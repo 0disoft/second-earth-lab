@@ -4,12 +4,29 @@
 > 사람이 갇히는 속도를 늦추고, 문을 열어두고,
 > 사람들이 더 나은 곳으로 스스로 옮겨갈 수 있게 만드는 설계다.
 
-이 문서는 "반주권 설계" v4 프레임워크를 정의한다. 이 프레임워크는
-국가·지역·플랫폼·회사·병원·학교·가족 등 모든 권력 구조에 적용 가능한
-**갇힘(lock-in) 기반 분석 도구**다.
+## 30초 요약
+
+반주권 설계 (Anti-Sovereign Design)는 **사람이 제도 안에 갇히는 순간을 찾고,
+그 갇힘을 줄이는 장치를 설계하는 분석 도구**다. 국가·지역·플랫폼·회사·병원·학교·가족처럼
+서로 달라 보이는 권력 구조를 같은 갇힘 확인표로 비교한다.
+
+```text
+못 나감 + 룰을 당함 + 따져도 안 먹힘 + 살 곳을 쥠 = 보호 대상 갇힘
+```
+
+이 저장소는 이 확인표를 5개 사례와 국가/전쟁 커널에 적용해, 어디서 탈출권이
+막히고 어떤 최소 규칙이 필요한지 정리한다.
 
 > **어려운 말은?** [용어 매핑표](./docs/glossary.md)에서
-> 어려운 말과 쉬운 말을 对照해 둔다.
+> 어려운 말과 쉬운 말을 비교해 둔다.
+
+## 먼저 읽기
+
+- **처음 5분**: [SUMMARY.md](./SUMMARY.md)
+- **개념 전체**: [framework.md](./framework.md)
+- **국가 권한 문제**: [chapter-national-kernel.md](./chapter-national-kernel.md)
+- **전쟁/계엄/동원 문제**: [chapter-war-kernel.md](./chapter-war-kernel.md)
+- **새 사례 작성**: [case-template.md](./case-template.md)
 
 ## 이 문서가 말하는 것 (3줄 요약)
 
@@ -23,27 +40,33 @@
 
 | 문서 | 줄 수 | 내용 |
 | --- | --- | --- |
-| [SUMMARY.md](./SUMMARY.md) | 113 | 1페이지 요약 — 무엇인가, 어떻게 쓰는가, 5사례 검증 |
-| [framework.md](./framework.md) | 704 | v4 프레임워크 전체 — 명제, 갇힘 확인표, 점수화, 방어 장치, 실험 엔진, AI 역할 |
-| [case-e7-visa.md](./case-e7-visa.md) | 201 | 첫 사례 — 한국 E-7 비자의 고용주-국가 짝꿍 갇힘 분석 |
-| [case-platform-suspension.md](./case-platform-suspension.md) | 421 | 두 번째 사례 — 플랫폼 계정 정지, 땅 없는 힘 분석 |
-| [case-medical-lock-in.md](./case-medical-lock-in.md) | 426 | 세 번째 사례 — 의료 기록 옮기기 불가, 물리 갇힘 분석 |
-| [case-care-lock-in.md](./case-care-lock-in.md) | 431 | 네 번째 사례 — 돌봄 의존, 관계 갇힘, 나가면 방치되는 딜레마 |
-| [case-education-lock-in.md](./case-education-lock-in.md) | 480 | 다섯 번째 사례 — 학력 인정 독점, 인정 시장 갇힘 분석 |
-| [chapter-war-kernel.md](./chapter-war-kernel.md) | 290 | 전쟁 버튼 — 국가 최소 규칙의 가장 센 비상 모드. 전쟁이 나면 모든 탈출권이 멈춤. 2021-2026 전쟁 데이터(UCDP/ACLED/ICRC/CFR)로 검증 |
-| [chapter-national-kernel.md](./chapter-national-kernel.md) | 482 | 국가 최소 규칙 — 평소에 매일 작동하는 규칙. 법·예산·비상 권한이 지역을 누른다. 전쟁 버튼(16장)은 이 규칙의 비상 모드. 한국 헌법(제40, 73, 76, 77, 117조) 직접 검증 |
-| [appendix-coercion-paradox.md](./appendix-coercion-paradox.md) | 262 | 부록 — 강제 딜레마 심화: 5사례에서 딜레마의 구체적 모습, 4가지 얼굴, 딜레마와 함께 살기 |
-| [case-template.md](./case-template.md) | 224 | 새 사례 분석 템플릿 — 10섹션 표준 구조 |
-| **총합** | **4,034** | (README, GAME_DESIGN.md 제외. README 포함 시 4,187줄) |
+| [SUMMARY.md](./SUMMARY.md) | 119 | 1페이지 요약 — 무엇인가, 어떻게 쓰는가, 5사례 검증 |
+| [framework.md](./framework.md) | 706 | v4 프레임워크 전체 — 명제, 갇힘 확인표, 점수화, 방어 장치, 실험 엔진, AI 역할 |
+| [case-e7-visa.md](./case-e7-visa.md) | 202 | 첫 사례 — 한국 E-7 비자의 고용주-국가 짝꿍 갇힘 분석 |
+| [case-platform-suspension.md](./case-platform-suspension.md) | 422 | 두 번째 사례 — 플랫폼 계정 정지, 땅 없는 힘 분석 |
+| [case-medical-lock-in.md](./case-medical-lock-in.md) | 427 | 세 번째 사례 — 의료 기록 옮기기 불가, 물리 갇힘 분석 |
+| [case-care-lock-in.md](./case-care-lock-in.md) | 432 | 네 번째 사례 — 돌봄 의존, 관계 갇힘, 나가면 방치되는 딜레마 |
+| [case-education-lock-in.md](./case-education-lock-in.md) | 481 | 다섯 번째 사례 — 학력 인정 독점, 인정 시장 갇힘 분석 |
+| [chapter-war-kernel.md](./chapter-war-kernel.md) | 291 | 전쟁 버튼 — 국가 최소 규칙의 가장 센 비상 모드. 전쟁이 나면 모든 탈출권이 멈춤. 2021-2026 전쟁 데이터(UCDP/ACLED/ICRC/CFR)로 검증 |
+| [chapter-national-kernel.md](./chapter-national-kernel.md) | 483 | 국가 최소 규칙 — 평소에 매일 작동하는 규칙. 법·예산·비상 권한이 지역을 누른다. 전쟁 버튼(16장)은 이 규칙의 비상 모드. 한국 헌법(제40, 73, 76, 77, 117조) 직접 검증 |
+| [appendix-coercion-paradox.md](./appendix-coercion-paradox.md) | 263 | 부록 — 강제 딜레마 심화: 5사례에서 딜레마의 구체적 모습, 4가지 얼굴, 딜레마와 함께 살기 |
+| [case-template.md](./case-template.md) | 225 | 새 사례 분석 템플릿 — 10섹션 표준 구조 |
+| **총합** | **4,051** | (README, GAME_DESIGN.md, docs/glossary.md 제외. README 포함 시 4,233줄) |
 
-> 총합은 README.md를 제외한 문서 줄 수 기준이다. GAME_DESIGN.md는 게임 기획안이므로 프레임워크 문서 총합에서 제외한다.
+> 총합은 README.md와 docs/glossary.md를 제외한 프레임워크 문서 줄 수 기준이다. GAME_DESIGN.md는 게임 기획안이므로 프레임워크 문서 총합에서 제외한다.
 >
-> framework.md는 5사례 검증 후 리뷰를 거쳐 670줄 → 704줄로 업데이트됨.
+> framework.md는 5사례 검증 후 리뷰를 거쳐 확장됨.
 > 전쟁 버튼 장은 국가 최소 규칙의 가장 센 비상 모드를 다룬다. framework.md 본문이
 > 아닌 별도 파일로 분리했으나, 섹션 16으로 번호를 부여해 정식 장으로 취급한다.
 > 국가 최소 규칙 장은 평소에 작동하는 규칙을 다룬다 — 법·예산·비상 권한이 매일
 > 작동하는 구조적 갇힘. 16장(전쟁 버튼)은 이 규칙의 비상 모드다. 한국 헌법 조항을
 > 직접 검증했으며, 섹션 17로 번호를 부여해 정식 장으로 취급한다.
+
+```text
+[17장] 국가 최소 규칙: 평소에 매일 작동
+        └─ 비상 전환
+[16장] 전쟁 버튼: 전쟁·계엄·동원 때 탈출권을 가장 세게 멈춤
+```
 
 ## 사례 검증 현황
 
