@@ -1,422 +1,465 @@
-# 사례 연구: 플랫폼 계정 정지 — 영토 없는 주권
+# Case Study: Platform Account Suspension — Sovereignty Without Territory
 
-> 반주권 설계 (Anti-Sovereign Design) v4 프레임워크의 두 번째 적용 사례.
-> 쉬운 말 매핑은 [용어 매핑표](./docs/glossary.md)를 따른다.
-> E-7이 "국가+고용주 합작 락인"을 보여줬다면,
-> 이 사례는 **영토 없는 주권**을 보여준다.
+> The second applied case of the Anti-Sovereign Design v4 framework.
+> Plain-language mappings follow the [glossary](./docs/glossary.md).
+> Where E-7 demonstrated "state + employer composite lock-in,"
+> this case demonstrates **sovereignty without territory**.
 
-## 1. 왜 이 사례인가
+## 1. Why This Case
 
-E-7 사례는 지역적 주권 — 국가가 영토 안에서 체류 자격을 통제하는 구조 —
-를 다뤘다. 플랫폼 계정 정지는 다른 종류의 주권을 보여준다. 영토가 없고,
-국경 대신 API가 있고, 주민등록 대신 계정이 있고, 추방 대신 계정 정지가 있다.
+The E-7 case examined territorial sovereignty — the structure in which a state
+controls the right to reside within its borders. Platform account suspension
+reveals a different kind of sovereignty. There is no territory; instead of
+borders there are APIs, instead of civil registration there are accounts, and
+instead of deportation there is account suspension.
 
-이 사례가 프레임워크에 중요한 이유: 락인 판별식이 지역 경계에 묶이지
-않고, **영토 없는 주권자**에도 동일하게 적용됨을 입증한다. 국가를
-쪼개서 지역 주권자를 만들었더니, 빈 자리를 플랫폼이 채우는 구조가
-이 사례에서 분명하게 드러난다.
+Why this case matters for the framework: it demonstrates that the lock-in
+discriminant is not bound to territorial boundaries and applies equally to a
+**non-territorial sovereign**. When the state is disaggregated into territorial
+sovereigns, the vacancy left behind is filled by the platform — a structure this
+case makes plainly visible.
 
-### 질문의 각도
+### The Angle of Inquiry
 
-"서비스 약관 위반했으면 정지 가능하지" 같은 얕은 논쟁으로 빠지지
-않는다. 질문은 그게 아니다:
+We do not descend into shallow arguments like "if you violated the terms of
+service, suspension is fair." That is not the question. The question is:
 
-**계정 정지가 개인의 사회적·경제적 생존조건을 얼마나 절단하는가,
-그리고 그 처분에 대해 설명·이의·정지·이동·배상이 가능한가.**
+**How completely does account suspension sever an individual's social and
+economic conditions of survival — and for that disposition, are explanation,
+objection, suspension, portability, and compensation available?**
 
-이 각도로 가면 플랫폼이 왜 현대적 주권자인지 분명해진다.
+From this angle, it becomes clear why the platform is a modern sovereign.
 
-## 2. 비지역적 주권(땅 없는 힘)
+## 2. Non-Territorial Sovereignty (Power Without Land)
 
-플랫폼은 국가와 같은 주권 구조를 가지고 있으면서, 영토가 없다. 이
-차이를 명시적으로 대조해야 한다.
+The platform possesses the same sovereign structure as a state, yet has no
+territory. This difference must be made explicit.
 
-| 국가 주권 | 플랫폼 주권 | 구조적 동등성 |
+| State Sovereignty | Platform Sovereignty | Structural Equivalence |
 | --- | --- | --- |
-| 영토 | 플랫폼 생태계 (API, 스토어, 프로토콜) | 같음: 접근 통제 영역 |
-| 주민등록 | 계정 | 같음: 식별·추적 단위 |
-| 국경 | 로그인 / API 권한 / 스토어 심사 | 같음: 진입 통제 |
-| 시민권 | 이용약관 동의 | 같음: 소속 조건 |
-| 추방 | 계정 정지 / 밴 | 같음: 강제 이탈 |
-| 법률 | 약관·알고리즘 정책 | 같음: 규칙 부과 |
-| 사법부 | 고객지원 / 항소 양식 | 같음: 항의 절차 (실질력 차이 큼) |
-| 세금 | 수수료 / 데이터 수집 / 광고 수익 | 같음: 자원 추출 |
+| Territory | Platform ecosystem (API, store, protocol) | Same: access-controlled domain |
+| Civil registration | Account | Same: unit of identification and tracking |
+| Borders | Login / API permissions / store review | Same: entry control |
+| Citizenship | Terms-of-service agreement | Same: condition of membership |
+| Deportation | Account suspension / ban | Same: forced exit |
+| Law | Terms of service / algorithmic policy | Same: rule imposition |
+| Judiciary | Customer support / appeal form | Same: redress procedure (large gap in practical power) |
+| Taxation | Fees / data collection / ad revenue | Same: resource extraction |
 
-영토가 없다는 건 약점이 아니라 **강점**이다. 영토 기반 주권은 물리적
-제약 때문에 확장에 한계가 있지만, 플랫폼 주권은 네트워크 효과를 통해
-전 세계로 확장한다. 한 플랫폼의 "국민"이 한 국가의 인구보다 많을 수 있다.
+The absence of territory is not a weakness but a **strength**. Territorial
+sovereignty is constrained by physical limits to expansion, but platform
+sovereignty expands globally through network effects. A single platform's
+"citizenry" can outnumber a nation's population.
 
-### 계정이 곧 신분이다
+### The Account Is Identity
 
-현대 디지털 환경에서 플랫폼 계정은 단순한 서비스 가입이 아니라
-**디지털 신분(digital identity)**으로 기능한다:
+In the modern digital environment, a platform account is not merely a service
+subscription — it functions as **digital identity**:
 
-- **인증 수단**: "Google로 로그인", "Apple로 로그인" — 타 서비스 접근의 열쇠
-- **결제 수단**: 앱스토어 구매, 구독, 인앱 결제
-- **소셜 그래프**: 연락처, 메시지, 팔로워, 평판
-- **콘텐츠 보관**: 사진, 문서, 이메일, 클라우드 저장
-- **비즈니스 기반**: 광고 계정, 개발자 계정, 판매자 계정, 크리에이터 수익
-- **기업 업무 도구**: 이메일, 캘린더, 협업 툴, 문서 공유
+- **Authentication**: "Log in with Google," "Log in with Apple" — the key to
+  accessing other services
+- **Payment**: App store purchases, subscriptions, in-app payments
+- **Social graph**: Contacts, messages, followers, reputation
+- **Content storage**: Photos, documents, email, cloud storage
+- **Business infrastructure**: Ad accounts, developer accounts, seller accounts,
+  creator revenue
+- **Enterprise work tools**: Email, calendar, collaboration tools, document
+  sharing
 
-계정 하나가 정지되면, 이 전체가 연쇄로 단절된다. 이건 "서비스 하나를
-못 쓰게 됨"이 아니라 **디지털 시민권의 박탈**이다.
+When a single account is suspended, this entire chain severs. This is not
+"losing access to one service" — it is **the revocation of digital citizenship**.
 
-## 3. 판별식 적용
+## 3. Applying the Discriminant
 
-### 항 1: 못 나감 — 높음
+### Clause 1: Cannot Exit — High
 
-계정이 묶는 것의 범위:
+The scope of what an account binds:
 
-| 묶임 대상 | 정지 시 결과 | 대체 가능성 |
+| What Is Bound | Consequence at Suspension | Substitutability |
 | --- | --- | --- |
-| 이메일 | 통신 단절, 타 서비스 비번 복구 불가 | 낮음 (이메일 기반 인증이 표준) |
-| 소셜 그래프 | 연락처·팔로워·평판 소멸 | 매우 낮음 (그래프 복제 불가) |
-| 구매 내역 | 앱·영화·음악·책 접근 상실 | 없음 (구매는 플랫폼 내 귀속) |
-| 결제 수단 | 구독·인앱 결제 단절 | 중간 (대체 결제수단 존재) |
-| 인증 수단 | "Google로 로그인" 의존 타 서비스 접근 불가 | 낮음 (OAuth 의존도 높음) |
-| 사진·문서 | 클라우드 저장소 접근 상실 | 중간 (백업이 있으면) |
-| 비즈니스 계정 | 광고·판매·수익 창출 단절 | 낮음 (비즈니스 전체가 정지) |
+| Email | Communication severed, password recovery for other services impossible | Low (email-based authentication is standard) |
+| Social graph | Contacts, followers, reputation vanish | Very low (graph cannot be replicated) |
+| Purchase history | Access to apps, movies, music, books lost | None (purchases are platform-internal) |
+| Payment method | Subscriptions, in-app payments severed | Medium (alternative payment methods exist) |
+| Authentication | Cannot access services dependent on "Log in with Google" | Low (high OAuth dependency) |
+| Photos / documents | Cloud storage access lost | Medium (if backed up) |
+| Business account | Ad, sales, revenue generation severed | Low (entire business suspended) |
 
-"못 나감"이 높은 이유: 단일 서비스 이탈이 아니라, **디지털 생태계 전체의
-이탈**이기 때문. 이메일만 바꿔도 비밀번호 복구, 연락처 이전, 구독 재설정,
-인증 재설정이 필요하고, 이 과정에서 타 서비스 접근이 영구 상실될 수 있다.
+Why "cannot exit" is high: it is not departure from a single service but
+**departure from an entire digital ecosystem**. Changing email alone requires
+password recovery, contact migration, subscription resets, and
+re-authentication — and during this process, access to other services can be
+permanently lost.
 
-### 항 2: 룰을 당함 — 높음
+### Clause 2: Subjected to Rules — High
 
-규칙 부과의 일방성:
+The unilateral nature of rule imposition:
 
-- **약관 변경**: 사전 통지는 있으나 실질적 거부권 없음. "동의하지 않으면
-  서비스 사용 불가" — 이건 동의가 아니라 강제다.
-- **자동 정지**: 알고리즘이 계정을 정지시킨다. 의도하지 않은 정지
-  (false positive)가 대량으로 발생할 수 있다.
-- **알고리즘 판정**: 정지 사유가 알고리즘에 의해 자동 분류되며,
-  인간의 판단이 개입되지 않는 경우가 많다.
-- **약관 해석의 독점**: "약관 위반"의 판단 기준을 플랫폼이 독점한다.
-  법적 기준이 아니라 플랫폼의 내부 정책이고, 그 정책은 불투명하다.
+- **Terms-of-service changes**: Advance notice exists, but there is no effective
+  right to refuse. "If you don't agree, you can't use the service" — this is not
+  consent; it is coercion.
+- **Automated suspension**: Algorithms suspend accounts. Unintended suspensions
+  (false positives) can occur at scale.
+- **Algorithmic adjudication**: The reason for suspension is automatically
+  classified by an algorithm, often without any human judgment involved.
+- **Monopoly on terms interpretation**: The platform holds a monopoly on the
+  criteria for judging "terms violation." The standard is not legal but the
+  platform's internal policy, and that policy is opaque.
 
-### 항 3: 따져도 안 먹힘 — 높음
+### Clause 3: Objection Is Ineffective — High
 
-항의 절차의 형식성:
+The formality of redress procedures:
 
-| 문제 | 설명 |
+| Problem | Description |
 | --- | --- |
-| 고객지원 부재 | 실시간 상담원 접근 불가, 자동화된 응답만 반복 |
-| 자동화된 항소 | 양식 제출 후 자동 알고리즘이 재검토, 인간 검토 없음 |
-| 설명 부족 | "약관 위반" 이외의 구체적 사유 미제공 |
-| 시간 압박 | 항소 처리 중 계정 정지 상태 유지, 생계 단절 지속 |
-| 재량권 부재 | 항소 결과에 이의를 제기할 상급 기관 없음 |
-| 법적 구제의 한계 | 소액 사용자는 소송 비용 감당 불가, 중재 조항 강제 |
+| No customer support | No access to live agents; only automated responses repeat |
+| Automated appeals | After form submission, an automated algorithm reviews; no human review |
+| Insufficient explanation | No specific reason provided beyond "terms violation" |
+| Time pressure | Account remains suspended during appeal processing; livelihood disruption continues |
+| No discretion | No higher authority to appeal the decision |
+| Limits of legal remedy | Small-scale users cannot afford litigation; arbitration clauses mandatory |
 
-핵심: 항의 절차가 존재하지만, 그 절차를 운영하는 주체가 처분을 내린
-주체와 같다. 사법 독립성이 없다. 이건 국가에서 "경찰이 기소하고 경찰이
-재판하고 경찰이 항소를 심리한다"는 것과 같은 구조다.
+Core point: a redress procedure exists, but the entity operating it is the same
+entity that issued the disposition. There is no judicial independence. This is
+structurally equivalent to a state where "the police prosecute, the police
+judge, and the police hear the appeal."
 
-### 항 4: 생존조건을 쥠 — 높음 (집단에 따라 매우 높음)
+### Clause 4: Holds Survival Conditions — High (Very High Depending on Group)
 
-계정 정지가 생존조건을 절단하는 정도는 사용자 유형에 따라 다르다:
+The degree to which account suspension severs survival conditions varies by
+user type:
 
-| 사용자 유형 | 생존조건 절단 정도 | 설명 |
+| User Type | Severity of Survival-Condition Severance | Description |
 | --- | --- | --- |
-| 일반 사용자 (취미) | 낮음 | 불편하지만 생존과 무관 |
-| 일반 사용자 (인증 의존) | 중간 | 타 서비스 접근 상실, 복구에 시간 |
-| 프리랜서/크리에이터 | 높음 | 수익 창출 채널 단절, 팬덤 접근 상실 |
-| 사업자/판매자 | 매우 높음 | 매출 단절, 재고·직원·계약 연쇄 영향 |
-| 개발자 (앱스토어 의존) | 매우 높음 | 앱 배포 채널 단절 = 사업 중단 |
-| 광고 운영자 | 매우 높음 | 광고 계정 정지 = 매출 0 |
-| 기업 (업무도구 의존) | 매우 높음 | 이메일·문서·캘린더 단절 = 업무 마비 |
+| General user (hobby) | Low | Inconvenient but unrelated to survival |
+| General user (auth-dependent) | Medium | Loses access to other services; recovery takes time |
+| Freelancer / creator | High | Revenue channel severed; fanbase access lost |
+| Business / seller | Very high | Revenue severed; inventory, employees, contracts cascade |
+| Developer (app-store-dependent) | Very high | App distribution channel severed = business shutdown |
+| Ad operator | Very high | Ad account suspended = zero revenue |
+| Enterprise (work-tool-dependent) | Very high | Email, documents, calendar severed = work paralysis |
 
-"생존조건을 쥠"이 사용자 유형에 따라 연속값이라는 것이 여기서 분명해진다.
-취미 사용자에게는 락인이 아닐 수 있지만, 사업자에게는 명백한 락인이다.
-이건 프레임워크의 락인 위험도 점수가 왜 이항 판정이 아닌지를 보여주는
-구체적 증거다.
+It becomes clear here that "holding survival conditions" is a continuous value
+depending on user type. For a hobby user it may not constitute lock-in; for a
+business it is unambiguous lock-in. This is concrete evidence for why the
+framework's lock-in severity score is not a binary judgment.
 
-### 락인 위험도: 높음 (사업·인증 의존 집단은 매우 높음)
+### Lock-in Severity: High (Very High for Business and Auth-Dependent Groups)
 
-## 4. 합작 락인
+## 4. Composite Lock-in
 
-플랫폼 계정 정지에서도 합작 락인이 나타난다. 단일 플랫폼이 아니라,
-여러 시스템이 결합해서 탈출 비용을 올린다.
+Composite lock-in appears in platform account suspension as well. It is not a
+single platform but the combination of multiple systems that raises the cost of
+exit.
 
-### 합작 구조 1: 플랫폼 + 결제망
+### Composite Structure 1: Platform + Payment Network
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 플랫폼 (Google/Apple) | 생태계 통제, 수수료 수익 | 계정·앱 배포·인증 |
-| 결제망 (카드사/PG) | 거래 처리, 리스크 관리 | 결제 승인·정지 연동 |
+| Platform (Google/Apple) | Ecosystem control, fee revenue | Account, app distribution, authentication |
+| Payment network (card company / PG) | Transaction processing, risk management | Payment approval, suspension linkage |
 
-결제망이 플랫폼 정지와 연동되면, 사용자는 계정뿐 아니라 결제 수단 전체를
-잃는다. 환불 분쟁, 지불 중단, 구독 연쇄 취소가 동시에 일어난다.
+When the payment network is linked to platform suspension, the user loses not
+only the account but the entire payment infrastructure. Refund disputes,
+payment halts, and cascading subscription cancellations occur simultaneously.
 
-### 합작 구조 2: 플랫폼 + 앱스토어
+### Composite Structure 2: Platform + App Store
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 플랫폼 (OS 제공자) | 생태계 통제 | 앱 배포 통로 독점 |
-| 앱스토어 심사 | 품질 관리, 정책 준수 | 앱 승인·거부·삭제 |
+| Platform (OS provider) | Ecosystem control | Monopoly over app distribution channel |
+| App store review | Quality control, policy compliance | App approval, rejection, removal |
 
-개발자에게 앱스토어 계정 정지는 단순한 "서비스 이용 중지"가 아니라
-**사업 기반 전체의 소멸**이다. 앱이 삭제되면 기존 사용자 접근이
-단절되고, 매출이 0이 되며, 투자 가치가 소멸한다. 대체 마켓이 존재하지
-않는다 (iOS의 경우 App Store가 유일).
+For a developer, app store account suspension is not a mere "service
+suspension" but **the dissolution of an entire business foundation**. When an
+app is removed, existing user access is severed, revenue drops to zero, and
+investment value evaporates. No alternative marketplace exists (for iOS, the
+App Store is the only one).
 
-### 합작 구조 3: 플랫폼 + 광고시장
+### Composite Structure 3: Platform + Advertising Market
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 콘텐츠 플랫폼 (YouTube/Meta) | 콘텐츠 생태계 운영 | 크리에이터 계정·수익화 |
-| 광고 네트워크 (AdSense 등) | 광고 효율, 브랜드 안전 | 광고 송출·수익 배분 |
+| Content platform (YouTube/Meta) | Operating the content ecosystem | Creator account, monetization |
+| Ad network (AdSense, etc.) | Ad efficiency, brand safety | Ad delivery, revenue distribution |
 
-크리에이터에게 플랫폼 계정 정지는 시청자 접근과 수익이 동시에
-단절됨을 의미한다. 대체 플랫폼이 있어도 소셜 그래프(구독자)를 이전할
-수 없으므로, 실질적 탈출이 불가능하다.
+For a creator, platform account suspension means simultaneous severance of
+audience access and revenue. Even if an alternative platform exists, the social
+graph (subscribers) cannot be transferred, making effective exit impossible.
 
-### 합작 구조 4: 플랫폼 + 정부/기업 신원 인증
+### Composite Structure 4: Platform + Government/Enterprise Identity Authentication
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 플랫폼 | 사용자 관리 | OAuth, SSO, 계정 인증 |
-| 정부/기업 | 디지털 행정, 업무 효율 | 플랫폼 기반 인증 채택 |
+| Platform | User management | OAuth, SSO, account authentication |
+| Government / enterprise | Digital administration, work efficiency | Adopts platform-based authentication |
 
-정부 서비스나 기업 업무 도구가 플랫폼 인증(OAuth)에 의존하면,
-플랫폼 계정 정지가 공적 서비스·업무 접근까지 단절시킨다. 이 구조에서
-플랫폼은 사기업이면서 **공적 인프라**로 기능한다.
+When government services or enterprise work tools depend on platform
+authentication (OAuth), platform account suspension severs access to public
+services and work. In this structure, the platform is a private company that
+functions as **public infrastructure**.
 
-### 교차점에서 생기는 락인
+### Lock-in at the Intersection
 
-E-7과 같은 패턴이 반복된다. 각 주체는 자기 역할만 수행한다:
+The same pattern as E-7 repeats. Each actor performs only its own role:
 
-- 플랫폼: "이건 서비스 약관 집행이다"
-- 결제망: "이건 거래 위험 관리다"
-- 앱스토어: "이건 스토어 정책 준수다"
-- 정부/기업: "이건 인증 의존이다"
+- Platform: "This is enforcement of service terms"
+- Payment network: "This is transaction risk management"
+- App store: "This is store policy compliance"
+- Government / enterprise: "This is authentication dependency"
 
-그런데 이들이 결합한 탈출 비용은 어느 주체의 책임으로도 분류되지
-않는다. 단일 부문 감사로는 보이지 않는 교차항 락인이다.
+But the cost of exit produced by their combination is classified as no single
+actor's responsibility. It is cross-sector lock-in invisible to any
+single-sector audit.
 
-## 5. E-7과의 구조적 비교
+## 5. Structural Comparison with E-7
 
-| 차원 | E-7 비자 | 플랫폼 계정 정지 |
+| Dimension | E-7 Visa | Platform Account Suspension |
 | --- | --- | --- |
-| 주권 유형 | 지역적 (영토 기반) | 비지역적 (네트워크 기반) |
-| 주권자 | 국가 + 고용주 | 플랫폼 + 결제/스토어/광고/정부 |
-| 식별 단위 | 외국인등록번호 | 계정 ID |
-| 규칙 부과 | 출입국관리법 | 약관·알고리즘 |
-| 강제 이탈 | 추방 | 계정 정지 |
-| 항의 절차 | 행정심판·소송 (느리지만 존재) | 고객지원 (빠르지만 형식적) |
-| 대체 경로 | 다른 비자 유형 (제한적) | 다른 플랫폼 (네트워크 효과로 사실상 불가) |
-| 데이터 이동성(데이터 가져가기) | 매우 낮음 (제도적 이동성 부재) | 매우 낮음 (소셜 그래프 이동 불가) |
-| 국제 비교 | 다른 국가의 비자 제도 존재 | 글로벌 플랫폼은 대체재 부재 |
+| Sovereignty type | Territorial (territory-based) | Non-territorial (network-based) |
+| Sovereign | State + employer | Platform + payment/store/ad/government |
+| Identification unit | Foreign registration number | Account ID |
+| Rule imposition | Immigration law | Terms of service / algorithms |
+| Forced exit | Deportation | Account suspension |
+| Redress procedure | Administrative appeal / litigation (slow but exists) | Customer support (fast but formalistic) |
+| Alternative route | Other visa types (limited) | Other platforms (effectively impossible due to network effects) |
+| Data portability | Very low (no institutional portability) | Very low (social graph non-portable) |
+| International comparison | Other countries' visa systems exist | Global platforms have no substitutes |
 
-### 공통점: 강제의 역설(강제 딜레마)
+### Commonality: The Coercion Paradox
 
-두 사례 모두 처방(해결책)을 채택할 권한을 가진 주체가 처방에 의해 자신의
-권한이 줄어드는 구조다. 플랫폼이 자발로 자기 재량을 줄일 이유가 없고,
-국가가 플랫폼을 강제 규제하면 국가가 다시 주권자가 된다.
+Both cases share a structure in which the actor with the authority to adopt a
+remedy sees its own authority reduced by that remedy. The platform has no reason
+to voluntarily curtail its own discretion, and if the state forcibly regulates
+the platform, the state becomes the sovereign again.
 
-### 차이점: 항의 절차의 질
+### Difference: Quality of Redress Procedure
 
-E-7은 행정절차가 느리지만 법적 틀이 있다. 플랫폼은 항의 절차가
-빠르지만 사법 독립성이 없다 — 심사자가 처분자와 같은 주체다. 이건
-프레임워크의 "따져도 안 먹힘" 항에서 플랫폼이 E-7보다 더 심각할 수
-있음을 보여준다.
+E-7 has a legal framework, albeit slow. The platform's redress procedure is
+fast but lacks judicial independence — the reviewer is the same entity as the
+one that issued the disposition. This shows that on the "objection is
+ineffective" clause, the platform can be more severe than E-7.
 
-### 차이점: 대체재의 존재
+### Difference: Existence of Alternatives
 
-E-7은 다른 비자 유형이나 다른 국가로의 이탈이 제한적으로 가능하다.
-플랫폼은 네트워크 효과 때문에 대체재가 사실상 존재하지 않는다.
-YouTube에서 Twitch로 옮겨도 시청자가 안 따라오면 의미 없다.
-이건 "포크 가능성"이 디지털 플랫폼에서 구조적으로 제한됨을 보여준다.
+E-7 permits limited exit to other visa types or other countries. For platforms,
+alternatives effectively do not exist due to network effects. Moving from
+YouTube to Twitch means nothing if the audience doesn't follow. This
+demonstrates that "fork feasibility" is structurally constrained in digital
+platforms.
 
-## 6. 부문별 포크 가능성 적용
+## 6. Applying Sector-Specific Fork Feasibility
 
-프레임워크는 부문별로 포크 원칙이 다르다고 한다. 플랫폼에 적용하면:
+The framework holds that fork principles differ by sector. Applied to platforms:
 
-### 디지털 플랫폼 — 포크 가능성이 가장 높아야 함
+### Digital Platforms — Fork Feasibility Must Be Highest
 
-프레임워크는 디지털 플랫폼에 "진짜 포크"를 요구한다: 데이터, 소셜
-그래프, 콘텐츠, 결제 내역, 평판의 이동 가능성.
+The framework demands a "real fork" for digital platforms: portability of data,
+social graph, content, payment history, and reputation.
 
-현재 상태:
-- **데이터 이동성**: "내 데이터 다운로드" 기능 존재하나, 데이터 이동성 3층
-  중 기술적 이동성(1층)만 충족. 의미적 이동성(2층)과 제도적 이동성(3층)
-  부재. 파일은 받았는데 다른 플랫폼이 안 읽어주면 무의미.
-- **소셜 그래프 이동성**: 사실상 불가능. 연락처는 내보낼 수 있지만,
-  팔로워·구독자 관계는 플랫폼 내에 귀속.
-- **콘텐츠 이동성**: 다운로드 가능하나, 메타데이터·상호작용 기록(좋아요,
-  댓글)은 이동 불가.
-- **결제 내역**: 구매 자체는 기록에 남지만, 구매한 콘텐츠 접근권은
-  이전 불가. 영화·앱·책을 다른 플랫폼에서 다시 구매해야 함.
-- **평판 이동성**: 플랫폼 내 평점·리뷰·인증 상태는 이동 불가.
+Current state:
+- **Data portability**: A "download my data" feature exists, but it satisfies
+  only technical portability (layer 1) of the three-layer data portability model.
+  Semantic portability (layer 2) and institutional portability (layer 3) are
+  absent. Receiving files is meaningless if no other platform can read them.
+- **Social graph portability**: Effectively impossible. Contacts can be
+  exported, but follower and subscriber relationships are platform-internal.
+- **Content portability**: Downloadable, but metadata and interaction records
+  (likes, comments) are non-portable.
+- **Payment history**: The purchase itself remains on record, but access rights
+  to purchased content are non-transferable. Movies, apps, and books must be
+  re-purchased on another platform.
+- **Reputation portability**: Platform-internal ratings, reviews, and
+  verification status are non-portable.
 
-결론: 디지털 플랫폼은 프레임워크가 요구하는 "진짜 포크" 조건을
-현재 전혀 충족하지 않는다. "다 보이긴 하는데 너는 못 나가"의 정확한
-사례다.
+Conclusion: digital platforms currently fail to meet any of the "real fork"
+conditions the framework demands. It is the precise embodiment of "you can see
+everything but you cannot leave."
 
-### 포크 비용의 비대칭(차이)
+### Fork-Cost Asymmetry
 
-포크 비용이 사용자에게만 부과된다:
-- 사용자가 플랫폼을 떠날 때: 데이터 재구축, 소셜 그래프 재형성, 구매
-  재투자 — 전부 사용자 부담
-- 플랫폼이 사용자를 정지할 때: 비용 0 — 즉시 집행
+Fork costs are imposed only on the user:
+- When a user leaves a platform: data reconstruction, social graph rebuilding,
+  re-investment in purchases — all borne by the user
+- When a platform suspends a user: zero cost — executed instantly
 
-이 비대칭이 락인의 핵심이다. 탈출 비용은 사용자에게만 있고, 추방 비용은
-플랫폼에게 거의 없다.
+This asymmetry is the core of lock-in. Exit costs exist only for the user;
+expulsion costs are nearly zero for the platform.
 
-## 7. 반주권 설계식 처방
+## 7. Anti-Sovereign Design Prescriptions
 
-### 처방 원칙: 다섯 가지 권리를 보장해야 한다
+### Prescription Principle: Five Rights Must Be Guaranteed
 
-프레임워크가 요구하는 다섯 가지 — 설명, 이의제기, 집행정지(멈추기), 배상,
-포크 가능성 —을 플랫폼 계정 정지에 적용한다.
+The framework's five requirements — explanation, objection, injunctive
+suspension (halt), compensation, and fork feasibility — applied to platform
+account suspension.
 
-### 처방 목록
+### Prescription List
 
-| 처방 | 메커니즘 | 프레임워크 대응 |
+| Prescription | Mechanism | Framework Correspondence |
 | --- | --- | --- |
-| 계정 정지 전 사전통지 (긴급 제외) | 정지 72시간 전 사유·증거 통지, 대응 기회 부여 | 설명 |
-| 긴급 생계 계정 임시복구권 | 생계·의료·법적 의무 관련 계정은 항소 중 임시 운영 | 집행정지 |
-| 제3자 항소기구 | 플랫폼 내부가 아닌 독립 기구에서 항소 심리 | 이의제기 |
-| 자동처분 로그 공개 | 알고리즘 정지의 판정 기준·임계치·오패율 공개 | 설명 + 측정권(재는 권한) 공개 |
-| 데이터/소셜 그래프/구매내역 이동성 | 표준 포맷으로 내보내기 + 타 플랫폼 인수 의무 | 포크 가능성 |
-| 비즈니스 계정과 개인 계정 분리 보호 | 개인 약관 위반으로 비즈니스 계정 정지 금지 | 생존조건 보호 |
-| 플랫폼별 락인 열지도 공개 | 정지율, 항소 성공률, 평균 복구 시간 공개 | 측정권 헌법화 |
-| 피해 집단 반론권 | 크리에이터·사업자 단체의 반대 감사권 | 감사 시스템 |
-| 무효 정지 배상 | 잘못된 정지로 인한 손해 배상 의무 | 배상 |
+| Pre-suspension notice (except emergencies) | Notify reason and evidence 72 hours before suspension; provide opportunity to respond | Explanation |
+| Emergency livelihood account temporary restoration right | Accounts tied to livelihood, healthcare, or legal obligations operate temporarily during appeal | Injunctive suspension |
+| Third-party appeal body | Appeals heard by an independent body, not internal to the platform | Objection |
+| Automated-disposition log disclosure | Disclose algorithmic suspension criteria, thresholds, and false-positive rates | Explanation + right to measure disclosure |
+| Data / social graph / purchase history portability | Export in standard format + mandatory acceptance by other platforms | Fork feasibility |
+| Separation and protection of business and personal accounts | Prohibit suspending business accounts for personal terms violations | Survival-condition protection |
+| Per-platform lock-in heatmap disclosure | Disclose suspension rate, appeal success rate, average restoration time | Constitutionalization of right to measure |
+| Affected-group right of rebuttal | Right of counter-audit by creator and business associations | Audit system |
+| Compensation for invalid suspension | Mandatory compensation for damages caused by wrongful suspension | Compensation |
 
-### 시행 주체 문제
+### The Enforcement Actor Problem
 
-E-7과 같은 역설이 반복된다:
+The same paradox as E-7 repeats:
 
-- **플랫폼 자율**: 자기 재량을 스스로 줄일 이유 없음
-- **국가 규제**: 국가가 다시 주권자. 다만 이 경우 국가는 "통치 강제"가
-  아니라 "탈출권(빠져나갈 권리) 강제"를 수행하는 것이므로, 프레임워크의 방향에 부합.
-  단, 국가 권한은 락인 해제에만 제한되어야 함.
-- **제3자 기구**: 독립성 확보 어려움. 예산·선발·권한이 플랫폼 또는
-  정부에 의존하면 종속됨.
-- **당사자 직접 권리**: 임시복구권을 법적 권리로 부여. 플랫폼이
-  "허가"하는 것이 아니라, 사용자가 일정 조건 충족 시 단독으로
-  행사할 수 있는 권리.
+- **Platform self-regulation**: No reason to voluntarily curtail its own
+  discretion
+- **State regulation**: The state becomes the sovereign again. However, in this
+  case the state performs not "coercion of governance" but "coercion of the
+  right of exit," which aligns with the framework's direction. The state's
+  authority must be limited solely to lock-in release.
+- **Third-party body**: Difficult to secure independence. If budget, selection,
+  or authority depends on the platform or government, it becomes subordinate.
+- **Direct party rights**: Grant temporary restoration as a legal right. Not
+  something the platform "permits," but a right the user can exercise
+  unilaterally upon meeting certain conditions.
 
-### 완화책: 탈출권 강제의 적용
+### Mitigation: Applying Coercion of the Right of Exit
 
-프레임워크의 "통치 강제 vs 탈출권 강제" 구분이 여기서 작동한다.
+The framework's distinction between "coercion of governance vs. coercion of the
+right of exit" operates here.
 
-국가가 플랫폼에 "계정 정지 절차를 이렇게 해라"라고 구체적으로
-지시하면 통치 강제다 — 새로운 주권자가 규칙을 정하는 것.
+If the state specifically directs the platform on "how to conduct account
+suspension procedures," that is coercion of governance — a new sovereign
+setting the rules.
 
-대신 국가가 "사용자가 자기 데이터를 가져갈 수 있도록 강제하라"라고
-하는 건 탈출권 강제다 — 문을 여는 권력이지, 방을 정하는 권력이 아니다.
+Instead, the state mandating "that users be able to take their data with them"
+is coercion of the right of exit — the power to open doors, not the power to
+design rooms.
 
-이 구분이 실제로 작동하려면, 규제가 플랫폼 내부 정책(통치)이 아니라
-**이탈 인프라(탈출)**에만 집중해야 한다:
-- 데이터 이동성 표준 강제
-- 소셜 그래프 이동성 의무화
-- 제3자 항소기구의 독립성 보장
-- 무효 정지 배상 의무화
+For this distinction to function in practice, regulation must focus not on
+platform internal policy (governance) but solely on **exit infrastructure
+(exit)**:
+- Mandate data portability standards
+- Require social graph portability
+- Guarantee the independence of third-party appeal bodies
+- Mandate compensation for invalid suspension
 
-## 8. 락인 열지도 (Lock-in Heatmap)
+## 8. Lock-in Heatmap
 
-플랫폼 유형별 락인 구조를 가시화한다:
+Visualizing the lock-in structure by platform type:
 
 ```
-플랫폼 유형        | 이탈가능성(나갈 수 있나?) | 규칙강제성(규칙이 센가?) | 항의실효성(항의가 먹히나?) | 의존비대칭(없으면 안 되나?) | 위험도
-------------------|----------|----------|----------|----------|------
-OS 생태계 (Apple)  | 매우 낮음 | 매우 높음 | 낮음      | 매우 높음 | 매우 높음
-OS 생태계 (Google) | 낮음      | 높음      | 낮음      | 매우 높음 | 매우 높음
-소셜 미디어        | 중간      | 높음      | 중간      | 높음      | 높음
-콘텐츠 플랫폼      | 중간      | 높음      | 중간      | 높음      | 높음
-이메일/클라우드    | 낮음      | 중간      | 중간      | 높음      | 높음
-결제/광고          | 낮음      | 높음      | 낮음      | 매우 높음 | 매우 높음
-업무도구 (기업)    | 낮음      | 중간      | 중간      | 매우 높음 | 매우 높음
-단일 목적 서비스    | 높음      | 낮음      | 중간      | 낮음      | 낮음
+Platform Type        | Exit Feasibility (can you leave?) | Rule Coercion (are rules strong?) | Redress Efficacy (do objections work?) | Dependency Asymmetry (do you need it?) | Severity
+---------------------|----------|----------|----------|----------|------
+OS ecosystem (Apple)  | Very low | Very high | Low      | Very high | Very high
+OS ecosystem (Google) | Low      | High      | Low      | Very high | Very high
+Social media          | Medium   | High      | Medium   | High      | High
+Content platform      | Medium   | High      | Medium   | High      | High
+Email/cloud           | Low      | Medium    | Medium   | High      | High
+Payment/advertising   | Low      | High      | Low      | Very high | Very high
+Work tools (enterprise) | Low    | Medium    | Medium   | Very high | Very high
+Single-purpose service | High   | Low       | Medium   | Low       | Low
 ```
 
-### 열지도가 보여주는 것
+### What the Heatmap Shows
 
-- OS 생태계(Apple/Google)가 가장 위험도가 높음 — 대체재 부재, 인증
-  의존, 결제 독점이 결합
-- 단일 목적 서비스(예: 날씨 앱)는 락인 위험도가 낮음 — 대체 가능,
-  생존조건과 무관
-- 업무도구는 기업 단위에서 매우 높음 — 한 플랫폼에 업무 전체가 의존
-- 결제/광고는 사업자에게 매우 높음 — 수익 창출 채널 독점
+- OS ecosystems (Apple/Google) carry the highest severity — absence of
+  alternatives, authentication dependency, and payment monopoly combined
+- Single-purpose services (e.g., weather apps) have low lock-in severity —
+  substitutable, unrelated to survival conditions
+- Work tools are very high at the enterprise level — the entire workflow depends
+  on one platform
+- Payment/advertising is very high for businesses — monopoly over revenue
+  channels
 
-### 사용자 유형별 위험도 중첩
+### Severity Overlap by User Type
 
-같은 플랫폼에서도 사용자 유형에 따라 위험도가 다르다:
+Even on the same platform, severity differs by user type:
 
 ```
-사용자 유형        | OS 생태계 | 소셜 미디어 | 결제/광고 | 업무도구
------------------|----------|-----------|----------|--------
-취미 사용자        | 중간      | 낮음       | 낮음      | 낮음
-인증 의존자        | 높음      | 중간       | 중간      | 중간
-크리에이터         | 높음      | 매우 높음  | 매우 높음 | 중간
-사업자/판매자      | 매우 높음 | 높음       | 매우 높음 | 높음
-개발자             | 매우 높음 | 중간       | 높음      | 중간
-기업 (업무도구)    | 매우 높음 | 중간       | 높음      | 매우 높음
+User Type              | OS Ecosystem | Social Media | Payment/Ad | Work Tools
+-----------------------|----------|-----------|----------|--------
+Hobby user             | Medium   | Low       | Low      | Low
+Auth-dependent         | High     | Medium    | Medium   | Medium
+Creator                | High     | Very high | Very high| Medium
+Business/seller        | Very high| High      | Very high| High
+Developer              | Very high| Medium    | High     | Medium
+Enterprise (work tools)| Very high | Medium  | High     | Very high
 ```
 
-이 중첩이 보여주는 것: "플랫폼이 락인인가?"가 아니라 **"누구에게
-락인인가"**가 핵심 질문이다. 락인 위험도는 구조와 사용자의 교차항에서
-결정된다.
+What this overlap reveals: the key question is not "is the platform lock-in?"
+but **"lock-in for whom?"** Lock-in severity is determined at the intersection
+of structure and user.
 
-## 9. 이 사례가 프레임워크에 미치는 영향
+## 9. Impact of This Case on the Framework
 
-### 검증된 것
+### What Was Verified
 
-1. **판별식이 비지역적 주권에도 적용된다** — 영토 기반 주권(E-7)과
-   네트워크 기반 주권(플랫폼)을 같은 테이블에 올릴 수 있음.
-2. **합작 락인이 플랫폼에서도 발생한다** — 플랫폼 + 결제 + 스토어 +
-   광고 + 정부 인증의 교차점에서 락인이 생김.
-3. **락인 위험도의 연속성이 입증된다** — 같은 플랫폼에서 사용자
-   유형에 따라 위험도가 다르며, 이항 판정이 불가능함.
-4. **데이터 이동성 3층이 진짜 병목(막힘)임** — 기술적 이동성만 충족되고,
-   의미적·제도적 이동성이 부재하여 포크가 불가능함.
-5. **통치 강제 vs 탈출권 강제 구분이 실제로 작동한다** — 국가 규제가
-   플랫폼 내부 정책이 아니라 이탈 인프라에만 집중해야 함이 구체화됨.
+1. **The discriminant applies to non-territorial sovereignty** — territorial
+   sovereignty (E-7) and network-based sovereignty (platform) can be placed on
+   the same table.
+2. **Composite lock-in occurs on platforms too** — lock-in emerges at the
+   intersection of platform + payment + store + advertising + government
+   authentication.
+3. **The continuity of lock-in severity is demonstrated** — on the same
+   platform, severity differs by user type; binary judgment is impossible.
+4. **The three-layer data portability model is the real bottleneck** — only
+   technical portability is satisfied; the absence of semantic and institutional
+   portability makes forking impossible.
+5. **The coercion of governance vs. coercion of the right of exit distinction
+   works in practice** — it is made concrete that state regulation must focus on
+   exit infrastructure, not platform internal policy.
 
-### 새로이 드러난 과제
+### Newly Revealed Challenges
 
-1. **포크 가능성의 비대칭 비용** — 탈출 비용은 사용자에게만 있고,
-   추방 비용은 플랫폼에게 거의 없음. 프레임워크가 이 비대칭을
-   명시적으로 다뤄야 함.
-2. **항의 절차의 사법 독립성 부재** — 심사자가 처분자와 같은 주체.
-   제3자 항소기구의 설계가 핵심 처방이 됨.
-3. **비즈니스 계정과 개인 계정의 연쇄 정지** — 개인 약관 위반으로
-   비즈니스 계정이 정지되는 구조가 락인을 증폭시킴. 계정 분리 보호가
-   별도 처방으로 필요함.
-4. **소셜 그래프 이동성의 기술적 난제** — 데이터는 내보낼 수 있어도
-   관계 그래프는 복제 불가. 포크 가능성의 기술적 한계가 명시적으로
-   다뤄져야 함.
+1. **Asymmetric cost of fork feasibility** — exit costs exist only for the user,
+   and expulsion costs are nearly zero for the platform. The framework must
+   address this asymmetry explicitly.
+2. **Absence of judicial independence in redress procedures** — the reviewer is
+   the same entity as the one who issued the disposition. The design of a
+   third-party appeal body becomes a core prescription.
+3. **Cascading suspension of business and personal accounts** — the structure
+   in which a personal terms violation suspends the business account amplifies
+   lock-in. Account separation protection is needed as a separate prescription.
+4. **The technical challenge of social graph portability** — data can be
+   exported, but the relationship graph cannot be replicated. The technical
+   limits of fork feasibility must be addressed explicitly.
 
-### E-7과 플랫폼 사례의 공통 패턴
+### Common Pattern Between E-7 and the Platform Case
 
-두 사례를 비교하면, 합작 락인의 공통 구조가 드러난다:
+Comparing the two cases reveals the common structure of composite lock-in:
 
-1. **각 주체는 자기 역할만 수행** — 국가는 "체류질서", 고용주는
-   "근로계약". 플랫폼은 "약관 집행", 결제망은 "위험 관리".
-2. **교차점에서 생기는 락인은 어느 쪽 책임도 아님** — 단일 부문
-   감사로는 보이지 않음.
-3. **처방은 교차점을 동시에 풀어야 함** — 한쪽만 풀리면 반쯤 풀린
-   락인은 여전히 락인.
-4. **시행 주체의 역설이 반복됨** — 처방을 채택할 권한을 가진 주체가
-   처방에 의해 자신의 권한이 줄어드는 구조.
+1. **Each actor performs only its own role** — the state handles "residence
+   order," the employer handles "employment contract." The platform handles
+   "terms enforcement," the payment network handles "risk management."
+2. **Lock-in at the intersection is no one's responsibility** — invisible to
+   any single-sector audit.
+3. **Prescriptions must dissolve the intersection simultaneously** — if only
+   one side is resolved, a half-dissolved lock-in is still a lock-in.
+4. **The enforcement actor paradox repeats** — the actor with the authority to
+   adopt a remedy sees its own authority reduced by that remedy.
 
-이 공통 패턴이 프레임워크의 보편성을 입증한다. 락인 판별식이 지역
-주권(국가)과 비지역 주권(플랫폼) 모두에 적용되며, 합작 락인 구조가
-두 영역에서 동일하게 발생한다.
+This common pattern demonstrates the framework's universality. The lock-in
+discriminant applies to both territorial sovereignty (the state) and
+non-territorial sovereignty (the platform), and the composite lock-in structure
+arises identically in both domains.
 
-## 10. 다음 방향
+## 10. Next Directions
 
-두 사례(E-7, 플랫폼)이 프레임워크의 적용 가능성을 입증했다. 다음
-후보:
+The two cases (E-7, platform) have demonstrated the framework's applicability.
+Next candidates:
 
-- **의료 기록 이전 불가 (의료 락인)** — 데이터 이동성 3층이 가장
-  직접적으로 시험되는 영역. 제도적 이동성(3층)의 부재가 생명과 직결.
-- **가족 돌봄 의존 (돌봄 락인)** — "탈출 불가능자"가 가장 분명하게
-  드러나는 영역. 경제적 의존, 양육권, 주거, 시간이 결합된 락인.
-- **학력 인증 독점 (교육 락인)** — 포크 가능성이 제도적 이동성에
-  전적으로 의존하는 영역. 기술적 이동성이 있어도 의미가 없는 사례.
+- **Medical record non-portability (medical lock-in)** — the domain where the
+  three-layer data portability model is most directly tested. The absence of
+  institutional portability (layer 3) is directly tied to life.
+- **Family care dependency (care lock-in)** — the domain where "those who
+  cannot exit" are most clearly revealed. Economic dependency, custody,
+  housing, and time combine into lock-in.
+- **Educational credential monopoly (education lock-in)** — the domain where
+  fork feasibility depends entirely on institutional portability. A case where
+  technical portability exists but is meaningless.
 
-이 사례들은 프레임워크의 각 장치(데이터 이동성, 락인 위험도, 합작
-락인, 포크 가능성)가 다른 맥락에서 어떻게 작동하는지를 추가로
-검증할 것이다.
+These cases will further test how each of the framework's instruments (data
+portability, lock-in severity, composite lock-in, fork feasibility) operates
+in a different context.

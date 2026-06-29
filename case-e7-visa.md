@@ -1,202 +1,180 @@
-# 사례 연구: 한국 E-7 비자 — 고용주-국가 합작 락인
+# Case Study: South Korea's E-7 Visa — Employer-State Composite Lock-in
 
-> 반주권 설계 (Anti-Sovereign Design) v4 프레임워크의 첫 적용 사례.
-> 쉬운 말 매핑은 [용어 매핑표](./docs/glossary.md)를 따른다.
-> 이 사례가 보여주는 것: "락인 헌정주의"가 추상철학이 아니라
-> 바로 행정표로 내려온다는 것.
+> The first application case of the Anti-Sovereign Design v4 framework.
+> For plain-language mappings, see the [glossary](./docs/glossary.md).
+> What this case demonstrates: "lock-in constitutionalism" is not abstract philosophy —
+> it comes down as an administrative form.
 
-## 1. 개요
+## 1. Overview
 
-한국 E-7 비자는 특정 직종의 외국인 근로자에게 발급되는 취업 비자다. 이
-비자 구조를 반주권 설계 판별식으로 분석하면, 단일 주체의 락인이 아니라
-**국가와 고용주가 각자 다른 인센티브로 협력하여 만드는 합작 락인
-(composite lock-in)**이 드러난다.
+The South Korean E-7 visa is a work visa issued to foreign workers in specific occupations. When this visa structure is analyzed through the Anti-Sovereign Design discriminant, what emerges is not a lock-in by a single actor but a **composite lock-in — created by the state and the employer cooperating with different incentives**.
 
-이 사례가 분석 도구로서 중요한 이유: "이 비자가 공정한가?"라는 질문이
-"이 구조가 사람의 탈출 비용을 누가, 얼마나, 어떤 명분으로 올리는가?"로
-바뀐다. 이 질문이 훨씬 세다.
+Why this case matters as an analytical tool: the question "Is this visa fair?" is replaced by "Who raises the cost of a person's exit, by how much, and under what pretext?" That question is far sharper.
 
-## 2. 법적 구조
+## 2. Legal Structure
 
-### 출입국관리법 제21조
+### Immigration Act Article 21
 
-외국인이 근무처를 변경·추가하려면 허가 또는 신고 체계를 통과해야 한다.
+A foreign national who wishes to change or add a workplace must pass through a permission or reporting regime.
 
-- 참조: [Immigration Act Article 21](https://elaw.klri.re.kr/eng_service/lawView.do?hseq=33079&lang=ENG)
-- 참조: [VISA Navigator (출입국관계)](https://www.immigration.go.kr/bbs/immigration_eng/230/454085/download.do)
+- Reference: [Immigration Act Article 21](https://elaw.klri.re.kr/eng_service/lawView.do?hseq=33079&lang=ENG)
+- Reference: [VISA Navigator (Immigration)](https://www.immigration.go.kr/bbs/immigration_eng/230/454085/download.do)
 
-E-7은 직종에 따라 두 가지 경로로 갈린다:
+E-7 splits into two paths depending on the occupation:
 
-- **사전허가 직종**: 근무처 변경 전 법무부 허가 필요
-- **사후신고 직종**: 근무처 변경 후 일정 기간 내 신고
+- **Pre-approval occupations**: Ministry of Justice permission required before changing workplace
+- **Post-report occupations**: Report within a certain period after changing workplace
 
-일부 경우 원 근무처의 **이적동의서**가 중요한 문서로 작동한다. 즉 "그냥 직장
-옮기면 됨"이 아니다.
+In some cases, a **consent-to-transfer letter** from the original employer operates as a critical document. In other words, "just switch jobs" is not how it works.
 
-- 참조: [E-7 workplace change 실무 정리](https://kowork.kr/en/blog/E7changingworkplaces)
+- Reference: [E-7 workplace change practical summary](https://kowork.kr/en/blog/E7changingworkplaces)
 
-## 3. 판별식 적용
+## 3. Discriminant Application
 
-### 항 1: 못 나감 — 높음
+### Clause 1: Cannot Exit — High
 
-직장 변경이 행정 허가/신고와 새 고용주 요건에 묶여 있다. 자유로운 이직이
-불가능하며, 허가 없이 이직할 경우 불법 체류로 전락한다.
+Changing workplaces is bound to administrative permission/reporting and new-employer requirements. Free job mobility is impossible, and changing jobs without permission results in illegal stay.
 
-### 항 2: 룰을 당함 — 높음
+### Clause 2: Subjected to Rules — High
 
-본인의 능력뿐 아니라 고용주의 서류, 직종 코드, 체류질서 판단까지 걸린다.
-근무처 변경 허가 여부는 행정 기관의 재량이 개입되며, 기준이 투명하지 않다.
+It depends not only on one's own ability but also on the employer's documents, occupation code, and the authority's judgment of stay order. Whether a workplace change is approved involves administrative discretion, and the criteria are not transparent.
 
-### 항 3: 따져도 안 먹힘 — 중간~높음
+### Clause 3: Redress Does Not Work — Medium to High
 
-절차는 존재하지만, 실질적 항의력이 약하다:
+Procedures exist, but effective redress power is weak:
 
-- **언어 장벽**: 행정 절차가 한국어 중심
-- **시간 압박**: 허가 대기 중 체류 자격이 불안정
-- **행정 재량**: 거절 사유가 명확하지 않음
-- **고용주 서류 의존**: 이적동의서·계약 해지 증빙 등 고용주 협조 필요
+- **Language barrier**: Administrative proceedings are Korea-centric
+- **Time pressure**: Stay status is unstable while awaiting permission
+- **Administrative discretion**: Grounds for refusal are not clearly stated
+- **Dependence on employer documents**: Employer cooperation required for consent-to-transfer letter, proof of contract termination, etc.
 
-### 항 4: 생존조건을 쥠 — 높음
+### Clause 4: Holds Survival Conditions — High
 
-비자 하나에 연쇄로 묶이는 생존 기반:
+A survival base chained to a single visa:
 
-- **임금**: 근무처가 곧 소득원
-- **체류자격**: 근무처 변경 불허 = 체류 자격 상실
-- **건강보험**: 직장 가입 건강보험, 이탈 시 단절
-- **주거**: 외국인 등록 주소와 고용주 연동
-- **가족 체류**: 본인 비자 상태가 배우자/자녀 체류에 직결
-- **은행/통신**: 외국인등록증 기반 금융·통신 서비스
+- **Wages**: Workplace is the source of income
+- **Stay status**: Denial of workplace change = loss of stay status
+- **Health insurance**: Workplace-based health insurance, severed upon exit
+- **Housing**: Foreign registration address linked to employer
+- **Family stay**: One's own visa status directly determines spouse/children's stay
+- **Banking/telecom**: Financial and telecom services based on foreign registration card
 
-### 락인 위험도: 높음
+### Lock-in Severity: High
 
-네 항 모두 높음~중간 높음이며, 네 번째 항(생존조건을 쥠)이 특히 높다.
+All four clauses are high to medium-high, with the fourth clause (holds survival conditions) particularly high.
 
-## 4. 합작 락인 분석
+## 4. Composite Lock-in Analysis
 
-이 사례의 핵심은 락인을 만드는 주체가 단일이 아니라는 것이다.
+The core of this case is that the actor creating the lock-in is not singular.
 
-### 두 주체, 두 인센티브
+### Two Actors, Two Incentives
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 국가 (법무부) | 이주 통제, 체류 질서 유지 | 체류 허가 구조 설계, 근무처 변경 허가/신고 |
-| 고용주 | 인력 유지, 이직 비용 상승 | 이적동의서, 계약 조건, 서류 협조 |
+| State (Ministry of Justice) | Migration control, maintaining stay order | Design of stay permission structure, workplace change permission/reporting |
+| Employer | Workforce retention, raising turnover cost | Consent-to-transfer letter, contract terms, document cooperation |
 
-두 주체 모두 "이 구조를 바꾸자"고 할 이유가 없다:
+Neither actor has reason to say "let's change this structure":
 
-- 국가는 체류 질서 관리를 명분으로 현재 구조 유지
-- 고용주는 이직 비용 상승이 인력 유지에 유리
+- The state maintains the current structure under the pretext of managing stay order
+- The employer benefits from raised turnover cost for workforce retention
 
-### 교차점에서 생기는 락인
+### Lock-in Arising at the Intersection
 
-국가는 "이건 체류질서 관리다"라고 하고, 고용주는 "이건 근로계약이다"라고
-한다. 그런데 그 둘이 합쳐진 탈출 비용은 어느 쪽도 책임지지 않는다.
+The state says "this is stay-order management," and the employer says "this is an employment contract." But the combined exit cost that the two produce is something neither side takes responsibility for.
 
-- 국가 관점: "근무처 변경 허가는 체류질서상 필요"
-- 고용주 관점: "이적동의서는 계약 관계상 필요"
-- 결과: 두 허가가 결합된 탈출 비용은 어느 기관의 책임으로도 분류되지 않음
+- State's view: "Workplace change permission is necessary for stay order"
+- Employer's view: "The consent-to-transfer letter is necessary for the contract relationship"
+- Result: The exit cost produced by combining the two permissions is not classified under any agency's responsibility
 
-이것이 단일 주권자 모델이 설명하지 못하는 구조다. 락인은 한 주체의
-의도가 아니라, 두 주체가 각자 자기 권한을 행사하는 교차점에서 **생긴다**.
+This is a structure that a single-sovereign model cannot explain. The lock-in is not the intention of one actor; it **emerges** at the intersection where two actors each exercise their own authority.
 
-### 측정의 어려움
+### The Measurement Problem
 
-단일 부문 감사로는 합작 락인이 보이지 않는다:
+A single-sector audit cannot see composite lock-in:
 
-- 노동부 감사: "고용주가 근로계약을 위반했는가?" → 계약 자체는 합법
-- 법무부 감사: "체류 절차가 법적 기준을 따랐는가?" → 절차 자체는 합법
-- 교차항 측정: "국가의 체류 규칙과 고용주의 계약 구조가 결합했을 때
-  탈출 비용이 어느 수준이 되는가?" → 이 질문을 하는 기관이 없음
+- Labor ministry audit: "Did the employer violate the employment contract?" → The contract itself is legal
+- Justice ministry audit: "Did the stay procedure follow legal criteria?" → The procedure itself is legal
+- Cross-term measurement: "When the state's stay rules and the employer's contract structure combine, what level does the exit cost reach?" → No agency asks this question
 
-## 5. 반주권 설계식 처방(해결책)
+## 5. Anti-Sovereign Design Prescriptions (Solutions)
 
-### 처방 원칙: 교차점을 동시에 풀어야 한다
+### Prescription Principle: The Intersection Must Be Unlocked Simultaneously
 
-한쪽만 풀리면 락인이 반쯤 풀리며, 반쯤 풀린 락인은 여전히 락인이다.
+If only one side is unlocked, the lock-in is half-unlocked, and a half-unlocked lock-in is still a lock-in.
 
-예: 브릿지 체류기간이 생겼는데 새 고용주가 이적동의서를 안 주면, 브릿지
-기간 동안 구직만 하다가 비자가 만료되는 구조가 될 수 있다.
+For example: if a bridge stay period is introduced but the new employer does not provide a consent-to-transfer letter, the structure becomes one where the worker only job-hunts during the bridge period until the visa expires.
 
-### 처방 목록
+### Prescription List
 
-| 처방 | 겨냥하는 주체 | 메커니즘 |
+| Prescription | Target Actor | Mechanism |
 | --- | --- | --- |
-| 고용 종료 시 자동 브릿지 체류기간 부여 | 국가 | 고용주와의 관계가 끝나도 체류 자격 유지 |
-| 원 고용주 이적동의서 의존 최소화 | 고용주 | 고용주 서류 협조 없이도 이직 가능 |
-| 임금체불·괴롭힘·계약위반 신고 시 즉시 임시 이전권 | 양쪽 교차점 | 신고 즉시 체류 유지 + 근무처 변경 |
-| 새 고용주 심사 중 합법 체류와 제한적 구직 허용 | 국가 | 심사 대기 중 불법체류화 방지 |
-| 직종별 전환 거절률, 처리기간, 동의서 분쟁, 체불 연계 데이터 공개 | 커널(측정) | 락인 열지도 구성 |
-| 실명 감시 금지, 비자 유형별 락인 열지도만 공개 | 커널(데이터 분리) | 개인 감시 차단 |
-| 피해자 단체/이주민 단체의 반대 감사권 보장 | 감사 시스템 | 다수 감사 + 분쟁 공개 |
+| Automatic bridge stay period upon termination of employment | State | Maintain stay status even after the relationship with the employer ends |
+| Minimize dependence on the original employer's consent-to-transfer letter | Employer | Enable job change without employer document cooperation |
+| Immediate temporary transfer right upon reporting wage arrears, harassment, or contract violation | Both, at the intersection | Maintain stay + change workplace upon report |
+| Permit lawful stay and limited job-seeking during new-employer screening | State | Prevent illegalization during screening wait |
+| Publish transfer denial rates, processing times, consent-letter disputes, and arrears-linked data by occupation code | Kernel (measurement) | Construct lock-in heatmap |
+| Prohibit named surveillance; publish only lock-in heatmaps by visa type | Kernel (data separation) | Block individual surveillance |
+| Guarantee counter-audit rights for victim groups and migrant organizations | Audit system | Multiple audits + dispute disclosure |
 
-### 시행 주체의 문제
+### The Implementing-Actor Problem
 
-처방은 명확한데, **처방을 채택할 권한을 가진 주체가 처방에 의해 자신의
-권한이 줄어드는 구조**다. 이건 프레임워크 자체가 지적하는 "강제의 역설(강제 딜레마)"이다.
+The prescriptions are clear, but **the structure is such that the actor with the authority to adopt a prescription is the one whose authority would be reduced by that prescription**. This is the "coercion paradox (coercion dilemma)" that the framework itself identifies.
 
-현재 비자 정책은 법무부(출입국관리본부)가 통제한다. 법무부가 자기 부처의
-재량을 스스로 줄일 이유가 없다.
+Current visa policy is controlled by the Ministry of Justice (Immigration Office). The Ministry of Justice has no reason to voluntarily reduce its own departmental discretion.
 
-시행 주체 후보와 한계:
+Candidate implementing actors and their limits:
 
-| 후보 | 한계 |
+| Candidate | Limit |
 | --- | --- |
-| 국회 입법 | 이주노동자는 유권자가 아니라서 대표성 없음. 정치적 주기에 휘둘림 |
-| 사법부 판결 | 행정 재량 제한의 한계 |
-| 이주민 단체 반대 감사권 | 자원 부족, 정부 예산 의존 시 또 다른 락인 |
-| 국제기구 압력 | 국가 주권 침해 논란, 실제 강제력 약함 |
+| National Assembly legislation | Migrant workers are not voters, so there is no representation. Subject to political cycles |
+| Judicial rulings | Limits on restricting administrative discretion |
+| Migrant organizations' counter-audit rights | Resource shortages; dependence on government budget creates another lock-in |
+| International organization pressure | Disputes over state sovereignty infringement; weak actual enforcement power |
 
-### 완화책: 당사자에게 직접 권리 부여
+### Mitigation: Grant Rights Directly to the Affected Party
 
-국가가 브릿지 기간을 "부여"하는 것이 아니라, 이주노동자가 일정 조건
-충족 시 **단독으로 체류를 유지할 수 있는 권리**를 법적으로 갖는 것.
-이 권리가 행사되면 고용주의 동의가 필요 없고, 법무부의 개별 허가도
-필요 없다. 통제가 주체에서 개인으로 이동하는 구조.
+Rather than the state "granting" a bridge period, the migrant worker holds — by law — **the right to maintain stay independently upon meeting certain conditions**. When this right is exercised, the employer's consent is not needed, nor is individual permission from the Ministry of Justice. It is a structure in which control shifts from the actor to the individual.
 
-물론 이 권리의 요건을 정하는 것 자체가 통치 강제다. 다만 이건 매번 같은
-재귀이고, 프레임워크가 인정하는 한계다.
+Of course, setting the requirements for this right is itself an act of governance coercion. But this is the same recursion every time, and it is a limitation the framework acknowledges.
 
-## 6. 락인 열지도 (Lock-in Heatmap)
+## 6. Lock-in Heatmap
 
-개인을 식별하지 않고, 비자 유형별 락인 구조를 가시화한다:
+Without identifying individuals, the lock-in structure by visa type is visualized:
 
 ```
-비자 유형    | 이탈가능성(나갈 수 있나?) | 규칙강제성(규칙이 센가?) | 항의실효성(항의가 먹히나?) | 의존비대칭(없으면 안 되나?) | 위험도
+Visa type    | Exit feasibility (can you leave?) | Rule coercion (are rules strong?) | Redress efficacy (does redress work?) | Dependency asymmetry (indispensable?) | Severity
 -----------|----------|----------|----------|----------|------
-E-7 (취업)  | 낮음      | 높음      | 중간      | 높음      | 높음
-E-9 (비전문)| 매우 낮음 | 매우 높음 | 낮음      | 매우 높음 | 매우 높음
-E-2 (회화)  | 중간      | 중간      | 중간      | 중간      | 중간
-F-2 (거주)  | 높음      | 낮음      | 높음      | 낮음      | 낮음
-F-4 (재외동포)| 높음     | 낮음      | 높음      | 낮음      | 낮음
+E-7 (work)  | Low      | High     | Medium   | High     | High
+E-9 (non-professional) | Very low | Very high | Low | Very high | Very high
+E-2 (language) | Medium | Medium | Medium | Medium | Medium
+F-2 (residence) | High | Low | High | Low | Low
+F-4 (overseas Korean) | High | Low | High | Low | Low
 ```
 
-이 열지도가 보여주는 것:
-- E-9가 E-7보다 더 심각한 락인 구조 (고용주 허가 없이 근무처 변경 불가)
-- 거주(F-2)와 재외동포(F-4)는 락인 위험도가 낮음 — 탈출권(빠져나갈 권리)이 보장되는 구조의 참고점
-- 직종별 세부 분석이 필요한 영역: E-7 내에서도 직종 코드에 따라 이적동의서
-  의존도가 다름
+What this heatmap shows:
+- E-9 has a more severe lock-in structure than E-7 (workplace change impossible without employer permission)
+- Residence (F-2) and overseas Korean (F-4) have low lock-in severity — reference points for structures where the right of exit is guaranteed
+- Areas requiring detailed occupation-by-occupation analysis: even within E-7, dependence on the consent-to-transfer letter varies by occupation code
 
-## 7. 이 사례가 프레임워크에 미치는 영향
+## 7. Impact of This Case on the Framework
 
-### 검증된 것
+### What Was Verified
 
-1. **판별식이 작동한다** — 네 항 판별식이 구체적 정책을 분석 가능
-2. **합작 락인 개념이 필요하다** — 단일 주체 모델로는 E-7 구조를 설명 못 함
-3. **락인 열지도가 분석 도구로 기능한다** — 비자 유형 간 비교 가능
-4. **처방이 행정표로 내려온다** — 추상철학이 아니라 구체적 행정 개혁안
+1. **The discriminant works** — the four-clause discriminant can analyze concrete policy
+2. **The composite lock-in concept is necessary** — a single-actor model cannot explain the E-7 structure
+3. **The lock-in heatmap functions as an analytical tool** — comparison across visa types is possible
+4. **Prescriptions come down as administrative forms** — not abstract philosophy but concrete administrative reform proposals
 
-### 남은 과제
+### Remaining Challenges
 
-1. **시행 주체 문제 미해결** — 강제의 역설이 구체 사례에서 재등장
-2. **합작 락인의 측정 방법 미정립** — 교차항 측정을 할 기관/절차 부재
-3. **임계값 설정 미정** — "높음/중간/낮음" 이외의 정량화 필요
-4. **데이터 분리의 기술적 구현 미정** — 차등프라이버시 등의 구체적 적용 방안
+1. **The implementing-actor problem is unresolved** — the coercion paradox reappears in a concrete case
+2. **The measurement method for composite lock-in is not established** — no agency or procedure for cross-term measurement exists
+3. **Threshold setting is undefined** — quantification beyond "high/medium/low" is needed
+4. **The technical implementation of data separation is undetermined** — concrete application of differential privacy and similar techniques
 
-## 8. 다음 사례로의 확장
+## 8. Extension to the Next Case
 
-이 사례는 "지역적 주권"을 다룬다. 다음 사례인 **플랫폼 계정 정지**는
-**비지역적 주권(땅 없는 힘)**을 다루며, 같은 판별식이 영토 없는 주권자(Google/Apple/Meta)에도
-적용됨을 보일 것이다.
+This case deals with "territorial sovereignty." The next case, **platform account suspension**, deals with **non-territorial sovereignty (power without territory)**, and will show that the same discriminant applies to sovereigns without territory (Google/Apple/Meta).
 
-이 두 사례를 함께 보면, 프레임워크가 지역 경계에 묶이지 않고 모든 권력
-구조에 보편적으로 적용됨이 입증된다.
+Viewed together, these two cases demonstrate that the framework applies universally to all power structures, not bound by territorial borders.

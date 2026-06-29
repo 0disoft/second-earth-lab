@@ -1,225 +1,225 @@
-# 사례 분석 템플릿
+# Case Analysis Template
 
-> 반주권 설계 (Anti-Sovereign Design) v4 프레임워크에 새 사례를 적용할 때 사용하는 템플릿.
-> 쉬운 말 매핑은 [용어 매핑표](./docs/glossary.md)를 따른다.
-> 이 템플릿은 다섯 사례(E-7, 플랫폼, 의료, 돌봄, 교육)에서 검증된 구조를
-> 표준화한 것이다. 모든 섹션이 채워져야 완전한 분석이 된다.
+> Template used when applying a new case to the Anti-Sovereign Design v4 framework.
+> For plain-language mappings, follow the [terminology mapping table](./docs/glossary.md).
+> This template standardizes the structure validated across five cases (E-7, platform, healthcare, care, education).
+> A complete analysis requires all sections to be filled.
 
-## 사용 방법
+## How to Use
 
-1. 이 파일을 복사하여 `case-<이름>.md`로 이름을 바꾼다.
-2. 각 섹션의 지시를 따라 채운다.
-3. 괄호 안의 안내(`[...]`)는 삭제하고 실제 내용으로 대체한다.
-4. 완료 후 README.md의 문서 구성 표에 추가한다.
+1. Copy this file and rename it to `case-<name>.md`.
+2. Fill in each section following its instructions.
+3. Replace the bracketed guidance (`[...]`) with actual content.
+4. After completion, add it to the document composition table in README.md.
 
 ---
 
-## 1. 왜 이 사례인가
+## 1. Why This Case
 
-> 이 사례가 프레임워크의 어떤 측면을 시험하는지 한 문단으로 서술한다.
-> 다섯 사례가 검증한 다섯 주권 유형(지역, 비지역, 물리적, 관계적, 인정 체계)
-> 중 어디에 해당하는지, 또는 새로운 주권 유형인지 밝힌다.
+> Describe in one paragraph which aspect of the framework this case tests.
+> State which of the five sovereignty types validated by the five cases (territorial, non-territorial, physical, relational, recognition regime)
+> it falls under, or whether it constitutes a new sovereignty type.
 
-[이 사례가 프레임워크를 세게 시험하는 이유를 서술한다.]
+[Describe why this case tests the framework hard.]
 
-### 핵심 질문
+### Core Question
 
-[이 사례가 던지는 핵심 질문을 한 문장으로]
+[State the core question this case raises in one sentence.]
 
-### 이 사례가 검증할 명제
+### Proposition This Case Validates
 
-[프레임워크의 기존 명제를 시험하는지, 새 명제를 제안하는지]
+[Whether it tests an existing proposition of the framework or proposes a new one.]
 
-## 2. 판별식 적용
+## 2. Applying the Discriminant
 
-> 락인 판별식 4항을 각 주체별로 적용한다.
-> 둘 이상의 주체가 갇히면 각각 작성한다 (돌봄: 제공자+수혜자, 교육: 학생+부모+교사).
+> Apply the four items of the lock-in discriminant to each actor.
+> If two or more actors are locked in, write each separately (care: provider+recipient, education: student+parent+teacher).
 
-### [주체 A — 예: 사용자, 환자, 학생]
+### [Actor A — e.g., user, patient, student]
 
-| 항 | 점수 (높음/중간/낮음) | 설명 |
+| Item | Score (High/Medium/Low) | Explanation |
 | --- | --- | --- |
-| 못 나감 | | [이탈을 막는 구조적 요소] |
-| 룰을 당함 | | [일방적 규칙 부과] |
-| 따져도 안 먹힘 | | [항의 절차의 실질적 실효성] |
-| 생존조건을 쥠 | | [의존 비대칭(차이)의 구체적 내용] |
+| Cannot exit | | [Structural factors preventing exit] |
+| Rules imposed | | [Unilateral rule imposition] |
+| Redress ineffective | | [Practical efficacy of redress procedures] |
+| Holds survival conditions | | [Specific content of dependency asymmetry] |
 
-### [주체 B — 해당하는 경우]
+### [Actor B — if applicable]
 
-| 항 | 점수 | 설명 |
+| Item | Score | Explanation |
 | --- | --- | --- |
-| 못 나감 | | |
-| 룰을 당함 | | |
-| 따져도 안 먹힘 | | |
-| 생존조건을 쥠 | | |
+| Cannot exit | | |
+| Rules imposed | | |
+| Redress ineffective | | |
+| Holds survival conditions | | |
 
-### 락인 위험도: [높음/매우 높음/중간] (주체 A), [...] (주체 B)
+### Lock-in severity: [High/Very High/Medium] (Actor A), [...] (Actor B)
 
-> 4번째 항(생존조건을 쥠)이 "매우 높음"이면 나머지 3항이 중간이어도 위험도가 높음.
+> If the 4th item (holds survival conditions) scores "very high," lock-in severity is high even if the other three items are medium.
 
-[위험도 평가의 이유를 서술한다.]
+[Describe the reasoning for the severity assessment.]
 
-## 3. 데이터 이동성(데이터 가져가기) 3층
+## 3. Data Portability (Taking Your Data With You) — Three Layers
 
-> 기술적(1층), 의미적(2층), 제도적(3층) 이동성을 각각 평가한다.
-> 이 사례에서 어느 층이 병목(막힘)인지 밝힌다.
+> Assess technical (Layer 1), semantic (Layer 2), and institutional (Layer 3) portability separately.
+> Identify which layer is the bottleneck in this case.
 
-### 1층: 기술적 이동성 — [충족/부분/부재]
+### Layer 1: Technical Portability — [Met/Partial/Absent]
 
-| 항목 | 현재 상태 |
+| Item | Current Status |
 | --- | --- |
-| [데이터 유형 1] | [이탈 가능 여부] |
-| [데이터 유형 2] | |
+| [Data type 1] | [Whether exit is possible] |
+| [Data type 2] | |
 
-### 2층: 의미적 이동성 — [충족/부분/부재]
+### Layer 2: Semantic Portability — [Met/Partial/Absent]
 
-| 항목 | 현재 상태 |
+| Item | Current Status |
 | --- | --- |
-| [호환성 항목 1] | [다른 시스템에서 해석 가능 여부] |
-| [호환성 항목 2] | |
+| [Compatibility item 1] | [Whether interpretable by other systems] |
+| [Compatibility item 2] | |
 
-### 3층: 제도적 이동성 — [충족/부분/부재]
+### Layer 3: Institutional Portability — [Met/Partial/Absent]
 
-| 항목 | 현재 상태 |
+| Item | Current Status |
 | --- | --- |
-| [인정/상호운용 항목 1] | [다른 기관이 인정하는지] |
-| [인정/상호운용 항목 2] | |
+| [Recognition/interoperability item 1] | [Whether other institutions recognize it] |
+| [Recognition/interoperability item 2] | |
 
-### 병목 분석
+### Bottleneck Analysis
 
-[어느 층이 없으면 다른 층이 무의미해지는지 서술한다.]
+[Describe which layer, if absent, renders the other layers meaningless.]
 
-## 4. 합작 락인
+## 4. Composite Lock-in
 
-> 둘 이상의 주체가 각자 다른 인센티브로 락인을 만드는 구조를 식별한다.
-> 4단계 공통 패턴이 반복되는지 확인한다.
+> Identify structures where two or more actors create lock-in through their respective, differing incentives.
+> Check whether the four-stage common pattern recurs.
 
-### 합작 구조 목록
+### List of Composite Structures
 
-| # | 주체 A (역할) | 주체 B 이상 (역할) | 교차점 락인 |
+| # | Actor A (role) | Actor B+ (role) | Intersection lock-in |
 | --- | --- | --- | --- |
 | 1 | | | |
 | 2 | | | |
 | 3 | | | |
 | ... | | | |
 
-### 4단계 패턴 확인
+### Four-Stage Pattern Verification
 
-1. **각 주체는 자기 역할만 수행** — [각 주체의 합의점]
-2. **교차점에서 생기는 락인** — [단일 부문 감사로 보이지 않는 것]
-3. **처방(해결책)은 교차점을 동시에 풀어야** — [한쪽만 풀면 어떻게 되는지]
-4. **시행 주체의 역설** — [처방을 채택할 권한을 가진 주체가 누구인지]
+1. **Each actor performs only its own role** — [each actor's point of agreement]
+2. **Lock-in arises at the intersection** — [what a single-sector audit cannot see]
+3. **The prescription must resolve the intersection simultaneously** — [what happens if only one side is resolved]
+4. **The implementer's paradox** — [which actor holds the authority to adopt the prescription]
 
-## 5. 관계적 락인 (해당하는 경우)
+## 5. Relational Lock-in (If Applicable)
 
-> 두 명 이상이 서로 다른 방식으로 같이 묶이는 구조.
-> 단일인 락인(국가/플랫폼/의료)이면 이 섹션을 생략해도 된다.
+> Structures where two or more actors are bound together in different ways.
+> If the lock-in is singular (state/platform/healthcare), this section may be omitted.
 
-### 락인 구조
+### Lock-in Structure
 
-- **[주체 A]는 [무엇]에 묶임**
-- **[주체 B]는 [무엇]에 묶임**
-- **[주체 C — 해당시]는 [무엇]에 묶임**
+- **[Actor A] is bound to [what]**
+- **[Actor B] is bound to [what]**
+- **[Actor C — if applicable] is bound to [what]**
 
-### 탈출 피해
+### Exit Harm
 
-> 한 사람의 탈출이 다른 사람의 생존을 위협하는지 확인한다.
-> 돌봄(탈출=방치), 교육(학군 변경=입시 트랙 단절)과 비교한다.
+> Check whether one person's exit threatens another's survival.
+> Compare with care (exit = neglect) and education (school district change = admission track disruption).
 
-| 탈출 주체 | 제3자에게 미치는 영향 |
+| Exiting actor | Impact on third parties |
 | --- | --- |
 | | |
 
-## 6. 반주권 설계식 처방
+## 6. Anti-Sovereign Design Prescriptions
 
-> 락인을 풀기 위한 처방을 제시한다. 각 처방은 프레임워크의 어느 장치에
-> 대응하는지 표시한다.
+> Present prescriptions for resolving lock-in. For each prescription, indicate which
+> mechanism of the framework it corresponds to.
 
-### 처방 목록
+### List of Prescriptions
 
-| # | 처방 | 대상 | 메커니즘 | 프레임워크 대응 |
+| # | Prescription | Target | Mechanism | Framework Correspondence |
 | --- | --- | --- | --- | --- |
-| 1 | | | | [데이터 이동성/탈출권(빠져나갈 권리) 강제/이의제기/포크/...] |
+| 1 | | | | [Data portability / enforced right of exit / objection / fork / ...] |
 | 2 | | | | |
 | 3 | | | | |
 | ... | | | | |
 
-### 시행 주체 문제
+### The Implementer Problem
 
-[처방을 채택할 권한을 가진 주체가 누구인지, 그 주체가 자기 권한을 줄일
-이유가 없는 역설을 서술한다.]
+[Describe which actor holds the authority to adopt the prescription, and the paradox
+that this actor has no reason to reduce its own authority.]
 
-### 부문별 포크 원칙 적용
+### Sector-Specific Fork Principles
 
-| 부문 | 핵심 원칙 | 이 사례에서의 적용 |
+| Sector | Core Principle | Application in This Case |
 | --- | --- | --- |
-| [해당 부문] | [진짜 포크/인정 이동성/접근 보장/대체 돌봄/인정 다원화] | |
+| [Relevant sector] | [Real fork / recognition portability / access guarantee / alternative care / recognition pluralism] | |
 
-## 7. 락인 열지도 (Lock-in Heatmap)
+## 7. Lock-in Heatmap
 
-> 이 사례의 내부 변형(사용자 유형, 트랙, 단계)별로 락인 위험도를
-> 가시화한다.
+> Visualize lock-in severity across internal variations (user types, tracks, stages)
+> in this case.
 
-### [분류 축 1] × [분류 축 2]
+### [Classification axis 1] × [Classification axis 2]
 
 ```
-[유형 A]     | 이탈가능성(나갈 수 있나?) | 규칙강제성(규칙이 센가?) | 항의실효성(항의가 먹히나?) | 의존비대칭(없으면 안 되나?) | 위험도
-[유형 B]     |           |           |           |           |
-[유형 C]     |           |           |           |           |
+[Type A]     | Exit feasibility (can they leave?) | Rule coercion (are the rules strong?) | Redress efficacy (does redress work?) | Dependency asymmetry (do they need it?) | Severity
+[Type B]     |           |           |           |           |
+[Type C]     |           |           |           |           |
 ```
 
-### 특이점
+### Anomalies
 
-[열지도에서 드러나는 역설이나 예외적 패턴을 서술한다.
-예: 홈스쿨링 역설 — 이탈 가능성은 높지만 인정 부재로 의존 비대칭 매우 높음]
+[Describe paradoxes or exceptional patterns revealed by the heatmap.
+e.g., homeschooling paradox — exit feasibility is high, but absence of recognition makes dependency asymmetry very high]
 
-## 8. 기존 사례와의 비교
+## 8. Comparison with Existing Cases
 
-> 이 사례를 기존 사례(E-7, 플랫폼, 의료, 돌봄, 교육)와 비교한다.
+> Compare this case with existing cases (E-7, platform, healthcare, care, education).
 
-### 판별식 비교
+### Discriminant Comparison
 
-| 차원 | E-7 | 플랫폼 | 의료 | 돌봄 | 교육 | [이 사례] |
+| Dimension | E-7 | Platform | Healthcare | Care | Education | [This case] |
 | --- | --- | --- | --- | --- | --- | --- |
-| 주권 유형 | 지역적 | 비지역적 | 물리적 | 관계적 | 인정 체계 | |
-| 생존조건 | | | | | | |
-| 락인된 사람 수 | 1 | 1 | 1 | 2+ | 3 | |
-| 탈출 시 제3자 영향 | 없음 | 없음 | 없음 | 생존 위협 | 트랙 단절 | |
-| 항의 능력 | | | | | | |
+| Sovereignty type | Territorial | Non-territorial | Physical | Relational | Recognition regime | |
+| Survival conditions | | | | | | |
+| Number locked in | 1 | 1 | 1 | 2+ | 3 | |
+| Third-party impact on exit | None | None | None | Survival threat | Track disruption | |
+| Redress capacity | | | | | | |
 
-### 탈출권의 형태
+### Form of the Right of Exit
 
-| 사례 | 탈출권의 형태 | 핵심 요구 |
+| Case | Form of right of exit | Core demand |
 | --- | --- | --- |
-| [이 사례] | | |
+| [This case] | | |
 
-## 9. 이 사례가 프레임워크에 미치는 영향
+## 9. This Case's Impact on the Framework
 
-### 검증된 것
+### What Was Validated
 
-1. [프레임워크의 기존 명제가 이 사례에서도 성립하는지]
+1. [Whether existing propositions of the framework hold in this case]
 2. ...
 
-### 새로이 드러낸 것
+### Newly Revealed
 
-1. [기존 프레임워크에 없던 새로운 차원이나 개념]
+1. [New dimensions or concepts not present in the existing framework]
 2. ...
 
-### 승격 후보
+### Promotion Candidates
 
-> 이 사례에서 새로 발견된 개념 중 framework.md로 승격할 만한 것이 있으면
-> 명시한다. 승격 기준: 기존 사례에도 소급 적용되는 보편적 개념인지.
+> If any concept newly discovered in this case merits promotion to framework.md,
+> state it explicitly. Promotion criterion: whether it is a universal concept that can be retroactively applied to existing cases.
 
-| 개념 | 승격 여부 | 승격 위치 (후보) |
+| Concept | Promoted? | Promotion location (candidate) |
 | --- | --- | --- |
-| | [승격/보류] | |
+| | [Promoted/Held] | |
 
-### 남은 과제
+### Remaining Tasks
 
-1. [이 사례에서 풀리지 않은 문제]
+1. [Problems unresolved in this case]
 2. ...
 
-## 10. 결론 — 프레임워크 보편성에 대한 기여
+## 10. Conclusion — Contribution to Framework Universality
 
-[이 사례가 프레임워크의 보편성을 어떻게 확장/시험/도전하는지 한 문단으로
-서술한다.]
+[Describe in one paragraph how this case extends/tests/challenges the
+universality of the framework.]

@@ -1,483 +1,384 @@
-# 17. 국가 커널(국가 최소 규칙) 락인 (National Kernel Lock-in)
+# 17. National Kernel (National Minimum Rules) Lock-in
 
-> 국가법은 지역 합의 위에 놓인 최상위 강제 커널이다.
-> 쉬운 말 매핑은 [용어 매핑표](./docs/glossary.md)를 따른다.
-> 반주권 설계(사람을 가두지 않는 설계)가 지역과 플랫폼만 분석하고 국가 입법·전쟁·비상권(비상 권한)을
-> 분석하지 않으면, 가장 큰 락인을 놓친다.
+> National law is the supreme coercive kernel layered on top of regional consensus.
+> For plain-language mapping, see the [glossary](./docs/glossary.md).
+> If Anti-Sovereign Design (design that does not trap people) analyzes only regions and platforms while leaving national legislation, war powers, and emergency powers unexamined, it misses the largest lock-in.
 
-## 17.1 왜 이 장이 필요한가
+## 17.1 Why This Chapter Is Necessary
 
-전쟁권 장(16장)은 전쟁 버튼이 눌리면 모든 탈출권(빠져나갈 권리)이 정지된다고 말했다.
-그런데 전쟁이 없어도 국가는 지역을 무력화한다. 매일, 평시에, 합법적으로.
+The war-power chapter (Chapter 16) stated that once the war button is pressed, every right of exit (the right to get out) is suspended.
+But even without war, the state neutralizes regions. Every day, in peacetime, legally.
 
-- 국회가 법률을 통과시키면 지역 조례는 무효다.
-- 중앙정부가 예산을 배정하면 지역은 그 틀 안에서만 쓸 수 있다.
-- 대통령이 긴급명령을 내리면 지역 합의는 거치지 않는다.
-- 법령이 바뀌면 지역이 만든 인정 체계, 의료 기록 포맷, 교육 과정이 하루아침에
-  무효가 된다.
+- When the National Assembly passes a law, regional ordinances become void.
+- When the central government allocates a budget, regions can only spend within that framework.
+- When the president issues an emergency order, regional consensus is not even consulted.
+- When statutes change, the recognition regimes, medical record formats, and curricula built by regions are invalidated overnight.
 
-**전쟁권은 국가 커널의 하위 항목이 아니라, 국가 커널이 예외상태로 전환될 때
-나타나는 최고강도 모드다.** 국가 커널은 평시의 일상 강제를 설명하고, 전쟁
-커널은 그 강제가 국경·징병(군대에 강제로 보냄)·계엄·동원으로 증폭되는 순간을 설명한다. 전쟁권
-장(16장)이 "비상 버튼"을 다뤘다면, 이 장은 **일상 버튼**을 다룬다.
+**The war power is not a sub-item of the national kernel; it is the highest-intensity mode that appears when the national kernel switches to an exception state.** The national kernel describes the everyday coercion of peacetime, while the war kernel describes the moment that coercion is amplified into borders, conscription (forced dispatch into the military), martial law, and mobilization. If the war-power chapter (Chapter 16) dealt with the "emergency button," this chapter deals with the **everyday button**.
 
-핵심 명제:
+Core proposition:
 
-**대통령과 국회가 너무 센 게 아니라, 선거 한 번을 "모든 미래 강제에 대한
-포괄 동의(한꺼번에 동의)"로 취급하는 구조가 문제다.**
+**The problem is not that the president and the National Assembly are too strong; it is the structure that treats a single election as blanket consent (consent all at once) to all future coercion.**
 
-바로잡는 방향은 대통령을 착하게 만들기가 아니라, **국가 결정 하나하나에
-락인 비용표를 붙이고, 지역·개인·탈출 불가능자에게 브레이크를 주는 것**이다.
+The corrective direction is not to make the president virtuous, but to **attach a lock-in cost sheet to each national decision and give brakes to regions, individuals, and those who cannot exit.**
 
-## 17.2 구조: 지방자치는 허용된 자치다
+## 17.2 Structure: Local Autonomy Is Permitted Autonomy
 
-한국 헌법을 기준으로, 국가와 지역의 권한 관계를 확인한다. 다음 조항은
-국가법령정보센터에서 직접 검증했다 (2026년 6월 접근, 헌법 제10호
-1987. 10. 29. 전부개정).
+Based on the South Korean Constitution, we verify the authority relationship between the state and the region. The following provisions were verified directly at the National Law Information Center (accessed June 2026, Constitution No. 10, fully amended October 29, 1987).
 
-| 조항 | 원문 (검증됨) | 구조적 의미 |
+| Article | Original text (verified) | Structural meaning |
 | --- | --- | --- |
-| 제40조 | "입법권(법 만드는 권한)은 국회에 속한다." | 모든 법률이 국회를 통과한다. 지역이 만드는 것은 법률이 아니라 조례다. |
-| 제73조 | "대통령은 조약을 체결·비준하고, 외교사절을 신임·접수 또는 파견하며, 선전포고와 강화를 한다." | 전쟁·외교 결정이 대통령 단일 권한이다. |
-| 제76조 ① | 대통령은 내우·외환·천재·지변 또는 중대한 재정·경제상의 위기에 있어서 국가의 안전보장 또는 공공의 안녕질서를 유지하기 위하여 긴급한 조치가 필요하고 국회의 집회를 기다릴 여유가 없을 때에 한하여 최소한으로 필요한 재정·경제상의 처분을 하거나 이에 관하여 법률의 효력을 가지는 명령을 발할 수 있다. | 대통령이 법률의 효력을 가지는 명령을 단독 발동 가능. 단, 사후 국회 승인 필요 (③④⑤항). |
-| 제76조 ② | 대통령은 국가의 안위에 관계되는 중대한 교전상태에 있어서 국가를 보위하기 위하여 긴급한 조치가 필요하고 국회의 집회가 불가능한 때에 한하여 법률의 효력을 가지는 명령을 발할 수 있다. | 교전상태에서 대통령이 법률 효력 명령 단독 발동. 이것이 16장 전쟁권의 헌법적 근거다. |
-| 제77조 ① | 대통령은 전시·사변 또는 이에 준하는 국가비상사태에 있어서 병력으로써 군사상의 필요에 응하거나 공공의 안녕질서를 유지할 필요가 있을 때에는 법률이 정하는 바에 의하여 계엄을 선포할 수 있다. | 계엄 선포권이 대통령에게 있다. |
-| 제77조 ③ | 비상계엄이 선포된 때에는 법률이 정하는 바에 의하여 영장제도, 언론·출판·집회·결사의 자유, 정부나 법원의 권한에 관하여 특별한 조치를 할 수 있다. | 비상계엄 발동 시 기본권 체계가 접힌다. 16장이 다룬 "탈출권 일괄 정지"의 헌법적 근거. |
-| 제77조 ⑤ | 국회가 재적의원 과반수의 찬성으로 계엄의 해제를 요구한 때에는 대통령은 이를 해제하여야 한다. | 유일한 브레이크 — 국회 과반수. 하지만 계엄 중 국회 소집 자체가 어려울 수 있다. |
-| 제117조 ① | 지방자치단체는 주민의 복리에 관한 사무를 처리하고 재산을 관리하며, **법령의 범위 안에서** 자치에 관한 규정을 제정할 수 있다. | 지방자치는 국가 법령의 하위 설정이다. "법령의 범위"가 병목(막힘)이다. |
+| Art. 40 | "The legislative power (the power to make laws) belongs to the National Assembly." | All laws pass through the National Assembly. What regions create is not law but ordinances. |
+| Art. 73 | "The President concludes and ratifies treaties, accredits, receives, or dispatches diplomatic envoys, and declares war and concludes peace." | War and diplomatic decisions are the president's sole authority. |
+| Art. 76 ① | The President may, when necessary to maintain national security or public peace and order in the face of internal turmoil, external provocation, natural disaster, or a grave financial or economic crisis, and when there is no time to await the convening of the National Assembly, take minimum necessary financial or economic measures or issue orders having the effect of law. | The president can unilaterally issue orders with the force of law. However, ex post National Assembly approval is required (③④⑤). |
+| Art. 76 ② | The President may, when necessary to protect the state in a state of grave engagement crisis concerning national security and when the convening of the National Assembly is impossible, issue orders having the effect of law. | In a state of engagement, the president can unilaterally issue orders with the force of law. This is the constitutional basis for the war power of Chapter 16. |
+| Art. 77 ① | The President may, when necessary to meet military requirements or to maintain public peace and order during wartime, armed conflict, or a comparable national emergency, proclaim martial law as prescribed by law. | The authority to proclaim martial law belongs to the president. |
+| Art. 77 ③ | When emergency martial law is proclaimed, special measures may be taken with respect to the warrant system, freedom of speech, press, assembly, and association, and the authority of the government or the courts, as prescribed by law. | When emergency martial law is activated, the fundamental-rights system folds. This is the constitutional basis for the "blanket suspension of the right of exit" covered in Chapter 16. |
+| Art. 77 ⑤ | When the National Assembly requests the lifting of martial law by a majority vote of the members present, the President shall comply. | The sole brake — a National Assembly majority. But convening the National Assembly during martial law may itself be difficult. |
+| Art. 117 ① | Local governments handle affairs concerning the welfare of residents and manage property, and may enact provisions concerning autonomy **within the scope of statutes and regulations.** | Local autonomy is a sub-setting of national statutes. "Within the scope of statutes" is the bottleneck. |
 
-출처: [국가법령정보센터, 대한민국헌법](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=61603)
+Source: [National Law Information Center, Constitution of the Republic of Korea](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=61603)
 
-### 핵심 구조
+### Core Structure
 
 ```
 ┌──────────────────────────────────────────────────┐
-│  국가 커널 (National Kernel)                       │
-│  - 입법권 (제40조, 국회)                            │
-│  - 조약·선전포고·강화 (제73조, 대통령)              │
-│  - 긴급명령·긴급재정경제처분 (제76조, 대통령)        │
-│  - 계엄 선포 + 기본권 정지 (제77조, 대통령)         │
-│  - 예산 배분 (국회+정부)                            │
-│  - 인허가(허가)·감독 (행정부)                             │
+│  National Kernel                                  │
+│  - Legislative power (Art. 40, National Assembly) │
+│  - Treaties, war declaration, peace (Art. 73, President) │
+│  - Emergency orders, emergency fiscal/economic measures (Art. 76, President) │
+│  - Martial law proclamation + suspension of fundamental rights (Art. 77, President) │
+│  - Budget allocation (National Assembly + Government) │
+│  - Licensing, supervision (Executive)              │
 ├──────────────────────────────────────────────────┤
-│  "법령의 범위 안에서" (제117조)                     │
-│  ↓ 하위 설정값                                      │
+│  "Within the scope of statutes" (Art. 117)        │
+│  ↓ sub-setting                                    │
 ├──────────────────────────────────────────────────┤
-│  지역 자치 (조례, 규칙)                             │
-│  - 주민 복리 사무                                   │
-│  - 재산 관리                                        │
-│  - 자치 규정 (단, 법령 범위 내)                     │
+│  Regional autonomy (ordinances, rules)            │
+│  - Resident welfare affairs                       │
+│  - Property management                            │
+│  - Autonomy provisions (within the scope of statutes) │
 ├──────────────────────────────────────────────────┤
-│  개인·플랫폼·병원·학교·돌봄                         │
-│  (지역이 아니라 국가법이 직접 때리기도 함)           │
+│  Individuals, platforms, hospitals, schools, care  │
+│  (sometimes national law strikes directly, not via the region) │
 └──────────────────────────────────────────────────┘
 ```
 
-지역은 "자기 운영체제"를 가진 게 아니다. 국가 OS 위에서 돌아가는 앱에
-가깝다. 국가가 API를 닫으면 끝난다.
+The region does not have its "own operating system." It is closer to an app running on top of the national OS. When the state closes the API, it is over.
 
-## 17.3 왜 권한이 여기까지 집중됐는가
+## 17.3 Why Authority Concentrated Here
 
-### 원인 1: 전쟁국가의 유산
+### Cause 1: Legacy of the War State
 
-근대 국가는 기본적으로 세금 걷고, 병력 동원하고, 국경 지키려고 만들어졌다.
-지역 동의보다 빠른 동원과 일관된 명령이 우선이었다. 중앙집권은 효율의
-도구였고, 그 효율은 외부 위협 앞에서 정당화됐다.
+The modern state was fundamentally created to collect taxes, mobilize troops, and defend borders. Faster mobilization and unified command took precedence over regional consent. Centralization was a tool of efficiency, and that efficiency was justified in the face of external threats.
 
-한국의 경우, 국가 자체가 해방·분단·전쟁(1950-53)·군사정변(1961)·긴급조치
-(1972-79)·계엄(1980)을 거치며 형성됐다. 현재 헌법(1987)은 민주화의 산물이지만,
-그 안에 계엄·긴급명령·선전포고 권한을 그대로 보존하고 있다. 1987년 헌법이
-이 권한들을 만든 게 아니라, 전쟁국가의 유산을 제한적으로 계승한 것이다.
+In the case of Korea, the state itself was formed through liberation, division, war (1950–53), a military coup (1961), emergency measures (1972–79), and martial law (1980). The current constitution (1987) is a product of democratization, but it preserves martial law, emergency orders, and war declaration authority intact. The 1987 Constitution did not create these powers; it narrowly inherited the legacy of the war state.
 
-### 원인 2: 대표민주주의의 동의 압축
+### Cause 2: Consent Compression in Representative Democracy
 
-"국민이 선거로 국회/대통령을 뽑았으니 그들이 결정한 건 국민 동의다"라는
-압축 논리(줄여서 생각하기). 근데 실제로는 개별 법률, 전쟁, 징병, 지역 강제에 대해 국민이
-직접 동의한 적은 없다.
+The compression logic (thinking by reduction): "The people elected the National Assembly and the president, so what they decide is the people's consent." But in reality, the people have never directly consented to individual laws, wars, conscription, or regional coercion.
 
-선거는 **방향 선호**를 표현하는 도구지, **모든 미래 결정에 대한 포괄 동의**가
-아니다. 그런데 현행 구조는 한 번의 선거 결과를 이후 수년간의 모든 법률·예산·
-비상조치에 대한 위임으로 취급한다. 이건 "동의"라기보다 **위임의 과잉**이다.
+An election is a tool for expressing **directional preference**, not **blanket consent to all future decisions**. Yet the current structure treats a single election result as a delegation for all subsequent laws, budgets, and emergency measures for years afterward. This is not "consent" so much as **excess of delegation**.
 
-### 원인 3: 단일국가 법 위계(차례)
+### Cause 3: Unitary State Legal Hierarchy
 
-한국은 연방제가 아니라 단일국가 구조다. 지역법이 국가법과 정면 충돌하기
-어렵다. 제117조의 "법령의 범위 안에서"가 정확히 그 병목이다 — 지역이
-만들 수 있는 규칙의 상한이 국가 법령으로 정해진다.
+Korea is not a federal system but a unitary state structure. Regional law cannot directly conflict with national law. Art. 117's "within the scope of statutes" is precisely that bottleneck — the upper bound of rules a region can create is set by national statutes.
 
-연방제 국가에서는 주(州) 헌법이 연방법과 위계가 다르고, 주 고유 권한이
-명시될 수 있다. 단일국가에서는 그런 구조적 완충이 없다. 지역 자치는
-국가가 "허용한" 범위 내에서만 작동한다.
+In a federal state, a state constitution can have a different hierarchy from federal law, and state-specific powers can be explicitly enumerated. In a unitary state, there is no such structural buffer. Regional autonomy operates only within the scope the state "permits."
 
-### 원인 4: 비상권의 블랙홀
+### Cause 4: The Black Hole of Emergency Powers
 
-전쟁, 계엄, 긴급명령은 평시 권리 체계를 접는 버튼이다. 이게 있으면
-지역 합의, AI 감사, 탈출권이 한순간에 정지될 수 있다.
+War, martial law, and emergency orders are buttons that fold the peacetime rights system. When these exist, regional consensus, AI audits, and the right of exit can be suspended in an instant.
 
-제77조 ③항이 그 원인이다: 비상계엄 시 "영장제도, 언론·출판·집회·결사의
-자유, 정부나 법원의 권한"에 특별조치가 가능하다. 이건 기본권 체계 전체를
-접을 수 있는 헌법적 장치다.
+Art. 77 ③ is the cause: under emergency martial law, "special measures" can be taken regarding "the warrant system, freedom of speech, press, assembly, and association, and the authority of the government or the courts." This is a constitutional mechanism that can fold the entire fundamental-rights system.
 
-16장이 다룬 전쟁권 락인(전쟁 버튼)은 이 블랙홀의 최고강도 예외 모드다. 그러나 평시에도
-이 장치의 **존재 자체**가 지역 자율을 위축시킨다 — "언젠가 쓰일 수 있다"는
-가능성만으로도 지역은 국가와 정면 충돌을 피한다.
+The war-power kernel (war button) covered in Chapter 16 is the highest-intensity exception mode of this black hole. But even in peacetime, the **mere existence** of this mechanism shrinks regional autonomy — the possibility that "it could someday be used" alone is enough for regions to avoid head-on conflict with the state.
 
-### 원인 5: 예산 중앙집중
+### Cause 5: Budgetary Centralization
 
-법만 문제가 아니다. 돈줄이 중앙에 있으면 지역은 반항하기 어렵다.
-보조금, 교부세, 국책사업, 인허가가 전부 통제 수단이 된다.
+Law is not the only problem. When the money supply is at the center, regions find it hard to resist. Subsidies, local allocation taxes, national projects, and licensing all become instruments of control.
 
-지역이 자체 세원(지방세)만으로는 재정 자립이 어렵고, 국가 보조금에
-의존하면 보조금 조건이 곧 지역 정책의 상한이 된다. 예산 중앙집중은
-법적 위계를 강제하는 것보다 더 효과적인 락인 도구다 — 법 위반이 아니라
-"지원금이 끊길까 봐" 지역이 자율적으로 자제한다.
+When a region cannot achieve fiscal independence from its own revenue sources (local taxes) alone and depends on national subsidies, the subsidy conditions become the upper bound of regional policy. Budgetary centralization is a more effective lock-in tool than enforcing legal hierarchy — not by violating the law, but by the region voluntarily restraining itself for fear of "funding being cut off."
 
-### 원인 6: 국회도 지역의 대리자가 아니다
+### Cause 6: The National Assembly Is Not the Region's Representative Either
 
-국회의원은 지역구에서 뽑혀도 일단 국가 입법자다. 특정 지역 주민의 실시간
-동의 기관이 아니라, 전국 단위 법을 만드는 기관이다. 지역구 국회의원이
-"내 지역의 자율권을 보호하겠다"고 해도, 국회 표결 구조상 전국적 다수가
-지역 결정을 뒤집을 수 있다.
+Even if a National Assembly member is elected from a district, once elected they are a national legislator. They are not a real-time consent body for the residents of a specific region, but a body that makes nationwide law. Even if a district's assembly member vows to "protect my region's autonomy," the National Assembly's voting structure means a national majority can overturn a regional decision.
 
-이건 "대의민주주의의 한계"라는 추상적 비판이 아니다. 구조적 사실이다:
-입법권(제40조)이 국회에 있고, 지역은 조례만 만들 수 있으므로(제117조),
-지역 자율의 범위를 국회가 전국 법률로 언제든 좁힐 수 있다.
+This is not an abstract critique of "the limits of representative democracy." It is a structural fact: legislative power (Art. 40) belongs to the National Assembly, and regions can only enact ordinances (Art. 117), so the National Assembly can narrow the scope of regional autonomy at any time through nationwide legislation.
 
-## 17.4 판별식 적용: 국가 커널은 락인인가
+## 17.4 Applying the Discriminant: Is the National Kernel a Lock-in?
 
-락인 판별식 4항을 국가 커널에 적용한다. 갇힌 주체는 **지역**이고,
-2차적으로 **개인**이다.
+The four criteria of the lock-in discriminant are applied to the national kernel. The trapped subject is the **region**, and secondarily the **individual**.
 
-| 항 | 점수 | 설명 |
+| Criterion | Score | Description |
 | --- | --- | --- |
-| 못 나감 | 매우 높음 | 지역이 국가법 체계를 이탈할 수 없다. 제117조 "법령의 범위"가 상한. 연방제가 아니므로 지역이 자체 헌법을 가질 수 없다. 개인은 여권·비자·세금·병역 의무로 국가에 묶임. |
-| 룰을 당함 | 매우 높음 | 국회가 통과시킨 법률이 지역 조례보다 우선. 대통령 긴급명령(제76조)은 국회 회기 전에도 발동. 지역이 룰을 만드는 범위 자체를 국가가 정의. |
-| 따져도 안 먹힘 | 높음 | 헌법재판소가 위헌 심사를 하지만, 그 자체가 국가 기관. 지역이 국가법에 대해 직접적 거부권은 없다. 행정심판·소송은 느리고, 위헌 결정은 국가 기관의 판단. |
-| 생존조건을 쥠 | 매우 높음 | 예산, 세금, 인허가, 병역, 비자, 의료보험, 교육 과정 — 국가가 생존조건의 인프라를 직접 관리. 지역이 자체 화폐, 자체 군대, 자체 외교를 가질 수 없음. |
+| Cannot exit | Very high | A region cannot leave the national legal system. Art. 117's "scope of statutes" is the upper bound. Since it is not a federation, regions cannot have their own constitution. Individuals are bound to the state through passports, visas, taxes, and military service obligations. |
+| Subject to rules | Very high | Laws passed by the National Assembly take precedence over regional ordinances. Presidential emergency orders (Art. 76) can be issued even before the National Assembly is in session. The very scope within which a region can make rules is defined by the state. |
+| Redress ineffective | High | The Constitutional Court conducts constitutional review, but it is itself a state organ. Regions have no direct veto over national law. Administrative appeals and litigation are slow, and unconstitutionality rulings depend on a state organ's judgment. |
+| Controls survival conditions | Very high | Budget, taxes, licensing, conscription, visas, health insurance, curricula — the state directly manages the infrastructure of survival conditions. Regions cannot have their own currency, their own military, or their own diplomacy. |
 
-**락인 위험도: 매우 높음 (4/4 항, 전부 "높음" 이상)**
+**Lock-in severity: Very high (4/4 criteria, all rated "high" or above)**
 
-국가 커널 락인의 특이점: **갇힌 주체가 지역이면서 동시에 개인**이다.
-지역이 국가법에 묶이고, 그 지역 안의 개인이 국가법에 직접 묶인다.
-이중 락인 구조다.
+The distinctive feature of the national kernel lock-in: **the trapped subject is simultaneously the region and the individual.** The region is bound by national law, and the individuals within that region are directly bound by national law. It is a dual lock-in structure.
 
-### 전쟁권 락인과의 관계
+### Relationship to the War-Power Lock-in
 
-| 차원 | 전쟁권 락인 (16장) | 국가 커널 락인 (이 장) |
+| Dimension | War-power lock-in (Ch. 16) | National kernel lock-in (this chapter) |
 | --- | --- | --- |
-| 발동 조건 | 전시·사변·비상계엄 | 평시에도 매일 |
-| 발동 주체 | 대통령 (제73, 76, 77조) | 국회 + 대통령 + 행정부 |
-| 탈출권 정지 | 일괄 정지 (100%) | 부분적 제한 (지속적) |
-| 가시성 | 극단적이라 보임 | 일상적이라 안 보임 |
-| 병목 | 비상 버튼 | 일상 버튼 |
+| Trigger condition | Wartime, armed conflict, emergency martial law | Every day, even in peacetime |
+| Triggering actor | President (Arts. 73, 76, 77) | National Assembly + President + Executive |
+| Right-of-exit suspension | Blanket suspension (100%) | Partial restriction (continuous) |
+| Visibility | Extreme, so visible | Everyday, so invisible |
+| Bottleneck | Emergency button | Everyday button |
 
-전쟁권 락인은 국가 커널이 **예외상태로 전환될 때 나타나는 최고강도 모드**다.
-국가 커널은 평시의 일상 강제를 설명하고, 전쟁 커널은 그 강제가
-국경·징병·계엄·동원으로 증폭되는 순간을 설명한다. 전쟁권 장이 "비상 버튼"을
-다뤘다면, 이 장은 **평시에도 작동하는 일상적 강제**를 다룬다.
+The war-power lock-in is the **highest-intensity mode that appears when the national kernel transitions to an exception state.** The national kernel describes the everyday coercion of peacetime, while the war kernel describes the moment that coercion is amplified into borders, conscription, martial law, and mobilization. If the war-power chapter dealt with the "emergency button," this chapter deals with **the everyday coercion that operates even in peacetime.**
 
-## 17.5 합작 락인 — 국가 편
+## 17.5 Composite Lock-in — The National Side
 
-5사례에서 확인된 합작 락인 패턴이 국가 수준에서도 나타난다.
+The composite lock-in pattern identified in the five cases also appears at the national level.
 
-### 합작 구조 1: 국회 + 행정부
+### Composite Structure 1: National Assembly + Executive
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 국회 | 입법, 정치적 성과 | 법률 제정, 예산 심의 |
-| 행정부 (대통령) | 집행, 정책 추진 | 법률 집행, 긴급명령, 인허가 |
+| National Assembly | Legislation, political achievements | Enacting laws, deliberating budgets |
+| Executive (President) | Enforcement, policy advancement | Enforcing laws, emergency orders, licensing |
 
-국회가 법을 만들고 행정부가 집행하는 구조는 분권처럼 보이지만, 양쪽이
-합의하면 지역에 일방적 규칙을 부과할 수 있다. 국회가 "국가안보" 법률을
-통과시키면, 행정부가 그걸 집행하면서 지역 자율권을 줄인다. 이 과정에
-지역의 동의는 필요 없다.
+The structure in which the National Assembly makes laws and the executive enforces them looks like separation of powers, but when both sides agree, they can impose unilateral rules on regions. When the National Assembly passes a "national security" law, the executive enforces it and reduces regional autonomy. No regional consent is required in this process.
 
-### 합작 구조 2: 중앙정부 + 지방자치단체 (예산)
+### Composite Structure 2: Central Government + Local Governments (Budget)
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 중앙정부 | 예산 통제, 정책 일관성 | 보조금, 교부세, 국책사업 배분 |
-| 지방자치단체 | 재정 확보, 주민 복지 | 보조금 신청, 조건 수용 |
+| Central government | Budget control, policy consistency | Distributing subsidies, allocation taxes, national projects |
+| Local governments | Fiscal acquisition, resident welfare | Applying for subsidies, accepting conditions |
 
-중앙이 보조금에 조건을 붙이면, 지역은 그 조건을 수용하지 않으면 예산이
-줄어든다. 이건 "지역 자율"이 아니라 **조건부 자율**이다. 예산 의존도가
-높을수록 지역 자율은 형식적이다.
+When the central government attaches conditions to subsidies, a region that does not accept those conditions sees its budget reduced. This is not "regional autonomy" but **conditional autonomy**. The higher the budget dependency, the more formal regional autonomy becomes.
 
-### 합작 구조 3: 국가 + 플랫폼 (데이터·인증)
+### Composite Structure 3: State + Platform (Data, Authentication)
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 국가 | 행정 효율, 통제 | 공적 인증(OAuth), 디지털 행정 |
-| 플랫폼 | 사용자 확보, 생태계 통제 | 인증 제공, 데이터 보유 |
+| State | Administrative efficiency, control | Public authentication (OAuth), digital administration |
+| Platform | User acquisition, ecosystem control | Providing authentication, holding data |
 
-국가가 플랫폼 인증을 공적 서비스에 연동하면(2장 사례), 국가와 플랫폼이
-합작으로 개인의 디지털 시민권을 쥔다. 한쪽이 풀려도 다른 쪽이 남아 있으면
-락인이 지속된다.
+When the state links platform authentication to public services (Chapter 2 case), the state and the platform jointly control an individual's digital citizenship. Even if one side is released, if the other remains, the lock-in persists.
 
-### 합작 구조 4: 국가 + 국제기구
+### Composite Structure 4: State + International Organizations
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 국가 | 주권 유지, 국제 협력 | 조약 비준(제73조), 국제 규범 수용 |
-| 국제기구 | 규범 확산, 질서 | 조약, 관습법, 제재 |
+| State | Preserving sovereignty, international cooperation | Ratifying treaties (Art. 73), accepting international norms |
+| International organization | Spreading norms, order | Treaties, customary law, sanctions |
 
-국가가 조약을 비준하면(제73조), 그 조약이 국내법과 같은 효력을 가진다
-(제6조 ①항). 이 과정에 국민 직접 동의가 없다. 조약이 지역 자율권을
-제한하면, 지역은 국제 조약이라는 더 높은 위계에 묶인다.
+When the state ratifies a treaty (Art. 73), that treaty has the same effect as domestic law (Art. 6 ①). There is no direct popular consent in this process. If a treaty restricts regional autonomy, the region is bound to a higher hierarchy: the international treaty.
 
-### 교차점에서 생기는 락인
+### Lock-in Arising at the Intersection
 
-4단계 패턴이 반복된다:
+The four-step pattern repeats:
 
-1. 국회는 "이건 입법이다", 행정부는 "이건 집행이다", 중앙은 "이건 예산 배분이다"
-2. 교차점에서 지역 자율권이 줄어드는데, 어느 주체의 책임으로도 분류되지 않음
-3. 처방(해결책)은 입법·예산·인허가를 동시에 풀어야 — 한쪽만 풀면 반쯤 풀린 락인
-4. 시행 주체(국회, 대통령)가 자기 권한을 줄일 이유가 없음
+1. The National Assembly says "this is legislation," the executive says "this is enforcement," the center says "this is budget allocation."
+2. At the intersection, regional autonomy shrinks, but it is not classified as any single actor's responsibility.
+3. The prescription (solution) must simultaneously unlock legislation, budget, and licensing — releasing only one yields a half-undone lock-in.
+4. The implementing actors (National Assembly, president) have no reason to reduce their own authority.
 
-## 17.6 국가 결정 분류 — 락인 강도 계층
+## 17.6 National Decision Classification — Lock-in Intensity Hierarchy
 
-사용자가 제안한 분류를 프레임워크에 통합한다. 모든 국가 결정을
-락인 강도별로 나누고, 뒤로 갈수록 승인 기준이 기하급수적으로 높아지게 한다.
+We integrate the user-proposed classification into the framework. All national decisions are stratified by lock-in intensity, with approval thresholds rising geometrically toward the back.
 
-| 계층 | 결정 유형 | 락인 강도 | 승인 기준 (현행) | 제안 승인 기준 |
+| Tier | Decision type | Lock-in intensity | Approval threshold (current) | Proposed approval threshold |
 | --- | --- | --- | --- | --- |
-| 1 | 일반 법률 | 낮음 | 국회 재적의원 과반 | 현행 유지 |
-| 2 | 지역 자치 제한 법률 | 중간 | 국회 재적의원 과반 | 국회 3/5 + 영향받는 지역 의회 동의 |
-| 3 | 조세(세금)·예산 강제 | 중간~높음 | 국회 과반 | 국회 과반 + 지역 재정 영향평가 공개 |
-| 4 | 신분·비자·이동 제한 | 높음 | 국회 과반 (개별 법률) | 국회 3/5 + 탈출권 영향평가 + 2년 재승인 |
-| 5 | 징병·동원 | 매우 높음 | 국회 동의 (병역법 등) | 국회 3/5 + 동원 대상 사전 명시 + 1년 재승인 |
-| 6 | 계엄·긴급명령 | 매우 높음 | 사후 국회 승인 (제76조 ③항) | 사후 승인 + 30일 재승인 + 지역 유예청구권 |
-| 7 | 전쟁·파병·선제공격 | 최상 | 대통령(제73조) + 국회 동의 (헌법상) | 16장 9가지 처방 + 방어전/공격전 구분 + 재승인 30-90일 |
+| 1 | General legislation | Low | Majority of seated National Assembly members | Maintain current |
+| 2 | Legislation restricting regional autonomy | Medium | Majority of seated National Assembly members | National Assembly 3/5 + consent of affected regional councils |
+| 3 | Taxation and budget coercion | Medium–High | National Assembly majority | National Assembly majority + public regional fiscal impact assessment |
+| 4 | Status, visa, movement restrictions | High | National Assembly majority (individual laws) | National Assembly 3/5 + right-of-exit impact assessment + 2-year re-approval |
+| 5 | Conscription and mobilization | Very high | National Assembly consent (Military Service Act, etc.) | National Assembly 3/5 + prior specification of mobilization targets + 1-year re-approval |
+| 6 | Martial law, emergency orders | Very high | Ex post National Assembly approval (Art. 76 ③) | Ex post approval + 30-day re-approval + regional waiver request right |
+| 7 | War, troop deployment, preemptive strike | Supreme | President (Art. 73) + National Assembly consent (constitutionally) | Chapter 16's nine prescriptions + defensive/offensive war distinction + 30–90 day re-approval |
 
-이 표의 핵심: **뒤로 갈수록 승인 기준이 크게 높아져야 한다.**
-현행 구조는 계층 1과 계층 7의 승인 기준 차이가 충분하지 않다. 일반 법률도
-국회 과반이고, 전쟁도 (형식상) 국회 동의가 있으면 된다. 락인 강도가
-수백 배 차이나는 결정이 비슷한 절차로 통과된다.
+The core of this table: **the approval threshold must rise sharply toward the back.** The current structure does not sufficiently differentiate the approval thresholds of Tier 1 and Tier 7. General legislation requires a National Assembly majority, and war, too, (formally) only requires National Assembly consent. Decisions whose lock-in intensity differs by hundreds of times pass through similar procedures.
 
-## 17.7 지역 영향평가 의무화
+## 17.7 Mandatory Regional Impact Assessment
 
-국회 법률안이나 대통령 명령이 지역 자율권을 침해하면 자동으로 표시되는
-시스템을 제안한다.
+We propose a system in which a National Assembly bill or presidential order that infringes on regional autonomy is automatically flagged.
 
-### 평가 항목
+### Assessment Items
 
-모든 국가 결정에 대해 다음 질문에 답해야 한다:
+For every national decision, the following questions must be answered:
 
-1. **어느 지역의 규칙을 무력화하는가?**
-   - 기존 조례·지역 규칙과 충돌하는가?
-   - 지역이 만든 실험(의료, 교육, 돌봄)을 무효화하는가?
+1. **Which region's rules does it neutralize?**
+   - Does it conflict with existing ordinances or regional rules?
+   - Does it invalidate experiments built by the region (medical care, education, care)?
 
-2. **어느 주민의 탈출권을 줄이는가?**
-   - 이 법이 통과되면 누구의 이탈 비용이 올라가는가?
-   - 비자, 계정, 의료 기록, 학력 인정 중 무엇이 더 묶이는가?
+2. **Whose right of exit does it reduce?**
+   - When this law passes, whose exit cost rises?
+   - Among visas, accounts, medical records, and academic credential recognition, what becomes more locked in?
 
-3. **어떤 생존조건을 국가가 새로 쥐는가?**
-   - 예산, 인력, 인프라, 데이터 중 무엇이 중앙으로 이동하는가?
-   - 기존에 지역이나 개인이 가지고 있던 권한이 국가로 넘어가는가?
+3. **What survival conditions does the state newly take control of?**
+   - Among budget, personnel, infrastructure, and data, what shifts to the center?
+   - Does authority previously held by regions or individuals transfer to the state?
 
-4. **지역이 거부하거나 수정할 통로가 있는가?**
-   - 지역 의회가 이 법에 대해 거부권이 있는가?
-   - 유예 청구가 가능한가?
-   - 대안 준수 신청이 가능한가?
+4. **Does the region have a path to reject or amend?**
+   - Does the regional council have a veto over this law?
+   - Is a waiver request possible?
+   - Is an alternative-compliance application possible?
 
-### 영향평가의 구조
+### Structure of the Impact Assessment
 
-이건 환경영향평가(EIA)의 거버넌스 버전이다. 환경영향평가가 "이 개발이
-환경에 미치는 영향"을 의무화하듯, **국가 결정 영향평가**는 "이 결정이
-지역 자율·탈출권·생존조건에 미치는 영향"을 의무화한다.
+This is a governance version of the Environmental Impact Assessment (EIA). Just as the EIA mandates "the impact of this development on the environment," the **national decision impact assessment** mandates "the impact of this decision on regional autonomy, the right of exit, and survival conditions."
 
-영향평가가 없으면, 국가 결정이 지역을 무력화하는지 자체가 보이지 않는다.
-보이지 않으면 논의할 수 없고, 논의할 수 없으면 브레이크를 걸 수 없다.
+Without an impact assessment, it is invisible whether a national decision neutralizes a region. If it is invisible, it cannot be discussed; if it cannot be discussed, a brake cannot be applied.
 
-## 17.8 AI는 찬반 판단자가 아니라 락인 감사관
+## 17.8 AI Is Not a Pro-Con Judge but a Lock-in Auditor
 
-AI가 "이 법이 좋습니다" 하면 안 된다. 그건 통치자의 역할이다.
+AI must not say "this law is good." That is the role of a governor.
 
-AI는 다음과 같이 말해야 한다:
+AI should say the following:
 
-| AI 역할 | 출력 | 하지 말아야 할 것 |
+| AI role | Output | What it must not do |
 | --- | --- | --- |
-| 락인 탐지기 | "이 법은 A지역의 자치권을 줄입니다" | "이 법은 좋습니다/나쁩니다" |
-| 탈출권 변호사 | "B집단의 탈출 비용이 40% 올라갑니다" | "B집단을 보호해야 합니다" (가치 판단) |
-| 정책 감사관 | "C권한을 대통령/부처에 새로 집중시킵니다" | "이 권한 집중은 정당합니다" (정치적 판단) |
-| 만료 추적기 | "6개월 뒤 자동 재승인 없으면 위험합니다" | "재승인을 권장합니다" (정책 제안) |
+| Lock-in detector | "This law reduces the autonomy of Region A" | "This law is good/bad" |
+| Right-of-exit advocate | "Group B's exit cost rises by 40%" | "Group B should be protected" (value judgment) |
+| Policy auditor | "This newly concentrates authority C in the president/ministry" | "This concentration of authority is justified" (political judgment) |
+| Expiry tracker | "Without automatic re-approval in 6 months, this is dangerous" | "Re-approval is recommended" (policy proposal) |
 
-AI의 역할은 **측정과 공개**지, **판단과 집행**이 아니다. 이건
-프레임워크 섹션 11(AI의 역할)과 일관된다 — AI는 통치자가 아니라
-변호사·감사관·측정기다.
+AI's role is **measurement and disclosure**, not **judgment and enforcement.** This is consistent with framework Section 11 (AI's Role) — AI is not a governor but an advocate, auditor, and measuring instrument.
 
-### AI 감사의 구조적 제약
+### Structural Constraints on AI Auditing
 
-- AI 모델 자체가 국가가 통제하면, AI 감사는 국가의 자기 감사가 된다
-- AI를 위임한 자(국가, 기업)가 권력자이므로, AI의 "독립성"은 구조적으로 제한됨
-- 16장에서 지적한 것처럼, AI에게 판단을 넘기면 그 판단 권한이 새 권력이 됨
+- If the AI model itself is controlled by the state, AI auditing becomes the state's self-audit.
+- Since those who delegate AI (the state, corporations) are the powerful, AI "independence" is structurally limited.
+- As noted in Chapter 16, if judgment is handed to AI, that judgment authority becomes a new power.
 
-완화책: AI 감사 결과를 **다수 감사자**(섹션 9)가 교차 검증하고, 불일치를
-공개한다. AI가 단일 판단자가 아니라, 다수 감사 중 하나의 도구로 작동한다.
+Mitigation: AI audit results are cross-verified by **multiple auditors** (Section 9), and disagreements are disclosed. AI does not function as a single judge but as one tool among multiple audits.
 
-## 17.9 지역 유예권(지역이 잠깐 미루는 권리)
+## 17.9 Regional Waiver (The Region's Right to Postpone)
 
-국가법이 지역 실험을 죽이는 경우, 일부 지역은 일정 기간 유예나 대안 준수를
-신청할 수 있어야 한다.
+When national law kills a regional experiment, some regions should be able to apply for a deferral or alternative compliance for a certain period.
 
-### 유예권의 범위
+### Scope of the Waiver
 
-- **적용 가능**: 지역이 시험 중인 정책(의료 기록 표준, 교육 과정, 돌봄 형태)이
-  국가법과 충돌할 때, 일정 기간 유예
-- **적용 불가**: 기본권 하한선. 지역이 "우린 노동권/의료권/이동권 낮출래" 하면 안 됨
+- **Applicable**: When a policy a region is testing (medical record standards, curricula, care models) conflicts with national law, a deferral for a certain period.
+- **Not applicable**: The floor of fundamental rights. A region cannot say "we will lower labor rights / health rights / freedom of movement."
 
-### 유예청구 절차
+### Waiver Request Procedure
 
 ```
-국가법 통과
+National law passes
     ↓
-지역 영향평가 (17.7)
+Regional impact assessment (17.7)
     ↓
-락인 강도 계층 분류 (17.6)
+Lock-in intensity tier classification (17.6)
     ↓
-계층 2 이상 → 지역 유예청구권 발생
+Tier 2 or above → regional waiver request right arises
     ↓
-지역 의회 유예결의 (주민 투표 또는 의회 표결)
+Regional council waiver resolution (resident vote or council vote)
     ↓
-국가 심사 (유예 기간, 조건, 기본권 하한선 확인)
+State review (waiver period, conditions, fundamental-rights floor verification)
     ↓
-유예 승인/거부 (거부 시 사유 공개 의무)
+Waiver approved/denied (if denied, obligation to disclose reasons)
 ```
 
-### 유예권의 한계
+### Limits of the Waiver
 
-- 국가가 유예 승인권을 가지면, 그 권한이 새 통치 도구가 됨 (강제의 역설(강제 딜레마))
-- 유예 기간이 끝나면 국가법이 적용되므로, 유예는 연기지 면책이 아님
-- 기본권 하한선을 누가 정하는가 — 그 정의권이 새 락인의 원인
+- If the state holds the authority to approve waivers, that authority becomes a new tool of governance (coercion paradox / coercion dilemma).
+- When the waiver period ends, national law applies, so a waiver is a deferral, not immunity.
+- Who defines the fundamental-rights floor — that defining authority is itself a cause of new lock-in.
 
-## 17.10 전쟁권 별도 헌법 락
+## 17.10 Separate Constitutional Lock on War Powers
 
-16장에서 전쟁권 9가지 처방을 제안했다. 이 장에서 그 처방을 국가 커널
-구조에 통합한다.
+Chapter 16 proposed nine prescriptions for war powers. This chapter integrates those prescriptions into the national kernel structure.
 
-전쟁은 일반 정치 절차로 다루면 안 된다. 전쟁 결정은 국가 커널의
-최상위 계층(계층 7)에 별도로 고정되어야 한다.
+War must not be handled through ordinary political procedures. War decisions must be separately fixed at the top tier (Tier 7) of the national kernel.
 
-| 처방 (16장) | 국가 커널 통합 | 헌법적 위치 |
+| Prescription (Ch. 16) | National kernel integration | Constitutional position |
 | --- | --- | --- |
-| 방어전/공격전 구분 | 계층 7의 내부 구분. 공격전은 계층 7+ (최상위보다 더 높은 문턱) | 헌법 수정 필요 |
-| 선제공격 금지 | 대통령 단독 금지 (제73조 제한). 의회 3/5 + 사후 국민투표 | 헌법 수정 필요 |
-| casus belli 공개 | 전쟁 개시 전 공개 가능 범위 명분 감사 | 법률 수준 |
-| 짧은 주기 재승인 | 계층 7의 기본 조건. 30-90일 재승인 | 법률 수준 |
-| 징병·동원 별도 승인 | 계층 5와 7의 분리. 전쟁 승인 ≠ 동원 승인 | 법률 수준 |
-| 비용·피해 자동 공개 | 계층 7의 투명성 의무 | 법률 수준 |
-| 피난권·양심적 거부권 보장 | 탈출권 강제 (전쟁 중에도 정지 불가) | 헌법 수준 |
-| AI 군사 조언 사후 감사 | 계층 7의 AI 감사 의무 | 법률 수준 |
-| 휴전 거부 설명 책임 | 계층 7의 지속 조건 | 법률 수준 |
+| Defensive/offensive war distinction | Internal distinction within Tier 7. Offensive war = Tier 7+ (a threshold higher than the top) | Constitutional amendment required |
+| Preemptive strike prohibition | Prohibition on sole presidential action (restriction of Art. 73). Parliamentary 3/5 + ex post referendum | Constitutional amendment required |
+| Casus belli disclosure | Audit of publicly available grounds before the initiation of war | Statutory level |
+| Short-cycle re-approval | Default condition of Tier 7. 30–90 day re-approval | Statutory level |
+| Separate conscription/mobilization approval | Separation of Tiers 5 and 7. War approval ≠ mobilization approval | Statutory level |
+| Automatic cost and damage disclosure | Transparency obligation of Tier 7 | Statutory level |
+| Right to asylum and conscientious objection guaranteed | Right-of-exit enforcement (cannot be suspended even during war) | Constitutional level |
+| Ex post audit of AI military advice | AI audit obligation of Tier 7 | Statutory level |
+| Duty to explain refusal of ceasefire | Continuing condition of Tier 7 | Statutory level |
 
-"헌법 수정 필요"로 표시한 항목은 현재 헌법(제73, 76, 77조)만으로는
-구현할 수 없는 구조적 변경이다. 이건 이 프레임워크가 "법률 개정 안"이
-아니라 **구조적 설계**임을 명시하는 것이다.
+Items marked "constitutional amendment required" are structural changes that cannot be implemented under the current constitution (Arts. 73, 76, 77) alone. This explicitly marks that this framework is not a "bill for legal revision" but a **structural design.**
 
-## 17.11 중앙권한 만료제(가져간 권한은 끝나는 날이 있음)
+## 17.11 Sunset Clause for Centralized Authority (Taken Authority Must Have an Expiration Date)
 
-국가가 위기 명목으로 가져간 권한은 자동 만료되어야 한다.
-연장하려면 다시 증명해야 한다.
+Authority taken by the state under the pretext of crisis must automatically expire.
+To extend it, it must be proven again.
 
-"한번 생긴 권한은 계속 남음"이 가장 위험하다.
+"Once created, authority persists indefinitely" is the most dangerous pattern.
 
-### 만료제 구조
+### Sunset Clause Structure
 
-| 권한 유형 | 만료 기간 | 연장 조건 |
+| Authority type | Expiration period | Extension condition |
 | --- | --- | --- |
-| 긴급명령 (제76조) | 30일 (현행은 사후 승인만) | 국회 재승인 + 영향평가 갱신 |
-| 계엄 (제77조) | 30일 (현행은 국회 해제 요구에만 의존) | 국회 재적 3/5 재승인 + 지역 영향평가 |
-| 전쟁 승인 | 90일 | 국회 3/5 재승인 + 비용·피해 공개 |
-| 동원·징병 | 180일 | 국회 재승인 + 동원 대상 재확인 |
-| 비상 입법 | 1년 | 국회 재승인 + 영향평가 |
-| 일반 법률 (락인 강도 계층 2+) | 3년 | 재검토 의무 (자동 폐기 아님, 재증명) |
+| Emergency orders (Art. 76) | 30 days (currently only ex post approval) | National Assembly re-approval + impact assessment renewal |
+| Martial law (Art. 77) | 30 days (currently depends only on National Assembly demand to lift) | Re-approval by 3/5 of seated National Assembly members + regional impact assessment |
+| War authorization | 90 days | National Assembly 3/5 re-approval + cost and damage disclosure |
+| Mobilization, conscription | 180 days | National Assembly re-approval + re-confirmation of mobilization targets |
+| Emergency legislation | 1 year | National Assembly re-approval + impact assessment |
+| General legislation (lock-in intensity Tier 2+) | 3 years | Re-review obligation (not automatic repeal, re-proof) |
 
-### 만료제의 핵심
+### Core of the Sunset Clause
 
-현행 구조는 "한 번 승인되면 법률이 지속된다"가 기본이다. 만료제는 이를
-뒤집는다 — **락인 강도가 높은 결정일수록 짧은 주기로 재승인해야 한다.**
+The current structure defaults to "once approved, a law persists." The sunset clause reverses this — **the higher the lock-in intensity of a decision, the shorter the re-approval cycle must be.**
 
-이건 프레임워크의 "종속 속도 저감"(명제 6)과 직결된다. 권한이 자동
-만료되면, 종속이 고정되는 데 걸리는 시간이 늘어난다. 연장하려면 다시
-증명해야 하므로, 권력이 한 점에 고정되는 것을 늦출 수 있다.
+This connects directly to the framework's "reducing the speed of dependency" (Proposition 6). When authority automatically expires, the time it takes for dependency to become fixed increases. Because extension requires renewed proof, the fixation of power at a single point can be delayed.
 
-### 만료제의 역설
+### The Paradox of the Sunset Clause
 
-만료제를 집행하는 주체가 필요하고, 그 주체에게 권한이 집중된다.
-"이 권한이 만료됐는가"를 판정하는 권한 자체가 새 락인의 원인이다.
+An actor is needed to enforce the sunset clause, and authority concentrates in that actor.
+The authority to determine "has this authority expired?" is itself a cause of new lock-in.
 
-완화책: 만료 판정을 자동화한다 — 기한이 지나면 법적으로 자동 실효되고,
-연장하지 않으면 효력이 상실된다. 판정 주체를 두지 않고, **시간 자체가
-판정자**가 되도록 설계한다. 다만 "자동 실효"을 회피하는 꼼수(긴급명령으로
-연장 등)를 막기 위해, 만료 후 6개월간 동일 내용의 긴급명령·긴급입법을
-금지하는 쿨다운을 둔다.
+Mitigation: automate the expiry determination — when the deadline passes, it is legally voided automatically, and if not extended, its effect is lost. No judging actor is placed; **time itself is designed to be the judge.** However, to prevent tricks that evade "automatic expiry" (extending via emergency orders, etc.), a cooldown is imposed: for six months after expiry, emergency orders and emergency legislation of the same content are prohibited.
 
-## 17.12 강제의 역설 — 국가 커널 버전
+## 17.12 The Coercion Paradox — National Kernel Version
 
-섹션 12와 16장에서 역설을 인정했다. 국가 커널에서 역설은 가장 근본적이다.
+The paradox was acknowledged in Section 12 and Chapter 16. In the national kernel, the paradox is most fundamental.
 
-"국가 결정에 락인 비용표를 붙이고, 지역·개인에게 브레이크를 주겠다" —
-이 원칙을 누가 강제하는가.
+"Attach a lock-in cost sheet to each national decision and give brakes to regions and individuals" — who enforces this principle?
 
-- 국가가 강제하면 → 국가가 락인 비용표를 정의·판정·집행하는 권력을 가진다.
-  그 권력이 새 락인이다.
-- 헌법재판소가 강제하면 → 헌법재판소가 "락인"의 정의를 독점한다.
-- 지역이 강제하면 → 지역에 거부권이 생기면, 그게 분리독립의 근거가 된다.
-- 국민투표가 강제하면 → 모든 결정을 국민투표에 넣을 수 없다. 그리고
-  다수결이 소수의 탈출권을 줄이면, 그건 또 다른 락인이다.
-- AI가 강제하면 → AI가 락인 비용표를 계산하는 권한이 새 권력이 된다.
+- If the state enforces it → the state holds the power to define, adjudicate, and enforce the lock-in cost sheet. That power is a new lock-in.
+- If the Constitutional Court enforces it → the Constitutional Court monopolizes the definition of "lock-in."
+- If the region enforces it → if the region gains a veto, that becomes the basis for secession.
+- If a referendum enforces it → not every decision can go to a referendum. And if a majority vote reduces the minority's right of exit, that is another lock-in.
+- If AI enforces it → the authority for AI to calculate the lock-in cost sheet becomes a new power.
 
-이 순환은 끊기지 않는다. 프레임워크가 할 수 있는 것은 **늦추는 것**이다.
+This cycle does not break. What the framework can do is **slow it down.**
 
-국가 커널에서 "늦추다"는 의미:
+"Slowing down" in the national kernel means:
 
-1. **결정 지연** — 락인 강도가 높을수록 승인 절차가 길어진다. 그 시간 안에
-   지역·개인이 반응할 기회가 생긴다.
-2. **권한 분산** — 국가 결정을 국회+행정부+사법부+지역+시민이 겹쳐서
-   승인하도록 한다. 한 점이 종속되어도 즉시 발동되지 않는다.
-3. **만료** — 권한이 자동 만료되면, 종속이 고정되기 전에 권한이 사라진다.
-4. **가시성** — 락인 비용표, 영향평가, 만료 추적이 공개되면, 락인이
-   형성되는 과정이 보인다. 보이면 논의할 수 있다.
+1. **Decision delay** — The higher the lock-in intensity, the longer the approval procedure. Within that time, regions and individuals gain an opportunity to react.
+2. **Authority dispersion** — National decisions are approved through overlapping layers: National Assembly + Executive + Judiciary + Region + Citizens. Even if one point is captured, it does not activate instantly.
+3. **Sunset** — When authority automatically expires, the authority disappears before dependency becomes fixed.
+4. **Visibility** — When the lock-in cost sheet, impact assessment, and expiry tracking are public, the process of lock-in formation becomes visible. When it is visible, it can be discussed.
 
-이것도 해결이 아니다. 국가가 "긴급"을 선언하면 이 장치들도 무력화될 수 있다.
-다만, 장치가 있으면, 장치를 무력화하는 데 시간과 가시성이 필요하다.
-그 시간이 반응의 기회가 된다.
+This is not a solution either. If the state declares "emergency," these mechanisms can also be neutralized.
+However, when mechanisms exist, neutralizing them requires time and visibility. That time becomes the window for response.
 
-## 17.13 남은 과제
+## 17.13 Remaining Challenges
 
-1. **헌법 수정의 현실성** — 계층 7(전쟁권)의 구조적 변경은 헌법 수정이 필요하다.
-   헌법 수정은 국회 3/2 + 국민투표 과반(제128조, 129조)이 필요하다. 이 문턱
-   자체가 국가 커널의 자기 보호 장치다.
-2. **국제 차원** — 국가 커널 락인은 단일 국가 안에서 풀기 어렵다. 조약,
-   국제 규범, 제재가 국가법 위에 또 다른 층을 만든다. 16장에서 열어둔
-   국제 차원 문제와 같다.
-3. **만료제의 집행** — "자동 실효"을 회피하는 꼼수를 막는 구체적 설계가 필요하다.
-4. **지역 유예권의 종속** — 지역 의회가 국가법을 유예하는 권한을 가지면,
-   지역 의회 자체가 새 락인 주체가 될 수 있다.
-5. **예산 중앙집중의 구체적 완화** — 지역 재정 자립도를 높이는 구체적 세원
-   이전 설계가 필요하다. 이건 재정학 영역이지만, 락인 관점에서 접근해야 한다.
-6. **AI 감사의 독립성** — AI가 국가 결정을 감사하되, AI를 통제하는 주체가
-   국가가 아니도록 구조를 설계해야 한다. 이건 기술적·제도적 난제다.
+1. **Feasibility of constitutional amendment** — Structural changes to Tier 7 (war powers) require constitutional amendment. Amendment requires a 2/3 National Assembly majority + a referendum majority (Arts. 128, 129). That threshold itself is the national kernel's self-protection mechanism.
+2. **The international dimension** — The national kernel lock-in is difficult to resolve within a single state. Treaties, international norms, and sanctions create another layer above national law. This is the same international-dimension issue opened in Chapter 16.
+3. **Enforcement of the sunset clause** — Concrete design is needed to prevent tricks that evade "automatic expiry."
+4. **Capture of the regional waiver** — If regional councils gain the authority to waive national law, the regional council itself can become a new lock-in actor.
+5. **Concrete mitigation of budgetary centralization** — Concrete revenue-source transfer design is needed to raise the degree of regional fiscal autonomy. This belongs to the field of public finance, but must be approached from a lock-in perspective.
+6. **Independence of AI auditing** — A structure must be designed in which AI audits national decisions but the actor controlling the AI is not the state. This is a technical and institutional challenge.
 
-## 17.14 한 줄 결론
+## 17.14 One-Sentence Conclusion
 
-**대통령과 국회가 너무 센 게 아니라, 선거 한 번을 "모든 미래 강제에 대한
-포괄 동의"로 취급하는 구조가 문제다.**
+**The problem is not that the president and the National Assembly are too strong; it is the structure that treats a single election as blanket consent to all future coercion.**
 
-바로잡는 방향은 대통령을 착하게 만들기가 아니라, 국가 결정 하나하나에
-락인 비용표를 붙이고, 지역·개인·탈출 불가능자에게 브레이크를 주는 것이다.
+The corrective direction is not to make the president virtuous, but to attach a lock-in cost sheet to each national decision and give brakes to regions, individuals, and those who cannot exit.
 
-전쟁권(16장)은 국가 커널이 예외상태로 전환될 때 나타나는 최고강도 모드다.
-국가 커널은 평시의 **일상 버튼**이다. 비상 모드의 버튼을 잠그는 것만으로는
-충분하지 않다 — 매일 눌리는 일상 버튼에도 락인 비용표를 붙여야 한다.
-그래야 지역이 "자기 운영체제"를 가질 수 있고, 개인이 "국가 OS 위의 앱"이
-아니라 주체가 될 수 있다.
+The war power (Chapter 16) is the highest-intensity mode that appears when the national kernel transitions to an exception state.
+The national kernel is the **everyday button** of peacetime. Locking the emergency-mode button alone is not enough — a lock-in cost sheet must also be attached to the everyday button that is pressed every day.
+Only then can a region have its "own operating system," and an individual become a subject rather than "an app on top of the national OS."
 
 ---
 
-*이 장은 16장(전쟁권 락인)과 짝을 이루어 작성되었다. 16장이 국가 커널의
-예외 모드(전쟁·비상 버튼)를 다뤘다면, 이 장은 평시에도 매일 작동하는
-국가 입법·예산·비상권의 구조적 락인을 다룬다. 국가 커널이 평시 기본
-커널이고 전쟁 커널은 그 안의 최고강도 예외 모드다. 헌법 조항은
-국가법령정보센터(law.go.kr)에서 직접 검증했다. 이 장은 "법률 개정안"이
-아니라 구조적 설계 문서다.*
+*This chapter was written as a companion to Chapter 16 (War-Power Lock-in). Where Chapter 16 dealt with the national kernel's exception mode (war and emergency buttons), this chapter deals with the structural lock-in of national legislation, budget, and emergency powers that operates every day even in peacetime. The national kernel is the peacetime default kernel, and the war kernel is the highest-intensity exception mode within it. Constitutional provisions were verified directly at the National Law Information Center (law.go.kr). This chapter is not a "bill for legal revision" but a structural design document.*

@@ -1,427 +1,468 @@
-# 사례 연구: 의료 기록 이전 불가 — 물리 인프라 락인
+# Case Study: Medical Record Portability Failure — Physical Infrastructure Lock-in
 
-> 반주권 설계 (Anti-Sovereign Design) v4 프레임워크의 세 번째 적용 사례.
-> 쉬운 말 매핑은 [용어 매핑표](./docs/glossary.md)를 따른다.
-> E-7이 "지역 주권"을, 플랫폼이 "비지역 주권"을 보여줬다면,
-> 이 사례는 **포크 불가능한 물리 인프라**를 정면으로 다룬다.
+> The third application case of the Anti-Sovereign Design v4 framework.
+> Plain-language mappings follow the [glossary](./docs/glossary.md).
+> Where E-7 illustrated "territorial sovereignty" and the platform case illustrated "non-territorial sovereignty,"
+> this case directly confronts **un-forkable physical infrastructure**.
 
-## 1. 왜 이 사례인가
+## 1. Why This Case
 
-의료는 생존조건을 직접적으로 쥔다. 생명, 통증, 기능, 약물 접근 — 다른
-사례에서는 "경제적 생존"이나 "디지털 생존"이었지만, 의료에서는 **물리적
-생존 자체**가 걸린다.
+Medicine directly governs survival conditions. Life, pain, function, drug access — in
+other cases these were "economic survival" or "digital survival," but in medicine,
+**physical survival itself** is at stake.
 
-이 사례가 프레임워크를 세게 시험하는 이유: 병원 기록은 옮길 수 있어도,
-병원 건물, 전문의, 장비, 응급망은 복사할 수 없다. 데이터 이동성(데이터 가져가기) 3층과
-물리 인프라 포크 한계가 동시에 드러난다. 플랫폼 사례에서는 "디지털
-포크가 원칙"이었지만, 의료에서는 프레임워크가 부문별로 다른 원칙을
-적용해야 함이 실제로 시험된다.
+This case tests the framework hard: even if hospital records can be transferred,
+hospital buildings, specialists, equipment, and emergency networks cannot be
+copied. The 3-layer data portability (data take-away) and the limits of physical
+infrastructure forking are exposed simultaneously. In the platform case, "digital
+fork is the principle," but here the framework is actually tested on whether it
+must apply different principles by sector.
 
-### 핵심 질문
+### Core Question
 
-**환자가 병원을 선택하는 게 아니라, 병원·보험·기록·지역 인프라가 환자의
-선택지를 얼마나 좁히는가?**
+**It is not the patient who chooses the hospital. How much do the hospital,
+insurer, record system, and regional infrastructure narrow the patient's options?**
 
-## 2. 판별식 적용
+## 2. Applying the Discriminant
 
-### 항 1: 못 나감 — 높음
+### Item 1: Cannot Exit — High
 
-환자가 병원을 떠날 수 없는 구조적 요인:
+Structural factors that prevent a patient from leaving a hospital:
 
-| 묶임 대상 | 설명 | 대체 가능성 |
+| What is locked | Description | Substitutability |
 | --- | --- | --- |
-| 의료 기록 | 검사 결과, 수술 이력, 투약 기록, 알레르기 정보 | 낮음 (기록이 안 옮겨지면 새 병원에서 재검사) |
-| 보험 연동 | 실손보험, 건강보험 적용 병원 제한 | 중간 (보험 가입 병원 네트워크에 따라) |
-| 주치의 관계 | 환자 상태를 장기적으로 파악하는 의사 | 매우 낮음 (신뢰·지식 이전 불가) |
-| 만성질환 관리 체계 | 투석, 항암, 재활 스케줄 | 매우 낮음 (스케줄·장비·인력 의존) |
-| 희귀질환 센터 | 해당 질환을 전문적으로 다루는 기관 | 없음 (전국에 몇 곳 안 됨) |
-| 예약 대기 | 전문의 예약이 수개월 대기 | 낮음 (대기 자체가 이탈 장벽) |
-| 처방(해결책) 연속성 | 정기 처방약, 마약성 진통제, 특수약물 | 낮음 (처방 단절 = 증상 악화) |
+| Medical records | Test results, surgical history, medication records, allergy information | Low (if records don't transfer, re-testing at the new hospital) |
+| Insurance linkage | Private indemnity insurance, health-insurance-approved hospital limits | Medium (depends on the insurer's hospital network) |
+| Attending physician relationship | A doctor who knows the patient's condition long-term | Very low (trust and knowledge cannot be transferred) |
+| Chronic disease management system | Dialysis, chemotherapy, rehab schedules | Very low (schedule, equipment, staffing dependency) |
+| Rare disease centers | Institutions specializing in that disease | None (only a few exist nationwide) |
+| Appointment wait | Specialist appointments with waits of months | Low (the wait itself is an exit barrier) |
+| Prescription (solution) continuity | Regular prescriptions, narcotic analgesics, specialty drugs | Low (prescription disruption = symptom deterioration) |
 
-"못 나감"이 높은 이유: 이탈 비용이 단순한 불편이 아니라 **건강 악화,
-재검사 비용, 치료 단절**로 이어지기 때문.
+Why "cannot exit" is high: the exit cost is not mere inconvenience but leads to
+**health deterioration, re-testing costs, and treatment disruption.**
 
-### 항 2: 룰을 당함 — 높음
+### Item 2: Subjected to Rules — High
 
-규칙이 일방적으로 부과되는 구조:
+Structures in which rules are unilaterally imposed:
 
-- **병원 내부 절차**: 진료의뢰서, 예약 규칙, 검사 순서, 퇴원 기준 — 환자
-  선택권 없음
-- **보험 심사**: 건강보험·실손보험에서 비급여·급여 판정, 심사 기간 —
-  환자가 이의를 제기해도 보험자가 결정
-- **진료 의뢰 체계**: 1차→2차→3차 병원 이동 규칙 — 환자가 원해도
-  건너뛸 수 없음 (원칙상)
-- **플랫폼화된 예약**: 외부 예약 플랫폼이 병원 예약을 독점 — 플랫폼
-  약관 변경이 병원 접근에 영향
-- **병원 정책 변경**: 진료과 축소, 외래 중단, 응급실 제한 — 일방적 통보,
-  환자 동의 없음
+- **Internal hospital procedures**: referral letters, appointment rules, test
+  sequencing, discharge criteria — no patient choice
+- **Insurance review**: health insurance and indemnity insurance coverage/non-
+  coverage determinations, review periods — even if the patient objects, the
+  insurer decides
+- **Referral system**: rules for moving from primary to secondary to tertiary
+  hospitals — patients cannot skip levels even if they want to (in principle)
+- **Platformed appointment booking**: external booking platforms monopolize
+  hospital appointments — changes to platform terms affect hospital access
+- **Hospital policy changes**: department reductions, outpatient clinic closures,
+  emergency room restrictions — unilateral notice, no patient consent
 
-### 항 3: 따져도 안 먹힘 — 높음
+### Item 3: Redress Doesn't Work — High
 
-항의 절차의 형식성이 의료에서 특히 심각한 이유:
+Why the formality of complaint procedures is especially severe in medicine:
 
-| 문제 | 설명 |
+| Problem | Description |
 | --- | --- |
-| 정보 비대칭(차이) | 환자가 의학적 판단의 정당성을 평가할 능력이 없음 |
-| 전문성 장벽 | 의료 분쟁은 전문 지식이 없으면 이의 자체를 제기하기 어려움 |
-| 의료분쟁 비용 | 소송·감정 비용이 환자에게 과도하고, 시간이 오래 걸림 |
-| 보험자 재량 | 보험 심사 이의제기 결과를 보험자가 결정, 독립성 없음 |
-| 병원 내부 위원회 | 의료사고 심의를 병원 내부 위원회에서 함 — 심사자=처분자 |
-| 응급 상황에서 항의 불가 | 응급 처치 중에는 항의 자체가 불가능 |
+| Information asymmetry | Patients lack the ability to assess the legitimacy of medical judgments |
+| Expertise barrier | Without specialized knowledge, patients cannot even raise a dispute |
+| Medical dispute cost | Litigation and expert-assessment costs are excessive for the patient, and time-consuming |
+| Insurer discretion | The insurer decides the outcome of insurance-review objections — no independence |
+| Hospital internal committee | Medical-accident review is conducted by an internal hospital committee — reviewer = adjudicator |
+| No redress possible in emergencies | Protest is impossible during emergency treatment |
 
-핵심: 의료에서는 항의 자체를 제기할 **능력**이 환자에게 없다. 정보 비대칭이
-다른 사례(E-7의 언어 장벽, 플랫폼의 자동화 응답)보다 더 근본적이다.
+The crux: in medicine, patients lack the **capacity** to raise a protest at all.
+Information asymmetry is more fundamental here than in other cases (E-7's
+language barrier, the platform's automated responses).
 
-### 항 4: 생존조건을 쥠 — 매우 높음
+### Item 4: Holds Survival Conditions — Very High
 
-의료에서 "생존조건을 쥔다"는 비유가 아니라 **문자 그대로**다:
+In medicine, "holding survival conditions" is not metaphor but **literal**:
 
-- **생명**: 응급 처치, 중증 질환 치료, 수술
-- **통증**: 진통·마취 접근, 만성 통증 관리
-- **기능**: 재활, 물리치료, 보조기구
-- **약물**: 정기 처방약, 특수약물, 마약성 진통제
-- **정보**: 본인의 검사 결과, 진단, 치료 계획에 대한 접근
-- **시간**: 대기 시간 자체가 건강 악화로 이어짐
+- **Life**: emergency treatment, treatment of severe disease, surgery
+- **Pain**: access to analgesics and anesthesia, chronic pain management
+- **Function**: rehabilitation, physical therapy, assistive devices
+- **Drugs**: regular prescriptions, specialty drugs, narcotic analgesics
+- **Information**: access to one's own test results, diagnoses, treatment plans
+- **Time**: wait time itself leads to health deterioration
 
-### 락인 위험도: 매우 높음
+### Lock-in Severity: Very High
 
-네 항 모두 높음~매우 높음이며, 네 번째 항(생존조건을 쥠)이 문자 그대로
-생명과 직결된다. 플랫폼 사례에서는 "경제적 생존"이었고, E-7에서는
-"체류·고용"이었지만, 의료에서는 **물리적 생존** 자체가 걸린다.
+All four items rate high to very high, and the fourth (holds survival
+conditions) connects literally to life. In the platform case it was "economic
+survival," in E-7 it was "residence and employment," but in medicine
+**physical survival itself** is at stake.
 
-## 3. 데이터 이동성 3층 — 의료에서의 실상
+## 3. The 3-Layer Data Portability — The Reality in Medicine
 
-프레임워크의 데이터 이동성 3층을 의료에 적용하면, 각 층의 충족 상태가
-분명하게 드러난다.
+Applying the framework's 3-layer data portability to medicine makes each layer's
+fulfillment state plainly visible.
 
-### 1층: 기술적 이동성 — 부분 충족
+### Layer 1: Technical Portability — Partially Met
 
-| 항목 | 현재 상태 |
+| Item | Current State |
 | --- | --- |
-| 진료기록부 교부 | 환자가 요청하면 받을 수 있음 (법적 권리) |
-| 검사 결과 | 검사별로 개별 요청 필요, 통합 안 됨 |
-| 영상 데이터 (X-ray, MRI) | CD/DVD로 받을 수 있으나 형식이 비표준 |
-| 처방 기록 | 약국 시스템에 묶여 있어 이동 불가 |
-| 수술 기록 | 수술기록부가 있으나 환자 접근이 제한적 |
+| Medical record issuance | Available on request (legal right) |
+| Test results | Must be requested individually per test, not integrated |
+| Imaging data (X-ray, MRI) | Available on CD/DVD but format is non-standard |
+| Prescription records | Tied to the pharmacy system, not portable |
+| Surgical records | Surgical records exist but patient access is limited |
 
-기술적으로 파일은 빠져나올 수 있으나, 형식이 비표준이고 통합이 안 되어
-있다. "받을 수는 있지만 읽을 수 없다"는 상태.
+Technically the files can come out, but formats are non-standard and not
+integrated. A state of "you can get it, but you can't read it."
 
-### 2층: 의미적 이동성 — 미충족
+### Layer 2: Semantic Portability — Not Met
 
-| 항목 | 현재 상태 |
+| Item | Current State |
 | --- | --- |
-| 진료기록 포맷 | 병원마다 다른 EMR 시스템, 비표준 용어 |
-| 검사 결과 해석 | 수치는 줘도 해석은 다시 받아야 함 |
-| 영상 데이터 호환 | 다른 병원 장비와 호환되지 않는 경우 |
-| 약물 코드 | 병원마다 약물 분류 코드가 다름 |
-| 진단 코드 | ICD 코드는 있으나 병원 내부 분류가 다름 |
+| Medical record format | Each hospital uses a different EMR system, non-standard terminology |
+| Test result interpretation | Numbers are given but interpretation must be obtained again |
+| Imaging data compatibility | Incompatible with other hospitals' equipment |
+| Drug codes | Each hospital uses different drug classification codes |
+| Diagnosis codes | ICD codes exist but internal hospital classifications differ |
 
-기록을 받아도 새 병원이 그 의미를 이해하지 못하면, 재검사가 필요하다.
-의미적 이동성이 없으면 기술적 이동성은 무의미하다.
+Even if records are obtained, if the new hospital cannot understand their
+meaning, re-testing is necessary. Without semantic portability, technical
+portability is meaningless.
 
-### 3층: 제도적 이동성 — 사실상 부재
+### Layer 3: Institutional Portability — Virtually Absent
 
-| 항목 | 현재 상태 |
+| Item | Current State |
 | --- | --- |
-| 검사 결과 인정 | 새 병원이 기존 검사를 인정하지 않고 재검사 요구 |
-| 처방 인정 | 새 병원에서 처방을 다시 시작하거나 변경 |
-| 수술 이력 인정 | 수술 후 관리를 새 병원이 안 받으려 함 |
-| 보험 연동 | 병원 변경 시 보험 심사가 다시 시작 |
-| 의뢰 체계 | 타 병원 기록이 있어도 진료의뢰서를 다시 발급 |
+| Test result recognition | New hospital does not accept prior tests and demands re-testing |
+| Prescription recognition | New hospital restarts or changes prescriptions |
+| Surgical history recognition | New hospital reluctant to take over post-operative care |
+| Insurance linkage | Insurance review restarts on hospital change |
+| Referral system | Referral letter reissued even with records from another hospital |
 
-제도적 이동성이 없으면, 1층과 2층이 충족되어도 환자는 재검사·재진단·
-재처방을 받아야 한다. 이건 시간, 비용, 건강 악화의 삼중고다.
+Without institutional portability, even if layers 1 and 2 are met, the patient
+must undergo re-testing, re-diagnosis, and re-prescription. This is the triple
+burden of time, cost, and health deterioration.
 
-### 3층이 없으면 "기록 이동"은 보여주기다
+### Without Layer 3, "Record Transfer" Is Window Dressing
 
-의료에서 데이터 이동성 3층의 부재가 가장 극적으로 나타난다. 환자가
-진료기록부를 들고 새 병원에 가도:
+The absence of the 3-layer data portability is most dramatic in medicine. Even
+if a patient carries their medical record to a new hospital:
 
-1. 새 병원이 기록을 안 읽음 (의미적 이동성 부재)
-2. 읽어도 인정 안 함 (제도적 이동성 부재)
-3. 결국 재검사 — 환자가 시간, 비용, 방사선 노출, 통증을 다시 겪음
+1. The new hospital does not read the record (semantic portability absent)
+2. Even if read, it is not accepted (institutional portability absent)
+3. Re-testing follows — the patient endures time, cost, radiation exposure, and pain again
 
-이건 "기록 이전"이 아니라 **재검사 강요**다. 3층이 없으면 1층은 보여주기다.
+This is not "record transfer" — it is **coerced re-testing**. Without layer 3,
+layer 1 is window dressing.
 
-## 4. 물리 인프라 락인
+## 4. Physical Infrastructure Lock-in
 
-의료 사례의 핵심은 데이터 이동성을 아무리 확보해도 **물리적 인프라를
-복사할 수 없다**는 것이다. 여기서 프레임워크의 "부문별 포크 원칙"이
-실제로 시험된다.
+The core of the medical case is that no matter how much data portability is
+secured, **physical infrastructure cannot be copied.** This is where the
+framework's "sector-specific fork principle" is actually tested.
 
-### 포크 불가능한 물리 인프라
+### Un-forkable Physical Infrastructure
 
-| 인프라 | 복사 불가 이유 | 락인 효과 |
+| Infrastructure | Why It Cannot Be Copied | Lock-in Effect |
 | --- | --- | --- |
-| 병원 건물 | 물리적 구조, 위치 | 지역 내 병원 수 = 선택지 상한 |
-| 전문의 | 인력 수, 교육 기간, 면허 | 희귀 전문의는 전국에 소수 |
-| 장비 (MRI, 수술로봇) | 고가, 설치 공간, 유지비 | 장비 보유 병원 = 제한적 |
-| 응급실 | 24시간 인력·장비 | 지역 응급망 = 생사 |
-| 중환자실 | 전문 인력·감염 관리 | ICU 가용성 = 중증 환자 생존 |
-| 투석실·항암치료실 | 정기 치료 스케줄·장비 | 정기 치료 환자 = 이동 불가 |
-| 약국·제약 유통 | 특수약물 유통망 | 희귀약 접근 = 유통망 의존 |
+| Hospital building | Physical structure, location | Number of hospitals in the region = ceiling on choice |
+| Specialists | Headcount, training period, licensing | Rare specialists are few nationwide |
+| Equipment (MRI, surgical robots) | High cost, installation space, maintenance | Hospitals with the equipment = limited |
+| Emergency room | 24-hour staffing and equipment | Regional emergency network = life or death |
+| Intensive care unit | Specialized staff, infection control | ICU availability = survival of severe patients |
+| Dialysis unit / chemotherapy suite | Regular treatment schedule, equipment | Regular-treatment patients = unable to move |
+| Pharmacy / pharmaceutical distribution | Specialty drug distribution network | Rare-drug access = network dependency |
 
-### 지역 의료 독점
+### Regional Medical Monopoly
 
-지역에 병원이 하나뿐이거나, 특정 진료과가 한 곳에만 있을 때:
+When a region has only one hospital, or a particular department exists in only one
+place:
 
-- **선택지 부재**: 다른 병원이 없으면 "선택"이 성립하지 않음
-- **응급 상황**: 응급실이 가까운 곳에 하나뿐이면, 그 병원이 서비스가
-  낮아도 갈 수밖에 없음
-- **희귀질환**: 특정 질환을 전문으로 하는 센터가 전국에 몇 곳 안 됨
-- **섬·도서지역**: 의료 접근 자체가 지리적 락인
+- **Absence of options**: if there is no other hospital, "choice" does not obtain
+- **Emergencies**: if there is only one nearby emergency room, the patient must go
+  there even if service quality is low
+- **Rare diseases**: centers specializing in a particular disease number only a
+  few nationwide
+- **Islands and remote areas**: medical access itself is geographic lock-in
 
-여기서는 포크가 아니라 **접근 보장과 독점 남용 제한**이 핵심이다. 이건
-프레임워크가 부문별로 다른 원칙을 적용해야 한다고 한 것의 구체적 적용이다:
+Here the core is not fork but **access assurance and limiting monopoly abuse.**
+This is the concrete application of the framework's claim that it must apply
+different principles by sector:
 
-| 부문 | 원칙 | 의료에서의 적용 |
+| Sector | Principle | Application in Medicine |
 | --- | --- | --- |
-| 디지털 플랫폼 | 진짜 포크 | (플랫폼 사례에서 검증됨) |
-| 의료·교육·자격 | 인정의 이동성 | 기록 이전 + 새 병원이 인정 → 제도적 이동성 |
-| 물리 인프라 | 접근 보장 + 독점 남용 제한 | 병원 건물 복사가 아니라 기록 이전, 보험 연동, 응급 접근, 지역 독점 감시 |
+| Digital platform | True fork | (validated in the platform case) |
+| Medicine, education, credentials | Portability of recognition | Record transfer + new hospital acceptance → institutional portability |
+| Physical infrastructure | Access assurance + monopoly-abuse limitation | Not copying the building but monitoring record transfer, insurance linkage, emergency access, regional monopoly |
 
-의료 사례는 **이 세 부문이 동시에 나타나는 유일한 영역**이다. 기록(인정의
-이동성), 장비·인력(물리 인프라), 예약·원격진료(디지털 플랫폼)이 겹친다.
-그래서 프레임워크의 부문별 원칙이 단일 부문이 아닌 **복합 적용**으로
-검증된다.
+The medical case is **the only domain where all three sectors appear
+simultaneously.** Records (portability of recognition), equipment and staff
+(physical infrastructure), and appointment/telemedicine (digital platform)
+overlap. Thus the framework's sector-specific principles are tested not in a
+single sector but as a **composite application.**
 
-## 5. 합작 락인
+## 5. Composite Lock-in
 
-의료에서도 합작 락인이 발생한다. 병원 단독이 아니라, 여러 시스템이
-결합해서 탈출 비용을 올린다.
+Composite lock-in also occurs in medicine. Not the hospital alone, but multiple
+systems combine to raise the cost of exit.
 
-### 합작 구조 1: 병원 + 보험자
+### Composite Structure 1: Hospital + Insurer
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 병원 | 환자 유지, 수익 | 진료·검사·처방 |
-| 보험자 (건강보험/실손) | 비용 통제, 위험 관리 | 급여·비급여 판정, 심사 |
+| Hospital | Patient retention, revenue | Treatment, testing, prescribing |
+| Insurer (health insurance / indemnity) | Cost control, risk management | Coverage/non-coverage determination, review |
 
-병원을 바꾸면 보험 심사가 다시 시작된다. 기존 검사가 인정되지 않아
-재검사 비용이 환자에게 부과된다. 병원-보험 연동이 환자의 이탈 비용을
-구조적으로 올린다.
+Switching hospitals restarts insurance review. Prior tests are not recognized,
+and re-testing costs are imposed on the patient. The hospital-insurer linkage
+structurally raises the patient's exit cost.
 
-### 합작 구조 2: 병원 + 정부 인허가(허가)
+### Composite Structure 2: Hospital + Government Licensing
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 병원 | 면허 유지, 인허가 | 의료 서비스 제공 |
-| 정부 (보건복지부) | 의료 질 관리, 인력 통제 | 병원 설립·축소 승인, 전문의 배정 |
+| Hospital | License maintenance, licensing | Providing medical services |
+| Government (Ministry of Health and Welfare) | Medical quality management, staffing control | Hospital establishment/downsizing approval, specialist assignment |
 
-정부가 병원 축소·폐쇄를 승인하면, 지역 주민의 의료 접근이 단절된다.
-이 결정에 환자는 참여하지 못한다. 정부-병원 합작으로 의료 인프라가
-결정되고, 환자는 결과만 감수한다.
+When the government approves a hospital's downsizing or closure, residents'
+medical access is severed. Patients have no part in this decision. The
+government-hospital composite determines medical infrastructure, and patients
+only bear the consequences.
 
-### 합작 구조 3: 병원 + 의료기록 시스템 (EMR)
+### Composite Structure 3: Hospital + EMR System
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 병원 | 환자 정보 보유 | EMR 운영, 기록 관리 |
-| EMR 벤더 | 계약 유지, 데이터 보유 | 시스템 독점, 포맷 비표준 |
+| Hospital | Holding patient information | EMR operation, record management |
+| EMR vendor | Contract retention, data retention | System monopoly, non-standard format |
 
-EMR 시스템이 병원마다 다르고, 벤더가 데이터 이동을 기술적으로 방해하면,
-환자 기록 이전이 구조적으로 차단된다. EMR 벤더의 비표준 포맷이
-데이터 이동성 2층(의미적 이동성)을 직접적으로 훼손한다.
+When EMR systems differ by hospital and the vendor technically obstructs data
+movement, patient record transfer is structurally blocked. The EMR vendor's
+non-standard format directly undermines data portability layer 2 (semantic
+portability).
 
-### 합작 구조 4: 병원 + 약국/제약 유통망
+### Composite Structure 4: Hospital + Pharmacy / Pharmaceutical Distribution
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 병원 | 처방권 유지 | 처방 발행 |
-| 약국/제약 | 유통 통제, 재고 관리 | 특수약물 공급 |
+| Hospital | Prescribing authority | Issuing prescriptions |
+| Pharmacy / pharma | Distribution control, inventory management | Supplying specialty drugs |
 
-특수약물, 생물학적 제제, 마약성 진통제는 유통망이 제한적이다. 병원을
-바꾸면 기존 처방이 새 약국에서 조제되지 않을 수 있다. 처방 연속성이
-약물 유통망에 의존한다.
+Specialty drugs, biologics, and narcotic analgesics have limited distribution
+networks. Switching hospitals may mean an existing prescription cannot be filled
+at a new pharmacy. Prescription continuity depends on the drug distribution
+network.
 
-### 합작 구조 5: 병원 + 지역 교통
+### Composite Structure 5: Hospital + Regional Transportation
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 병원 | 환자 접근 | 위치 고정 |
-| 지역 교통 | 노선 유지 | 병원 접근 교통망 |
+| Hospital | Patient access | Fixed location |
+| Regional transit | Route maintenance | Hospital-access transport network |
 
-투석·항암 등 정기 치료 환자에게 교통은 의료 접근의 일부다. 교통망이
-단절되면 치료 자체가 단절된다. 이건 물리 인프라 락인과 지역 인프라
-락인의 교차다.
+For patients receiving regular treatment such as dialysis or chemotherapy,
+transportation is part of medical access. If the transport network is
+disrupted, treatment itself is disrupted. This is the intersection of physical
+infrastructure lock-in and regional infrastructure lock-in.
 
-### 교차점에서 생기는 락인
+### Lock-in at the Intersection
 
-E-7, 플랫폼과 같은 4단계 패턴이 반복된다:
+The same 4-stage pattern seen in E-7 and the platform case repeats:
 
-1. 병원은 "이건 진료 연속성이다", 보험자는 "이건 비용 관리다"라고 함
-2. 교차점에서 재검사·재심사·재처방이 생김
-3. 처방은 병원·보험·약국을 동시에 풀어야 함
-4. 시행 주체(보건복지부, 건강보험공단)가 자기 재량을 줄일 이유 없음
+1. The hospital says "this is continuity of care," the insurer says "this is
+   cost management"
+2. Re-testing, re-review, and re-prescription arise at the intersection
+3. Prescriptions must address hospital, insurer, and pharmacy simultaneously
+4. The implementing bodies (Ministry of Health and Welfare, National Health
+   Insurance Service) have no reason to reduce their own discretion
 
-## 6. 반주권 설계식 처방
+## 6. Anti-Sovereign Design Prescriptions
 
-### 처방 원칙: 3층 이동성 + 물리 인프라 접근 보장
+### Prescription Principle: 3-Layer Portability + Physical Infrastructure Access Assurance
 
-의료에서는 데이터 이동성 3층을 동시에 확보하고, 물리 인프라에 대해서는
-포크가 아니라 접근 보장과 독점 남용 제한을 적용한다.
+In medicine, the 3-layer data portability must be secured simultaneously, while
+for physical infrastructure the principle is not fork but access assurance and
+limiting monopoly abuse.
 
-### 처방 목록
+### Prescription List
 
-| 처방 | 대상 | 메커니즘 | 프레임워크 대응 |
+| Prescription | Target | Mechanism | Framework Correspondence |
 | --- | --- | --- | --- |
-| 표준화된 진료기록 이동권 | 병원 + EMR 벤더 | 표준 포맷 의무화, 환자 요청 시 기한 내 교부 | 데이터 이동성 1+2층 |
-| 검사 결과 상호 인정 의무 | 병원 + 보험자 | 타 병원 검사 결과를 정당한 사유 없이 거부 금지 | 데이터 이동성 3층 |
-| 응급·만성질환 환자 임시 진료 연속권 | 병원 + 정부 | 병원 변경 중에도 치료·처방 단절 금지 | 집행정지(멈추기) |
-| 병원 변경 시 처방·검사 반복 최소화 | 병원 | 정당한 사유 없는 재검사 금지, 재검사 시 사유·비용 공개 | 탈출 비용 저감 |
-| 의료기록 거부/지연에 대한 배상 | 병원 | 기록 이전 지연 시 배상 의무 | 배상 |
-| 희귀질환·중증 환자 제2의견 접근권 | 병원 + 보험자 | 제2의견 비용 보조, 제2의견 기준 치료 변경 권리 | 이의제기 |
-| 지역 의료 독점 열지도 공개 | 커널(측정) | 지역별 병원 수, 진료과, 장비, 응급실 가용성 공개 | 락인 열지도 |
-| 병원 폐쇄/이전/진료과 축소 시 사전 영향평가 | 병원 + 정부 | 환자 이송 계획, 대체 의료 접근 확보 후 승인 | 집행정지 + 탈출권(빠져나갈 권리) |
-| 처방 이동성 보장 | 병원 + 약국 | 처방이 타 약국에서 조제되지 않는 경우 사유 공개 | 포크 가능성(약물) |
-| 환자 의료데이터 직접 접근권 | 병원 + EMR 벤더 | 환자가 자신의 데이터를 API로 접근·이전 가능 | 데이터 이동성 1층 |
+| Standardized medical record portability right | Hospital + EMR vendor | Mandatory standard format, delivery within deadline on patient request | Data portability layers 1+2 |
+| Mutual test-result acceptance obligation | Hospital + insurer | Prohibition on refusing another hospital's test results without just cause | Data portability layer 3 |
+| Temporary care continuity right for emergency and chronic-disease patients | Hospital + government | Prohibition of treatment/prescription disruption during hospital transition | Injunctive suspension (stop) |
+| Minimize prescription and test repetition on hospital change | Hospital | Prohibition of unjustified re-testing; disclosure of reason and cost when re-testing occurs | Exit-cost reduction |
+| Compensation for refusal or delay of medical records | Hospital | Compensation obligation for delayed record transfer | Compensation |
+| Second-opinion access right for rare and severe disease patients | Hospital + insurer | Subsidy for second-opinion cost, right to change treatment based on second opinion | Objection |
+| Regional medical monopoly heatmap disclosure | Kernel (measurement) | Disclosure of hospitals, departments, equipment, and ER availability by region | Lock-in heatmap |
+| Pre-impact assessment for hospital closure, relocation, or department reduction | Hospital + government | Patient transfer plan and alternative medical access secured before approval | Injunctive suspension + right of exit |
+| Prescription portability assurance | Hospital + pharmacy | Disclosure of reason when a prescription cannot be filled at another pharmacy | Fork feasibility (drugs) |
+| Patient direct medical-data access right | Hospital + EMR vendor | Patient API access to and transfer of own data | Data portability layer 1 |
 
-### 시행 주체 문제
+### The Implementing-Body Problem
 
-E-7, 플랫폼과 같은 역설:
+The same paradox as in E-7 and the platform case:
 
-- **병원 자율**: 자기 재량을 스스로 줄일 이유 없음
-- **정부 규제**: 보건복지부가 병원을 통제하면 정부가 주권자. 다만 이
-  경우 "탈출권 강제"(기록 이동, 재검사 금지)이므로 통치 강제가 아님
-- **보험자**: 건강보험공단이 단일 보험자이므로, 보험 심사 기준 변경이
-  곧 통치
-- **당사자 직접 권리**: 환자가 일정 조건 충족 시 기록 이전·재검사 거부·
-  제2의견 접근을 단독으로 행사하는 권리
+- **Hospital autonomy**: no reason to voluntarily reduce its own discretion
+- **Government regulation**: if the Ministry of Health and Welfare controls
+  hospitals, the government is the sovereign. However, since this is a "forced
+  right of exit" (record transfer, prohibition of re-testing), it is not
+  governance coercion
+- **Insurer**: since the National Health Insurance Service is the single insurer,
+  changing review criteria is itself governance
+- **Direct party rights**: rights the patient exercises independently when
+  certain conditions are met — record transfer, refusal of re-testing, and
+  second-opinion access
 
-### 완화책: 탈출권 강제의 적용
+### Mitigation: Applying Forced Right of Exit
 
-플랫폼 사례와 같은 구조가 의료에도 적용된다. 정부가 병원에 "진료 절차를
-이렇게 해라"라고 지시하면 통치 강제다. 대신 정부가 "환자가 자기 기록을
-가져갈 수 있도록 강제하라"고 하는 건 탈출권 강제다 — 문을 여는 권력이지,
-방을 정하는 권력이 아니다.
+The same structure as in the platform case applies to medicine. If the
+government tells a hospital "conduct your treatment procedures this way," that
+is governance coercion. Instead, the government telling a hospital "you must
+ensure the patient can take their records" is a forced right of exit — the power
+to open the door, not the power to choose the room.
 
-규제가 병원 내부 진료 정책(통치)이 아니라 **이탈 인프라(탈출)**에만
-집중해야 한다:
-- 진료기록 표준 포맷 강제
-- 검사 결과 상호 인정 의무화
-- 기록 이전 지연에 대한 배상
-- 환자 데이터 API 접근권
+Regulation must focus not on the hospital's internal treatment policy (governance)
+but solely on **exit infrastructure (exit):**
+- Mandatory standard format for medical records
+- Mandatory mutual acceptance of test results
+- Compensation for delayed record transfer
+- Patient data API access right
 
-## 7. 락인 열지도 (Lock-in Heatmap)
+## 7. Lock-in Heatmap
 
-의료 부문 내에서 락인 위험도가 다르게 나타나는 구조를 가시화한다:
-
-```
-의료 상황             | 이탈가능성(나갈 수 있나?) | 규칙강제성(규칙이 센가?) | 항의실효성(항의가 먹히나?) | 의존비대칭(없으면 안 되나?) | 위험도
----------------------|----------|----------|----------|----------|------
-응급 처치             | 매우 낮음 | 매우 높음 | 매우 낮음 | 매우 높음 | 매우 높음
-만성질환 (투석/항암)   | 매우 낮음 | 높음      | 낮음      | 매우 높음 | 매우 높음
-희귀질환              | 없음      | 높음      | 낮음      | 매우 높음 | 매우 높음
-수술 후 관리           | 낮음      | 높음      | 중간      | 높음      | 높음
-정기 진료 (감기 등)    | 높음      | 낮음      | 중간      | 낮음      | 낮음
-예방 접종             | 높음      | 낮음      | 높음      | 낮음      | 낮음
-원격진료 (가벼운 상담)  | 중간      | 중간      | 중간      | 중간      | 중간
-```
-
-### 환자 유형별 위험도 중첩
-
-같은 의료 체계에서도 환자 유형에 따라 위험도가 다르다:
+Visualizes how lock-in severity appears differently across situations within the
+medical sector:
 
 ```
-환자 유형             | 응급 처치 | 만성질환 | 수술 후 | 정기 진료
----------------------|----------|--------|--------|---------
-건강한 성인            | 중간      | 낮음    | 낮음    | 낮음
-만성질환자             | 매우 높음 | 매우 높음| 높음   | 높음
-희귀질환자             | 매우 높음 | 매우 높음| 매우 높음| 매우 높음
-노인 (다질환)          | 매우 높음 | 매우 높음| 높음   | 높음
-임산부                 | 높음      | 중간    | 중간    | 중간
-아동                   | 높음      | 중간    | 중간    | 중간
-장애인                 | 매우 높음 | 높음    | 높음    | 높음
-지역 거주자 (1병원)     | 매우 높음 | 높음    | 높음    | 중간
+Medical situation      | Exit feasibility (can you leave?) | Rule coercion (are rules strong?) | Redress efficacy (does protest work?) | Dependency asymmetry (can you do without?) | Severity
+----------------------|----------|----------|----------|----------|------
+Emergency treatment   | Very low | Very high | Very low | Very high | Very high
+Chronic disease (dialysis/chemo) | Very low | High | Low | Very high | Very high
+Rare disease          | None     | High      | Low      | Very high | Very high
+Post-operative care   | Low      | High      | Medium   | High      | High
+Routine care (cold, etc.) | High | Low       | Medium   | Low       | Low
+Vaccination           | High     | Low       | High     | Low       | Low
+Telemedicine (light consultation) | Medium | Medium | Medium | Medium | Medium
 ```
 
-이 중첩이 보여주는 것: 의료 락인은 "병원-환자"라는 단일 관계가 아니라,
-**환자의 건강 상태 × 질환 유형 × 지역 인프라**의 교차항에서 결정된다.
-같은 지역에서도 만성질환자와 건강한 성인의 락인 위험도가 극단적으로 다르다.
+### Severity Overlap by Patient Type
 
-## 8. 세 사례 비교 — 프레임워크 보편성 검증
+Even within the same medical system, severity varies by patient type:
 
-이제 세 사례(E-7, 플랫폼, 의료)를 비교하면, 프레임워크의 각 장치가
-다른 맥락에서 어떻게 작동하는지가 드러난다.
+```
+Patient type          | Emergency treatment | Chronic disease | Post-operative | Routine care
+----------------------|----------|--------|--------|---------
+Healthy adult        | Medium   | Low    | Low    | Low
+Chronic disease patient | Very high | Very high | High | High
+Rare disease patient | Very high | Very high | Very high | Very high
+Elderly (multi-morbidity) | Very high | Very high | High | High
+Pregnant woman        | High     | Medium | Medium | Medium
+Child                 | High     | Medium | Medium | Medium
+Disabled person       | Very high | High   | High   | High
+Regional resident (1 hospital) | Very high | High | High | Medium
+```
 
-### 판별식 비교
+What this overlap shows: medical lock-in is not a single "hospital-patient"
+relationship but is determined at the intersection of **patient health status ×
+disease type × regional infrastructure.** Even in the same region, the lock-in
+severity of a chronic disease patient and a healthy adult differs extremely.
 
-| 차원 | E-7 비자 | 플랫폼 계정 정지 | 의료 기록 이전 |
+## 8. Comparing Three Cases — Verifying Framework Universality
+
+Comparing the three cases (E-7, platform, medicine) reveals how each device of
+the framework operates in a different context.
+
+### Discriminant Comparison
+
+| Dimension | E-7 visa | Platform account suspension | Medical record transfer |
 | --- | --- | --- | --- |
-| 주권 유형 | 지역적 | 비지역적 | 지역적 + 물리적 |
-| 생존조건 | 체류·고용 | 경제·디지털 | 생명·통증·약물 |
-| 못 나감 | 높음 | 높음 | 높음 (물리 인프라 추가) |
-| 룰을 당함 | 높음 | 높음 | 높음 (정보 비대칭 추가) |
-| 따져도 안 먹힘 | 중간~높음 | 높음 | 높음 (전문성 장벽 추가) |
-| 생존조건을 쥠 | 높음 | 높음 | 매우 높음 (문자 그대로 생명) |
-| 합작 락인 | 국가+고용주 | 플랫폼+결제/스토어/광고 | 병원+보험/정부/EMR/약국 |
+| Sovereignty type | Territorial | Non-territorial | Territorial + physical |
+| Survival conditions | Residence, employment | Economic, digital | Life, pain, drugs |
+| Cannot exit | High | High | High (plus physical infrastructure) |
+| Subjected to rules | High | High | High (plus information asymmetry) |
+| Redress doesn't work | Medium–high | High | High (plus expertise barrier) |
+| Holds survival conditions | High | High | Very high (life, literally) |
+| Composite lock-in | State + employer | Platform + payments/store/ads | Hospital + insurer/government/EMR/pharmacy |
 
-### 프레임워크 장치별 검증
+### Verification by Framework Device
 
-| 장치 | E-7에서 | 플랫폼에서 | 의료에서 |
+| Device | In E-7 | In platform | In medicine |
 | --- | --- | --- | --- |
-| 데이터 이동성 3층 | 매우 낮음 (제도적 부재) | 매우 낮음 (소셜 그래프 불가) | 부분 (1층만, 2·3층 부재) |
-| 포크 가능성 | 제한적 (다른 비자 유형) | 낮음 (네트워크 효과) | 불가 (물리 인프라) |
-| 부문별 포크 원칙 | 해당 없음 | 진짜 포크 요구 | 인정의 이동성 + 접근 보장 |
-| 합작 락인 | 2주체 (국가+고용주) | 4구조 (플랫폼+결제/스토어/광고/정부) | 5구조 (병원+보험/정부/EMR/약국/교통) |
-| 탈출권 강제 | 브릿지 체류기간 | 데이터 이동성 강제 | 진료기록 표준·상호 인정 |
-| 락인 열지도 | 비자 유형별 | 플랫폼×사용자 유형 | 의료 상황×환자 유형 |
+| 3-layer data portability | Very low (institutional absence) | Very low (social graph impossible) | Partial (layer 1 only; layers 2 and 3 absent) |
+| Fork feasibility | Limited (other visa types) | Low (network effects) | Impossible (physical infrastructure) |
+| Sector-specific fork principle | Not applicable | True fork required | Portability of recognition + access assurance |
+| Composite lock-in | 2 actors (state + employer) | 4 structures (platform + payments/store/ads/government) | 5 structures (hospital + insurer/government/EMR/pharmacy/transit) |
+| Forced right of exit | Bridge residence period | Forced data portability | Standardized record + mutual acceptance |
+| Lock-in heatmap | By visa type | Platform × user type | Medical situation × patient type |
 
-### 세 사례가 공통으로 입증한 것
+### What the Three Cases Jointly Prove
 
-1. **판별식이 세 가지 주권 유형에 모두 적용** — 지역(E-7), 비지역
-   (플랫폼), 물리적(의료)
-2. **합작 락인의 4단계 패턴이 세 영역에서 반복** — 각 주체 자기 역할만
-   수행, 교차점에서 생김, 동시 처방 필요, 시행 주체 역설
-3. **락인 위험도의 연속성이 입증** — 같은 구조에서 사용자/환자 유형에
-   따라 위험도가 다름
-4. **데이터 이동성 3층이 모든 영역에서 진짜 병목(막힘)** — 1층만 충족되고
-   2·3층이 부재하면 이동성은 보여주기
-5. **부문별 포크 원칙이 실제로 필요** — 디지털(진짜 포크), 의료(인정+
-   접근), 물리(접근 보장만)가 다르게 적용됨
+1. **The discriminant applies to all three sovereignty types** — territorial
+   (E-7), non-territorial (platform), physical (medicine)
+2. **The 4-stage composite lock-in pattern repeats across all three domains** —
+   each actor performs only its own role, lock-in arises at the intersection,
+   simultaneous prescriptions are needed, and the implementing-body paradox holds
+3. **The continuity of lock-in severity is proven** — within the same structure,
+   severity varies by user/patient type
+4. **The 3-layer data portability is the real bottleneck in every domain** — if
+   only layer 1 is met and layers 2 and 3 are absent, portability is window
+   dressing
+5. **The sector-specific fork principle is genuinely necessary** — digital (true
+   fork), medicine (recognition + access), and physical (access assurance only)
+   are applied differently
 
-### 의료 사례가 새로이 드러낸 것
+### What the Medical Case Newly Reveals
 
-1. **물리 인프라 포크 불가** — 데이터를 옮겨도 건물·장비·인력은 복사
-   불가. 프레임워크의 부문별 원칙이 실제로 시험됨
-2. **정보 비대칭이 항의 실효성을 근본적으로 제한** — E-7(언어), 플랫폼
-   (자동화)과 달리, 의료는 환자가 항의 자체를 제기할 능력이 없음
-3. **생존조건이 문자 그대로 생명** — 다른 사례의 "경제적/디지털 생존"과
-   질적으로 다른 수준
-4. **세 부문이 동시에 겹침** — 의료는 디지털(EMR/예약), 인정(검사 결과),
-   물리(건물/장비) 세 부문이 동시에 나타나는 유일한 영역
-5. **합작 락인 구조가 가장 복잡** — 5개 합작 구조가 동시에 작용
+1. **Physical infrastructure is un-forkable** — even if data is moved, buildings,
+   equipment, and staff cannot be copied. The framework's sector-specific
+   principle is actually tested
+2. **Information asymmetry fundamentally limits redress efficacy** — unlike E-7
+   (language) or platform (automation), in medicine the patient lacks the
+   capacity to raise a protest at all
+3. **Survival conditions are literally life** — qualitatively different from the
+   "economic/digital survival" of other cases
+4. **Three sectors overlap simultaneously** — medicine is the only domain where
+   digital (EMR/appointments), recognition (test results), and physical
+   (buildings/equipment) appear at once
+5. **The composite lock-in structure is the most complex** — five composite
+   structures act simultaneously
 
-## 9. 이 사례가 프레임워크에 미치는 영향
+## 9. This Case's Impact on the Framework
 
-### 검증된 것
+### What Was Validated
 
-1. **부문별 포크 원칙이 작동한다** — 디지털(포크), 의료(인정), 물리(접근)
-   세 원칙이 의료 한 영역에서 동시에 적용됨
-2. **물리 인프라에서 포크 대신 접근 보장이 작동** — 프레임워크가 포크를
-   강제하지 않고 부문별 원칙을 적용함이 입증됨
-3. **데이터 이동성 3층이 의료에서 가장 극적으로 드러남** — 3층 없으면
-   재검사 강요, 환자가 시간·비용·건강 악화를 감수
-4. **합작 락인 패턴이 세 번째 영역에서도 반복** — 4단계 공통 패턴 입증
+1. **The sector-specific fork principle works** — the three principles of digital
+   (fork), medicine (recognition), and physical (access) are applied
+   simultaneously within the single domain of medicine
+2. **Access assurance works instead of fork for physical infrastructure** — the
+   framework does not force fork but applies sector-specific principles, which is
+   proven
+3. **The 3-layer data portability is most dramatically exposed in medicine** —
+   without layer 3, coerced re-testing follows, and the patient bears time, cost,
+   and health deterioration
+4. **The composite lock-in pattern repeats in a third domain** — the common
+   4-stage pattern is proven
 
-### 남은 과제
+### Remaining Challenges
 
-1. **정보 비대칭 문제 미해결** — 환자가 항의를 제기할 능력 자체가 없음.
-   제2의견 접근권이 완화책이지만, 제2의견 비용·접근성이 여전히 락인
-2. **물리 인프라 독점의 구체적 완화책 미정립** — 지역 병원 독점 시
-   "접근 보장"의 구체적 기준이 없음
-3. **의료 인력 부족이 구조적 락인** — 전문의 수 자체가 부족하면, 제도를
-   바꿔도 탈출 옵션이 없음
-4. **응급 상황에서 탈출권의 의미** — 응급 처치 중에는 "탈출권"이
-   현실적으로 작동하지 않음. 사전 설계가 유일한 방어
+1. **The information-asymmetry problem is unresolved** — patients lack the
+   capacity to raise a protest at all. The second-opinion access right is a
+   mitigation, but second-opinion cost and accessibility remain a lock-in
+2. **Specific mitigations for physical-infrastructure monopoly are not
+   established** — when a regional hospital monopoly exists, there are no concrete
+   criteria for "access assurance"
+3. **Medical staffing shortages are a structural lock-in** — if the number of
+   specialists itself is insufficient, changing institutions yields no exit
+   option
+4. **The meaning of the right of exit in emergencies** — during emergency
+   treatment, the "right of exit" does not realistically function. Prior design
+   is the only defense
 
-## 10. 다음 방향
+## 10. Next Direction
 
-세 사례가 프레임워크의 핵심 장치를 검증했다. 다음 후보:
+The three cases have validated the framework's core devices. The next candidate:
 
-- **가족 돌봄 의존 (돌봄 락인)** — "탈출 불가능자"가 가장 분명하게
-  드러나는 영역. 경제적 의존, 양육권, 주거, 시간이 결합된 락인. 의료와
-  달리 "돌봄 자체가 관계"라서 탈출이 관계 해체를 의미함.
-- **학력 인증 독점 (교육 락인)** — 제도적 이동성에 전적으로 의존하는
-  영역. 기술적 이동성이 있어도 의미가 없는 사례.
+- **Family care dependency (care lock-in)** — the domain where the "unable-to-
+  exit" is most clearly visible. A lock-in combining economic dependence,
+  custody rights, housing, and time. Unlike medicine, "care itself is a
+  relationship," so exit means the dissolution of the relationship.
+- **Educational credential monopoly (education lock-in)** — a domain entirely
+  dependent on institutional portability. A case where technical portability
+  exists but is meaningless.

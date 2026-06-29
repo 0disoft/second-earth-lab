@@ -1,709 +1,558 @@
-# 반주권 설계 (Anti-Sovereign Design) v4 — 프레임워크
+# Anti-Sovereign Design v4 — Framework
 
-> 쉬운 말 매핑은 [용어 매핑표](./docs/glossary.md)를 따른다.
+> For plain-language mappings, see the [glossary](./docs/glossary.md).
 
-## 1. 출발점
+## 1. Starting Point
 
-국가 법률이 모든 지역을 강제하는 구조에 대한 반대에서 시작한다. 지역은
-주민과 AI가 함께 합의해서 규칙을 만들고, 사람들은 자신이 원하는 지역으로
-이동할 수 있어야 한다. 규칙이不合理한 지역은 사람이 빠져나가면 자연스럽게
-사라질 것이다.
+We begin in opposition to a structure in which national law forces itself on every region. Regions should be places where residents and AI together agree on the rules, and people should be able to move to whichever region they want. Regions with unreasonable rules will naturally empty out and disappear.
 
-이 비전이 작동하려면, "지역 경쟁"보다 먼저 **"도망칠 수 없는 사람을 어떻게
-보호할 것인가"**를 설계해야 한다. 이걸 못 하면 자유주의처럼 시작해서
-봉건제로 끝난다.
+For this vision to work, before "regional competition" we must first design an answer to the question: **"How do we protect the people who cannot run away?"** Fail at this, and you start as liberalism and end as feudalism.
 
-## 2. 여섯 핵심 명제
+## 2. Six Core Propositions
 
-### 명제 1: 권력은 없앨 수 없다
+### Proposition 1: Power Cannot Be Abolished
 
-사람, 돈, 기록, 인프라가 모이면 권력은 생긴다. 국가를 없애면 그 자리를
-플랫폼이 채운다. 지역을 쪼개면 지역이 권력자가 된다. 최소 규칙을 민간에
-맡기면 민간이 권력자가 된다. 문제는 권력 자체가 아니라 **권력이 한 번
-생기면 바꾸기 어려워지는 것**이다.
+Wherever people, money, records, and infrastructure gather, power arises. Abolish the state and the platform takes its place. Break a region apart and the region itself becomes the power-holder. Hand minimal rules to the private sector and the private sector becomes the power-holder. The problem is not power itself, but the fact that **once power emerges, it becomes hard to change**.
 
-### 명제 2: 문제는 권력이 아니라 락인이다
+### Proposition 2: The Problem Is Not Power but Lock-In
 
-현대 주권은 영토보다 **락인(lock-in, 한 번 들어가면 나오기 힘든 상태)**에서 생긴다. 주권의 원천을
-지리가 아니라 구조적 락인에서 찾아야 한다. 이 락인 판별식의 파괴력은
-적용 범위에 있다 — 국가에만 적용하면 낡은 자유주의, 지역에도 적용하면
-분권주의, 회사와 플랫폼과 병원과 학교까지 적용하면 그제야 현대 주권
-이론이 된다.
+Modern sovereignty arises less from territory than from **lock-in — a state that is hard to escape once you are inside it**. The source of sovereignty must be sought not in geography but in structural lock-in. The destructive force of this lock-in discriminant lies in its range of application: apply it only to the state and you get old liberalism; apply it to regions as well and you get decentralism; apply it all the way down to companies, platforms, hospitals, and schools, and only then do you arrive at a modern theory of sovereignty.
 
-### 명제 3: 탈출권(빠져나갈 권리)은 약자 기준의 비대칭(차이) 권리다
+### Proposition 3: The Right of Exit Is an Asymmetric Right, Calibrated to the Weaker Party
 
-탈출권은 대칭 권리가 아니다. 대칭으로 만들면 바로 망한다. 사장이 "나도
-노동자를 자유롭게 해고할 탈출권이 있다", 부자가 "나도 세금에서 탈출할
-권리가 있다", 플랫폼이 "나도 귀찮은 사용자를 끊을 권리가 있다"라고 한다.
+The right of exit is not a symmetric right. Make it symmetric and it collapses immediately. The boss will claim "I too have the right of exit to freely fire workers," the rich will claim "I too have the right to exit from taxes," and the platform will claim "I too have the right to cut off annoying users."
 
-탈출권은 "누구나 빠져나갈 자유"가 아니라, **의존당하는 쪽이 의존시키는
-쪽으로부터 빠져나갈 권리**여야 한다.
+The right of exit must not be "everyone's freedom to leave," but rather **the right of the dependent party to exit from the party they depend on**.
 
-이에 따라 강제도 두 종류로 나뉜다:
+Correspondingly, coercion splits into two kinds:
 
-- **통치 강제** — 사람을 어떤 질서 안에 넣는 것. 위험하다.
-- **탈출권 강제** — 사람이 그 질서에서 빠져나올 수 있게 하는 것. 필요하다.
+- **Coercion to govern** — putting a person inside a given order. Dangerous.
+- **Coercion to enforce the right of exit** — making it possible for a person to leave that order. Necessary.
 
-둘 다 강제지만 방향이 다르다. 이 둘을 섞으면 모델이 망가진다. 다만
-"보호"와 "락인"이 구조적으로 같다는 점(둘 다 이탈 비용을 인위적으로
-높이는 장치)을 인정해야 하며, 경계 판단 자체가 정치적이다. 이 판단을
-단일 심판이 하면 안 되고, 다수 감사 + 분쟁 공개로 가야 한다.
+Both are coercion, but they point in different directions. Mix the two and the model breaks. It must be admitted, however, that "protection" and "lock-in" are structurally the same thing (both are devices that artificially raise the cost of exit), and that the boundary judgment itself is political. No single arbiter should make this judgment; it must go through multiple auditors plus public disclosure of disputes.
 
-#### 탈출권의 확장: 대체 생존조건(다른 살 곳) 동반 원칙
+#### Extension of the Right of Exit: The Principle of Accompanying Alternative Survival Conditions
 
-탈출권이 단순히 "나갈 권리"이면 충분한 경우가 많다. 비자에서 빠져나오고,
-플랫폼을 떠나고, 병원을 바꾸는 것.
+Often, a mere "right to leave" is enough. Quitting a visa, leaving a platform, switching hospitals.
 
-하지만 돌봄에서는 "나갈 권리"만으로는 부족하다. 부모가 떠나면 아이가
-위험하고, 가족 간병인이 떠나면 환자가 위험하다. 한 사람의 탈출권이
-다른 사람의 생존조건을 끊을 수 있다.
+But in care, "the right to leave" alone is insufficient. If a parent leaves, the child is endangered; if a family caregiver leaves, the patient is endangered. One person's right of exit can sever another person's survival conditions.
 
-따라서 탈출권은 **"대체 생존조건이 준비된 상태에서 나갈 권리"**로
-확장되어야 한다. 대체 돌봄·대체 주거·대체 소득이 확보되지 않은 탈출은
-권리가 아니라 방치다.
+The right of exit must therefore be extended to **"the right to leave once alternative survival conditions have been prepared."** Exit without secured alternative care, alternative housing, or alternative income is not a right — it is abandonment.
 
-이 확장은 돌봄에서만 필요한 것이 아니다. 의료에서 응급 환자의 병원
-이전, E-7에서 배우자 체류가 본인 비자에 의존하는 구조에서도 같은
-원칙이 적용된다. 탈출이 제3자의 생존을 위협하면, 탈출권 행사에 앞서
-대체 생존조건이 확보되어야 한다.
+This extension is not needed only in care. The same principle applies to the transfer of an emergency patient between hospitals, and to the structure under which an E-7 visa holder's spouse depends for residence on the holder's own visa. Whenever exit threatens a third party's survival, alternative survival conditions must be secured before the right of exit is exercised.
 
-#### 관계적 락인
+#### Relational Lock-In
 
-지금까지의 락인은 "A가 B의 생존조건을 쥔다"는 단방향 구조였다. 하지만
-돌봄에서는 돌봄 제공자와 수혜자가 **서로 다른 방식으로 같이 묶인다**.
-교육에서는 학생·부모·교사 삼각이 묶인다.
+Lock-in, so far, has been a one-directional structure: "A holds B's survival conditions." But in care, the provider and the recipient are **bound together in different ways**. In education, the triangle of student, parent, and teacher is bound together.
 
-- 제공자는 수혜자에게 묶임 (수혜자 생존이 제공자에 의존)
-- 수혜자는 제공자에게 묶임 (대체 돌봄 부재)
-- 제공자는 돌봄 역할에 묶임 (소득·주거·비자 의존)
-- 수혜자는 돌봄 자체에 묶임 (돌봄 단절 = 생존 단절)
-- 교육에서는 부모가 자녀 미래에 묶임, 교사가 평가·행정에 묶임
+- The provider is bound to the recipient (the recipient's survival depends on the provider)
+- The recipient is bound to the provider (absence of alternative care)
+- The provider is bound to the care role (dependence on income, housing, visa)
+- The recipient is bound to care itself (severing care = severing survival)
+- In education, the parent is bound to the child's future, the teacher to evaluation and administration
 
-이건 단방향 락인이 아니라 **양방향·다각 락인**이다. 핵심: 각 주체가
-다르게 갇히면서, 한쪽의 탈출이 다른 쪽의 생존을 위협한다. 이 구조에서
-"락인된 사람"은 한 명이 아니라 둘 이상이다.
+This is not one-directional lock-in but **bidirectional, multi-angle lock-in**. The key: each party is trapped differently, and one party's exit threatens the other's survival. In this structure, "the locked-in person" is not one person but two or more.
 
-#### 대리 발언권(대신 말해주는 권리)
+#### Proxy Voice
 
-아동, 중증 환자, 인지장애인은 스스로 항의할 수 없다. 이의제기권이
-형식적으로 존재해도, 행사할 주체가 없으면 권리가 아니다.
+Children, critically ill patients, and people with cognitive disabilities cannot protest on their own. A right of objection may exist in form, but if there is no subject who can exercise it, it is not a right.
 
-대리 발언권이 필요한 경우:
-- 아동 — 부모가 가해자일 수 있음
-- 중증 환자 — 의식 저하
-- 인지장애인 — 항의 능력 제한
-- 돌봄 수혜자 전반 — 제공자에게 종속된 상태에서 독립 항의 불가
+Cases that require proxy voice:
+- Children — the parent may be the abuser
+- Critically ill patients — diminished consciousness
+- People with cognitive disabilities — limited ability to protest
+- Care recipients generally — unable to object independently while subordinated to the provider
 
-대리 발언자는 독립 옴부즈맨, 정기 방문 모니터, 피해 집단 대표 등이
-될 수 있다. 다만 대리 발언자 자체가 부정을 당할(포획될) 위험이 있으므로,
-다수 감사 + 정기 교체 + 피해 집단의 직접 반론권이 병행되어야 한다.
+A proxy speaker may be an independent ombudsman, a periodic visiting monitor, or a representative of the affected group. However, because the proxy speaker themselves can be captured, this must be paired with multiple auditors, regular replacement, and the affected group's direct right of counter-argument.
 
-### 명제 4: 투명성은 부족하다
+### Proposition 4: Transparency Is Not Enough
 
-투명하지만 못 바꾸면 유리 감옥이다. 감사 보고서가 공개돼도 아무 일도 안
-일어나면 장식품이다. 최소 조건은 다음 다섯 개가 같이 있어야 한다:
+Transparent but unchangeable is a glass prison. An audit report made public that produces no action is decoration. The minimum requires five things together:
 
-| 조건 | 의미 |
+| Condition | Meaning |
 | --- | --- |
-| **설명** | 왜 이런 결정이 났는지 설명 가능 |
-| **이의제기** | 피해자(개인이든 집단이든)가 이의제기 가능 |
-| **집행정지(멈추기)** | 심각한 피해가 예상되면 집행을 멈출 수 있음 |
-| **배상** | 틀렸으면 배상 |
-| **포크 가능성** | 계속 안 고치면 다른 시스템으로 이동하거나 포크할 수 있음 |
+| **Explanation** | It must be possible to explain why a given decision was made |
+| **Objection** | Victims (individual or collective) can object |
+| **Injunctive suspension (stopping)** | When serious harm is foreseeable, execution can be halted |
+| **Compensation** | If it was wrong, compensation follows |
+| **Forkability** | If it is never fixed, one can move to another system or fork |
 
-이 중 "포크 가능성"이 중요하다. 오픈소스 소프트웨어에서 포크가 없으면
-오픈소스가 제 역할을 못 하는 것처럼, 거버넌스도 포크가 없으면 투명성은
-장식품이다. "다 보이긴 하는데 너는 못 나가"면 그건 자유가 아니다.
+Of these, "forkability" is the important one. Just as open-source software without the possibility of forks cannot do its job, governance without forks makes transparency a decoration. "You can see everything, but you cannot leave" is not freedom.
 
-### 명제 5: 스캐너는 개인이 아니라 병목(막힘)을 본다
+### Proposition 5: The Scanner Looks at Bottlenecks, Not at Individuals
 
-락인 상태를 계속 스캔하는 시스템이 필요하지만, "락인된 사람을 찾겠다"면서
-사람들의 직장, 병원, 가족, 계정, 빚, 비자, 보험을 다 들여다보면 그 자체가
-감시국가가 된다.
+A system that continuously scans lock-in states is necessary, but if it claims to "find locked-in people" and starts inspecting everyone's workplace, hospital, family, accounts, debts, visas, and insurance, it becomes a surveillance state in itself.
 
-원칙은 **개인을 보지 말고 병목(막힘)을 보는 것**이다. 개별 인간의 인생 지도를
-만들지 말고, 구조를 본다:
+The principle is **do not look at individuals, look at bottlenecks**. Do not build a map of any individual person's life; look at the structure:
 
-- 이 자격증은 한 기관이 독점하는가
-- 이 병원망 밖으로 기록이 안 나가는가
-- 이 플랫폼 계정 정지가 생계 단절로 이어지는가
-- 이 비자 구조가 고용주에게 사람을 묶는가
+- Is this certification monopolized by a single institution?
+- Do records fail to leave this hospital network?
+- Does suspension of this platform account lead to a severance of livelihood?
+- Does this visa structure bind a person to an employer?
 
-필요한 것은 감시가 아니라 **락인 열지도**다. 어디가 뜨거운지
-보는 것이지, 누가 땀 흘리는지 실명으로 추적하는 것이 아니다.
+What is needed is not surveillance but a **lock-in heatmap**. It shows where the heat is; it does not track by real name who is sweating.
 
-#### 데이터 분리 원칙
+#### Data Separation Principle
 
-정확한 원칙은 "개인을 안 본다"가 아니라, **"개인 데이터는 측정에 쓰되,
-권력 행사에는 바로 연결하지 못하게 한다"**이다. 네 계층을 분리해야 한다:
+The precise principle is not "do not look at individuals," but rather **"individual data may be used for measurement, but it must not be directly connected to the exercise of power."** Four layers must be separated:
 
-1. **수집 계층** — 의존 관계 데이터 수집
-2. **분석 계층** — 패턴 쿼리, 병목(막힘) 식별
-3. **구제 계층** — 당사자 동의 또는 법적 절차를 통한 개별 구제
-4. **강제 계층** — 락인 해제 명령, 집행정지(멈추기)
+1. **Collection layer** — collecting data on dependency relations
+2. **Analysis layer** — pattern queries, bottleneck identification
+3. **Remedy layer** — individual remedy through the subject's consent or legal process
+4. **Enforcement layer** — orders to release lock-in, injunctive suspension
 
-패턴 쿼리는 가능하지만 실명 접근은 당사자 동의, 법적 절차, 긴급 구제 같은
-좁은 문으로만 열어야 한다. 이 분리가 깨지는 순간 락인 스캐너는 감시국가가 된다.
+Pattern queries are permitted, but real-name access must be opened only through narrow gates such as the subject's consent, legal process, or emergency relief. The moment this separation breaks down, the lock-in scanner becomes a surveillance state.
 
-차등프라이버시(differential privacy) 같은 기술로, "이 직업군의 X%가 단일
-고용주에 종속되어 있다"는 통계는 보되, "김철수가 A회사에 묶여 있다"는 정보는
-안 보는 구조가 기술적으로 가능하다.
+With techniques such as differential privacy, it is technically possible to see the statistic "X% of this occupational group is dependent on a single employer" while not seeing the information "Kim Cheol-su is bound to Company A."
 
-### 명제 6: 모든 방어장치는 포획된다고 가정한다
+### Proposition 6: Assume Every Defensive Mechanism Will Be Captured
 
-방어장치가 부정을 당하지 않을 거라고 가정하면 안 된다. 방어장치가
-방어장치가 부정을 당했을 때 그 사실이 빨리 알려지도록 만드는 것이 목표다.
+Do not assume that defensive mechanisms will not be subverted. The goal is to make it so that when a defensive mechanism is captured, the fact becomes known quickly.
 
-방어는 단일 기관이 아니라 **여러 기관이 서로 다른 방식으로 겹치는 구조**여야 한다:
+Defense must not be a single institution but **a structure in which multiple institutions overlap in different ways**:
 
-- 감사자 여러 명 (서로 다른 선발 경로)
-- 돈줄 여러 개
-- 반대 보고서 공개
-- 피해 집단의 직접 반론권
-- 일정 기간마다 권한 자동 만료
-- 방어장치 부정 의심 자체를 감사하는 메타 감사
-- 데이터와 절차의 최소 공개 표준
+- Multiple auditors (different selection paths)
+- Multiple funding streams
+- Public disclosure of dissenting reports
+- The affected group's direct right of counter-argument
+- Automatic expiration of authority after a fixed period
+- Meta-audits that audit the suspicion of capture itself
+- Minimum disclosure standards for data and procedures
 
-#### 시간 비동기화(따로 움직임)
+#### Temporal Desynchronization
 
-공간적 분산만으로는 동시 포획에 취약하다. 방어선이 여러 개여도 같은 선거
-주기, 같은 예산 주기, 같은 임명권자에 묶이면 한 번에 무너진다. 방어는
-공간적 겹침과 더불어 **시간적 엇갈림**이 필요하다:
+Spatial dispersion alone is vulnerable to simultaneous capture. Even with multiple defensive lines, if they are tied to the same electoral cycle, the same budget cycle, or the same appointing authority, they fall at once. Defense requires not only spatial overlap but **temporal offset**:
 
-| 속도 | 장치 | 역할 |
+| Speed | Mechanism | Role |
 | --- | --- | --- |
-| 빠름 | 긴급 집행정지, 피해자 이의제기, 임시 이전권 | 개인의 생존 주기에 맞춰 작동 |
-| 중간 | 감사, 반대 감사, 예산 검토 | 중기 포획 감지 |
-| 느림 | 하한선 변경, 최소 규칙 프로토콜 개정, 헌법급 탈출권 | 장기 구조 보호 |
+| Fast | Emergency injunctive suspension, victim objection, temporary transfer rights | Operates on the individual's survival cycle |
+| Medium | Audits, counter-audits, budget review | Detects medium-term capture |
+| Slow | Floor changes, minimal-rule protocol revisions, constitutional-grade right of exit | Protects long-term structure |
 
-실패 모드가 달라야 방어가 된다. 같은 방식으로 부정을 당하면 층이 많아도
-의미 없다. 보안 설계의 defense in depth 원칙과 같다 — 층이 많은 게 아니라,
-층마다 **다른 실패 모드**를 가져야 한다.
+Defense works only if the failure modes differ. If capture works the same way against every layer, having many layers is meaningless. This is the same as the security principle of defense in depth — it is not the number of layers that matters, but that each layer has **a different failure mode**.
 
-빠른 장치는 개인을 당장 보호하고, 느린 장치는 빠른 장치 자체가 부정을
-당하지 않도록 보호한다. 이 둘의 상호 의존이 재귀의 바닥을 잡는 구조다.
+Fast mechanisms protect the individual in the moment; slow mechanisms protect the fast mechanisms themselves from being captured. The interdependence of the two is what holds the bottom of the recursion.
 
-## 3. 비지역적 주권(땅 없는 힘) — 영토 없는 주권자
+## 3. Non-Territorial Sovereignty — The Sovereign Without Territory
 
-현대에서 가장 강력한 락인 구조는 지리적이지 않다. 플랫폼 계정, 소셜미디어
-정체성, 금융망 접근, 앱스토어, 결제망 — 이건 영토가 없는 주권이다.
+The most powerful lock-in structures of the modern age are not geographic. Platform accounts, social-media identities, access to financial networks, app stores, payment networks — these are sovereignty without territory.
 
-### 국가 주권과 플랫폼 주권의 구조적 동등성
+### Structural Equivalence of State Sovereignty and Platform Sovereignty
 
-주권의 핵심 요소가 영토에서 네트워크로 이동했을 뿐, 구조는 같다:
+The core elements of sovereignty have simply migrated from territory to network; the structure is the same:
 
-| 국가 주권 | 플랫폼 주권 | 구조적 동등성 |
+| State sovereignty | Platform sovereignty | Structural equivalence |
 | --- | --- | --- |
-| 영토 | 플랫폼 생태계 (API, 스토어, 프로토콜) | 접근 통제 영역 |
-| 주민등록 | 계정 | 식별·추적 단위 |
-| 국경 | 로그인 / API 권한 / 스토어 심사 | 진입 통제 |
-| 시민권 | 이용약관 동의 | 소속 조건 |
-| 추방 | 계정 정지 / 밴 | 강제 이탈 |
-| 법률 | 약관·알고리즘 정책 | 규칙 부과 |
-| 사법부 | 고객지원 / 항소 양식 | 항의 절차 (실질력 차이 큼) |
-| 세금 | 수수료 / 데이터 수집 / 광고 수익 | 자원 추출 |
+| Territory | Platform ecosystem (API, store, protocol) | Access-controlled zone |
+| Resident registration | Account | Unit of identification and tracking |
+| Border | Login / API permissions / store review | Entry control |
+| Citizenship | Consent to terms of service | Condition of membership |
+| Deportation | Account suspension / ban | Forced exit |
+| Law | Terms and algorithmic policy | Imposition of rules |
+| Judiciary | Customer support / appeal form | Protest procedure (large gap in real power) |
+| Taxes | Fees / data collection / ad revenue | Resource extraction |
 
-영토가 없다는 건 약점이 아니라 **강점**이다. 영토 기반 주권은 물리적 제약
-때문에 확장에 한계가 있지만, 플랫폼 주권은 네트워크 효과를 통해 전 세계로
-확장한다. 한 플랫폼의 "국민"이 한 국가의 인구보다 많을 수 있다.
+The absence of territory is not a weakness but a **strength**. Territory-based sovereignty is limited in expansion by physical constraints, but platform sovereignty expands across the world through network effects. The "citizenry" of a single platform can outnumber the population of a single state.
 
-### 계정이 곧 신분이다
+### The Account Is the Identity
 
-현대 디지털 환경에서 플랫폼 계정은 단순한 서비스 가입이 아니라 **디지털
-시민권(digital citizenship)**으로 기능한다:
+In the modern digital environment, a platform account is not a simple service sign-up but functions as **digital citizenship**:
 
-- **인증 수단**: "Google로 로그인", "Apple로 로그인" — 타 서비스 접근의 열쇠
-- **결제 수단**: 앱스토어 구매, 구독, 인앱 결제
-- **소셜 그래프**: 연락처, 메시지, 팔로워, 평판
-- **콘텐츠 보관**: 사진, 문서, 이메일, 클라우드 저장
-- **비즈니스 기반**: 광고 계정, 개발자 계정, 판매자 계정, 크리에이터 수익
-- **기업 업무 도구**: 이메일, 캘린더, 협업 툴, 문서 공유
+- **Authentication**: "Sign in with Google," "Sign in with Apple" — the key to accessing other services
+- **Payment**: App store purchases, subscriptions, in-app payments
+- **Social graph**: contacts, messages, followers, reputation
+- **Content storage**: photos, documents, email, cloud storage
+- **Business base**: ad accounts, developer accounts, seller accounts, creator revenue
+- **Enterprise work tools**: email, calendar, collaboration tools, document sharing
 
-계정 하나가 정지되면, 이 전체가 연쇄로 단절된다. 이건 "서비스 하나를 못
-쓰게 됨"이 아니라 **디지털 시민권의 박탈**이다.
+When one account is suspended, this entire chain is severed. This is not "losing the use of one service" — it is **the stripping of digital citizenship**.
 
-### 프레임워크의 함의
+### Implications for the Framework
 
-이 확장이 없으면, 국가를 쪼개서 지역 주권자를 만들었더니 빈 자리를
-플랫폼이 채우는 결과가 된다. 주권이 사라진 게 아니라 **영토 없는 민간
-주권자로 이전**된 것이다. 최소 규칙 경쟁 원칙이 지리적 지역뿐 아니라 디지털
-플랫폼에도 동일하게 적용되어야 하는 이유다.
+Without this extension, the result of breaking up the state to create regional sovereigns is that platforms fill the vacancy. Sovereignty has not disappeared; it has **migrated to non-territorial private sovereigns**. This is why the principle of minimal-rule competition must apply identically to digital platforms as well as to geographic regions.
 
-## 4. 락인 판별식
+## 4. The Lock-In Discriminant
 
-락인 여부를 판정하는 네 항 확인표:
+A four-item checklist to determine whether lock-in is present:
 
 ```
-못 나감 + 룰을 당함 + 따져도 안 먹힘 + 상대가 내 생존조건을 쥠 = 보호 대상 락인
+cannot leave + subjected to rules + objection does not work + counterparty holds your survival conditions = lock-in warranting protection
 ```
 
-| 항 | 질문 | 측정 대상 |
+| Item | Question | What is measured |
 | --- | --- | --- |
-| 1. 못 나감 | 이 관계에서 빠져나갈 수 있는가? | 이탈 가능성 |
-| 2. 룰을 당함 | 규칙이 일방적으로 부과되는가? | 규칙 강제성 |
-| 3. 따져도 안 먹힘 | 항의 절차가 실질적 구제를 주는가? | 항의 실효성 |
-| 4. 생존조건을 쥠 | 상대가 본인의 생존 기반을 통제하는가? | 의존 비대칭 |
+| 1. Cannot leave | Can one exit this relationship? | Exit feasibility |
+| 2. Subjected to rules | Are rules imposed unilaterally? | Rule coerciveness |
+| 3. Objection does not work | Does the protest procedure provide real remedy? | Effectiveness of objection |
+| 4. Holds survival conditions | Does the counterparty control the basis of your survival? | Dependency asymmetry |
 
-이 확인표의 핵심은 네 번째 항이다. 네 번째 항이 없으면 금고와 감옥을
-구분하지 못한다. 노동법, 복지, 세금, 공공보험 같은 것은 누군가를 묶는 게
-맞지만, 그 묶음이 약자를 가두는지 아니면 강자의 약탈을 막는지 봐야 한다.
+The heart of this checklist is the fourth item. Without the fourth, one cannot distinguish a vault from a prison. Labor law, welfare, taxes, public insurance — these do bind people, but the question is whether that binding imprisons the weak or stops the predation of the strong.
 
-### "락인된 사람"은 고정 범주가 아니다
+### "The Locked-In Person" Is Not a Fixed Category
 
-같은 사람이 한 차원에서는 갇히고, 다른 차원에서는 자유롭다:
+The same person may be trapped along one dimension and free along another:
 
-- 지리적으로 이동 가능하지만, 직업적 자격증이 특정 국가에 묶여 있음
-- 플랫폼에서 계정 삭제 가능하지만, 의료 기록이 특정 병원에 묶여 있음
-- 경제적 자본은 있지만, 가족 돌봄 책임이 이동을 막음
-- 언어 능력은 있지만, 자녀 교육 기록이 이전 불가능함
+- Geographically mobile, but occupational certification tied to a specific country
+- Able to delete a platform account, but medical records locked in a specific hospital
+- Has economic capital, but family care responsibilities block movement
+- Has language ability, but a child's education records cannot be transferred
 
-"락인된 사람"을 식별하는 작업 자체가 다차원 평가여야 하며, 누군가 오늘 묶여
-있지 않아도 내일 락인될 수 있다. 원칙은 "현재 락인된 사람"이 아니라 **"락인될 수
-있는 모든 사람"**에 대해 적용되어야 한다.
+Identifying "the locked-in person" must itself be a multi-dimensional assessment, and someone not locked in today may be locked in tomorrow. The principle must apply not to "those currently locked in" but to **"everyone who could be locked in."**
 
-## 5. 락인 위험도 점수
+## 5. Lock-In Severity Score
 
-"생존조건을 쥔다"는 이항 판정이 아니라 연속값이다. 각 항을 점수화하여
-**락인 위험도**로 평가한다:
+"Holds survival conditions" is not a binary judgment but a continuous value. Each item is scored to produce a **lock-in severity**:
 
 ```
-락인 위험도 = f(이탈 가능성, 규칙 강제성, 항의 실효성, 의존 비대칭)
+lock-in severity = f(exit feasibility, rule coerciveness, effectiveness of objection, dependency asymmetry)
 ```
 
-같은 구조가 사람에 따라, 시점에 따라 락인이 되고 안 된다:
+The same structure is lock-in for one person and not for another, depending on time and circumstance:
 
-- 고용주가 급여를 쥔다: 대체 고용주가 있으면 락인 아님, 없으면 락인
-- 플랫폼이 계정을 쥔다: 생계와 직결되면 락인, 취미 계정이면 아님
-- 의료 기록이 병원에 묶인다: 만성질환이면 락인, 건강하면 아님
-- 가족 돌봄 책임이 이동을 막는다: 피부양자 생존이 걸리면 락인
+- Employer holds the paycheck: lock-in if there is no alternative employer, not lock-in if there is
+- Platform holds the account: lock-in if tied to livelihood, not if it is a hobby account
+- Medical records locked in a hospital: lock-in for chronic illness, not for a healthy person
+- Family care responsibilities block movement: lock-in if the dependent's survival is at stake
 
-보호 대상은 "락인 있음/없음"이 아니라 **"위험도가 임계값을 넘는 관계"**다.
+The object of protection is not "lock-in present / absent" but **"relationships whose severity exceeds the threshold."**
 
-### 임계값의 정치성
+### The Political Nature of the Threshold
 
-임계값 설정은 정치적이다. 낮추면 모든 고용·플랫폼·가족 관계가 락인이 되어
-시스템이 마비하고, 높이면 실제 락인을 놓친다. 임계값을 누가 정하느냐가 다시
-주권 문제로 돌아온다.
+Setting the threshold is political. Lower it and every employment, platform, and family relationship becomes lock-in, paralyzing the system; raise it and real lock-in slips through. Who sets the threshold brings us back to the question of sovereignty.
 
-완화책:
-- 임계값을 고정하지 않고 지역·부문별로 다르게 설정
-- 그 차이 자체가 공개되고 분쟁의 대상이 됨
-- 각 부문이 어떤 임계값을 쓰는지, 누구에게 유리한지, 반대 감사가 뭘
-  지적했는지 공개
-- 하한선의 지역 간 편차에 상한을 두고, 넘으면 자동 조정 기구 개입
-- 조정 기구의 권한은 갱신 권한이 아니라 **편차 억제 권한만**으로 제한
+Mitigations:
+- Do not fix the threshold; set it differently by region and sector
+- The differences themselves are disclosed and become the subject of dispute
+- Each sector discloses which threshold it uses, whom it favors, and what the counter-audit flagged
+- A ceiling on inter-regional variance in the floor; when exceeded, an automatic adjustment body intervenes
+- The adjustment body's authority is limited not to the power to renew, but only to **the power to suppress variance**
 
-## 6. 합작 락인
+## 6. Composite Lock-In
 
-락인을 만드는 주체가 단일이 아닐 수 있다. 두 주체 이상이 각자 다른
-인센티브로 협력해서 락인을 만드는 구조다.
+The actor that creates lock-in may not be singular. It is a structure in which two or more actors, each with different incentives, cooperate to produce lock-in.
 
-예: 한국 E-7 비자
-- 국가의 인센티브: 이주 통제, 체류 질서, 고용주 책임 전가
-- 고용주의 인센티브: 이직 비용 상승으로 인한 인력 유지
-- 양쪽 모두 "이 구조를 바꾸자"고 할 이유가 없음
+Example: South Korea's E-7 visa
+- State's incentive: migration control, residence order, shifting employer responsibility
+- Employer's incentive: retention of staff through raised cost of switching
+- Neither has reason to say "let's change this structure"
 
-이 구조에서 확인표의 네 번째 항 "상대가 내 생존조건을 쥠"에서 "상대"가
-단수가 아니다. 생존조건을 쥔 주체가 둘 이상이고, 각자 자기 부분만 책임지면
-전체 락인은 어느 쪽의 책임으로도 분류되지 않는다.
+In this structure, in the checklist's fourth item, "the counterparty holds your survival conditions," the "counterparty" is not singular. Two or more actors hold survival conditions, and if each is responsible only for its own part, the total lock-in is classified as no single party's responsibility.
 
-합작 락인의 측정은 교차항 측정이 필요하다: "국가의 체류 규칙과 고용주의
-계약 구조가 결합했을 때 탈출 비용이 Y가 된다." 단일 부문 감사로는 보이지
-않는다.
+Measuring composite lock-in requires cross-term measurement: "When the state's residence rules combine with the employer's contract structure, the cost of exit becomes Y." This is invisible to single-sector audits.
 
-해결책도 단일 주체를 겨냥하면 안 된다. 한쪽만 풀리면 락인이 반쯤 풀리며,
-반쯤 풀린 락인은 여전히 락인이다. 해결책은 **교차점을 동시에 풀어야** 한다.
+Nor should the solution target a single actor. Release only one side and lock-in is half undone — and half-undone lock-in is still lock-in. The solution must **release the intersection simultaneously.**
 
-### 4단계 공통 패턴
+### The Four-Stage Common Pattern
 
-다섯 사례(E-7, 플랫폼, 의료, 돌봄, 교육)에서 같은 구조가 반복된다:
+The same structure repeats across the five cases (E-7, platform, medical, care, education):
 
-1. **각 주체는 자기 역할만 수행** — 국가는 "체류질서", 고용주는 "근로계약".
-   플랫폼은 "약관 집행", 결제망은 "위험 관리". 병원은 "진료 연속성", 보험자는
-   "비용 관리". 가족은 "사랑·의무", 국가는 "복지 정책". 학교는 "교육과정
-   준수", 입시기관은 "선발 기준".
-2. **교차점에서 생기는 락인은 어느 쪽 책임도 아님** — 단일 부문 감사로는
-   보이지 않는다.
-3. **해결책은 교차점을 동시에 풀어야 함** — 한쪽만 풀리면 반쯤 풀린 락인은
-   여전히 락인이다.
-4. **시행 주체의 딜레마가 반복됨** — 해결책을 채택할 권한을 가진 주체가
-   해결책에 의해 자신의 권한이 줄어드는 구조.
+1. **Each actor performs only its own role** — the state does "residence order," the employer does "employment contract." The platform does "terms enforcement," the payment network does "risk management." The hospital does "continuity of care," the insurer does "cost management." The family does "love and duty," the state does "welfare policy." The school does "curriculum compliance," the admissions body does "selection criteria."
+2. **Lock-in arising at the intersection is no one's responsibility** — invisible to single-sector audits.
+3. **The solution must release the intersection simultaneously** — releasing only one side leaves half-undone lock-in, which is still lock-in.
+4. **The enforcer's dilemma recurs** — the actor with the authority to adopt the solution is placed in a structure where the solution reduces their own authority.
 
-이 공통 패턴이 합작 락인의 정의다. 단일 주체의 의도가 아니라, 둘 이상의
-주체가 각자 자기 권한을 행사하는 교차점에서 락인이 생긴다. 다섯 가지
-힘 유형 — 지역, 땅 없는 힘, 물리적, 관계, 인정 시장 — 모두에서 동일하게
-발생한다.
+This common pattern is the definition of composite lock-in. It is not the intent of any single actor, but lock-in that arises at the intersection where two or more actors each exercise their own authority. It occurs identically across all five types of power — regional, non-territorial, physical, relational, and recognition regime.
 
-### 합작 락인 사례 목록
+### Catalog of Composite Lock-In Cases
 
-| 사례 | 주체 A | 주체 B (이상) | 교차점 락인 |
+| Case | Actor A | Actor B (etc.) | Intersection lock-in |
 | --- | --- | --- | --- |
-| E-7 비자 | 국가 (체류 허가) | 고용주 (이적동의서) | 체류-고용 결합 탈출 비용 |
-| 플랫폼 계정 정지 | 플랫폼 (약관 집행) | 결제망 (거래 정지) | 계정-결제 연쇄 단절 |
-| 플랫폼 + 앱스토어 | 플랫폼 (OS) | 앱스토어 (배포 통로) | 개발자 사업 기반 소멸 |
-| 플랫폼 + 광고 | 콘텐츠 플랫폼 (수익화) | 광고 네트워크 (광고 송출) | 크리에이터 수익-시청자 동시 단절 |
-| 플랫폼 + 정부 인증 | 플랫폼 (OAuth) | 정부/기업 (인증 채택) | 계정 정지 → 공적 서비스 단절 |
-| 의료 + 보험자 | 병원 (진료·검사) | 보험자 (급여 판정) | 병원 변경 시 재검사·재심사 |
-| 의료 + 정부 허가 | 병원 (의료 서비스) | 정부 (설립·축소 승인) | 지역 의료 접근 단절 |
-| 의료 + EMR 벤더 | 병원 (기록 관리) | EMR 벤더 (비표준 포맷) | 의미적 이동성 훼손 |
-| 돌봄 + 국가 | 가족 (돌봄 전담) | 국가 (부양 의무법) | 돌봄 책임 가족 전가 |
-| 돌봄 + 복지제도 | 가족 (돌봄 형태) | 복지제도 (지원금 조건) | 돌봄 형태 변경 시 지원 단절 |
-| 돌봄 + 비자 | 고용주 (가구) | 국가 (비자) | 이주 가사노동자 체류-고용 결합 |
-| 교육 + 입시기관 | 학교 (성적·생활기록) | 대학 (입시 기준) | 학교 변경 = 입시 트랙 변경 |
-| 교육 + 국가 | 학교 (교육과정) | 교육부 (허가) | 대안 교육 인정 박탈 |
-| 교육 + 주소 | 학교 (학군 배정) | 주거 (주소지) | 학교 변경 = 주소 이전 |
-| 교육 + 사교육 | 사교육 (입시 대비) | 입시제도 (표준화 시험) | 사교육 중단 = 입시 경쟁 탈락 |
+| E-7 visa | State (residence permit) | Employer (consent-to-transfer) | Residence-employment combined exit cost |
+| Platform account suspension | Platform (terms enforcement) | Payment network (transaction halt) | Account-payment cascading severance |
+| Platform + app store | Platform (OS) | App store (distribution channel) | Developer business base erased |
+| Platform + advertising | Content platform (monetization) | Ad network (ad delivery) | Creator revenue and audience severed simultaneously |
+| Platform + government auth | Platform (OAuth) | Government/enterprise (auth adoption) | Account suspension → public service severance |
+| Medical + insurer | Hospital (treatment, testing) | Insurer (benefit determination) | Re-testing and re-review on hospital change |
+| Medical + government licensing | Hospital (medical service) | Government (establishment/downsize approval) | Regional medical access severed |
+| Medical + EMR vendor | Hospital (record management) | EMR vendor (non-standard format) | Semantic portability degraded |
+| Care + state | Family (full-time care) | State (family-support duty law) | Care responsibility shifted onto family |
+| Care + welfare system | Family (form of care) | Welfare system (grant conditions) | Support severed on change of care form |
+| Care + visa | Employer (household) | State (visa) | Migrant domestic worker's residence-employment combined |
+| Education + admissions body | School (grades, records) | University (admissions criteria) | School change = admissions track change |
+| Education + state | School (curriculum) | Ministry of Education (licensing) | Alternative education recognition revoked |
+| Education + address | School (school district assignment) | Residence (address) | School change = address relocation |
+| Education + private tutoring | Private tutoring (exam prep) | Admissions system (standardized testing) | Quitting tutoring = dropping out of admissions competition |
 
-## 7. 측정이 통치다
+## 7. Measurement Is Governance
 
-실험 엔진에서 "성공"을 측정하려면 측정 항목이 정해져야 한다. 그런데
-측정 항목을 정하는 순간, 그게 "좋음의 정의"가 된다:
+To measure "success" in an experiment engine, the metrics must be defined. But the moment the metrics are defined, they become "the definition of the good":
 
-- GDP로 재면 → 경제 성장이 좋음. 규제 완화가 "성공"으로 측정됨
-- 주민 만족도로 재면 → 다수의 선호가 좋음. 소수 락인이 안 보임
-- 이탈률로 재면 → 나가는 사람이 많은 게 나쁜 걸로 측정됨.
-  그런데 이탈이 어려워서 못 나가는 경우도 이탈률이 낮아짐
+- Measure by GDP → economic growth is the good. Deregulation is measured as "success."
+- Measure by resident satisfaction → majority preference is the good. Minority lock-in becomes invisible.
+- Measure by exit rate → many people leaving is measured as bad. But cases where exit is hard and people cannot leave also produce a low exit rate.
 
-"좋음을 중앙에서 정하지 않겠다"는 선언 자체가 하나의 좋음 관념이며,
-측정 항목 선택이 그 관념을 드러내는 지점이다.
+The very declaration "we will not define the good centrally" is itself one conception of the good, and the choice of metric is the point at which that conception is revealed.
 
-### 측정권(재는 권한) 헌법화
+### Constitutionalizing the Right to Measure
 
-측정 항목도 헌법처럼 다뤄야 한다:
+Metrics must be treated like a constitution:
 
-- 공통 지표는 최소화
-- 지표의 정치적 편향 공개
-- 반대 지표 허용
-- 피해 집단이 "이 지표가 우리를 지운다"고 이의제기 가능
-- 지표 자체에 만료일 부여
-- 지표 변경 이력 공개
+- Minimize common indicators
+- Disclose the political bias of indicators
+- Allow counter-indicators
+- Let affected groups object that "this indicator erases us"
+- Attach expiration dates to indicators themselves
+- Publish the change history of indicators
 
-측정의 본질적 딜레마: 비교 가능성과 자율성이 충돌한다. 표준화되면 비교가
-가능하지만, 표준화 주체가 주권자다. 지역이 각자 다른 항목을 쓰면 비교가
-불가능하고 복제도 안 된다.
+The essential dilemma of measurement: comparability and autonomy collide. Standardize and comparison becomes possible, but the standardizing body is the sovereign. If each region uses different metrics, comparison is impossible and replication fails.
 
-완화책: 최소 공통 측정항목(락인 위험도, 이탈률, 피해 구제 건수 같은 보편적
-지표)은 최소 규칙이 정하고, 지역별 추가 항목은 자율로 둔다. 다만 이 최소 공통
-항목을 정하는 주체가 다시 주권 문제로 돌아오며, 이건 피할 수 없다.
+Mitigation: the minimal common metrics (universal indicators like lock-in severity, exit rate, remedy counts) are set by the minimal rule, and additional metrics per region are left to autonomy. But the body that sets these minimal common metrics brings us back to the question of sovereignty, and this cannot be escaped.
 
-## 8. 최소 규칙(커널) 설계
+## 8. Minimal Rule (Kernel) Design
 
-### 국가를 최소 규칙처럼 낮춘다
+### Reducing the State to a Minimal Rule
 
-국가를 없애자는 것이 아니라, 국가를 운영체제 최소 규칙처럼 낮추는 것이다.
-국가는 최소 기본권, 이동권, 신분/재산/의료/교육 데이터의 휴대성, 폭력
-방지, 외부효과 정산만 맡고, 지역은 그 위에서 앱처럼 다양한 거버넌스를
-실험한다.
+This is not a call to abolish the state, but to lower it to the minimal rule of an operating system. The state handles only minimal basic rights, freedom of movement, portability of identity/property/medical/education data, violence prevention, and settlement of externalities; regions then experiment with diverse governance on top of it, like apps.
 
-### 최소 규칙이 강제하는 것과 강제하지 않는 것
+### What the Minimal Rule Enforces and What It Does Not
 
-핵심 구분: **좋은 삶의 내용을 정하면 안 되고, 지역이 사람을 가둘 수
-없게 하는 규칙만 강제**해야 한다.
+The key distinction: **it must not define the content of a good life; it must enforce only the rules that prevent a region from imprisoning its people.**
 
-비유하면: 각 지역이 게임 룰을 다르게 만들 수는 있다. 근데 플레이어의
-세이브파일을 인질로 잡거나, 나가기 버튼을 숨기거나, 운영자가 밴 때리고
-항소창도 안 주는 건 금지해야 한다.
+By analogy: each region may make different game rules. But holding a player's save file hostage, hiding the exit button, or the operator banning a player with no appeal window — these must be prohibited.
 
-**강제하면 안 되는 것 — 지역 합의와 AI 조언에 맡길 것:**
+**What must not be enforced — left to regional agreement and AI counsel:**
 
-- 지역별 세금 구조
-- 교육 방식
-- 주거 정책
-- 교통 정책
-- 복지 전달 방식
-- 행정 자동화 방식
-- AI 조언 시스템의 세부 모델
+- Regional tax structure
+- Approach to education
+- Housing policy
+- Transportation policy
+- Mode of welfare delivery
+- Mode of administrative automation
+- The detailed model of the AI counsel system
 
-이런 건 지역 합의와 AI 제안으로 달라져야 한다. 그래야 경쟁적 거버넌스가
-살아남는다. "모든 지역에 똑같이 강제"하면 원래 비전이 망가진다.
+These should vary by regional agreement and AI proposals. That is how competitive governance survives. "Enforce the same thing in every region" and the original vision breaks.
 
-**강제해야 하는 것 — 탈출권 하한선:**
+**What must be enforced — the floor of the right of exit:**
 
-- 기록 이동권 (세금·의료·교육 기록의 이동성)
-- 이의제기권 (처분에 대한 설명·항의 절차)
-- 설명 요구권 (처분 사유의 공개)
-- 긴급 집행정지권 (심각한 피해 시 집행 중지)
-- 차별적 진입장벽 금지 (지역 가입 심사 제한)
-- 탈출 불가능자 보호 (아동, 장애인, 의존자)
-- 데이터 이동성 (3층 전부)
-- 포크 가능성 (부문별 원칙에 따라)
-- 대리 발언권 (항의 능력이 없는 수혜자 — 아동·중증 환자·인지장애인)
-- 대체 생존조건 보장 (탈출이 제3자 생존을 위혬할 때 — 돌봄·의료)
-- 인정 시장 다원화 (단일 주체가 인정을 독점하지 못하게)
+- Right to transfer records (portability of tax, medical, education records)
+- Right of objection (explanation and protest procedure against a disposition)
+- Right to demand explanation (disclosure of the reasons for a disposition)
+- Right to emergency injunctive suspension (halting execution in cases of serious harm)
+- Prohibition of discriminatory entry barriers (limits on regional admission screening)
+- Protection of those unable to exit (children, people with disabilities, dependents)
+- Data portability (all three layers)
+- Forkability (per sectoral principle)
+- Proxy voice (for recipients unable to object — children, critically ill patients, people with cognitive disabilities)
+- Guarantee of alternative survival conditions (when exit threatens a third party's survival — care, medical)
+- Pluralization of the recognition regime (no single actor may monopolize recognition)
 
-이건 지역 취향으로 빼버리게 두면 바로 "자율 지역"이 아니라 작은 감옥이
-된다.
+Leave these to regional preference and what you get is not an "autonomous region" but a small prison.
 
-### 강제의 방향: 통치가 아니라 탈출권
+### The Direction of Coercion: Not Governance but the Right of Exit
 
-이 강제는 지역을 통치하려는 강제가 아니라, 지역이 주민을 통치 불가능하게
-가두지 못하게 하는 강제다 (섹션 2, 명제 3에서 정의한 통치 강제 vs 탈출권
-강제 구분). 이 선을 못 그으면 자유로운 지역 경쟁이 아니라 지역별 봉건제가
-된다.
+This coercion is not coercion to govern the region; it is coercion that prevents the region from imprisoning its residents in a way that makes them ungovernable by exit (the distinction between coercion to govern and coercion to enforce the right of exit, defined in Section 2, Proposition 3). Fail to draw this line and you do not get free regional competition but regional feudalism.
 
-최소 규칙이 "복지는 이만큼", "교육은 이렇게", "AI는 이 모델"을 정하기
-시작하면 새 주권자다. 대신 최소 규칙은 딱 이것만 한다:
+If the minimal rule starts defining "this much welfare," "education this way," "AI this model," it is a new sovereign. Instead, the minimal rule does only this:
 
-- 못 나가게 묶는 계약 무효화
-- 데이터·기록 이전 방해 금지
-- 항의 절차 없는 자동 처분 정지
-- 독점 최소 규칙의 상호운용 강제
-- 피해 집단의 집행정지 요청 보장
-- 탈출 비용을 일부러 높이는 행위 제재
-- 대체 생존조건 없는 탈출 금지 (방치 방지)
-- 대리 발언권 없는 수혜자 보호
+- Invalidate contracts that prevent exit
+- Prohibit obstruction of data and record transfer
+- Suspend automatic dispositions that lack a protest procedure
+- Enforce interoperability of monopoly minimal rules
+- Guarantee the affected group's right to request injunctive suspension
+- Sanction acts that deliberately raise the cost of exit
+- Prohibit exit without alternative survival conditions (preventing abandonment)
+- Protect recipients who lack proxy voice
 
-### 최소 규칙은 국가가 아니라 프로토콜이어야 한다
+### The Minimal Rule Must Be a Protocol, Not a State
 
-하지만 프로토콜 운영자도 권력이 되므로, 프로토콜은 다음 위에 있어야 한다:
+But because a protocol operator also becomes a power, the protocol must rest on:
 
-- 다중 발급자 (상호 검증 가능한 프로토콜, W3C DID 등)
-- 다중 감사자
-- 포크 가능성
-- 강제 상호운용성
+- Multiple issuers (mutually verifiable protocols, W3C DID, etc.)
+- Multiple auditors
+- Forkability
+- Mandatory interoperability
 
-최소 규칙 기능(신원, 의료, 교육, 세금 기록)을 국가에서 빼냈는데 그걸
-구글/애플/삼성/네이버 같은 곳이 독점하면 왕관만 갈아씌운 것이다. 답은
-"민간화"가 아니라 **상호운용 가능한 여러 발급자 + 탈퇴 가능성 + 공개
-프로토콜**이다.
+If the minimal-rule functions (identity, medical, education, tax records) are taken out of the state and then monopolized by the likes of Google, Apple, Samsung, or Naver, only the crown has been swapped. The answer is not "privatization" but **interoperable multiple issuers plus the possibility of exit plus open protocols.**
 
-### 부문별 포크(갈라타기) 가능성
+### Sectoral Forkability
 
-소프트웨어 포크를 정치에 그대로 들고 오면 유치해진다. 병원 건물, 도로,
-전력망, 가족 돌봄은 GitHub repo처럼 복사 안 된다. 부문별로 원칙이 달라야
-한다:
+Importing software fork into politics verbatim becomes naive. Hospital buildings, roads, power grids, and family care cannot be copied like a GitHub repo. The principle must differ by sector:
 
-| 부문 | 핵심 원칙 | 설명 |
+| Sector | Core principle | Description |
 | --- | --- | --- |
-| 디지털 플랫폼 | 진짜 포크(갈라타기) | 데이터, 소셜 그래프, 콘텐츠, 결제 내역, 평판 이동 가능 → 대체 서비스 생존 가능 |
-| 의료·자격 | 인정의 이동성 | 기록은 옮겼는데 새 기관이 "우린 이거 인정 안 함" 하면 끝 |
-| 물리 인프라 | 접근 보장 + 독점 남용 제한 | 병원 건물 복사가 아니라 기록 이전, 보험 연동, 응급 접근, 지역 독점 감시, 필수 서비스 거부 제한 |
-| 관계 (돌봄) | 대체 돌봄 인프라 | 관계 자체는 복제 불가. 대체 돌봄 제공자·휴식권·긴급 돌봄 전환권으로 탈출 비용 저감 |
-| 인정 시장 (교육) | 인정 다원화 | 단일 국가 인정 독점 대신 상호운용 가능한 여러 인정 체계 + 공개 프로토콜 |
+| Digital platforms | True fork | Data, social graph, content, payment history, reputation portable → alternative service can survive |
+| Medical / credentials | Portability of recognition | If records are transferred but the new institution says "we don't recognize this," it is over |
+| Physical infrastructure | Guaranteed access + limits on monopoly abuse | Not copying the hospital building, but record transfer, insurance linkage, emergency access, monitoring of regional monopoly, limits on refusal of essential service |
+| Relational (care) | Alternative care infrastructure | The relationship itself cannot be replicated. Reduce exit cost through alternative care providers, right to rest, right to emergency care transfer |
+| Recognition regime (education) | Pluralization of recognition | Instead of a single state monopoly on recognition, multiple interoperable recognition regimes + open protocols |
 
-### 디지털 플랫폼도 자동으로 포크 가능한 것은 아니다
+### Digital Platforms Are Not Automatically Forkable Either
 
-"디지털이니까 포크가 쉽겠지"라는 가정은 틀렸다. 디지털 플랫폼에서 진짜
-포크가 되려면 다음이 전부 이동해야 한다:
+The assumption that "because it is digital, forking is easy" is wrong. For a true fork to occur on a digital platform, all of the following must be portable:
 
-| 이동 대상 | 현재 상태 | 포크에 미치는 영향 |
+| What must move | Current state | Impact on fork |
 | --- | --- | --- |
-| 데이터 (게시물, 사진, 문서) | 다운로드 가능 (기술적 이동성만) | 의미·제도적 이동성 없으면 무의미 |
-| 소셜 그래프 (팔로워, 구독자) | 이동 불가 | 대체 플랫폼에서 팬덤 재구축 불가 → 포크 사실상 불가 |
-| 콘텐츠 메타데이터 (댓글, 좋아요) | 이동 불가 | 상호작용 기록 소멸 → 콘텐츠 가치 저하 |
-| 구매 내역 (앱, 영화, 책) | 기록은 남음, 접근권은 귀속 | 다른 플랫폼에서 재구매 필요 → 포크 비용 급증 |
-| 평판 (평점, 리뷰, 인증) | 이동 불가 | 신뢰 자산 소멸 → 새 플랫폼에서 신뢰 재구축 필요 |
-| 인증 의존 (OAuth, SSO) | 이동 불가 | 타 서비스 접근이 플랫폼 계정에 의존 → 계정 정지 시 연쇄 단절 |
+| Data (posts, photos, documents) | Downloadable (technical portability only) | Without semantic and institutional portability, meaningless |
+| Social graph (followers, subscribers) | Not portable | Cannot rebuild fandom on alternative platform → fork effectively impossible |
+| Content metadata (comments, likes) | Not portable | Interaction records lost → content value degraded |
+| Purchase history (apps, movies, books) | Records remain, access rights are locked | Re-purchase required on another platform → fork cost spikes |
+| Reputation (ratings, reviews, certifications) | Not portable | Trust assets lost → trust must be rebuilt on new platform |
+| Authentication dependence (OAuth, SSO) | Not portable | Access to other services depends on the platform account → cascading severance on account suspension |
 
-소셜 그래프가 이동하지 않으면, "데이터는 가져갈 수 있지만 사람은
-못 가져간다"는 상태가 된다. 이건 포크가 아니라 **데이터 백업**이다.
-진짜 포크는 데이터뿐 아니라 관계, 평판, 구매, 인증이 같이 이동해야 한다.
+If the social graph does not move, you end up in a state of "you can take your data, but you cannot take your people." That is not a fork — it is **a data backup**. A true fork requires that data, relationships, reputation, purchases, and authentication all move together.
 
-### 포크 비용의 비대칭(갈라탈 때 드는 힘 차이)
+### The Asymmetry of Fork Cost
 
-포크 비용이 사용자에게만 부과된다:
+Fork cost is imposed only on the user:
 
-- **사용자가 플랫폼을 떠날 때**: 데이터 재구축, 소셜 그래프 재형성, 구매
-  재투자, 인증 재설정 — 전부 사용자 부담
-- **플랫폼이 사용자를 정지할 때**: 비용 0 — 즉시 집행
+- **When a user leaves a platform**: rebuilding data, re-forming a social graph, re-investing in purchases, re-setting authentication — all borne by the user
+- **When a platform suspends a user**: cost is zero — executed instantly
 
-이 비대칭이 락인의 핵심이다. 탈출 비용은 사용자에게만 있고, 추방 비용은
-플랫폼에게 거의 없다. 포크 가능성이 의미를 가지려면, 이 비대칭을
-줄여야 한다 — 사용자의 이탈 비용을 낮추고, 플랫폼의 정지 비용을 높이는
-방향으로.
+This asymmetry is the heart of lock-in. Exit cost exists only for the user; expulsion cost is nearly zero for the platform. For forkability to mean anything, this asymmetry must be reduced — in the direction of lowering the user's exit cost and raising the platform's cost of suspension.
 
-### 데이터 이동성(데이터 가져가기) 3층
+### The Three Layers of Data Portability
 
-"내 데이터 다운로드 가능"은 거의 사기 수준으로 약하다. 파일은 줬는데
-새 병원, 새 학교, 새 플랫폼이 안 받아주면 의미 없다. 진짜 이동성은 세 층이
-필요하다:
+"My data is downloadable" is nearly fraud-level weak. The files are handed over, but if the new hospital, new school, or new platform will not accept them, it is meaningless. Real portability requires three layers:
 
-1. **기술적 이동성** — 파일이 빠져나옴
-2. **의미적 이동성** — 다른 시스템이 뜻을 이해함
-3. **제도적 이동성** — 다른 기관이 그 기록을 인정함
+1. **Technical portability** — the files come out
+2. **Semantic portability** — another system understands the meaning
+3. **Institutional portability** — another institution recognizes those records
 
-세 번째가 없으면 그냥 예쁜 백업 파일이다.
+Without the third, it is just a pretty backup file.
 
-데이터 이동성 설계는 단순히 "기록 이전"이 아니라, **포크의 물질적 비용을
-낮추는 인프라**다. 제도적 이동성이 확보되면, 새로운 의료 시스템을 세우는 데
-있어 "기존 환자 기록을 그대로 가져올 수 있다"는 게 포크의 진입 장벽을
-극적으로 낮춘다.
+Data portability design is not simply "record transfer" — it is **infrastructure that lowers the material cost of forking.** When institutional portability is secured, the ability to "carry existing patient records over as-is" when setting up a new medical system dramatically lowers the entry barrier to a fork.
 
-## 9. 감사 시스템
+## 9. The Audit System
 
-### 단일 감사자는 사제 계급이 된다
+### A Single Auditor Becomes a Priesthood
 
-"우리가 검증했으니 믿어라"가 되는 순간 닫힌 권력이다. 감사 시스템의
-목표는 "합의된 단일 진실"이 아니라 **분쟁을 숨기지 않는 구조**다:
+The moment it becomes "trust us, we verified," it is closed power. The goal of the audit system is not "an agreed single truth" but **a structure that does not hide disputes**:
 
-- 서로 다른 감사자들이 독립 평가
-- 평가 결과의 불일치 자체를 공개
-- 핵심 쟁점을 짧은 공통 포맷으로 요약
-- 피해 예상 집단이 별도 반론권 보유
-- 감사 결과를 무시하면 이유와 책임자 공개
+- Different auditors evaluate independently
+- Disagreements among evaluations are themselves disclosed
+- Core disputes are summarized in a short common format
+- Groups expected to be affected retain a separate right of counter-argument
+- If an audit result is ignored, the reason and the responsible party are disclosed
 
-감사가 너무 많아지면 일반인은 못 읽어서, "감사 해설자"가 새 권력이 될
-위험이 있다. 핵심 쟁점의 짧은 공통 포맷 요약이 이 위험을 완화한다.
+When audits multiply, ordinary people cannot read them, and the "audit interpreter" risks becoming a new power. The short common-format summary of core disputes mitigates this risk.
 
-### 다수 감사의 한계
+### The Limits of Multiple Auditors
 
-다수 감사자 전체가 동시에 부정을 당하는 경우 — 예산이 같은 출처에서 나오거나,
-감사자 선발이 같은 주체에 의해 이루어지면 — 분산이 무의미해진다. 이건
-BFT(비잔틴 결함 허용) 임계값과 같은 구조다. 분산이 충분히 다양한 경제적·
-제도적 독립성을 가질 때만 작동한다.
+When all multiple auditors are captured simultaneously — budgets come from the same source, or auditor selection is done by the same actor — dispersion becomes meaningless. This is the same structure as a BFT (Byzantine fault tolerance) threshold. It works only when dispersion has sufficiently diverse economic and institutional independence.
 
-## 10. 실험 엔진
+## 10. The Experiment Engine
 
-부정 설계("못 가두게 하자")만으로는 좋은 질서가 자동으로 나오지 않는다.
-포크 가능성이 있어도, 실제로 포크가 일어나려면 사람이 모이고 자본이 모이고
-인프라가 만들어져야 한다. **실험-비교-확산 루프**가 필요하다:
+Negative design ("let no one be imprisoned") alone does not automatically produce good order. Even with forkability, for a fork to actually occur, people must gather, capital must gather, and infrastructure must be built. An **experiment-compare-diffuse loop** is needed:
 
-1. 지역이나 조직은 다양한 규칙을 실험한다
-2. 실험 전 예상 피해와 락인 위험도를 공개한다
-3. 일정 기간 뒤 결과를 공통 포맷으로 측정한다
-4. 성공한 규칙은 다른 곳이 쉽게 복제할 수 있다
-5. 실패한 규칙은 피해자 구제와 함께 종료된다
-6. 실험 중 탈출 불가능자가 생기면 즉시 브레이크가 걸린다
+1. A region or organization experiments with diverse rules
+2. Before the experiment, expected harms and lock-in severity are disclosed
+3. After a fixed period, results are measured in a common format
+4. Successful rules can be easily replicated elsewhere
+5. Failed rules are terminated along with victim remedies
+6. If those unable to exit emerge during the experiment, the brake is pulled immediately
 
-"좋음"을 하나로 정하지 않고, **좋아지는 절차**를 만든다.
+Instead of defining "the good" as one thing, we build **a procedure for getting better.**
 
-### 실험 윤리 — 거버넌스 IRB
+### Experiment Ethics — A Governance IRB
 
-거버넌스 실험은 사람을 대상으로 하는 실험이다. 의학의 IRB에 해당하는
-장치가 필요하다:
+A governance experiment is an experiment on people. A mechanism equivalent to the IRB in medicine is needed:
 
-- 사전 위험평가 — 실험 전 예상 피해와 락인 위험도 공개
-- 소규모 파일럿 먼저 — 전 지역 동시 적용이 아니라 단계적 확대
-- 중단 기준 사전 정의 — 위험 임계치 도달 시 자동 중단
-- 피해 보상금 사전 설정
-- 탈출 불가능자에게 브레이크 권한 부여 — 아동, 이주노동자, 비자 의존자,
-  장애인, 돌봄 의존자는 "싫으면 떠나라"가 안 되는 집단
-- 능동적 동의가 어려운 집단은 실험 대상에서 제외 또는 가장 강력한 보호
+- Prior risk assessment — disclose expected harms and lock-in severity before the experiment
+- Small pilots first — gradual scaling, not simultaneous application across all regions
+- Pre-defined stopping criteria — automatic halt when a risk threshold is reached
+- Pre-funded compensation for harm
+- Granting brake authority to those unable to exit — children, migrant workers, visa dependents, people with disabilities, care dependents are groups for whom "just leave if you don't like it" does not work
+- Groups for whom active consent is difficult are excluded from experimentation or given the strongest protection
 
-## 11. AI의 역할
+## 11. The Role of AI
 
-AI는 왕이나 판사가 아니라, **락인된 사람의 변호사**여야 한다.
+AI should not be a king or a judge, but **the lawyer of the locked-in person.**
 
-다수의 평균 만족도를 최적화하는 AI는 위험하다. 다수결의 횡포를
-증폭시킨다. 대신 이동 불가능자 입장에서 "이 정책이 누구를 가두는지, 누가
-비용을 뒤집어쓰는지, 어떤 탈출로가 막히는지"를 계속 찾아내는 AI가
-핵심이다.
+An AI that optimizes the average satisfaction of the majority is dangerous. It amplifies the tyranny of the majority. Instead, the AI that matters is the one that, from the standpoint of those unable to move, keeps detecting "who this policy imprisons, who bears the cost, which exit is being blocked."
 
-같은 모델이 왕의 자리에 앉으면 폭정 도구이고, 변호사 자리에 앉으면 권리
-방어 도구다. 이건 AI의 능력 문제가 아니라 AI의 **주체 위치** 문제다.
+The same model seated on the throne is a tool of tyranny; seated in the lawyer's chair, it is a tool for the defense of rights. This is not a question of AI capability but of the **subject position** of AI.
 
-AI가 실제로 유용한 역할:
-- **락인 탐지기** — 개인 감시가 아니라 구조적 락인 패턴 감지
-- **락인 위험도 계산** — 정책 변경 시 탈출 비용 임계치 판단
-- **기록 번역** — 서울의 의료 기록을 호주 시스템이 읽을 수 있게 변환
-  (가치판단이 아닌 기술적 번역)
-- **탈출권 변호사** — 락인된 사람 입장에서 정책의 피해 분석
+Roles where AI is genuinely useful:
+- **Lock-in detector** — not individual surveillance but detection of structural lock-in patterns
+- **Lock-in severity calculation** — judging whether the exit-cost threshold is crossed on a policy change
+- **Record translation** — converting Seoul's medical records so an Australian system can read them (technical translation, not value judgment)
+- **Right-of-exit lawyer** — analyzing the harms of a policy from the standpoint of the locked-in person
 
-### AI 공개 감사
+### Open Audit of AI
 
-AI가 정책 제안을 하면, 그 제안의 근거가 전부 공개되어야 발효된다. "모델
-오픈소스"보다 더 중요한 건 **권력 오픈소스**다. 모델 자체가 비공개여도,
-정책 판단 근거는 공개되어야 한다:
+When AI proposes a policy, the proposal takes effect only when its entire basis is disclosed. More important than "open-source model" is **open-source power.** Even if the model itself is closed, the basis for policy judgments must be disclosed:
 
-1. 정책 목표를 사람이 먼저 공개한다
-2. AI가 쓴 입력 데이터의 출처와 한계를 공개한다
-3. 주요 가정과 대안 시나리오를 공개한다
-4. 독립 감사자가 재현 가능한 평가를 한다
-5. 피해 가능성이 큰 집단이 이의제기할 수 있다
-6. 모델 자체가 비공개여도, 정책 판단 근거는 공개되어야 한다
+1. Policy goals are first published by humans
+2. AI discloses the sources and limits of the input data it used
+3. Key assumptions and alternative scenarios are disclosed
+4. Independent auditors conduct reproducible evaluation
+5. Groups at high risk of harm can object
+6. Even if the model itself is closed, the basis for policy judgments must be disclosed
 
-누가 목표를 정했고, 누구에게 비용이 가고, 누가 빠져나갈 수 없고, 틀렸을 때
-누가 책임지는지가 보여야 한다.
+Who set the goals, who bears the cost, who cannot get out, and who is accountable when it is wrong — these must be visible.
 
-## 12. 강제의 역설(강제 딜레마)
+## 12. The Coercion Paradox
 
-이 프레임워크의 근본적 한계를 인정한다.
+We acknowledge the fundamental limit of this framework.
 
-"사람을 가두지 못한다"는 원칙을 누가 강제하느냐가 풀리지 않는다:
+Who enforces the principle that "no one may be imprisoned" remains unresolved:
 
-- 국가가 강제하면 → 국가가 다시 주권자. 최소 규칙이 커짐.
-- 지역이 자율에 맡기면 → 락인 구조가 스스로 풀릴 리 없음
-- 개인이 강제하면 → 락인된 사람이 스스로를 풀 수 있으면 락인된 게 아님
-- AI가 강제하면 → AI의 위임자가 권력자
+- If the state enforces it → the state is again the sovereign. The minimal rule grows.
+- If left to regional autonomy → there is no reason the lock-in structure will unwind itself
+- If the individual enforces it → if the locked-in person could free themselves, they were not locked in
+- If AI enforces it → the delegator of the AI is the power-holder
 
-이건 Hohfeld가 지적한 권리 이론의 고전적 문제다 — 모든 권리에는 상응하는
-의무와 강제 주체가 있어야 하는데, **가장 보호가 필요한 사람이 가장 강제
-능력이 없다**는 딜레마.
+This is the classic problem of rights theory that Hohfeld identified — every right requires a corresponding duty and an enforcer, yet **those most in need of protection have the least capacity to coerce.**
 
-이 순환을 끊는 건 불가능할 수 있다. 이 프레임워크가 할 수 있는 것은,
-이 순환을 완전히 끊겠다고 약속하지 않고, **락인이 구조적으로
-바뀌기 어려워지기 전에 락인을 풀 수 있는 기회를 남겨두는 것**이다. 완벽한 자유를
-약속하는 시스템이 항상 가장 빠르게 봉건제로 돌아간다.
+Breaking this circle may be impossible. What this framework can do is not promise to break the circle completely, but **leave open an opportunity to undo lock-in before it becomes structurally hard to change.** Systems that promise perfect freedom always return to feudalism the fastest.
 
-늦추는 장치들이 주권보다 느리게 부정을 당하지 않는다는 보장은 없다.
-다만, 장치가 충분히 다양한 실패 모드를 가지고, 시간적으로 따로 움직이면,
-부정의 속도가 느려지고, 그 동안 사람이 직접 개입할 수 있다.
+There is no guarantee that the delaying mechanisms will not be captured as fast as sovereignty itself. But if the mechanisms have sufficiently diverse failure modes and move on separate clocks, the speed of capture slows, and during that window people can intervene directly.
 
-## 13. 반주권 설계 헌법
+## 13. The Constitution of Anti-Sovereign Design
 
-> 어떤 권력도 사람의 생존조건을 쥔 채 설명 없이 묶어둘 수 없다.
-> 락인 위험은 계속 측정되어야 하고, 그 측정 권력은 분리되어야 하며,
-> 방어장치는 서로 다른 시간표로 작동해야 한다.
-> 시스템은 하나의 선을 향해 통치되는 게 아니라,
-> 탈출 가능한 실험들이 공개 비교되며 개선되어야 한다.
+> No power may hold a person bound within a rule while controlling their survival conditions without explanation.
+> The risk of lock-in must be continuously measured, and the power to measure must be separated.
+> Defensive mechanisms must operate on different schedules.
+> The system must not be governed toward a single line;
+> it must improve through publicly compared, exit-able experiments.
 
-그리고:
+And:
 
-> 누군가 네 생존조건을 쥔 채 너를 규칙 안에 묶는다면,
-> 그 규칙은 설명되어야 하고,
-> 다툴 수 있어야 하고,
-> 멈출 수 있어야 하며,
-> 떠날 수 있어야 하며,
-> 떠날 수 없다면 그 병목(막힘) 자체가 공적 문제로 드러나야 한다.
+> If someone controls your survival conditions while binding you within a rule,
+> that rule must be explained,
+> it must be contestable,
+> it must be stoppable,
+> you must be able to leave,
+> and if you cannot leave, then that bottleneck itself must be surfaced as a public matter.
 
-다섯 번째 조건("공적 문제로 드러나야 한다")이 나머지 네 개를 보호한다.
-권리가 아니라 **권리의 가시성**에 대한 권리다 — 권리가 침해되는 게 보이지
-않으면 아무도 개입하지 않기 때문이다.
+The fifth condition ("must be surfaced as a public matter") protects the other four. It is not a right to rights but a **right to the visibility of rights** — because when the violation of a right is invisible, no one intervenes.
 
-## 14. 적용 락인 판별식 — 모든 권력 구조에 적용
+## 14. The Applied Lock-In Discriminant — Apply to Every Power Structure
 
-이 확인표를 국가에만 적용하면 낡은 자유주의다. 지역에도 적용하면
-분권주의다. 회사와 플랫폼과 병원과 학교까지 적용하면 그제야 현대판 주권
-이론이 된다. 다섯 사례에서 검증된 구조적 특징을 반영한다.
+Apply this checklist only to the state and you get old liberalism. Apply it to regions as well and you get decentralism. Apply it all the way to companies, platforms, hospitals, and schools, and only then do you arrive at a modern theory of sovereignty. It reflects the structural features verified across the five cases.
 
-| 구조 | 못 나감 | 룰을 당함 | 따져도 안 먹힘 | 생존조건을 쥠 | 락인 유형 | 주요 짝꿍 구조 |
+| Structure | Cannot leave | Subjected to rules | Objection does not work | Holds survival conditions | Lock-in type | Primary partner structure |
 | --- | --- | --- | --- | --- | --- | --- |
-| 국가-시민 | 국적/비자, 체류 허가 | 법률, 출입국법 | 사법/행정심판 (제한적) | 세금/의료/자격/체류 | 지역적 (영토) | 국가+고용주 (E-7) |
-| 회사-직원 | 퇴사 시 연금/비자/의료 단절 | 사규/계약 | 사내 위원회/HR | 임금/건강보험 | 복합 (지역+제도) | 회사+국가 (비자) |
-| 플랫폼-사용자 | 계정 삭제 시 디지털 정체성 소멸, 소셜 그래프·평판·구매 내역 이동 불가 | 알고리즘/이용약관 | 고객지원 (형식적, 자동화) | 결제/소셜그래프/평판/인증 | 땅 없는 힘 (네트워크) | 플랫폼+결제/스토어/광고/정부 (4구조) |
-| 병원-환자 | 기록 이전 불가, 물리 인프라(건물/장비/전문의) 복제 불가 | 병원 규정, 보험 심사 | 환자 권리 (형식적), 정보 비대칭 | 생명/통증/약물/만성질환 | 물리적 (인프라) | 병원+보험/정부/EMR/약국 (5구조) |
-| 가족-돌봄 | 경제적 의존/양육권, 대체 돌봄 부재, 탈출=방치 | 가족 규범, 부양 의무법 | 사회적 압력, 항의 능력 부재 (대리 필요) | 생명/돌봄/양육/주거 | 관계적 (관계) | 가족+국가/복지/비자 (5구조) |
-| 학교-학생 | 학력 인증 독점, 학점·생활기록·입시 트랙 이전 불가 | 학칙, 입시 제도, 교육과정 | 학내 위원회 (학생 항의력 부재) | 미래 소득/대학/직업/사회적 신분 | 인정 시장 (인정) | 학교+입시/국가/주소/사교육 (5구조) |
+| State–citizen | Nationality/visa, residence permit | Law, immigration law | Judiciary/administrative appeal (limited) | Taxes/medical/credentials/residence | Regional (territorial) | State+employer (E-7) |
+| Company–employee | Pension/visa/medical severed on resignation | Internal rules/contract | Internal committee/HR | Wages/health insurance | Composite (regional+institutional) | Company+state (visa) |
+| Platform–user | Digital identity erased on account deletion; social graph, reputation, purchase history not portable | Algorithm/terms of service | Customer support (formal, automated) | Payment/social graph/reputation/authentication | Non-territorial power (network) | Platform+payment/store/ad/government (4 structures) |
+| Hospital–patient | Records not transferable; physical infrastructure (building/equipment/specialist) not replicable | Hospital regulations, insurance review | Patient rights (formal), information asymmetry | Life/pain/medication/chronic illness | Physical (infrastructure) | Hospital+insurance/government/EMR/pharmacy (5 structures) |
+| Family–care | Economic dependence/custody, absence of alternative care, exit = abandonment | Family norms, family-support duty law | Social pressure, absence of protest capacity (proxy needed) | Life/care/upbringing/housing | Relational (relationship) | Family+state/welfare/visa (5 structures) |
+| School–student | Monopoly on credential recognition; credits, records, admissions track not transferable | School rules, admissions system, curriculum | Internal committee (students lack protest power) | Future income/university/career/social status | Recognition regime (recognition) | School+admissions/state/address/private tutoring (5 structures) |
 
-### 적용 락인 판별식 사용법
+### How to Use the Applied Lock-In Discriminant
 
-1. **4항 판별**: 각 항을 높음/중간/낮음으로 평가. 4항(생존조건을 쥠)이
-   "매우 높음"이면 나머지 3항이 중간이어도 락인 위험도가 높음.
-2. **락인 유형 식별**: 지역/땅 없는 힘/물리적/관계/인정 시장 중 어디에
-   해당하는지 확인. 유형에 따라 포크 원칙이 다름.
-3. **짝꿍 구조 파악**: 단일 주체가 아니면 어느 주체들이 교차점을
-   만드는지 식별. 해결책은 교차점을 동시에 풀어야 함.
-4. **락인된 사람 수 확인**: 단일인(국가/플랫폼/의료)인지, 복수인(돌봄/교육)
-   인지 확인. 복수인이면 관계적 락인 적용.
-5. **항의 능력 확인**: 당사자가 직접 항의 가능한지, 대리 발언권이
-   필요한지 확인.
-6. **탈출 피해 확인**: 탈출 시 제3자 생존이 위협되는지 확인. 위협되면
-   대체 생존조건 동반 원칙 적용.
+1. **Four-item assessment**: Evaluate each item as high/medium/low. If item 4 (holds survival conditions) is "very high," lock-in severity is high even if the other three are medium.
+2. **Identify the lock-in type**: Determine which of regional / non-territorial power / physical / relational / recognition regime it falls under. The fork principle differs by type.
+3. **Identify the partner structure**: If not a single actor, identify which actors form the intersection. The solution must release the intersection simultaneously.
+4. **Check the number of locked-in persons**: Determine whether it is singular (state/platform/medical) or plural (care/education). If plural, apply relational lock-in.
+5. **Check protest capacity**: Determine whether the subject can object directly or whether proxy voice is needed.
+6. **Check exit harm**: Determine whether exit threatens a third party's survival. If it does, apply the principle of accompanying alternative survival conditions.
 
-## 15. 프레임워크의 한계
+## 15. Limits of the Framework
 
-반주권 설계는 완벽한 사회를 약속하지 않는다.
+Anti-Sovereign Design does not promise a perfect society.
 
-- 권력은 생기고, 없앨 수 없다.
-- 완벽한 자유는 불가능하며, 약속하면 거짓이다.
-- 모든 방어장치는 부정을 당할 수 있다고 가정한다.
-- 측정은 통치이고, 지표는 정치적이다.
-- 강제의 딜레마는 풀리지 않는다.
+- Power arises, and cannot be abolished.
+- Perfect freedom is impossible, and anyone who promises it is lying.
+- We assume every defensive mechanism can be captured.
+- Measurement is governance, and indicators are political.
+- The coercion paradox is not resolved.
 
-할 수 있는 것은:
-- 락인이 구조적으로 고정되기 전에 풀 수 있는 기회를 남기고
-- 문을 열어두고
-- 부정이 빨리 알려지도록 만들고
-- 사람들이 더 나은 곳으로 스스로 옮겨갈 수 있게 하는 것
+What can be done:
+- Leave open an opportunity to undo lock-in before it becomes structurally fixed
+- Keep the door open
+- Make capture become known quickly
+- Let people move themselves to somewhere better
 
-그리고 그 과정에서 벌어지는 기회가 이 프레임워크가 만들어내는 산물이다.
+And the opportunity that opens up in that process is the product this framework produces.
