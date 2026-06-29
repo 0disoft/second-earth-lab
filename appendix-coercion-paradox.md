@@ -1,263 +1,171 @@
-# 부록: 강제의 역설(강제 딜레마)
+# Appendix: The Coercion Paradox
 
-> 반주권 설계 (Anti-Sovereign Design) v4 프레임워크 부록.
-> 쉬운 말 매핑은 [용어 매핑표](./docs/glossary.md)를 따른다.
-> 섹션 12에서 인정한 그 역설을 깊게 본다.
-> 이 글은 프레임워크의 결론이 아니라, 프레임워크가 스스로에게 던지는 질문이다.
+> Anti-Sovereign Design v4 framework appendix.
+> For terminology, consult the [glossary](./docs/glossary.md).
+> Expands the paradox acknowledged in Section 12.
+> This is not the framework's conclusion but the question it poses to itself.
 
-## 1. 역설의 한 가운데
+## 1. At the Center of the Paradox
 
-"사람을 가두지 못한다"는 원칙을 누가 강제하는가.
+Who enforces the principle that people must not be locked in?
 
-국가가 강제하면, 국가가 다시 주권자다. 커널이 커진다. 국가가 "이런
-락인은 금지"라고 말하는 순간, 그 금지를 정의·판단·집행하는 권력이 새로운
-락인의 원인이다.
+If the state enforces it, the state is again the sovereign. The kernel grows. The moment the state says "this lock-in is prohibited," the power to define, judge, and enforce that prohibition becomes the seed of a new lock-in.
 
-지역에 맡기면, 락인 구조가 스스로 풀릴 리 없다. 지역 주민이 자발적으로
-"우리 지역의 독점을 깨겠다"고 투표할 이유가 없다 — 그 독점의 수혜자가
-바로 그 지역이기 때문이다.
+If delegated to the region, the lock-in structure will not dissolve itself. Regional residents have no reason to vote voluntarily to break their own monopoly — they are its beneficiaries.
 
-개인에게 맡기면, 락인된 사람이 스스로를 풀 수 있으면 락인된 게 아니다.
-대리 발언권(대신 말해주는 권리)을 만들면, 대리 발언자가 새 권력자다.
+If delegated to the individual, then if the locked-in person can free themselves, they were not locked in to begin with. Create a proxy voice (the right of another to speak on one's behalf), and the proxy becomes the new power holder.
 
-AI에게 맡기면, AI를 위임한 자가 권력자다.
+If delegated to AI, the party that delegates to AI is the power holder.
 
-이 순환은 논리적 오류가 아니다. 구조적 사실이다. 권리를 집행하는 주체가
-필요하고, 그 주체에게 권력이 모이고, 그 권력이 또 다른 락인을 만든다.
-Hohfeld가 1919년에 지적한 이 역설은 100년이 지난 후에도 풀리지 않았다.
+This is not a logical fallacy. It is a structural fact. Enforcing rights requires an enforcer. Power concentrates in that enforcer. That power produces another lock-in. Hohfeld identified this paradox in 1919; it remains unresolved a century later.
 
-## 2. 다섯 사례에서 역설이 어떻게 나타나는가
+## 2. How the Paradox Appears in the Five Cases
 
-역설은 추상적이지 않다. 다섯 사례 각각에서 구체적으로 관찰된다.
+The paradox is not abstract. It is observed concretely in each of the five cases.
 
-### E-7: 비자를 만든 주체가 비자를 풀 이유가 없다
+### E-7: The Entity That Created the Visa Has No Reason to Undo It
 
-비자 제도를 설계한 국가(법무부)와 수혜를 받는 고용주가, 이 제도를
-바꿀 이유가 없다. 이주노동자의 탈출권(빠져나갈 권리)을 강제하려면, 국가가 "고용주의
-동의 없이 이직을 허용한다"고 법을 바꿔야 한다. 그런데 그 법을 바꾸는
-주체가 바로 비자 제도를 운영하는 국가다.
+The state (the Ministry of Justice) that designed the visa system and the employers who benefit from it have no reason to change it. Enforcing the migrant worker's right of exit would require the state to change the law to permit job changes without employer consent. But the entity that changes the law is the same state that operates the visa system.
 
-처방(해결책)을 채택할 권한을 가진 주체가, 처방에 의해 자신의 통제력을 줄여야 한다.
+The authority with the power to adopt the prescription must, by that prescription, reduce its own control.
 
-### 플랫폼: 데이터 이동성(데이터 가져가기)을 강제하는 주체가 새 독점자가 된다
+### Platform: The Enforcer of Data Portability Becomes the New Monopolist
 
-플랫폼에게 "사용자 데이터를 내보내라"고 강제하려면, 그 강제를 집행하는
-주체가 필요하다. 국가가 강제하면 국가가 데이터 규제의 주권자가 된다.
-독립 기구를 만들면, 그 기구가 인증·표준·프로토콜의 새 게이트키퍼다.
+Forcing a platform to export user data requires an enforcement entity. If the state enforces it, the state becomes the sovereign of data regulation. If an independent body is created, that body becomes the new gatekeeper of certification, standards, and protocols.
 
-"포크 가능성을 강제하라"는 처방 자체가, 포크를 승인하는 권한을 가진
-새 주체를 만든다. 이건 포크를 금지하는 것과는 다르지만, 완전히 자유로운
-것도 아니다.
+The prescription "mandate forkability" itself creates a new entity with the authority to approve forks. This differs from prohibiting forks, but it is not fully free either.
 
-### 의료: 기록 표준을 정하는 주체가 새 병목(막힘)이 된다
+### Medical: The Entity That Sets Record Standards Becomes the New Bottleneck
 
-의료 기록의 이동성을 강제하려면, 표준 포맷을 정하는 주체가 필요하다.
-그 주체가 "이 포맷이 표준이다"라고 정하는 순간, 표준을 정하는 권력이
-새 락인이 된다. 표준을 따르지 않는 시스템은 배제되고, 표준을 변경하는
-권한이 새 권력이 된다.
+Enforcing medical record portability requires an entity to set a standard format. The moment that entity declares "this format is the standard," the power to set standards becomes a new lock-in. Systems that do not comply are excluded, and the authority to change the standard becomes a new power.
 
-의료에서는 역설이 더 날카롭다. 환자의 탈출권을 보호하려면 의료 행정을
-규제해야 하는데, 그 규제를 만드는 주체가 국가고, 국가가 의료 인프라를
-통제하는 구조가 바로 락인의 원인 중 하나다.
+The paradox is sharper in medicine. Protecting the patient's right of exit requires regulating medical administration. But the entity that creates that regulation is the state, and state control over medical infrastructure is itself one of the causes of lock-in.
 
-### 돌봄: 대체 돌봄을 강제하는 주체가 새 의존을 만든다
+### Caregiving: The Enforcer of Alternative Care Creates New Dependency
 
-돌봄에서 탈출권을 보호하려면, 대체 돌봄 인프라를 만들어야 한다. 그런데
-그 인프라를 누가 만드는가. 국가가 만들면, 국가가 돌봄의 새 제공자가
-된다. 민간에 맡기면, 민간이 돌봄 시장을 독점한다.
+Protecting the right of exit in caregiving requires building alternative care infrastructure. But who builds it? If the state builds it, the state becomes the new care provider. If delegated to the private sector, private entities monopolize the care market.
 
-"대체 생존조건(다른 살 곳) 동반 원칙"을 강제하려면, 그 원칙을 집행하는 주체가 필요하고,
-그 주체가 "어떤 대체 돌봄이 충분한가"를 판정하는 새 권력이 된다.
-대리 발언권을 만들면, 대리 발언자가 새 의존 대상이 될 수 있다.
+Enforcing the principle of "alternative survival conditions (somewhere else to go)" requires an entity to enforce it, and that entity becomes the new authority that judges "what alternative care is sufficient." Create a proxy voice, and the proxy may become the new object of dependency.
 
-### 교육: 인정 다원화를 강제하는 주체가 새 인정 독점자가 된다
+### Education: The Enforcer of Recognition Pluralism Becomes the New Recognition Monopolist
 
-교육에서 인정의 이동성을 강제하려면, 학점·학력·자격의 상호 인정
-표준을 정하는 주체가 필요하다. 그 주체가 "이 학점을 인정한다"고
-판정하는 순간, 인정의 권력이 집중된다. 다원화를 강제하는 주체가,
-다원화의 기준을 정하는 새 독점자가 된다.
+Enforcing recognition portability in education requires an entity to set mutual recognition standards for credits, degrees, and qualifications. The moment that entity declares "this credit is recognized," the power of recognition concentrates. The enforcer of pluralism becomes the new monopolist who sets the criteria for pluralism.
 
-이건 "인정의 인정" 문제다. 다원화된 인정 기관을 누가 인정하는가.
-국가가 인정하면 국가가 돌아온다. 민간이 인정하면 민간 평판이
-새 학력이다. 이 순환은 교육에서 가장 분명하게 드러난다.
+This is the "recognition of recognition" problem. Who recognizes the pluralized recognition bodies? If the state recognizes them, the state returns. If private entities recognize them, private reputation becomes the new credential. This is most clearly visible in education.
 
-## 3. 역설의 구조
+## 3. The Structure of the Paradox
 
-다섯 사례에서 같은 구조가 반복된다:
+The same structure repeats across all five cases:
 
 ```
-락인 발견 → 탈출권 처방 → 처방을 집행할 주체 필요
-→ 그 주체에게 권력 집중 → 새 락인 가능성
+Lock-in identified → Right-of-exit prescription → Entity needed to enforce prescription
+→ Power concentrates in that entity → Potential for new lock-in
 ```
 
-이걸 그래프로 그리면:
+Rendered as a graph:
 
 ```
-    락인 발견
+    Lock-in identified
         ↓
-   탈출권 처방
+   Exit-right prescription
         ↓
- 집행 주체 설계 ←──────┐
-        ↓              │
- 권력 집중            │
-        ↓              │
- 새 락인 가능성 ──────┘ (다시 락인 발견)
+ Enforcement entity design ←──────┐
+        ↓                          │
+ Power concentration               │
+        ↓                          │
+ New lock-in potential ────────────┘ (back to lock-in identification)
 ```
 
-역설의 핵심: **탈출권을 강제하는 행위 자체가, 강제자에게 권력을 준다.**
-그리고 권력을 받은 강제자는, 다시 락인의 원인이 된다.
+The core of the paradox: **the act of enforcing the right of exit itself grants power to the enforcer.** And the enforcer, having received that power, becomes the seed of a new lock-in.
 
-이 순환을 "끊겠다"고 약속하면, 프레임워크는 거짓이 된다. 완벽한 자유를
-약속하는 시스템이 항상 가장 빠르게 봉건제로 돌아가는 이유다.
+To promise to "break" this cycle is to make the framework false. Systems that promise perfect liberty always return to feudalism fastest.
 
-## 4. 한계 인정의 의미
+## 4. The Meaning of Acknowledging Limits
 
-프레임워크는 이 순환을 끊겠다고 하지 않는다. **한계를 인정한다**.
+The framework does not promise to break this cycle. **It acknowledges the limit.**
 
-"늦추다"는 세 가지를 의미한다:
+"Acknowledging limits" means three things:
 
-1. **종속 속도 저감** — 권력이 집중되더라도, 그 권력이 락인으로 고정되는 데
-   걸리는 시간을 늘린다. 시간이 있으면 사람이 반응할 수 있다.
-2. **분산** — 권력이 한 점에 모이지 않게 한다. 다수 감사, 다중 발급자,
-   시간 비동기화(따로 움직임). 한 점이 종속되어도 전체가 기울지 않게.
-3. **가시성** — 락인이 형성되는 과정이 보이게 한다. 역설이 숨겨지면
-   아무도 대응하지 못한다. 역설이 드러나면, 적어도 논의할 수 있다.
+1. **Reducing capture speed** — Even if power concentrates, the time it takes for that power to harden into lock-in is increased. With time, people can respond.
+2. **Distribution** — Power should not converge on a single point. Multiple auditors, multiple issuers, temporal desynchronization. If one point is captured, the whole does not collapse.
+3. **Visibility** — The process by which lock-in forms must be made visible. If the paradox is hidden, no one can respond. If the paradox is visible, it can at least be discussed.
 
-한계 인정은 해결이 아니다. 구조가 고정되기 전에 풀 기회를 남기는 것이다. 그 기회가 충분할지는
-모른다. 프레임워크가 인정하는 것은 이 한계 자체다.
+Acknowledging limits is not a solution. It is the preservation of opportunities to loosen lock-in before it structurally hardens. Whether that opportunity is sufficient is unknown. What the framework acknowledges is this limit itself.
 
-## 5. 역설의 네 가지 얼굴
+## 5. The Four Faces of the Paradox
 
-역설은 한 가지가 아니라, 네 가지 형태로 나타난다. 각각 다른 완화책이
-필요하다.
+The paradox is not singular. It appears in four forms, each requiring a different mitigation.
 
-### 얼굴 1: 집행 주체 역설
+### Face 1: The Enforcement-Entity Paradox
 
-"탈출권을 강제할 주체"가 필요한데, 그 주체에게 권력이 모인다.
+An entity is needed to "enforce the right of exit," but power concentrates in that entity.
 
-이건 Hohfeld의 고전적 역설이다. 권리에는 상응하는 의무와 강제 주체가
-있어야 하는데, 가장 보호가 필요한 사람이 가장 강제 능력이 없다.
+This is Hohfeld's classic paradox. Rights require corresponding duties and an enforcer, but those most in need of protection have the least capacity to enforce.
 
-**완화**: 집행을 단일 주체에 맡기지 않는다. 다중 발급자, 다수 감사,
-시간 비동기화. 집행 권력 자체를 분산시킨다. 다만 분산이 깨지는 임계값
-(BFT 문제)이 있고, 그 임계값 위에서는 분산이 무의미하다.
+**Mitigation**: Do not vest enforcement in a single entity. Multiple issuers, multiple auditors, temporal desynchronization. Distribute enforcement power itself. However, there is a threshold at which distribution breaks down (the BFT problem), and above that threshold, distribution is meaningless.
 
-### 얼굴 2: 측정 주체 역설
+### Face 2: The Measurement-Entity Paradox
 
-"락인 위험도를 측정할 주체"가 필요한데, 측정 항목을 정하는 주체가
-"좋음의 정의"를 만든다. 측정이 통치가 된다.
+An entity is needed to "measure lock-in severity," but the entity that defines metrics creates a "definition of the good." Measurement becomes governance.
 
-**완화**: 측정 항목에 만료일을 붙이고, 반대 지표를 허용하고, 측정
-주체를 교체한다. 다만 "무엇을 측정할 것인가"를 결정하는 순간, 그
-결정 자체가 정치적이다. 이건 피할 수 없다.
+**Mitigation**: Attach expiration dates to metrics, permit adversarial indicators, and rotate the measuring entity. However, the moment one decides "what to measure," that decision is itself political. This cannot be avoided.
 
-### 얼굴 3: 보호-락인 동일성 역설
+### Face 3: The Protection-Lock-in Identity Paradox
 
-"보호"와 "락인"이 구조적으로 동일하다 — 둘 다 이탈 비용을 인위적으로
-높이는 장치다. 노동법이 노동자를 보호하면서 동시에 이직 비용을 높일
-수 있고, 병원이 환자를 보호하면서 동시에 기록 이전 비용을 높인다.
+"Protection" and "lock-in" are structurally identical — both are mechanisms that artificially raise exit costs. Labor law can protect workers while simultaneously raising the cost of changing jobs. A hospital can protect patients while simultaneously raising the cost of record transfer.
 
-이 구조적 동일성 때문에 "이건 보호다" vs "이건 락인이다" 판단 자체가
-정치적이다. 이 판단을 단일 심판이 하면 안 되고, 다수 감사 + 분쟁 공개로
-가야 한다. 하지만 다수 감사 자체가 종속될 수 있다.
+Because of this structural identity, the judgment "this is protection" vs. "this is lock-in" is itself political. This judgment should not be made by a single arbiter. It requires multiple auditors and public dispute. However, multiple auditors can themselves be captured.
 
-**완화**: 보호-락인 판단을 자동화하지 않는다. 항상 분쟁의 대상으로
-둔다. 분쟁이 공개되면, 적어도 잘못된 판정이 드러난다. 다만 분쟁이
-드러나도 아무 행동이 일어나지 않으면, 그건 유리 감옥이다.
+**Mitigation**: Do not automate the protection-lock-in judgment. Always keep it as a subject of dispute. When disputes are public, erroneous determinations are at least exposed. However, if no action follows from visible disputes, the result is a glass prison.
 
-### 얼굴 4: 프레임워크 자기 역설
+### Face 4: The Framework Self-Paradox
 
-이 프레임워크 자체가 강제다. "락인을 측정하고, 탈출권을 강제하고,
-분쟁을 공개하라"는 규칙을 만드는 순간, 이 규칙을 집행하는 주체가
-필요하고, 그 주체가 새 주권자가 된다.
+The framework itself is coercion. The moment it creates rules — "measure lock-in, enforce the right of exit, make disputes visible" — an entity is needed to enforce those rules, and that entity becomes the new sovereign.
 
-프레임워크가 "주권을 없애겠다"고 말하면 거짓이다. 프레임워크가
-"주권을 약화시키겠다"고 말하는데, 그 약화를 집행하는 권력이 또
-주권이다. 이건 메타 수준의 역설이다 — 락인을 푸는 도구 자체가
-새 락인의 도구가 될 수 있다.
+If the framework says "we will abolish sovereignty," it is false. The framework says "we will weaken sovereignty," but the power that enforces that weakening is itself sovereignty. This is a meta-level paradox — the tool for undoing lock-in can itself become the tool for a new one.
 
-**완화**: 프레임워크 자체에 만료일과 포크 가능성을 붙인다. 프레임워크가
-고정불변의 헌법이 아니라, 실험-비교-확산 루프 안에서 수정되는 설계도면이
-되어야 한다. 다만 "프레임워크를 수정할 권한"을 가진 주체가 다시
-주권자다. 이 순환은 끝나지 않는다.
+**Mitigation**: Attach expiration dates and forkability to the framework itself. The framework should not be an immutable constitution but a blueprint revised within an experiment–compare–diffuse loop. However, the entity with "the authority to revise the framework" is again the sovereign. This cycle does not end.
 
-## 6. 왜 그래도 이 프레임워크인가
+## 6. Why This Framework Nonetheless
 
-역설이 풀리지 않으면, 왜 이 프레임워크를 쓰는가.
+If the paradox cannot be resolved, why use this framework?
 
-이유 1: **이름 없는 것에 이름을 붙인다.** 락인이 어디서 생기는지,
-누가 갇히는지, 어떤 합작 구조가 만들어지는지를 판별식 하나로 식별할
-수 있다. 이름이 없으면 보이지 않고, 보이지 않으면 대응할 수 없다.
+Reason 1: **It names what has no name.** Where lock-in arises, who is locked in, and what composite structure produces it can be identified with a single discriminant. What has no name is invisible; what is invisible cannot be addressed.
 
-이유 2: **비교 가능성을 만든다.** 국가·플랫폼·병원·가족·학교를 같은
-판별식 위에 올려놓으면, "이 구조는 저 구조와 같다"는 비교가 가능해진다.
-의료 락인과 교육 락인이 같은 패턴을 가진다는 것을 알면, 의료에서
-배운 처방을 교육에 적용해볼 수 있다.
+Reason 2: **It creates comparability.** Placing the state, platforms, hospitals, families, and schools on the same discriminant makes cross-structural comparison possible. Knowing that medical lock-in and educational lock-in share the same pattern allows prescriptions learned in medicine to be applied to education.
 
-이유 3: **처방의 방향을 고정한다.** 역설이 있더라도, 처분은 "더 많은
-탈출권" 방향으로 가야 한다. "더 많은 통제" 방향이 아니라. 이 방향성
-하 나가 프레임워크의 실질적 가치다. 완벽하지 않아도 방향이 맞으면,
-시간이 지나면서 개선의 여지가 생긴다.
+Reason 3: **It fixes the direction of prescriptions.** Even with the paradox, prescriptions must move toward "more right of exit," not "more control." This directionality is the framework's practical value. Perfection is not required; if the direction is correct, room for improvement emerges over time.
 
-이유 4: **한계를 인정한다.** 완벽한 자유를 약속하지 않는다.
-강제의 역설을 풀겠다고 하지 않는다. 이 솔직함이 프레임워크를 거짓
-약속으로부터 보호한다. 거짓 약속을 하는 시스템이 항상 가장 빠르게
-봉건제로 돌아간다.
+Reason 4: **It acknowledges limits.** It does not promise perfect liberty. It does not promise to resolve the coercion paradox. This honesty protects the framework from false promises. Systems that make false promises always return to feudalism fastest.
 
-## 7. 역설을 안고 가는 것
+## 7. Living with the Paradox
 
-역설을 풀 수 없다면, 어떻게 살아야 하는가.
+If the paradox cannot be solved, how should one live with it?
 
-첫째, 역설을 숨기지 않는다. 프레임워크가 "이건 풀 수 있다"고
-주장하면, 그 거짓이 곧 종속의 도구가 된다. 역설을 인정하는
-것이, 역설이 악용되는 것을 막는 최소한의 장치다.
+First, do not hide the paradox. If the framework claims "this can be solved," that falsehood becomes the instrument of capture. Acknowledging the paradox is the minimal safeguard against its exploitation.
 
-둘째, 역설이 드러나는 지점을 만든다. 락인 열지도, 측정권(재는 권한) 공개,
-반대 감사, 분쟁 가시화. 이 장치들이 역설을 "보이게" 만든다.
-역설이 보이면, 적어도 논의할 수 있다. 보이지 않으면 아무것도
-할 수 없다.
+Second, create points where the paradox becomes visible. Lock-in heatmaps, public right-to-measure, adversarial audits, dispute visualization. These mechanisms make the paradox "visible." When the paradox is visible, it can at least be discussed. When it is invisible, nothing can be done.
 
-셋째, 역설이 한 점에 집중되지 않게 한다. 다중 발급자, 다수 감사,
-시간 비동기화, 포크 가능성. 권력이 한 점에 모이면 역설이 한 점에서
-폭발한다. 분산되면, 역설이 여러 점에서 나타나고, 각 점에서 부분적으로
-대응할 수 있다.
+Third, prevent the paradox from concentrating at a single point. Multiple issuers, multiple auditors, temporal desynchronization, forkability. When power concentrates at one point, the paradox detonates at that point. When distributed, the paradox appears at multiple points, and each point can be partially addressed.
 
-넷째, 역설에 대응하는 속도를 다르게 한다. 빠른 장치(긴급 집행정지(멈추기))는
-개인의 생존 주기에 맞춰 작동하고, 느린 장치(커널 프로토콜 개정)는
-구조적 변화의 주기에 맞춘다. 속도가 다르면, 역설이 동시에 모든
-장치를 관통하지 못한다.
+Fourth, vary the speed at which mechanisms respond to the paradox. Fast mechanisms (emergency injunctive suspension) operate on the individual's survival cycle. Slow mechanisms (kernel protocol revision) operate on the cycle of structural change. When speeds differ, the paradox cannot simultaneously penetrate all mechanisms.
 
-다섯째, 역설 자체를 공적 문제로 만든다. 헌법의 다섯 번째 조건 —
-"떠날 수 없다면 그 병목 자체가 공적 문제로 드러나야 한다" — 이
-역설을 공적 영역으로 끌어낸다. 역설이 공적 문제가 되면, 적어도
-투명성의 대상이 된다. 투명성이 해결이 아니지만, 없는 것보다 낫다.
+Fifth, make the paradox itself a public problem. The fifth condition of the constitution — "if one cannot leave, the bottleneck itself must surface as a public problem" — draws the paradox into the public sphere. When the paradox becomes a public problem, it at least becomes a subject of transparency. Transparency is not a solution, but it is better than its absence.
 
-## 8. 결론: 늦추는 것이 충분한가
+## 8. Conclusion: Is Slowing Enough
 
-프레임워크가 만들어내는 것은 시간이다.
+What the framework produces is time.
 
-락인이 고정되는 속도를 줄이고, 종속이 퍼지는 속도를 줄이고, 역설이
-폭발하는 시점을 미루는 것. 그 미뤄진 시간 안에, 사람이 더 나은
-구조를 만들고, 실험하고, 비교하고, 옮겨갈 수 있는 기회가 생긴다.
+Reducing the speed at which lock-in hardens. Reducing the speed at which capture spreads. Deferring the moment at which the paradox detonates. Within that deferred time, the opportunity arises for people to build better structures, experiment, compare, and move.
 
-이 시간이 충분할지는 모른다. 역사적으로, 주권이 고정되는 속도보다
-민주적 대응이 더 느렸던 경우가 많았다. 늦추는 장치들이 주권보다
-느리게 종속될 수도 있다.
+Whether that time is sufficient is unknown. Historically, democratic response has often been slower than the speed at which sovereignty hardens. The mechanisms that slow capture may themselves be captured more slowly than sovereignty.
 
-다만, 아무것도 하지 않으면 시간이 0이다. 프레임워크가 만드는 시간이
-0보다 크면, 그것만으로도 의미가 있다. 완벽한 자유를 약속하는 시스템이
-항상 0에서 출발해서 마이너스로 끝나는 것과 비교하면.
+However, if nothing is done, time is zero. If the framework produces more than zero time, that alone is meaningful — compared to systems that promise perfect liberty, always starting from zero and ending in the negative.
 
-프레임워크는 역설을 안고 가는 것을 제안한다. 역설을 풀겠다고 약속하지
-않고, 역설을 숨기지 않고, 역설이 드러나는 지점을 만들고, 역설이 한 점에
-집중되지 않게 분산하고, 역설에 대응하는 속도를 다르게 한다.
+The framework proposes living with the paradox. It does not promise to resolve it. It does not hide it. It creates points where the paradox becomes visible. It distributes the paradox so it does not concentrate at a single point. It varies the speed of response.
 
-이것이 프레임워크가 할 수 있는 전부다. 그리고 이 전부가, 아무것도
-하지 않는 것보다 낫다.
+This is everything the framework can do. And everything is better than nothing.
 
 ---
 
-*이 부록은 framework.md 섹션 12를 확장한 것이다. 섹션 12가 한계를 인정한다고
-말한 것을, 다섯 사례의 구체적 관찰을 바탕으로 더 깊게 풀었다. 이 글은
-프레임워크의 한계를 인정하는 동시에, 그 한계 안에서도 의미가 있음을
-주장한다.*
+*This appendix expands Section 12 of framework.md. Where Section 12 acknowledges the limit, this appendix develops it more deeply on the basis of concrete observations from the five cases. It acknowledges the framework's limits while arguing that, within those limits, the framework remains meaningful.*
