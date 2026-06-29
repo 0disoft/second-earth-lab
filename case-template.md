@@ -2,7 +2,7 @@
 
 > Template used when applying a new case to the Anti-Sovereign Design v4 framework.
 > For plain-language mappings, follow the [terminology mapping table](./docs/glossary.md).
-> This template standardizes the structure validated across five cases (E-7, platform, healthcare, care, education).
+> This template standardizes the structure standardized after five case applications (E-7, platform, healthcare, care, education).
 > A complete analysis requires all sections to be filled.
 
 ## How to Use
@@ -17,7 +17,7 @@
 ## 1. Why This Case
 
 > Describe in one paragraph which aspect of the framework this case tests.
-> State which of the five sovereignty types validated by the five cases (territorial, non-territorial, physical, relational, recognition regime)
+> State which of the five sovereignty types tested across the five cases (territorial, non-territorial, physical, relational, recognition regime)
 > it falls under, or whether it constitutes a new sovereignty type.
 
 [Describe why this case tests the framework hard.]
@@ -26,7 +26,7 @@
 
 [State the core question this case raises in one sentence.]
 
-### Proposition This Case Validates
+### Proposition This Case Tests
 
 [Whether it tests an existing proposition of the framework or proposes a new one.]
 
@@ -37,25 +37,36 @@
 
 ### [Actor A — e.g., user, patient, student]
 
-| Item | Score (High/Medium/Low) | Explanation |
-| --- | --- | --- |
-| Cannot exit | | [Structural factors preventing exit] |
-| Rules imposed | | [Unilateral rule imposition] |
-| Redress ineffective | | [Practical efficacy of redress procedures] |
-| Holds survival conditions | | [Specific content of dependency asymmetry] |
+| Dimension | Score (0–5) | Evidence | Confidence |
+| --- | ---: | --- | --- |
+| Exit infeasibility | | [Structural factors preventing exit] | High / Medium / Low |
+| Rule coerciveness | | [Unilateral rule imposition] | High / Medium / Low |
+| Redress ineffectiveness | | [Practical efficacy of redress procedures] | High / Medium / Low |
+| Dependency asymmetry | | [Specific content of dependency asymmetry] | High / Medium / Low |
 
 ### [Actor B — if applicable]
 
-| Item | Score | Explanation |
-| --- | --- | --- |
-| Cannot exit | | |
-| Rules imposed | | |
-| Redress ineffective | | |
-| Holds survival conditions | | |
+| Dimension | Score (0–5) | Evidence | Confidence |
+| --- | ---: | --- | --- |
+| Exit infeasibility | | | |
+| Rule coerciveness | | | |
+| Redress ineffectiveness | | | |
+| Dependency asymmetry | | | |
 
-### Lock-in severity: [High/Very High/Medium] (Actor A), [...] (Actor B)
+### Persona Scores
 
-> If the 4th item (holds survival conditions) scores "very high," lock-in severity is high even if the other three items are medium.
+> Score at least two personas. Use the weighted severity formula from [lock-in-score.md](./docs/methodology/lock-in-score.md).
+> severity = 0.25 × exit_infeasibility + 0.20 × rule_coerciveness + 0.20 × redress_ineffectiveness + 0.35 × dependency_asymmetry
+
+| Persona | Exit infeasibility | Rule coerciveness | Redress ineffectiveness | Dependency asymmetry | Weighted severity | Confidence |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| High-bargaining-power persona | | | | | | |
+| Low-bargaining-power persona | | | | | | |
+| Transition-state persona | | | | | | |
+
+### Lock-in severity: [Score] (Actor A), [Score] (Actor B)
+
+> If dependency asymmetry scores 4 or above, lock-in severity is high even if the other three dimensions are moderate.
 
 [Describe the reasoning for the severity assessment.]
 
@@ -103,7 +114,7 @@
 | 3 | | | |
 | ... | | | |
 
-### Four-Stage Pattern Verification
+### Four-Stage Pattern Stress Test
 
 1. **Each actor performs only its own role** — [each actor's point of agreement]
 2. **Lock-in arises at the intersection** — [what a single-sector audit cannot see]
@@ -163,7 +174,7 @@ that this actor has no reason to reduce its own authority.]
 ### [Classification axis 1] × [Classification axis 2]
 
 ```
-[Type A]     | Exit feasibility (can they leave?) | Rule coercion (are the rules strong?) | Redress efficacy (does redress work?) | Dependency asymmetry (do they need it?) | Severity
+[Type A]     | Exit infeasibility | Rule coerciveness | Redress ineffectiveness | Dependency asymmetry | Severity
 [Type B]     |           |           |           |           |
 [Type C]     |           |           |           |           |
 ```
@@ -195,7 +206,7 @@ e.g., homeschooling paradox — exit feasibility is high, but absence of recogni
 
 ## 9. This Case's Impact on the Framework
 
-### What Was Validated
+### What Was Tested
 
 1. [Whether existing propositions of the framework hold in this case]
 2. ...
@@ -219,7 +230,7 @@ e.g., homeschooling paradox — exit feasibility is high, but absence of recogni
 1. [Problems unresolved in this case]
 2. ...
 
-## 10. Conclusion — Contribution to Framework Universality
+## 10. Conclusion — Contribution to Framework Transferability
 
 [Describe in one paragraph how this case extends/tests/challenges the
-universality of the framework.]
+transferability of the framework.]

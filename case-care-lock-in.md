@@ -297,7 +297,7 @@ Elderly (cognitive decline) | Very low   | High          | Very low          | V
 
 What this overlap reveals: in caregiving, **both provider and recipient have high lock-in severity.** In other cases, the subject and object of lock-in were distinct; in caregiving, both are locked in simultaneously. This is the core of relational lock-in.
 
-## 8. Four-Case Comparison — Framework Universality Verification
+## 8. Four-Case Comparison — Framework Transferability Stress Test
 
 ### Discriminant Comparison
 
@@ -310,7 +310,7 @@ What this overlap reveals: in caregiving, **both provider and recipient have hig
 | Challenge capacity | Limited | Limited | Limited | **Absent (proxy needed)** |
 | Composite lock-in | 2 actors | 4 structures | 5 structures | 5 structures |
 
-### Framework Mechanism Verification
+### Framework Mechanism Stress Test
 
 | Mechanism | E-7 | Platform | Medical | Caregiving |
 | --- | --- | --- | --- | --- |
@@ -335,7 +335,7 @@ What this overlap reveals: in caregiving, **both provider and recipient have hig
 ### What Was Tested
 
 1. **The discriminant applies to relational lock-in** — scoring is possible for both provider and recipient
-2. **The composite lock-in four-stage pattern repeats in a fourth domain** — universality confirmed
+2. **The composite lock-in four-stage pattern repeats in a fourth domain** — transferability supported in this domain
 3. **Lock-in severity continuity is demonstrated for both provider and recipient** — both show high severity in the same relationship
 4. **Domain-specific fork principles are tested in caregiving** — relationships cannot be replicated; alternative care infrastructure is needed instead of forking
 

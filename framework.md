@@ -201,11 +201,21 @@ Identifying "the locked-in person" must itself be a multi-dimensional assessment
 
 ## 5. Lock-In Severity Score
 
-"Holds survival conditions" is not a binary judgment but a continuous value. Each item is scored to produce a **lock-in severity**:
+"Holds survival conditions" is not a binary judgment but a continuous value. Each item is scored to produce a **lock-in severity**. For reproducible scoring, use the measurement model in [Lock-in Severity Score](./docs/methodology/lock-in-score.md).
 
 ```
-lock-in severity = f(exit feasibility, rule coerciveness, effectiveness of objection, dependency asymmetry)
+severity = 0.25 * exit_infeasibility
+         + 0.20 * rule_coerciveness
+         + 0.20 * redress_ineffectiveness
+         + 0.35 * dependency_asymmetry
 ```
+
+| Dimension | Question | What is measured |
+| --- | --- | --- |
+| Cannot leave | How infeasible is exit? | Exit infeasibility |
+| Subjected to rules | How coercive are imposed rules? | Rule coerciveness |
+| Objection does not work | How ineffective is redress? | Redress ineffectiveness |
+| Holds survival conditions | How asymmetric is dependency? | Dependency asymmetry |
 
 The same structure is lock-in for one person and not for another, depending on time and circumstance:
 

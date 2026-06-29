@@ -275,7 +275,7 @@ Multicultural/migrant| Very high  | Very high   | High        | Very high  | Ver
 
 What this overlap reveals: from the moment one enters an admissions track, exit costs rise dramatically. From the point where middle school internal grades begin, "transfer = abandoning admissions" becomes the core of lock-in.
 
-## 8. Five-Case Comparison — Final Framework Universality Verification
+## 8. Five-Case Comparison — Fifth-Domain Transferability Check
 
 Comparing the five cases fully reveals how each framework mechanism operates across different contexts.
 
@@ -290,7 +290,7 @@ Comparing the five cases fully reveals how each framework mechanism operates acr
 | Challenge capacity | Limited | Limited | Limited | Absent | Absent (minor) |
 | Composite lock-in | 2 actors | 4 structures | 5 structures | 5 structures | 5 structures |
 
-### Framework Mechanism Verification
+### Framework Mechanism Stress Test
 
 | Mechanism | E-7 | Platform | Medical | Caregiving | Education |
 | --- | --- | --- | --- | --- | --- |
@@ -331,7 +331,7 @@ The right of exit demands more with each case. This is the process by which the 
 1. **The extreme case where only layer 3 of the 3-layer model matters was demonstrated** — even with layers 1 and 2 satisfied, without layer 3, exit is impossible
 2. **Relational lock-in expanded into a triangular structure in education** — student, parent, and teacher each bound in different ways
 3. **Proxy voice is also needed in education** — minor students have no challenge capacity
-4. **The composite lock-in four-stage pattern repeats in a fifth domain** — final universality confirmation
+4. **The composite lock-in four-stage pattern repeats in a fifth domain** — fifth-domain transferability check
 5. **Recognition regime monopoly is the source of lock-in** — the state's sole issuance of recognition structurally limits the right of exit
 
 ### What Was Newly Revealed
@@ -349,7 +349,7 @@ The right of exit demands more with each case. This is the process by which the 
 3. **International credential recognition** — limited foreign credential recognition makes cross-national education mobility practically impossible
 4. **The relationship between private education regulation and the right of exit** — whether private education regulation raises or lowers the right of exit is uncertain
 
-## 10. Five Cases Complete — Final Framework Universality Conclusion
+## 10. Five Cases Complete — Framework Transferability Conclusion
 
 The five cases have stress-tested the framework's core mechanisms. Each case tested a different face of the framework, and with each test the framework was revised and expanded.
 

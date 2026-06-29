@@ -187,7 +187,7 @@ different principles by sector:
 
 | Sector | Principle | Application in Medicine |
 | --- | --- | --- |
-| Digital platform | True fork | (validated in the platform case) |
+| Digital platform | True fork | (tested in the platform case) |
 | Medicine, education, credentials | Portability of recognition | Record transfer + new hospital acceptance → institutional portability |
 | Physical infrastructure | Access assurance + monopoly-abuse limitation | Not copying the building but monitoring record transfer, insurance linkage, emergency access, regional monopoly |
 
@@ -364,7 +364,7 @@ relationship but is determined at the intersection of **patient health status ×
 disease type × regional infrastructure.** Even in the same region, the lock-in
 severity of a chronic disease patient and a healthy adult differs extremely.
 
-## 8. Comparing Three Cases — Verifying Framework Universality
+## 8. Comparing Three Cases — Framework Transferability Stress Test
 
 Comparing the three cases (E-7, platform, medicine) reveals how each device of
 the framework operates in a different context.
@@ -381,7 +381,7 @@ the framework operates in a different context.
 | Holds survival conditions | High | High | Very high (life, literally) |
 | Composite lock-in | State + employer | Platform + payments/store/ads | Hospital + insurer/government/EMR/pharmacy |
 
-### Verification by Framework Device
+### Stress Test by Framework Device
 
 | Device | In E-7 | In platform | In medicine |
 | --- | --- | --- | --- |
@@ -399,7 +399,7 @@ the framework operates in a different context.
 2. **The 4-stage composite lock-in pattern repeats across all three domains** —
    each actor performs only its own role, lock-in arises at the intersection,
    simultaneous prescriptions are needed, and the implementing-body paradox holds
-3. **The continuity of lock-in severity is proven** — within the same structure,
+3. **The continuity of lock-in severity is observed** — within the same structure,
    severity varies by user/patient type
 4. **The 3-layer data portability is the real bottleneck in every domain** — if
    only layer 1 is met and layers 2 and 3 are absent, portability is window
@@ -426,19 +426,19 @@ the framework operates in a different context.
 
 ## 9. This Case's Impact on the Framework
 
-### What Was Validated
+### What Was Tested
 
 1. **The sector-specific fork principle works** — the three principles of digital
    (fork), medicine (recognition), and physical (access) are applied
    simultaneously within the single domain of medicine
 2. **Access assurance works instead of fork for physical infrastructure** — the
    framework does not force fork but applies sector-specific principles, which is
-   proven
+   observed
 3. **The 3-layer data portability is most dramatically exposed in medicine** —
    without layer 3, coerced re-testing follows, and the patient bears time, cost,
    and health deterioration
 4. **The composite lock-in pattern repeats in a third domain** — the common
-   4-stage pattern is proven
+   4-stage pattern is observed
 
 ### Remaining Challenges
 
@@ -457,7 +457,7 @@ the framework operates in a different context.
 
 ## 10. Next Direction
 
-The three cases have validated the framework's core devices. The next candidate:
+The three cases have tested the framework's core devices. The next candidate:
 
 - **Family care dependency (care lock-in)** — the domain where the "unable-to-
   exit" is most clearly visible. A lock-in combining economic dependence,

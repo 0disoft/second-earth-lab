@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Validate Markdown docs: internal links, README line counts, CRLF detection."""
+"""Validate Markdown docs: internal links, README line counts, CRLF detection,
+banned claim phrases, README document-map completeness."""
 from __future__ import annotations
 
 import re
@@ -8,6 +9,36 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
+
+# Documents that must appear in the README Document Map table.
+CORE_DOCS = {
+    "SUMMARY.md",
+    "framework.md",
+    "docs/methodology/lock-in-score.md",
+    "case-e7-visa.md",
+    "case-platform-suspension.md",
+    "case-medical-lock-in.md",
+    "case-care-lock-in.md",
+    "case-education-lock-in.md",
+    "chapter-national-kernel.md",
+    "chapter-war-kernel.md",
+    "appendix-coercion-paradox.md",
+    "case-template.md",
+}
+
+# Phrases that overclaim framework universality or proof.
+# Case-insensitive match. These should not appear in any .md file
+# (except validate_docs.py itself).
+BANNED_CLAIM_PHRASES = [
+    "universality confirmed",
+    "final universality confirmation",
+    "framework universality verification",
+    "what was validated",
+    "is proven",
+    "proven across five cases",
+    "validated the framework",
+    "demonstrates the framework's universality",
+]
 
 
 def markdown_files() -> list[Path]:
@@ -123,12 +154,50 @@ def check_readme_line_counts() -> list[str]:
     return errors
 
 
+def check_readme_completeness() -> list[str]:
+    """Check that all CORE_DOCS appear in the README Document Map."""
+    if not README.exists():
+        return ["README.md not found"]
+
+    errors: list[str] = []
+    text = README.read_text(encoding="utf-8")
+
+    for doc in CORE_DOCS:
+        # Look for a markdown link to this doc in README
+        pattern = f"]({doc})" or f"](./{doc})"
+        if doc not in text:
+            errors.append(
+                f"README completeness: {doc} is missing from the Document Map"
+            )
+    return errors
+
+
+def check_banned_phrases(paths: list[Path]) -> list[str]:
+    """Check that no banned overclaiming phrases appear in markdown files."""
+    errors: list[str] = []
+    for path in paths:
+        text = path.read_text(encoding="utf-8").lower()
+        for phrase in BANNED_CLAIM_PHRASES:
+            if phrase.lower() in text:
+                # Find line number
+                for i, line in enumerate(
+                    path.read_text(encoding="utf-8").splitlines(), 1
+                ):
+                    if phrase.lower() in line.lower():
+                        errors.append(
+                            f"Banned phrase '{phrase}' in {path.relative_to(ROOT)}:{i}"
+                        )
+    return errors
+
+
 def main() -> int:
     paths = markdown_files()
     errors: list[str] = []
     errors.extend(check_crlf(paths))
     errors.extend(check_internal_links(paths))
     errors.extend(check_readme_line_counts())
+    errors.extend(check_readme_completeness())
+    errors.extend(check_banned_phrases(paths))
 
     if errors:
         for error in errors:

@@ -440,7 +440,7 @@ Comparing the two cases reveals the common structure of composite lock-in:
 4. **The enforcement actor paradox repeats** — the actor with the authority to
    adopt a remedy sees its own authority reduced by that remedy.
 
-This common pattern demonstrates the framework's universality. The lock-in
+This common pattern supports the framework's transferability across domains. The lock-in
 discriminant applies to both territorial sovereignty (the state) and
 non-territorial sovereignty (the platform), and the composite lock-in structure
 arises identically in both domains.

@@ -22,6 +22,7 @@ This repository applies that diagnostic to five case studies and two structural 
 
 - **First five minutes**: [SUMMARY.md](./SUMMARY.md)
 - **The full framework**: [framework.md](./framework.md)
+- **The scoring model**: [docs/methodology/lock-in-score.md](./docs/methodology/lock-in-score.md)
 - **The problem of national authority**: [chapter-national-kernel.md](./chapter-national-kernel.md)
 - **The problem of war, martial law, and mobilization**: [chapter-war-kernel.md](./chapter-war-kernel.md)
 - **Writing a new case study**: [case-template.md](./case-template.md)
@@ -39,7 +40,7 @@ This repository applies that diagnostic to five case studies and two structural 
 | Document | Lines | Content |
 | --- | --- | --- |
 | [SUMMARY.md](./SUMMARY.md) | 104 | One-page overview — what it is, how to use it, five-case stress test |
-| [framework.md](./framework.md) | 558 | The complete v4 framework — propositions, lock-in discriminant, scoring, defensive mechanisms, experiment engine, the role of AI |
+| [framework.md](./framework.md) | 568 | The complete v4 framework — propositions, lock-in discriminant, scoring, defensive mechanisms, experiment engine, the role of AI |
 | [case-e7-visa.md](./case-e7-visa.md) | 180 | First case — the employer-state composite lock-in in South Korea's E-7 visa |
 | [case-platform-suspension.md](./case-platform-suspension.md) | 465 | Second case — platform account suspension and non-territorial sovereignty |
 | [case-medical-lock-in.md](./case-medical-lock-in.md) | 468 | Third case — medical record portability and physical infrastructure lock-in |
@@ -48,10 +49,11 @@ This repository applies that diagnostic to five case studies and two structural 
 | [chapter-national-kernel.md](./chapter-national-kernel.md) | 384 | The national kernel — the rules that operate every day in peacetime. Law, budget, and emergency powers press against regional autonomy. Checked against the South Korean Constitution (Arts. 40, 73, 76, 77, 117). |
 | [chapter-war-kernel.md](./chapter-war-kernel.md) | 236 | The war button — the highest-intensity emergency mode of the national kernel. When war is declared, all exit rights are suspended. Checked against 2021–2026 conflict data (UCDP/ACLED/ICRC/CFR). |
 | [appendix-coercion-paradox.md](./appendix-coercion-paradox.md) | 171 | Appendix — the coercion paradox in depth: its concrete form across five cases, its four faces, and the proposition that the framework lives with the paradox rather than resolving it. |
-| [case-template.md](./case-template.md) | 225 | Template for new case studies — a ten-section standard structure |
-| **Total** | **3,546** | (Excluding README.md, GAME_DESIGN.md, docs/glossary.md.) |
+| [case-template.md](./case-template.md) | 236 | Template for new case studies — a ten-section standard structure |
+| [docs/methodology/lock-in-score.md](./docs/methodology/lock-in-score.md) | 154 | Measurement model — 0–5 severity score, weights, thresholds, confidence, persona variation |
+| **Total** | **3,721** | (Excluding README.md, GAME_DESIGN.md, docs/glossary.md.) |
 
-> The total counts framework documents only, excluding README.md and docs/glossary.md. GAME_DESIGN.md is a game design draft and is excluded from the framework total.
+> The total counts framework documents only, excluding README.md, docs/glossary.md, and docs/drafts/GAME_DESIGN.md.
 >
 > framework.md was expanded after the five-case stress test and review.
 > The national-kernel chapter (Ch. 16) addresses the peacetime rules that operate every day — law, budget,
