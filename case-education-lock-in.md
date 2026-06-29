@@ -1,481 +1,394 @@
-# 사례 연구: 학력 인증 독점 — 인정 체계 락인
+# Case Study: Credential Monopoly — Recognition Regime Lock-in
 
-> 반주권 설계 (Anti-Sovereign Design) v4 프레임워크의 다섯 번째이자 마지막 적용 사례.
-> 쉬운 말 매핑은 [용어 매핑표](./docs/glossary.md)를 따른다.
-> E-7이 "지역 주권"을, 플랫폼이 "비지역 주권"을, 의료가 "물리 인프라"를,
-> 돌봄이 "관계적 락인"을 다뤘다면, 이 사례는 **인정 체계 락인**을 다룬다.
+> Fifth and final application case of the Anti-Sovereign Design v4 framework.
+> For terminology, consult the [glossary](./docs/glossary.md).
+> If E-7 addressed "territorial sovereignty," the platform "non-territorial sovereignty," medical "physical infrastructure," and caregiving "relational lock-in," this case addresses **recognition regime lock-in**.
 
-## 1. 왜 이 사례인가
+## 1. Why This Case
 
-의료와 교육은 정반대의 락인 구조를 가진다.
+Medical and education have opposite lock-in structures.
 
-의료: 물리 인프라가 무거워서 못 나간다. 병원 건물, 전문의, 장비, 응급망이
-복제 불가능하다. 기록은 옮길 수 있어도 건물이 못 옮겨간다.
+Medical: one cannot leave because physical infrastructure is heavy. Hospital buildings, specialists, equipment, and emergency networks cannot be replicated. Records can be transferred, but buildings cannot move.
 
-교육: 물리 인프라는 가볍다. 학교 건물은 바꿀 수 있다. 교실, 책상,
-칠판은 어디에나 있다. 진짜 문제는 **인정 체계**가 무거워서 못 나간다는
-것이다. 학력, 성적, 학점, 입시 기록, 자격 인정이 안 옮겨지면, 학교를
-바꿔도 그 기록이 새 체계에서 인정되지 않는다.
+Education: physical infrastructure is light. School buildings can be changed. Classrooms, desks, and blackboards exist everywhere. The real problem is that **the recognition regime is too heavy to leave.** If diplomas, grades, credits, admissions records, and credential recognition do not transfer, changing schools means those records are not recognized in the new system.
 
-이 사례가 프레임워크를 세게 시험하는 이유: 데이터 이동성(데이터 가져가기) 3층 중 **3층(제도적
-이동성)만이 유일하게 중요한 극단 사례**다. 기술적 이동성(1층)은 쉽게 충족되고,
-의미적 이동성(2층)도 비교적 가능하지만, 제도적 이동성(3층)이 없으면 모든
-것이 무의미해진다.
+Why this case tests the framework hard: it is the extreme case in which **only layer 3 (institutional portability) of the 3-layer data portability model truly matters.** Technical portability (layer 1) is easily satisfied; semantic portability (layer 2) is relatively achievable; but without institutional portability (layer 3), everything becomes meaningless.
 
-### 핵심 질문
+### Core Question
 
-**학생이 학교를 다니는 게 아니라, 학교·입시·학력인증·부모 주소·기록 체계가
-학생의 미래 선택지를 얼마나 좁히는가?**
+**How much do the school, admissions system, credential regime, parental address, and record system narrow a student's future options?**
 
-### 이 사례가 검증할 새 명제
+### Proposition This Case Verifies
 
-**데이터가 이동해도 인정이 이동하지 않으면 탈출권(빠져나갈 권리)은 없다.**
+**If data moves but recognition does not, there is no right of exit.**
 
-이 명제는 데이터 이동성 3층의 3층(제도적 이동성)이 왜 가장 중요한지를
-극단적으로 보여준다. 1층과 2층이 충족되어도 3층이 없으면 탈출은 불가능하다.
+This proposition demonstrates in the extreme why layer 3 (institutional portability) of the 3-layer model is the most important. Even if layers 1 and 2 are satisfied, without layer 3, exit is impossible.
 
-## 2. 판별식 적용
+## 2. Applying the Discriminant
 
-교육은 학생 한 명이 갇히는 게 아니라, 학생·부모·교사가 각자 다른 방식으로
-묶인다. 돌봄에서 확인된 관계적 락인이 교육에서도 나타난다.
+In education, it is not just one student who is locked in — student, parent, and teacher are each bound in different ways. The relational lock-in identified in caregiving appears in education as well.
 
-### 학생
+### Student
 
-| 항 | 점수 | 설명 |
+| Prong | Score | Description |
 | --- | --- | --- |
-| 못 나감 | 매우 높음 | 학군, 성적표, 학점, 입시 트랙, 졸업요건, 생활기록 |
-| 룰을 당함 | 높음 | 학교 규칙, 평가 방식, 징계, 출석, 입시 제도 |
-| 따져도 안 먹힘 | 매우 높음 | 학생의 항의력 자체가 부재 — 부모·교사·학교 권력 앞에 무력 |
-| 생존조건을 쥠 | 매우 높음 | 미래 소득, 대학 진학, 직업 자격, 사회적 신분이 학력에 의존 |
+| Cannot exit | Very high | School district, transcript, credits, admissions track, graduation requirements, student records |
+| Subject to imposed rules | High | School rules, evaluation methods, discipline, attendance, admissions system |
+| Challenge produces no change | Very high | Student challenge capacity is absent — powerless before parents, teachers, and school authority |
+| Survival conditions held by another | Very high | Future income, university admission, occupational qualification, social status depend on credentials |
 
-### 부모
+### Parent
 
-| 항 | 점수 | 설명 |
+| Prong | Score | Description |
 | --- | --- | --- |
-| 못 나감 | 높음 | 자녀 학군, 주거 연동, 사교육 투자, 입시 트랙 |
-| 룰을 당함 | 높음 | 입시 제도, 학군 정책, 학교 배정 |
-| 따져도 안 먹힘 | 중간 | 학교·교육청 항의 가능하나 실질적 변화 드묾 |
-| 생존조건을 쥠 | 높음 | 자녀 미래가 부모 주거·소득·사교육 결정에 의존 |
+| Cannot exit | High | Child's school district, housing linkage, private education investment, admissions track |
+| Subject to imposed rules | High | Admissions system, school district policy, school assignment |
+| Challenge produces no change | Medium | Can challenge school or education office, but real change is rare |
+| Survival conditions held by another | High | Child's future depends on parental housing, income, and private education decisions |
 
-### 교사
+### Teacher
 
-| 항 | 점수 | 설명 |
+| Prong | Score | Description |
 | --- | --- | --- |
-| 못 나감 | 높음 | 교원자격, 정규직 전환, 연봉, 연수 이수, 평가 |
-| 룰을 당함 | 높음 | 교육과정, 평가 기준, 행정 업무, 교권 제도 |
-| 따져도 안 먹힘 | 중간 | 교원 노조·소청 위원회 존재하나 실질력 제한적 |
-| 생존조건을 쥠 | 높음 | 소득·직급·정년이 교육 행정에 의존 |
+| Cannot exit | High | Teaching license, tenure conversion, salary, training requirements, evaluation |
+| Subject to imposed rules | High | Curriculum, evaluation standards, administrative duties, teacher authority system |
+| Challenge produces no change | Medium | Teacher unions and appeal committees exist but have limited practical power |
+| Survival conditions held by another | High | Income, rank, and retirement age depend on education administration |
 
-### 락인 위험도: 매우 높음 (학생), 높음 (부모·교사)
+### Lock-in Severity: Very High (Student), High (Parent, Teacher)
 
-교육에서 "생존조건을 쥔다"는 의료처럼 당장의 생명이 아니라 **미래의
-생명선**을 쥔다는 점이 다르다. 학력이 소득, 직업, 사회적 신분을
-결정하는 구조에서, 인정 체계가 학생의 미래 선택지를 구조적으로 좁힌다.
+In education, "holding survival conditions" differs from medical: it means holding not immediate life but **future life chances.** In a structure where credentials determine income, occupation, and social status, the recognition regime structurally narrows students' future options.
 
-## 3. 제도적 이동성 — 교육에서의 실상
+## 3. Institutional Portability — The Reality in Education
 
-교육은 데이터 이동성 3층 중 3층이 유일하게 중요한 극단 사례다.
+Education is the extreme case where only layer 3 of the 3-layer data portability model matters.
 
-### 1층: 기술적 이동성 — 충족
+### Layer 1: Technical Portability — Satisfied
 
-| 항목 | 현재 상태 |
+| Item | Current Status |
 | --- | --- |
-| 성적표 | 발급 가능, 종이·PDF 형태 |
-| 생활기록부 | 학교에서 발급 가능 (NEIS 시스템) |
-| 학점 | 학교 시스템에 기록됨 |
-| 출석 기록 | 발급 가능 |
-| 징계 기록 | 발급 가능 (단, 열람 제한) |
+| Transcript | Issuable, paper/PDF format |
+| Student record | Issuable by school (NEIS system) |
+| Credits | Recorded in school system |
+| Attendance record | Issuable |
+| Discipline record | Issuable (but access restricted) |
 
-교육에서 1층은 사실상 충족된다. 성적표, 생활기록부, 학점은 기술적으로
-빠져나올 수 있다.
+Layer 1 is effectively satisfied in education. Transcripts, student records, and credits can technically be extracted.
 
-### 2층: 의미적 이동성 — 부분 충족
+### Layer 2: Semantic Portability — Partially Satisfied
 
-| 항목 | 현재 상태 |
+| Item | Current Status |
 | --- | --- |
-| 성적 체계 | 상대평가/절대평가 혼재, 학교마다 기준 상이 |
-| 학점 호환 | 학기·단위 수는 비교 가능하나 내용 다름 |
-| 생활기록 포맷 | 공통 양식이 있으나 학교마다 기재 방식 상이 |
-| 과목 분류 | 교육과정 개정 시 호환성 단절 |
-| 외국 학제 | 학제 차이로 직접 비교 불가 |
+| Grading system | Mixed relative/absolute evaluation, standards vary by school |
+| Credit compatibility | Semesters and unit counts comparable, but content differs |
+| Student record format | Common template exists, but schools record differently |
+| Subject classification | Compatibility breaks at curriculum revisions |
+| Foreign school systems | Direct comparison impossible due to system differences |
 
-의미적 이동성은 부분 충족된다. 성적표를 받아도 "이 학교의 4.5점
-만점에서 4.0"이 다른 체계에서 어떤 의미인지 해석이 필요하다. 다만
-표준화 노력(학점은행제, 교육과정 공통안)이 존재하므로 완전히 부재하지는
-않는다.
+Semantic portability is partially satisfied. Even if a transcript is obtained, "a 4.0 on a 4.5 scale at this school" requires interpretation in another system. However, standardization efforts (credit bank system, common curriculum guidelines) exist, so it is not entirely absent.
 
-### 3층: 제도적 이동성 — 사실상 부재
+### Layer 3: Institutional Portability — Effectively Absent
 
-| 항목 | 현재 상태 |
+| Item | Current Status |
 | --- | --- |
-| 학점 상호 인정 | 정규 학교 간에도 완전 인정 안 됨 (편입 시 손실) |
-| 대안학교 학력 인정 | 대안학교 졸업장이 정규 학력으로 인정되지 않는 경우 |
-| 홈스쿨링 인정 | 법적 인정 없음, 비인정 트랙 |
-| 외국 학력 인정 | 제한적, 학교·전공별 심사 |
-| 직업교육 학점 | 일반계 고등학교와 마찬가지로 인정되지 않는 경우 |
-| 온라인 교육 인정 | 제한적, 정규 학점으로 인정되는 경우 드묾 |
-| 징계 기록 이전 | 전학 시 징계 기록이 따라감 — 새 학교에서 불이익 |
-| 입시 트랙 이동 | 이과→문과, 일반계→특목고 이동 시 누적 손실 |
+| Credit mutual recognition | Even between regular schools, not fully recognized (loss upon transfer) |
+| Alternative school diploma recognition | Alternative school diplomas not recognized as regular credentials |
+| Homeschooling recognition | No legal recognition, unrecognized track |
+| Foreign credential recognition | Limited, reviewed by school and major |
+| Vocational education credits | Not recognized alongside general high school credits in some cases |
+| Online education recognition | Limited, rarely recognized as formal credits |
+| Discipline record transfer | Discipline records follow on transfer — disadvantage at new school |
+| Admissions track mobility | Science→humanities, general→specialized high school transitions incur cumulative loss |
 
-**3층이 없으면 1층과 2층이 무의미하다.** 성적표를 들고 새 학교에 가도,
-그 학점을 인정하지 않으면 재수강해야 한다. 이건 "기록 이전"이 아니라
-**재학습 강요**다.
+**Without layer 3, layers 1 and 2 are meaningless.** Even if a student takes a transcript to a new school, if the credits are not recognized, they must retake courses. This is not "record transfer" but **forced re-learning.**
 
-### "인정"이 락인의 본체다
+### "Recognition" Is the Body of the Lock-in
 
-의료에서 3층 부재가 "재검사 강요"로 나타났다면, 교육에서는 **"재학습
-강요"**로 나타난다. 학생이 2년간 공부한 기록이 새 체계에서 인정되지
-않으면, 그 2년은 소급해서 무효가 된다. 시간, 비용, 노력, 그리고
-가장 중요하게는 **미래 선택지**가 소멸한다.
+In medical, the absence of layer 3 manifested as "forced re-examination." In education, it manifests as **"forced re-learning."** If two years of a student's study are not recognized in the new system, those two years are retroactively voided. Time, money, effort, and most importantly, **future options** evaporate.
 
-이게 교육 락인의 핵심: 데이터는 이동해도 **인정이 이동하지 않으면
-탈출권은 없다.**
+This is the core of education lock-in: even if data moves, **if recognition does not move, there is no right of exit.**
 
-## 4. 합작 락인
+## 4. Composite Lock-in
 
-교육에서도 합작 락인이 발생한다. 학교 단독이 아니라, 여러 시스템이
-결합해서 탈출 비용을 올린다.
+Composite lock-in also occurs in education. Not a school alone, but multiple systems combine to raise exit costs.
 
-### 합작 구조 1: 학교 + 입시기관
+### Composite Structure 1: School + Admissions Institution
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 학교 | 학생 유지, 성과 관리 | 성적·생활기록·추천서 |
-| 입시기관 (대학) | 선발 통제 | 입시 기준, 전형 설계 |
+| School | Student retention, performance management | Grades, student records, recommendation letters |
+| Admissions institution (university) | Selection control | Admissions criteria, track design |
 
-학교 성적이 입시에 직결되면, 학교를 바꾸는 것 = 입시 트랙을 바꾸는
-것이다. 학교 변경 시 성적 산출 방식, 내신 반영 비율, 전형 자격이
-달라진다. 학교와 입시기관이 결합해서 탈출 비용을 올린다.
+When school grades feed directly into admissions, changing schools means changing the admissions track. School changes alter grade calculation methods, internal grade reflection ratios, and track eligibility. School and admissions institution combine to raise exit costs.
 
-### 합작 구조 2: 학교 + 국가 교육과정
+### Composite Structure 2: School + National Curriculum
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 학교 | 교육과정 준수 | 수업·평가·졸업 요건 |
-| 국가 (교육부) | 교육 표준화, 통제 | 교육과정 고시, 인허가(허가) |
+| School | Curriculum compliance | Classes, evaluation, graduation requirements |
+| State (Ministry of Education) | Standardization, control | Curriculum decree, accreditation |
 
-국가가 교육과정을 고시하고, 학교가 그것을 준수해야 한다. 대안적인
-교육과정을 채택하면 학력 인정이 박탈된다. 국가-학교 합작으로 교육
-내용·평가 방식이 고정된다.
+The state decrees the curriculum, and schools must comply. Adopting an alternative curriculum results in loss of credential recognition. State-school composite lock-in fixes educational content and evaluation methods.
 
-### 합작 구조 3: 학교 + 부모 주소/학군
+### Composite Structure 3: School + Parental Address/School District
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 학교 | 학생 배정 | 학군 기반 입학 |
-| 부모/주거 | 자녀 교육 | 주소지를 학군에 맞춤 |
+| School | Student assignment | District-based enrollment |
+| Parent/residence | Child's education | Aligning address to school district |
 
-주거가 학군에 묶이면, 학교를 바꾸려면 집을 옮겨야 한다. 이건 물리적
-이동 비용이 인정 체계에 의해 인위적으로 높아진 구조다. 주거 락인과
-교육 락인이 결합한다.
+When housing is tied to the school district, changing schools requires moving. This is a structure in which physical mobility cost is artificially raised by the recognition regime. Housing lock-in and education lock-in combine.
 
-### 합작 구조 4: 학교 + 대학/채용시장
+### Composite Structure 4: School + University/Labor Market
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 학교 | 학생 배출 | 학력·성적·추천서 |
-| 대학/채용시장 | 선발 | 학력 필터, 학벌 평가 |
+| School | Student output | Credentials, grades, recommendation letters |
+| University/labor market | Selection | Credential filtering, school-brand evaluation |
 
-대학과 채용시장이 학력을 선발 기준으로 쓰면, 학교 시스템에서 벗어나는
-것 = 사회적 이동성 단절이다. 대안 경로(홈스쿨, 대안학교, 직업교육)를
-거친 학생이 대학·채용에서 차별받으면, "자유롭게 선택할 수 있다"는
-명목만 있고 실질적 탈출은 불가능하다.
+When universities and the labor market use credentials as selection criteria, leaving the school system means severing social mobility. If students who take alternative paths (homeschooling, alternative schools, vocational education) are discriminated against in university admissions and hiring, there is nominal "free choice" but no actual exit.
 
-### 합작 구조 5: 사교육 + 입시제도
+### Composite Structure 5: Private Education + Admissions System
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 사교육 (학원) | 수익 | 입시 대비, 선행 |
-| 입시제도 | 선발 | 표준화 시험, 내신 반영 |
+| Private education (hagwon) | Profit | Admissions preparation, advance learning |
+| Admissions system | Selection | Standardized testing, internal grade reflection |
 
-사교육이 입시 제도에 맞춰 최적화되면, 학교 교육만으로 입시에 대응할 수
-없다. 사교육 투자가 입시 성과를 결정하고, 사교육을 중단하면 입시
-경쟁에서 탈락한다. 이건 돌봄에서 "국가가 돌봄을 가족에 떠넘기는" 구조와
-같다 — 국가가 교육 책임을 사교육 시장에 떠넘기고, 가족이 비용을 부담한다.
+When private education is optimized for the admissions system, school education alone cannot meet admissions demands. Private education investment determines admissions outcomes, and stopping private education means falling behind in the admissions race. This is the same structure as the state offloading caregiving onto the family in the caregiving case — the state offloads education responsibility onto the private education market, and the family bears the cost.
 
-### 교차점에서 생기는 락인
+### Lock-in Emerging at the Intersection
 
-다섯 사례 모두에서 같은 4단계 패턴이 반복된다:
+The same four-stage pattern repeats across all five cases:
 
-1. 학교는 "이건 교육과정 준수다", 입시기관은 "이건 선발 기준이다"라고 함
-2. 교차점에서 학점 미인정, 입시 트랙 고정, 주거-학군 결합이 생김
-3. 처방(해결책)은 학교·입시·국가·채용을 동시에 풀어야
-4. 시행 주체(교육부, 대학, 학교)가 자기 재량을 줄일 이유 없음
+1. The school says "this is curriculum compliance," the admissions institution says "this is selection criteria"
+2. At the intersection, credit non-recognition, fixed admissions tracks, and housing-district coupling emerge
+3. Prescriptions must address schools, admissions, the state, and hiring simultaneously
+4. The implementing entities (Ministry of Education, universities, schools) have no reason to reduce their own discretion
 
-## 5. 관계적 락인
+## 5. Relational Lock-in
 
-돌봄에서 확인된 관계적 락인이 교육에서도 나타난다. 학생·부모·교사가
-각자 다른 방식으로 같이 묶인다.
+The relational lock-in identified in caregiving also appears in education. Student, parent, and teacher are each bound in different ways within the same structure.
 
-### 삼각 락인 구조
+### Triangular Lock-in Structure
 
-- **학생은 학교에 묶임**: 성적·학력·생활기록·졸업요건·입시 트랙
-- **부모는 자녀 미래에 묶임**: 학군·주거·사교육·입시 투자. 자녀가
-  바뀌면 부모의 주거·소득·사회적 지위도 영향
-- **교사는 평가·입시·행정에 묶임**: 교원자격·정규직·연봉·평가가
-  교육 행정에 의존
+- **Student is bound to the school**: grades, credentials, student records, graduation requirements, admissions track
+- **Parent is bound to the child's future**: school district, housing, private education, admissions investment. If the child changes, the parent's housing, income, and social standing are affected
+- **Teacher is bound to evaluation, admissions, and administration**: teaching license, tenure, salary, and evaluation depend on education administration
 
-삼각 락인의 핵심: 세 주체가 서로 다른 방식으로 묶이면서, 한 주체의
-탈출이 다른 주체에게 영향을 미친다.
+The core of triangular lock-in: three actors are bound in different ways, and one actor's exit affects the others.
 
-- 학생이 학교를 떠나면 → 부모의 사교육 투자·주거 결정이 흔들림
-- 부모가 학군을 바꾸면 → 학생의 학점·생활기록·입시 트랙이 단절
-- 교사가 학교를 떠나면 → 학생의 추천서·평가 연속성이 단절
+- If the student leaves the school → the parent's private education investment and housing decisions are disrupted
+- If the parent changes the school district → the student's credits, records, and admissions track are severed
+- If the teacher leaves → the student's recommendation letters and evaluation continuity are severed
 
-### 부모의 딜레마: 탈출 피해의 교육 버전
+### The Parent's Dilemma: The Education Version of Exit Harm
 
-돌봄에서 "부모가 떠나면 아이가 위험하다"는 탈출 피해가 교육에서는
-**"부모가 학군을 바꾸면 자녀의 입시 트랙이 단절된다"**로 나타난다.
+In caregiving, "if the parent leaves, the child is endangered." In education, this exit harm appears as **"if the parent changes the school district, the child's admissions track is severed."**
 
-부모의 탈출권(더 나은 학군으로 이동, 대안 교육 선택)이 자녀의 입시
-기록·학점·생활기록에 피해를 줄 수 있다. 이건 돌봄의 탈출 피해와
-같은 구조다:
+The parent's right of exit (moving to a better district, choosing alternative education) can harm the child's admissions record, credits, and student record. This is the same structure as exit harm in caregiving:
 
-| 사례 | 탈출 | 제3자 피해 |
+| Case | Exit | Third-Party Harm |
 | --- | --- | --- |
-| 돌봄 | 가족 간병인 이탈 | 환자 돌봄 단절 |
-| 교육 | 학군/학교 변경 | 자녀 학점·입시 트랙 단절 |
+| Caregiving | Family caregiver departure | Patient care severed |
+| Education | District/school change | Child's credits and admissions track severed |
 
-프레임워크의 "대체 생존조건(다른 살 곳) 동반 원칙"이 교육에도 적용된다: 학교를
-바꾸려면, **학점·기록·인정이 새 체계에서 이전되어야** 한다. 이전되지
-않은 탈출은 권리가 아니라 손실이다.
+The framework's "alternative survival conditions accompaniment principle" applies to education: to change schools, **credits, records, and recognition must transfer to the new system.** Exit without transfer is not a right but a loss.
 
-## 6. 반주권 설계식 처방
+## 6. Anti-Sovereign Design Prescriptions
 
-### 처방 원칙: 제도적 이동성이 곧 탈출권
+### Prescription Principle: Institutional Portability Is the Right of Exit
 
-교육에서 탈출권은 "학교를 바꿀 권리"가 아니라 **"학습 기록과 인정이
-이전되는 상태에서 바꿀 권리"**다. 인정 이전 없는 전학은 탈출이 아니라
-손실이다.
+In education, the right of exit is not "the right to change schools" but **"the right to change schools with learning records and recognition transferred."** Transfer without recognition transfer is not exit but loss.
 
-### 처방 목록
+### Prescription List
 
-| 처방 | 대상 | 메커니즘 | 프레임워크 대응 |
+| Prescription | Target | Mechanism | Framework Correspondence |
 | --- | --- | --- | --- |
-| 학습 기록 이동권 | 학교 + NEIS | 표준 포맷으로 성적·생활기록·학점 이전 | 데이터 이동성 1+2층 |
-| 학점/역량 상호 인정 표준 | 학교 + 교육부 | 학교 간 학점 인정 의무화, 대안경로 학점 인정 | 데이터 이동성 3층 |
-| 징계·생활기록 이의제기권 | 학교 | 기록 열람·정정·삭제 청구권, 제3자 심사 | 설명 + 이의제기 |
-| 학교 변경 시 불이익 최소화 | 학교 + 입시기관 | 전학 시 학점 손실 금지, 입시 자격 유지 | 탈출 비용 저감 |
-| 대안 경로 제도적 인정 | 교육부 | 홈스쿨·대안학교·직업교육·온라인 학점 정규 인정 | 제도적 이동성 |
-| 입시 트랙별 락인 열지도 | 커널(측정) | 트랙 변경 시 누적 손실, 전학율, 학점 인정률 공개 | 락인 열지도 |
-| 학생 대리 발언권(대신 말해주는 권리) | 독립 옴부즈 | 학생 권리 옴부즈맨, 정기 접견, 징계 심사 참여 | 대리 발언권 |
-| 사교육 의존도 공개 | 커널(측정) | 학군별 사교육비·시간 공개, 입시 성과 상관관치 공개 | 측정권(재는 권한) 공개 |
-| 교사 평가/징계 기록 이의제기 | 학교 + 교육청 | 교원 소청 제도 강화, 평가 기록 공개 | 이의제기 |
-| 교육과정 다원화 | 교육부 | 국가 교육과정을 최소 기준으로, 지역·학교 자율 확대 | 통치 vs 탈출권 강제 구분 |
+| Learning record transfer right | School + NEIS | Transfer of grades, student records, and credits in standard format | Data portability layers 1+2 |
+| Credit/competency mutual recognition standard | School + Ministry of Education | Mandatory inter-school credit recognition, alternative-path credit recognition | Data portability layer 3 |
+| Discipline/record challenge right | School | Right to access, correct, and delete records; third-party review | Explanation + challenge |
+| Minimize transfer disadvantage | School + admissions institution | Prohibit credit loss on transfer, maintain admissions eligibility | Exit cost reduction |
+| Institutional recognition of alternative paths | Ministry of Education | Formal recognition of homeschooling, alternative school, vocational education, and online credits | Institutional portability |
+| Admissions track lock-in heatmap | Kernel (measurement) | Publish cumulative track-change loss, transfer rates, credit recognition rates | Lock-in heatmap |
+| Student proxy voice | Independent ombudsman | Student rights ombudsman, regular interviews, participation in discipline review | Proxy voice |
+| Private education dependency disclosure | Kernel (measurement) | Publish private education costs and time by district, admissions outcome correlations | Right to measure, publicized |
+| Teacher evaluation/discipline record challenge | School + education office | Strengthen teacher appeal system, disclose evaluation records | Challenge |
+| Curriculum pluralization | Ministry of Education | National curriculum as minimum standard, expanded regional/school autonomy | Governance vs. exit-right enforcement distinction |
 
-### 시행 주체 문제
+### The Implementation-Entity Problem
 
-다른 사례와 같은 역설:
-- **교육부**: 자기 통제권을 줄일 이유 없음
-- **대학**: 학력 필터가 선발 비용을 낮춤, 인정 범위를 넓힐 이유 없음
-- **학교**: 학생 유지가 학교 운영에 유리
-- **사교육 시장**: 입시 의존 구조가 수익 기반
+The same paradox as in other cases:
+- **Ministry of Education**: no reason to reduce its own control
+- **Universities**: credential filtering lowers selection cost, no reason to broaden recognition
+- **Schools**: retaining students benefits school operations
+- **Private education market**: admissions dependency is the revenue base
 
-다만 교육의 특수성: **국가가 교육 인정을 독점**하고 있다. 국가가
-인정 체계를 설계하고, 학력을 부여하고, 입시를 관리한다. 이건 국가가
-"인정 시장"의 유일한 공급자라는 뜻이다. 인정 시장에 경쟁이 없으면,
-탈출권이 형식적으로만 존재한다.
+However, education has a distinctive feature: **the state monopolizes credential recognition.** The state designs the recognition regime, grants credentials, and manages admissions. This means the state is the sole provider of the "recognition regime." Without competition in the recognition regime, the right of exit exists only formally.
 
-### 완화책: 인정 시장의 다원화
+### Mitigation: Pluralization of the Recognition Regime
 
-단일 국가 인정 체계를 다원화하는 방향:
+Directions for pluralizing the single state recognition regime:
 
-- 국가 인정 + 독립 인증 기관 인정 + 업계 인정 + 포트폴리오 인정이 공존
-- 대학·채용이 학력만 보지 않고 다양한 인정을 수용
-- 학점은행제 확대, 역량 중심 채용 확대
-- 다만 "인정의 인정" — 누가 다원화된 인정 기관을 인정하는가 — 이
-  문제는 강제의 역설(강제 딜레마)로 돌아온다
+- State recognition + independent accreditation body recognition + industry recognition + portfolio recognition coexist
+- Universities and hiring consider diverse recognitions, not only credentials
+- Expand the credit bank system and competency-based hiring
+- However, "recognition of recognition" — who recognizes the pluralized recognition bodies — returns to the coercion paradox
 
-이건 커널 설계의 "다중 발급자" 원칙과 같다. 신원을 국가가 단일 발급하는
-것이 위험하듯, 학력 인정을 단일 주체가 독점하는 것도 위험하다. 답은
-"민영화"가 아니라 **상호운용 가능한 여러 인정 체계 + 공개 프로토콜**이다.
+This aligns with the kernel design's "multiple issuers" principle. Just as the state being the sole issuer of identity is dangerous, a single entity monopolizing credential recognition is dangerous. The answer is not "privatization" but **interoperable multiple recognition regimes + open protocols.**
 
-## 7. 락인 열지도 (Lock-in Heatmap)
+## 7. Lock-in Heatmap
 
-교육 트랙별 락인 위험도를 가시화한다:
+Visualizing lock-in severity by education track:
 
-### 입시 트랙 × 학생 위험도
+### Admissions Track × Student Risk
 
 ```
-교육 트랙              | 이탈가능성(나갈 수 있나?) | 규칙강제성(규칙이 센가?) | 항의실효성(항의가 먹히나?) | 의존비대칭(없으면 안 되나?) | 위험도
-----------------------|----------|----------|----------|----------|------
-일반고 (내신 중심)       | 낮음      | 높음      | 매우 낮음 | 매우 높음 | 매우 높음
-특목고 (자사고)          | 매우 낮음 | 매우 높음 | 매우 낮음 | 매우 높음 | 매우 높음
-특성화고 (직업)          | 중간      | 높음      | 낮음      | 높음      | 높음
-대안학교                | 중간      | 중간      | 중간      | 높음      | 중간~높음
-홈스쿨링                | 높음      | 낮음      | 높음      | 매우 높음 | 높음 (인정 부재)
-온라인 교육             | 높음      | 낮음      | 중간      | 높음      | 중간 (인정 제한적)
-외국 학교               | 낮음      | 중간      | 중간      | 매우 높음 | 높음 (인정 복잡)
-학점은행제              | 높음      | 낮음      | 중간      | 중간      | 중간
+Education Track        | Exit Feasibility | Rule Coercion | Redress Efficacy | Dependency Asymmetry | Risk
+-----------------------|------------------|---------------|-------------------|----------------------|--------
+General high (internal)| Low             | High          | Very low          | Very high            | Very high
+Specialized high       | Very low         | Very high     | Very low          | Very high            | Very high
+Vocational high        | Medium           | High          | Low               | High                 | High
+Alternative school     | Medium           | Medium        | Medium            | High                 | Medium-High
+Homeschooling          | High             | Low           | High              | Very high           | High (no recognition)
+Online education       | High             | Low           | Medium            | High                 | Medium (limited recognition)
+Foreign school         | Low              | Medium        | Medium            | Very high           | High (complex recognition)
+Credit bank system     | High             | Low           | Medium            | Medium              | Medium
 ```
 
-### 홈스쿨링의 역설
+### The Homeschooling Paradox
 
-홈스쿨링은 학교 구조에서 벗어날 수 있다는 점에서 이탈 가능성이 높지만,
-학력 인정이 부재하여 의존 비대칭(차이)이 매우 높다. "나갈 수는 있지만 나가면
-사회적 신분이 소멸한다"는 구조다. 이건 **탈출권이 있어도 인정이 없으면
-의미가 없다**는 프레임워크 핵심 명제를 극단적으로 보여준다.
+Homeschooling has high exit feasibility in that it can escape the school structure, but credential recognition is absent, making dependency asymmetry very high. The structure is: "you can leave, but if you do, your social status evaporates." This dramatically demonstrates the framework's core proposition: **even with a right of exit, without recognition, it is meaningless.**
 
-### 사용자 유형별 위험도 중첩
+### Risk Overlap by Student Type
 
 ```
-학생 유형             | 일반고 | 특목고 | 대안학교 | 홈스쿨 | 외국 학교
----------------------|--------|--------|---------|--------|----------
-초등                  | 높음    | 높음    | 중간     | 높음    | 높음
-중등 (내신 시작)        | 매우 높음| 매우 높음| 높음    | 매우 높음| 매우 높음
-고등 (입시 직전)        | 매우 높음| 매우 높음| 매우 높음| 매우 높음| 매우 높음
-전학생 (중간 편입)       | 매우 높음| 매우 높음| 높음    | 매우 높음| 매우 높음
-장애학생               | 매우 높음| 매우 높음| 높음    | 매우 높음| 매우 높음
-다문화/이주배경          | 매우 높음| 매우 높음| 높음    | 매우 높음| 매우 높음
+Student Type          | General HS | Specialized | Alternative | Homeschool | Foreign School
+---------------------|------------|-------------|-------------|------------|----------------
+Elementary           | High       | High        | Medium      | High       | High
+Middle (internal)    | Very high  | Very high   | High        | Very high  | Very high
+High (pre-admissions)| Very high  | Very high   | Very high   | Very high  | Very high
+Transfer student     | Very high  | Very high   | High        | Very high  | Very high
+Disabled student     | Very high  | Very high   | High        | Very high  | Very high
+Multicultural/migrant| Very high  | Very high   | High        | Very high  | Very high
 ```
 
-이 중첩이 보여주는 것: 입시 트랙에 들어가는 순간부터 이탈 비용이 극적으로
-상승한다. 중학교 내신이 시작되는 시점부터 "전학 = 입시 포기"가 되는
-구조가 락인의 핵심이다.
+What this overlap reveals: from the moment one enters an admissions track, exit costs rise dramatically. From the point where middle school internal grades begin, "transfer = abandoning admissions" becomes the core of lock-in.
 
-## 8. 다섯 사례 비교 — 프레임워크 보편성 최종 검증
+## 8. Five-Case Comparison — Final Framework Universality Verification
 
-다섯 사례를 비교하면, 프레임워크의 각 장치가 다른 맥락에서 어떻게
-작동하는지가 완전히 드러난다.
+Comparing the five cases fully reveals how each framework mechanism operates across different contexts.
 
-### 판별식 비교
+### Discriminant Comparison
 
-| 차원 | E-7 비자 | 플랫폼 정지 | 의료 이전 | 돌봄 의존 | 교육 인정 |
+| Dimension | E-7 Visa | Platform Suspension | Medical Transfer | Caregiving Dependency | Education Recognition |
 | --- | --- | --- | --- | --- | --- |
-| 주권 유형 | 지역적 | 비지역적 | 물리적 | 관계적 | 인정 체계 |
-| 생존조건 | 체류·고용 | 경제·디지털 | 생명·통증 | 생명·돌봄 | 미래 소득·신분 |
-| 락인된 사람 | 1명 | 1명 | 1명 | 2명+ | 3명 (학생·부모·교사) |
-| 탈출 시 제3자 영향 | 없음 | 없음 | 없음 | 생존 위협 | 입시 트랙 단절 |
-| 항의 능력 | 제한적 | 제한적 | 제한적 | 부재 | 부재 (미성년) |
-| 합작 락인 | 2주체 | 4구조 | 5구조 | 5구조 | 5구조 |
+| Sovereignty type | Territorial | Non-territorial | Physical | Relational | Recognition regime |
+| Survival conditions | Residence, employment | Economic, digital | Life, pain | Life, caregiving | Future income, status |
+| Locked-in person | 1 | 1 | 1 | 2+ | 3 (student, parent, teacher) |
+| Third-party impact of exit | None | None | None | Survival threat | Admissions track severance |
+| Challenge capacity | Limited | Limited | Limited | Absent | Absent (minor) |
+| Composite lock-in | 2 actors | 4 structures | 5 structures | 5 structures | 5 structures |
 
-### 프레임워크 장치별 검증
+### Framework Mechanism Verification
 
-| 장치 | E-7 | 플랫폼 | 의료 | 돌봄 | 교육 |
+| Mechanism | E-7 | Platform | Medical | Caregiving | Education |
 | --- | --- | --- | --- | --- | --- |
-| 데이터 이동성 3층 | 매우 낮음 | 매우 낮음 | 부분(1층) | 매우 낮음 | 1+2층 충족, 3층 부재 |
-| 포크 가능성 | 제한적 | 낮음 | 불가(물리) | 불가(관계) | 불가(인정) |
-| 부문별 포크 원칙 | 해당없음 | 진짜 포크 | 인정+접근 | 대체 돌봄 | 인정 다원화 |
-| 합작 락인 | 2주체 | 4구조 | 5구조 | 5구조 | 5구조 |
-| 탈출권 강제 | 브릿지 체류 | 데이터 이동 | 기록 표준 | 대체 돌봄 동반 | 학점 인정 표준 |
-| 항의 절차 | 행정심판 | 고객지원 | 의료분쟁 | 대리 발언권 | 대리 발언권 + 옴부즈 |
-| 락인 열지도 | 비자 유형 | 플랫폼×사용자 | 의료×환자 | 돌봄×제공자/수혜자 | 트랙×학생 유형 |
+| 3-layer data portability | Very low | Very low | Partial (layer 1) | Very low | Layers 1+2 satisfied, layer 3 absent |
+| Forkability | Limited | Low | Impossible (physical) | Impossible (relational) | Impossible (recognition) |
+| Domain-specific fork principle | N/A | True fork | Recognition + access | Alternative care | Recognition pluralization |
+| Composite lock-in | 2 actors | 4 structures | 5 structures | 5 structures | 5 structures |
+| Exit-right enforcement | Bridge visa | Data portability | Record standards | Alternative care accompaniment | Credit recognition standards |
+| Challenge procedure | Administrative appeal | Customer support | Medical dispute | Proxy voice | Proxy voice + ombudsman |
+| Lock-in heatmap | Visa type | Platform × user | Medical × patient | Care × provider/recipient | Track × student type |
 
-### 탈출권의 진화 — 최종 정리
+### Evolution of the Right of Exit — Final Summary
 
-| 사례 | 탈출권의 형태 | 핵심 요구 |
+| Case | Form of Right of Exit | Core Requirement |
 | --- | --- | --- |
-| E-7 | 비자에서 빠져나갈 권리 | 단순 이탈 |
-| 플랫폼 | 데이터를 가져갈 권리 | 이탈 + 데이터 |
-| 의료 | 기록을 이전할 권리 | 이탈 + 기록 + 인정 |
-| 돌봄 | 대체 생존조건 동반 이탈 | 이탈 + 대체 돌봄 + 방치 방지 |
-| 교육 | 인정이 이전되는 이탈 | 이탈 + 기록 + 인정 + 입시 트랙 보호 |
+| E-7 | Right to leave the visa regime | Simple departure |
+| Platform | Right to take your data | Exit + data |
+| Medical | Right to transfer records | Exit + records + recognition |
+| Caregiving | Exit with alternative survival conditions | Exit + alternative care + abandonment prevention |
+| Education | Exit with recognition transferred | Exit + records + recognition + admissions track protection |
 
-탈출권이 갈수록 요구하는 것이 많아진다. 이건 프레임워크가 "탈출권만 있으면
-된다"에서 시작해서, 실제 적용하면서 **탈출권이 맥락에 따라 다른 무게를
-가짐**을 발견한 과정이다.
+The right of exit demands more with each case. This is the process by which the framework, starting from "the right of exit alone suffices," discovered through application that **the right of exit carries different weight depending on context.**
 
-### 다섯 사례가 공통으로 입증한 것
+### What the Five Cases Commonly Proved
 
-1. **판별식이 다섯 가지 주권 유형에 모두 적용** — 지역, 비지역, 물리적,
-   관계적, 인정 체계
-2. **합작 락인의 4단계 패턴이 다섯 영역에서 반복** — 각 주체 자기 역할만
-   수행, 교차점에서 생김, 동시 처방 필요, 시행 주체 역설
-3. **락인 위험도의 연속성** — 같은 구조에서 사용자/환자/돌봄/학생 유형에
-   따라 위험도가 다름
-4. **데이터 이동성 3층이 모든 영역에서 진짜 병목(막힘)** — 1층만 충족되고
-   2·3층이 부재하면 이동성은 보여주기
-5. **부문별 포크 원칙이 다르게 적�용됨** — 디지털(진짜 포크), 의료(인정+
-   접근), 물리(접근 보장만), 관계(대체 돌봄), 인정(인정 다원화)
-6. **탈출권은 맥락에 따라 확장됨** — 단순 이탈 → 데이터 동반 → 인정 동반 →
-   대체 생존조건 동반 → 인정+입시 트랙 보호
-7. **강제의 역설이 모든 영역에서 반복** — 처방을 채택할 권한을 가진 주체가
-   처방에 의해 자신의 권한이 줄어드는 구조
+1. **The discriminant applies to all five sovereignty types** — territorial, non-territorial, physical, relational, recognition regime
+2. **The composite lock-in four-stage pattern repeats across five domains** — each actor performs only its role, lock-in emerges at the intersection, simultaneous prescriptions are needed, implementation-entity paradox
+3. **Lock-in severity continuity** — within the same structure, severity varies by user/patient/care-recipient/student type
+4. **The 3-layer data portability model is the real bottleneck in every domain** — if only layer 1 is satisfied and layers 2 and 3 are absent, portability is performative
+5. **Domain-specific fork principles apply differently** — digital (true fork), medical (recognition + access), physical (access guarantee only), relational (alternative care), recognition (recognition pluralization)
+6. **The right of exit expands with context** — simple departure → data accompaniment → recognition accompaniment → alternative survival conditions accompaniment → recognition + admissions track protection
+7. **The coercion paradox repeats in every domain** — the entity with authority to adopt the prescription sees its own authority reduced by that prescription
 
-## 9. 이 사례가 프레임워크에 미치는 영향
+## 9. Impact on the Framework
 
-### 검증된 것
+### What Was Verified
 
-1. **데이터 이동성 3층 중 3층만이 유일하게 중요한 극단 사례 입증** — 1·2층이
-   충족되어도 3층이 없으면 탈출 불가
-2. **관계적 락인이 교육에서 삼각 구조로 확장** — 학생·부모·교사가 각자
-   다른 방식으로 묶임
-3. **대리 발언권이 교육에서도 필요** — 미성년 학생은 항의 능력 자체가 부재
-4. **합작 락인 4단계 패턴이 다섯 번째 영역에서도 반복** — 보편성 최종 입증
-5. **인정 시장 독점이 락인의 원천** — 국가가 인정을 단일 발급하는 구조가
-   탈출권을 구조적으로 제한
+1. **The extreme case where only layer 3 of the 3-layer model matters was demonstrated** — even with layers 1 and 2 satisfied, without layer 3, exit is impossible
+2. **Relational lock-in expanded into a triangular structure in education** — student, parent, and teacher each bound in different ways
+3. **Proxy voice is also needed in education** — minor students have no challenge capacity
+4. **The composite lock-in four-stage pattern repeats in a fifth domain** — final universality confirmation
+5. **Recognition regime monopoly is the source of lock-in** — the state's sole issuance of recognition structurally limits the right of exit
 
-### 새로이 드러낸 것
+### What Was Newly Revealed
 
-1. **"인정"이 독립된 락인 차원** — 물리 인프라, 관계, 인정이 각각 별도의
-   락인 원천
-2. **탈출 피해의 교육 버전** — 부모의 학군 변경이 자녀의 입시 트랙 단절을
-   초래. 돌봄의 "탈출=방치"와 같은 구조
-3. **인정 시장 다원화 필요** — 단일 국가 인정 체계를 다원화해야 탈출권이
-   실질화됨. 커널 설계의 "다중 발급자" 원칙이 인정에도 적용
-4. **입시 트랙 자체가 락인 장치** — 트랙에 들어가는 순간 이탈 비용이
-   극적으로 상승. 이는 비자 유형(E-7→E-9)과 같은 구조
-5. **사교육 의존이 국가-가족 합작 락인의 교육 버전** — 국가가 교육 책임을
-   사교육에 떠넘기고, 가족이 비용을 부담하는 구조
+1. **"Recognition" is an independent lock-in dimension** — physical infrastructure, relationships, and recognition are each separate lock-in sources
+2. **The education version of exit harm** — parental district changes sever the child's admissions track. Same structure as "exit = abandonment" in caregiving
+3. **Need for recognition regime pluralization** — pluralizing the single state recognition regime is necessary for the right of exit to become substantive. The kernel design's "multiple issuers" principle applies to recognition
+4. **The admissions track itself is a lock-in device** — the moment one enters a track, exit costs rise dramatically. Same structure as visa types (E-7→E-9)
+5. **Private education dependency is the education version of state-family composite lock-in** — the state offloads education responsibility onto the private education market, and the family bears the cost
 
-### 남은 과제
+### Remaining Problems
 
-1. **인정 시장 다원화의 구체적 설계** — 다원화된 인정 기관을 누가 인정하는가
-   (강제의 역설 재등장)
-2. **입시 제도 자체가 락인 장치** — 입시 트랙 변경 비용을 낮추는 방법이
-   입시 제도의 근본적 개편을 요구하는지 여부
-3. **국제적 학력 인정** — 외국 학력 인정이 제한적이어서 국가 간 교육
-   이동이 사실상 불가능한 구조
-4. **사교육 시장 규제와 탈출권의 관계** — 사교육 규제가 탈출권을 높이는지
-   낮추는지 불확실
+1. **Concrete design for recognition regime pluralization** — who recognizes the pluralized recognition bodies (the coercion paradox reappears)
+2. **The admissions system itself as a lock-in device** — whether reducing track-change costs requires fundamental reform of the admissions system
+3. **International credential recognition** — limited foreign credential recognition makes cross-national education mobility practically impossible
+4. **The relationship between private education regulation and the right of exit** — whether private education regulation raises or lowers the right of exit is uncertain
 
-## 10. 다섯 사례 완성 — 프레임워크 보편성 최종 결론
+## 10. Five Cases Complete — Final Framework Universality Conclusion
 
-다섯 사례가 프레임워크의 핵심 장치를 검증했다. 각 사례는 프레임워크의
-다른 면을 시험했고, 각 시험에서 프레임워크는 수정·확장되었다.
+The five cases have verified the framework's core mechanisms. Each case tested a different face of the framework, and with each test the framework was revised and expanded.
 
-### 다섯 가지 주권 유형
+### Five Sovereignty Types
 
-| 사례 | 주권 유형 | 락인의 본체 | 포크 원칙 |
+| Case | Sovereignty Type | Body of Lock-in | Fork Principle |
 | --- | --- | --- | --- |
-| E-7 | 지역적 | 체류 허가 + 고용 결합 | 제한적 (다른 비자) |
-| 플랫폼 | 비지역적 | 계정 + 네트워크 효과 | 진짜 포크 (현재 불가) |
-| 의료 | 물리적 | 물리 인프라 + 기록 | 접근 보장 + 인정 |
-| 돌봄 | 관계적 | 관계 + 대체 돌봄 부재 | 대체 돌봄 인프라 |
-| 교육 | 인정 체계 | 인정 독점 + 입시 트랙 | 인정 다원화 |
+| E-7 | Territorial | Residence permit + employment coupling | Limited (different visa) |
+| Platform | Non-territorial | Account + network effects | True fork (currently impossible) |
+| Medical | Physical | Physical infrastructure + records | Access guarantee + recognition |
+| Caregiving | Relational | Relationship + absence of alternative care | Alternative care infrastructure |
+| Education | Recognition regime | Recognition monopoly + admissions track | Recognition pluralization |
 
-### 프레임워크가 다섯 사례에서 승격시킨 개념
+### Concepts the Framework Promoted Across the Five Cases
 
-| 개념 | 처음 등장 | 승격된 사례 | 프레임워크 위치 |
+| Concept | First Appearance | Case That Promoted It | Framework Location |
 | --- | --- | --- | --- |
-| 합작 락인 | E-7 | 플랫폼 | 섹션 6 |
-| 비지역적 주권(땅 없는 힘) | 플랫폼 | — | 섹션 3 |
-| 포크 비용 비대칭(갈라탈 때 드는 힘 차이) | 플랫폼 | — | 섹션 8 |
-| 데이터 이동성 3층 | 의료 | 교육 | 섹션 8 |
-| 관계적 락인 | 돌봄 | 교육 | 섹션 2 (명제 3) |
-| 탈출권 확장 (대체 생존조건) | 돌봄 | 교육 | 섹션 2 (명제 3) |
-| 대리 발언권 | 돌봄 | 교육 | 섹션 2 (명제 3) |
-| 인정 시장 다원화 | 교육 | — | 섹션 8 (커널 설계) |
+| Composite lock-in | E-7 | Platform | Section 6 |
+| Non-territorial sovereignty | Platform | — | Section 3 |
+| Fork cost asymmetry | Platform | — | Section 8 |
+| 3-layer data portability | Medical | Education | Section 8 |
+| Relational lock-in | Caregiving | Education | Section 2 (Prop. 3) |
+| Right-of-exit expansion (alternative survival conditions) | Caregiving | Education | Section 2 (Prop. 3) |
+| Proxy voice | Caregiving | Education | Section 2 (Prop. 3) |
+| Recognition regime pluralization | Education | — | Section 8 (kernel design) |
 
-### 최종 결론
+### Final Conclusion
 
-반주권 설계 v4 프레임워크는 다섯 가지 주권 유형 — 지역, 비지역, 물리적,
-관계적, 인정 체계 — 에 걸쳐 보편적으로 적용 가능함이 입증되었다.
+The Anti-Sovereign Design v4 framework has been demonstrated to be universally applicable across five sovereignty types — territorial, non-territorial, physical, relational, and recognition regime.
 
-프레임워크가 인정하는 것:
-- 각 사례가 새로운 차원을 드러냈다. 프레임워크는 사례 적용 전보다 후에
-  더 풍성해졌다.
-- 다섯 사례가 프레임워크를 완성한 것이 아니라, **프레임워크가 다섯
-  사례를 통해 수정·확장되었다**.
-- 강제의 역설은 다섯 영역 모두에서 풀리지 않았다. 프레임워크는 이를
-  완전히 끊겠다고 약속하지 않고, 락인이 구조적으로 고정되기 전에 풀 기회를 남긴다.
+What the framework acknowledges:
+- Each case revealed a new dimension. The framework is richer after case application than before.
+- The five cases did not complete the framework; rather, **the framework was revised and expanded through the five cases.**
+- The coercion paradox remained unresolved in all five domains. The framework does not promise to sever it completely but leaves opportunities to loosen lock-in before it structurally hardens.
 
-프레임워크의 핵심 명제는 다섯 사례를 통해 검증되었다:
+The framework's core propositions were verified through the five cases:
 
-> **데이터가 이동해도 인정이 이동하지 않으면 탈출권은 없다.**
-> **탈출이 제3자의 생존을 위협하면, 대체 생존조건이 동반되어야 한다.**
-> **권력은 없앨 수 없지만, 락인은 측정하고, 분쟁을 공개하고, 고정되기 전에 풀 수 있다.**
+> **If data moves but recognition does not, there is no right of exit.**
+> **If exit threatens a third party's survival, alternative survival conditions must accompany it.**
+> **Power cannot be abolished, but lock-in can be measured, disputes can be made public, and it can be loosened before it hardens.**
 
-다섯 사례는 끝났지만, 프레임워크는 끝나지 않았다. 새로운 사례가 나타나면
-프레임워크는 다시 수정될 것이다. 이게 프레임워크가 "완성형"이 아니라
-**살아있는 설계**인 이유다.
+The five cases are complete, but the framework is not. When new cases arise, the framework will be revised again. This is why the framework is not a "finished product" but a **living design.**

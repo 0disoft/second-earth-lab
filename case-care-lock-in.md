@@ -1,432 +1,361 @@
-# 사례 연구: 돌봄 의존 — 관계적 락인
+# Case Study: Caregiving Dependency — Relational Lock-in
 
-> 반주권 설계 (Anti-Sovereign Design) v4 프레임워크의 네 번째 적용 사례.
-> 쉬운 말 매핑은 [용어 매핑표](./docs/glossary.md)를 따른다.
-> E-7이 "지역 주권"을, 플랫폼이 "비지역 주권"을, 의료가 "물리 인프라"를
-> 다뤘다면, 이 사례는 **탈출=해방 공식이 깨지는 첫 사례**를 다룬다.
+> Fourth application case of the Anti-Sovereign Design v4 framework.
+> For terminology, consult the [glossary](./docs/glossary.md).
+> If E-7 addressed "territorial sovereignty," the platform "non-territorial sovereignty," and medical "physical infrastructure," this case addresses **the first case in which the equation of exit = liberation breaks.**
 
-## 1. 왜 이 사례인가
+## 1. Why This Case
 
-지금까지 세 사례(E-7, 플랫폼, 의료)에서 "탈출권(빠져나갈 권리)"은 대체로 해방이었다.
-비자에서 빠져나오고, 플랫폼을 떠나고, 병원을 바꾸는 것이 목표였다.
+In the three previous cases (E-7, platform, medical), the right of exit was largely liberation. Leaving a visa, departing a platform, changing hospitals was the goal.
 
-돌봄에서는 이 공식이 깨진다.
+In caregiving, this equation breaks.
 
-**부모가 떠나면 아이가 위험하고, 가족 간병인이 떠나면 환자가 위험하고,
-장애인 돌봄 제공자가 떠나면 생존조건이 끊긴다.**
+**If a parent leaves, the child is endangered. If a family caregiver leaves, the patient is endangered. If a disability care provider leaves, survival conditions are severed.**
 
-한 사람의 탈출권이 다른 사람의 생존조건을 끊을 수 있다. 이건 프레임워크의
-가장 기본적인 가정 — "탈출권은 약자 기준의 비대칭(차이) 권리" —을 정면으로
-시험한다. 탈출권이 단순 이탈권이 아니라 **대체 생존조건(다른 살 곳)을 동반해야 함**을
-요구하게 된다.
+One person's right of exit can sever another person's survival conditions. This directly tests the framework's most basic assumption — that "the right of exit is an asymmetry-based right defined from the position of the weak." It demands that the right of exit be understood not as mere departure but as **exit accompanied by alternative survival conditions.**
 
-이 사례가 프레임워크를 가장 세게 시험하는 이유:
+Why this case tests the framework hardest:
 
-1. **탈출이 곧 방치가 될 수 있음** — 다른 사례에는 없던 딜레마
-2. **락인된 사람이 한 명이 아님** — 돌봄 제공자와 수혜자가 서로 다른 방식으로
-   같이 묶임 (관계적 락인)
-3. **항의 능력 자체가 부재** — 아동, 중증 환자, 인지장애인은 스스로 항의 불가
-4. **국가-가족 합작 락인** — 국가가 돌봄을 가족에 떠넘기고, 가족은 사랑/의무
-   이름으로 사람을 묶음
+1. **Exit can become abandonment** — a dilemma absent in other cases
+2. **The locked-in are not singular** — care provider and recipient are bound in different ways within the same structure (relational lock-in)
+3. **Capacity for challenge is absent** — children, severe patients, and the cognitively impaired cannot self-advocate
+4. **State-family composite lock-in** — the state offloads caregiving onto the family, and the family binds people in the name of love and duty
 
-## 2. 판별식 적용
+## 2. Applying the Discriminant
 
-돌봄은 단일 관계가 아니다. 돌봄 제공자(가족 간병인, 부모, 장애인 돌봄
-제공자, 이주 가사노동자)와 돌봄 수혜자(아동, 노인, 장애인, 중증 환자)를
-나누어 점수화해야 한다.
+Caregiving is not a single relationship. Care providers (family caregivers, parents, disability care providers, migrant domestic workers) and care recipients (children, elderly, disabled, severe patients) must be scored separately.
 
-### 돌봄 제공자 — 가족 간병인 (배우자·자녀)
+### Care Provider — Family Caregiver (Spouse/Child)
 
-| 항 | 점수 | 설명 |
+| Prong | Score | Description |
 | --- | --- | --- |
-| 못 나감 | 매우 높음 | 경제적 의존, 시간 구속, 대체 인력 부재, 사회적 기대 |
-| 룰을 당함 | 높음 | 가족 규범, 도덕 압력, 법적 부양 의무 |
-| 따져도 안 먹힘 | 매우 높음 | "가족인데 왜 안 돌보느냐" — 항의 자체가 비도덕으로 프레임됨 |
-| 생존조건을 쥠 | 매우 높음 | 간병인의 수면·건강·소득·사회관계가 환자 상태에 의존 |
+| Cannot exit | Very high | Economic dependence, time constraints, absence of alternative personnel, social expectations |
+| Subject to imposed rules | High | Family norms, moral pressure, legal maintenance obligations |
+| Challenge produces no change | Very high | "You're family, why aren't you caring?" — challenge itself is framed as immoral |
+| Survival conditions held by another | Very high | Caregiver's sleep, health, income, and social relationships depend on the patient's condition |
 
-### 돌봄 제공자 — 부모 (양육)
+### Care Provider — Parent (Childrearing)
 
-| 항 | 점수 | 설명 |
+| Prong | Score | Description |
 | --- | --- | --- |
-| 못 나감 | 높음 | 자녀 의존, 양육 비용, 주거 연동, 교육 시스템 |
-| 룰을 당함 | 높음 | 아동법, 양육 의무, 사회적 감시 |
-| 따져도 안 먹힘 | 높음 | 양육을 포기하면 법적·사회적 제재 |
-| 생존조건을 쥠 | 매우 높음 | 자녀 생존이 부모 행동에 전적으로 의존 |
+| Cannot exit | High | Child dependence, parenting costs, housing linkage, education system |
+| Subject to imposed rules | High | Child welfare law, parenting obligations, social surveillance |
+| Challenge produces no change | High | Abandoning parenting triggers legal and social sanctions |
+| Survival conditions held by another | Very high | Child survival depends entirely on parental behavior |
 
-### 돌봄 제공자 — 장애인 돌봄 제공자 (가족/비가족)
+### Care Provider — Disability Care Provider (Family/Non-family)
 
-| 항 | 점수 | 설명 |
+| Prong | Score | Description |
 | --- | --- | --- |
-| 못 나감 | 매우 높음 | 활동지원사 등 인력 부족, 대체 불가, 1:1 의존 |
-| 룰을 당함 | 높음 | 복지 제도 규칙, 지원금 조건, 근무 시간 |
-| 따져도 안 먹힘 | 높음 | 피돌봄자 가족의 요구, 제도적 불만 절차 부재 |
-| 생존조건을 쥠 | 높음 | 소득이 해당 돌봄에 의존, 동시에 피돌봄자 생존이 자신에 의존 |
+| Cannot exit | Very high | Shortage of activity support workers, irreplaceable, 1:1 dependence |
+| Subject to imposed rules | High | Welfare system rules, subsidy conditions, working hours |
+| Challenge produces no change | High | Demands from care recipient's family, absence of institutional complaint procedures |
+| Survival conditions held by another | High | Income depends on this care role; simultaneously, recipient survival depends on provider |
 
-### 돌봄 제공자 — 이주 가사노동자
+### Care Provider — Migrant Domestic Worker
 
-| 항 | 점수 | 설명 |
+| Prong | Score | Description |
 | --- | --- | --- |
-| 못 나감 | 매우 높음 | 비자·주거·고용이 한 가구에 묶임 |
-| 룰을 당함 | 매우 높음 | 고용주 재량, 계약 불투명, 비자 조건 |
-| 따져도 안 먹힘 | 매우 높음 | 언어·비자·정보 장벽, 고용주=주거제공자 |
-| 생존조건을 쥠 | 매우 높음 | 체류·소득·주거·식사가 고용주에 전적으로 의존 |
+| Cannot exit | Very high | Visa, housing, and employment bound to a single household |
+| Subject to imposed rules | Very high | Employer discretion, opaque contracts, visa conditions |
+| Challenge produces no change | Very high | Language, visa, and information barriers; employer = housing provider |
+| Survival conditions held by another | Very high | Residence, income, housing, and meals entirely dependent on employer |
 
-### 돌봄 수혜자 — 아동
+### Care Recipient — Child
 
-| 항 | 점수 | 설명 |
+| Prong | Score | Description |
 | --- | --- | --- |
-| 못 나감 | 매우 높음 | 부모 외에 대체 보호자 없음, 이동 능력 부재 |
-| 룰을 당함 | 높음 | 부모 결정에 전적으로 종속 |
-| 따져도 안 먹힘 | 매우 높음 | 항의 능력 자체가 없음 — 언어·인지·법적 능력 |
-| 생존조건을 쥠 | 매우 높음 | 생존 자체가 보호자에게 전적으로 의존 |
+| Cannot exit | Very high | No alternative guardian beyond parents, no independent mobility |
+| Subject to imposed rules | High | Entirely subject to parental decisions |
+| Challenge produces no change | Very high | No capacity to challenge — linguistic, cognitive, legal |
+| Survival conditions held by another | Very high | Survival itself entirely dependent on guardian |
 
-### 돌봄 수혜자 — 중증 환자 / 인지장애인
+### Care Recipient — Severe Patient / Cognitively Impaired
 
-| 항 | 점수 | 설명 |
+| Prong | Score | Description |
 | --- | --- | --- |
-| 못 나감 | 매우 높음 | 이동 능력 부재, 대체 돌봄 부재 |
-| 룰을 당함 | 높음 | 간병인·가족 결정에 종속 |
-| 따져도 안 먹힘 | 매우 높음 | 항의 능력 부재 또는 제한 |
-| 생존조건을 쥠 | 매우 높음 | 생존·통증·약물·위생이 간병인에 의존 |
+| Cannot exit | Very high | No mobility, no alternative care |
+| Subject to imposed rules | High | Subject to caregiver and family decisions |
+| Challenge produces no change | Very high | Absent or limited challenge capacity |
+| Survival conditions held by another | Very high | Survival, pain management, medication, hygiene all dependent on caregiver |
 
-### 락인 위험도: 매우 높음 (제공자·수혜자 모두)
+### Lock-in Severity: Very High (Both Provider and Recipient)
 
-돌봄의 핵심 특징: **락인된 사람이 한 명이 아니다.** 제공자도 갇히고,
-수혜자도 갇힌다. 양쪽 모두 락인 위험도가 매우 높으며, 한쪽을 풀면
-다른 쪽이 더 깊이 락인될 수 있다.
+The defining feature of caregiving: **the locked-in are not singular.** The provider is locked in and the recipient is locked in. Both score very high on lock-in severity, and loosening one side can deepen the other's lock-in.
 
-## 3. 관계적 락인 (Relational Lock-in)
+## 3. Relational Lock-in
 
-지금까지의 락인은 "A가 B의 생존조건을 쥔다"는 단방향 구조였다. 돌봄에서는
-이 구조가 깨진다.
+Previous lock-ins followed a unidirectional structure: "A holds B's survival conditions." In caregiving, this structure breaks.
 
-### 상호 의존의 함정
+### The Trap of Mutual Dependence
 
-돌봄 제공자와 수혜자가 **서로 다른 방식으로 같이 묶인다**:
+Care provider and recipient are **bound together in different ways**:
 
-- **제공자는 수혜자에게 묶임**: 수혜자의 생존이 제공자에게 의존. 제공자가
-  떠나면 수혜자가 위험. 도덕적·법적 책임.
-- **수혜자는 제공자에게 묶임**: 제공자 외에 대체가 없음. 제공자가 바뀌면
-  적응 비용, 신뢰 재구축, 정보 이전 필요.
-- **제공자는 제공 역할에 묶임**: 소득·주거·비자·사회적 정체성이 돌봄 역할에
-  의존. 떠나면 자신의 생존도 위협.
-- **수혜자는 돌봄 자체에 묶임**: 돌봄이 끊기면 생존 단절. 대체 돌봄 인프라
-  부재.
+- **The provider is bound to the recipient**: the recipient's survival depends on the provider. If the provider leaves, the recipient is endangered. Moral and legal responsibility.
+- **The recipient is bound to the provider**: there is no alternative to the provider. Changing providers requires adaptation cost, trust rebuilding, and information transfer.
+- **The provider is bound to the care role**: income, housing, visa, and social identity depend on the care role. Leaving threatens the provider's own survival.
+- **The recipient is bound to caregiving itself**: if care is severed, survival is cut off. Absence of alternative care infrastructure.
 
-이건 "한 사람이 갇힌 구조"가 아니라 **"두 사람이 서로를 묶는 구조"**다.
-한쪽의 탈출이 다른 쪽의 락인을 깊게 만드는 것이 핵심이다.
+This is not "a structure in which one person is locked in" but **"a structure in which two people bind each other."** The core is that one party's exit deepens the other's lock-in.
 
-### 비대칭 관계 내의 상호 락인
+### Mutual Lock-in Within an Asymmetric Relationship
 
-주의: 상호 락인이라고 해서 대칭이 아니다.
+Note: mutual lock-in does not mean symmetry.
 
-- 간병인이 환자에게 묶이는 것과 환자가 간병인에게 묶이는 것은 **같은
-  종류의 락인이 아니다.** 간병인은 시간·소득·건강이 묶이지만, 환자는
-  생명·통증·위생이 묶인다.
-- 부모가 자녀에게 묶이는 것과 자녀가 부모에게 묶이는 것도 다르다. 부모는
-  법적 의무·경제적 책임이 묶이지만, 아동은 생존 자체가 묶인다.
+- A caregiver bound to a patient and a patient bound to a caregiver are **not the same kind of lock-in.** The caregiver's time, income, and health are bound; the patient's life, pain, and hygiene are bound.
+- A parent bound to a child and a child bound to a parent are also different. The parent is bound by legal obligation and economic responsibility; the child is bound in survival itself.
 
-관계적 락인의 핵심: **양쪽이 다르게 갇히면서, 한쪽의 탈출이 다른 쪽의
-생존을 위협한다.** 이건 E-7, 플랫폼, 의료 중 어느 사례에서도 나오지
-않은 구조다.
+The core of relational lock-in: **both parties are locked in differently, and one party's exit threatens the other's survival.** This structure appears in none of the E-7, platform, or medical cases.
 
-## 4. 탈출 피해 문제
+## 4. The Exit-as-Harm Problem
 
-이 사례가 프레임워크에 던지는 가장 어려운 질문:
+The hardest question this case poses to the framework:
 
-**한 사람의 정당한 탈출권이 다른 사람의 생존조건을 끊을 때, 커널은
-어떻게 개입해야 하는가?**
+**When one person's legitimate right of exit severs another person's survival conditions, how should the kernel intervene?**
 
-### E-7, 플랫폼, 의료에서는 없던 문제
+### A Problem Absent in E-7, Platform, and Medical
 
-| 사례 | 탈출 시 제3자 영향 |
+| Case | Third-Party Impact of Exit |
 | --- | --- |
-| E-7 | 고용주 불편 (인력 공백) — 생존 위협 아님 |
-| 플랫폼 | 플랫폼 손실 (사용자 1명) — 생존 위협 아님 |
-| 의료 | 병원 손실 (환자 1명) — 생존 위협 아님 |
-| **돌봄** | **수혜자 생존 위협 — 탈출=방치** |
+| E-7 | Employer inconvenience (staff vacancy) — not a survival threat |
+| Platform | Platform loss (one user) — not a survival threat |
+| Medical | Hospital loss (one patient) — not a survival threat |
+| **Caregiving** | **Recipient survival threat — exit = abandonment** |
 
-돌봄 제공자의 탈출이 정당하더라도, 그 탈출로 인해 돌봄 수혜자의
-생존조건이 끊긴다. 이건 "탈출권은 약자 기준의 비대칭 권리"라는
-프레임워크 원칙에 새로운 차원을 추가한다.
+Even if a care provider's exit is legitimate, it severs the care recipient's survival conditions. This adds a new dimension to the framework's principle that "the right of exit is an asymmetry-based right."
 
-### 탈출 피해의 유형
+### Types of Exit Harm
 
-| 탈출 | 정당성 | 제3자 피해 |
+| Exit | Legitimacy | Third-Party Harm |
 | --- | --- | --- |
-| 가족 간병인의 이탈 | 정당 (본인 생존·건강) | 환자 돌봄 단절 |
-| 부모의 양육 포기 | 정당할 수 있음 (본인 생존) | 아동 생존 위협 |
-| 이주 가사노동자의 이탈 | 정당 (노동권) | 가구 돌봄·가사 단절 |
-| 활동지원사의 교체 | 정당 (근로권) | 장애인 적응·신뢰 단절 |
+| Family caregiver departure | Legitimate (own survival/health) | Patient care severed |
+| Parental abandonment of parenting | May be legitimate (own survival) | Child survival threatened |
+| Migrant domestic worker departure | Legitimate (labor rights) | Household care and domestic work severed |
+| Activity support worker replacement | Legitimate (labor rights) | Disabled person's adaptation and trust severed |
 
-### 해결 원칙: 탈출권은 대체 생존조건을 동반해야
+### Resolution Principle: Exit Rights Must Accompany Alternative Survival Conditions
 
-탈출권이 정당하더라도, 탈출로 인해 제3자의 생존이 위협받으면, **탈출권
-행사에 앞서 대체 생존조건이 확보되어야 한다.**
+Even if the right of exit is legitimate, if exit threatens a third party's survival, **alternative survival conditions must be secured before the right of exit is exercised.**
 
-이건 탈출권을 제한하는 것이 아니다. 탈출권을 **배상·대체 인프라와 함께
-행사**하는 것이다:
+This does not restrict the right of exit. It means the right of exit is **exercised with compensation and alternative infrastructure**:
 
-- 가족 간병인이 퇴근하려면 → 대체 간병 인력이 있어야
-- 부모가 양육을 중단하려면 → 아동 보호 체계가 받아야
-- 활동지원사가 교체되려면 → 인수 인계 기간이 있어야
-- 이주 가사노동자가 이탈하려면 → 비자·주거가 독립되어야
+- A family caregiver who needs to stop working → alternative care personnel must exist
+- A parent who needs to stop parenting → the child protection system must step in
+- An activity support worker who needs to be replaced → a handover period must exist
+- A migrant domestic worker who needs to leave → visa and housing must be independent
 
-핵심 원칙: **탈출권은 "나갈 권리"만이 아니라 "대체 돌봄이 준비된
-상태에서 나갈 권리"다.** 대체 돌봄 없는 탈출은 권리가 아니라
-방치다.
+Core principle: **the right of exit is not merely "the right to leave" but "the right to leave in a state where alternative care is prepared."** Exit without alternative care is not a right but abandonment.
 
-### 커널의 역할
+### The Kernel's Role
 
-커널이 강제하는 것 (프레임워크 섹션 8 참조):
+What the kernel enforces (cf. framework Section 8):
 
-- **대체 돌봄 인프라 보장** — 탈출 전 대체 돌봄이 존재해야
-- **긴급 돌봄 전환권** — 갑작스러운 이탈 시 즉시 대체 돌봄 연결
-- **돌봄 기록 이동성** — 새 돌봄 제공자가 기존 정보를 이어받을 수 있어야
-- **수혜자 방치 방지권** — 수혜자가 방치될 권리가 아니라, 방치되지 않을
-  권리
+- **Alternative care infrastructure guarantee** — alternative care must exist before exit
+- **Emergency care transition right** — immediate alternative care connection in case of sudden departure
+- **Care record portability** — new care providers must be able to receive existing information
+- **Recipient anti-abandonment right** — not the right to be abandoned but the right not to be abandoned
 
-이건 커널이 "돌봄은 이렇게 해라"라고 지시하는 통치 강제가 아니다.
-"탈출할 때 대체 돌봄이 있어야 한다"는 **탈출권 강제**다 — 이탈 인프라를
-강제하는 것, 돌봄 방식을 정하는 것이 아니다.
+This is not the kernel dictating "how to provide care" (governance enforcement). It is **exit-right enforcement** — enforcing the existence of exit infrastructure, not dictating the form of care.
 
-## 5. 합작 락인
+## 5. Composite Lock-in
 
-돌봄에서도 합작 락인이 발생한다. 단일 주체가 아니라, 여러 시스템이
-결합해서 탈출 비용을 올린다.
+Composite lock-in also occurs in caregiving. Not a single entity but multiple systems combine to raise exit costs.
 
-### 합작 구조 1: 가족 + 국가
+### Composite Structure 1: Family + State
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 국가 | 복지 비용 절감, 돌봄 책임 가족 전가 | 부양 의무법, 복지 지원 조건 |
-| 가족 | 사랑·의무·도덕 | 돌봄 전담, 경제적·시간적 희생 |
+| State | Welfare cost reduction, offloading care responsibility to family | Maintenance obligation law, welfare support conditions |
+| Family | Love, duty, morality | Full-time caregiving, economic and temporal sacrifice |
 
-국가는 돌봄을 가족에게 떠넘기고, 가족은 사랑과 의무 이름으로 사람을
-묶는다. 국가는 "가족이 돌보는 게 최선"이라고 하고, 가족은 "가족인데
-왜 안 돌보느냐"는 사회적 압력에 묶인다.
+The state offloads caregiving onto the family, and the family binds people in the name of love and duty. The state says "family caregiving is best," and the family is bound by social pressure: "You're family, why aren't you caring?"
 
-이 구조에서 양쪽 모두 "이 구조를 바꾸자"고 할 이유가 없다:
-- 국가: 복지 비용 절감
-- 가족: 도덕적 정당성, 정체성
+In this structure, neither party has reason to change it:
+- State: welfare cost reduction
+- Family: moral legitimacy, identity
 
-### 합작 구조 2: 가족 + 복지제도
+### Composite Structure 2: Family + Welfare System
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 가족 | 돌봄 비용 보전 | 간병·양육 수당 신청 |
-| 복지제도 | 예산 통제, 조건부 지원 | 지원금 조건, 소득 심사, 돌봄 형태 제한 |
+| Family | Care cost offset | Applying for caregiving/parenting allowances |
+| Welfare system | Budget control, conditional support | Subsidy conditions, income assessment, care form restrictions |
 
-복지 지원금이 특정 돌봄 형태(가족 간병)에만 지급되면, 다른 형태(시설
-돌봄, 대체 간병)로의 전환을 구조적으로 막는다. 돌봄 형태를 바꾸면
-지원금이 끊기는 구조가 락인을 강화한다.
+If welfare subsidies are paid only for a specific care form (family caregiving), the structure blocks transition to other forms (facility care, alternative caregiving). The structure in which changing care form cuts off subsidies strengthens lock-in.
 
-### 합작 구조 3: 돌봄기관 + 보험/지원금
+### Composite Structure 3: Care Agency + Insurance/Subsidy
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 돌봄기관 | 인력 유지, 운영 | 돌봄 제공, 인력 배치 |
-| 보험/지원금 | 비용 통제 | 지급 조건, 돌봄 시간 제한 |
+| Care agency | Staff retention, operations | Care provision, personnel deployment |
+| Insurance/subsidy | Cost control | Payment conditions, care hour limits |
 
-활동지원사가 특정 기관에 묶여 있고, 지원금이 기관을 통해서만 지급되면,
-돌봄 제공자가 기관을 떠날 수 없다. 동시에 피돌봄자도 기관 변경 시
-지원금이 끊길 수 있다.
+If an activity support worker is bound to a specific agency and subsidies are paid only through the agency, the care provider cannot leave. Simultaneously, the care recipient may lose subsidies when changing agencies.
 
-### 합작 구조 4: 플랫폼 + 가사노동
+### Composite Structure 4: Platform + Domestic Labor
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 가사노동 플랫폼 | 수수료, 인력 통제 | 매칭, 결제, 평판 |
-| 가사노동자 | 소득 | 돌봄·가사 제공 |
+| Domestic labor platform | Fees, labor control | Matching, payment, reputation |
+| Domestic worker | Income | Care and domestic work provision |
 
-플랫폼이 가사노동자를 가구에 매칭하고, 평판이 플랫폼에 묶이면, 노동자가
-플랫폼을 떠나면 평판이 소멸한다. 이건 플랫폼 사례의 락인 구조가 돌봄
-영역에서 재현되는 것이다.
+If a platform matches domestic workers to households and reputation is bound to the platform, leaving the platform erases reputation. This is the platform case's lock-in structure reappearing in the caregiving domain.
 
-### 합작 구조 5: 비자 + 돌봄노동
+### Composite Structure 5: Visa + Care Labor
 
-| 주체 | 인센티브 | 역할 |
+| Actor | Incentive | Role |
 | --- | --- | --- |
-| 국가 (비자) | 이주 통제 | 체류 자격을 특정 고용주에 묶음 |
-| 고용주 (가구) | 저렴한 돌봄 노동 | 주거·소득·비자 조건 통제 |
+| State (visa) | Migration control | Residence status bound to a specific employer |
+| Employer (household) | Cheap care labor | Control of housing, income, and visa conditions |
 
-이주 가사노동자의 비자가 특정 가구에 묶이면, E-7 비자와 같은 합작 락인이
-돌봄 영역에서 발생한다. 국가는 "체류질서", 가구는 "근로계약"이라고
-하지만, 결합된 탈출 비용은 어느 쪽의 책임으로도 분류되지 않는다.
+If a migrant domestic worker's visa is bound to a specific household, the same composite lock-in as the E-7 visa occurs in the caregiving domain. The state says "immigration order" and the household says "employment contract," but the combined exit cost is attributable to neither.
 
-### 교차점에서 생기는 락인
+### Lock-in Emerging at the Intersection
 
-네 사례(E-7, 플랫폼, 의료, 돌봄)에서 같은 4단계 패턴이 반복된다:
+The same four-stage pattern repeats across all four cases (E-7, platform, medical, caregiving):
 
-1. 국가는 "이건 복지 정책이다", 가족은 "이건 가족 의무다"라고 함
-2. 교차점에서 돌봄 제공자·수혜자 모두가 묶임
-3. 처방(해결책)은 국가·가족·복지제도를 동시에 풀어야
-4. 시행 주체(국가, 가족)가 자기 역할을 줄일 이유 없음
+1. The state says "this is welfare policy," the family says "this is family duty"
+2. At the intersection, both provider and recipient are bound
+3. Prescriptions must address the state, family, and welfare system simultaneously
+4. The implementing entities (state, family) have no reason to reduce their own roles
 
-## 6. 반주권 설계식 처방
+## 6. Anti-Sovereign Design Prescriptions
 
-### 처방 원칙: 탈출권 + 대체 돌봄 동반 원칙
+### Prescription Principle: Right of Exit + Alternative Care Accompaniment
 
-돌봄에서는 기존 처방에 새 원칙이 추가된다: **탈출권 행사 시 대체 돌봄이
-동반되어야 한다.** 대체 돌봄 없는 탈출은 권리가 아니라 방치다.
+In caregiving, a new principle is added to existing prescriptions: **alternative care must accompany the exercise of the right of exit.** Exit without alternative care is not a right but abandonment.
 
-### 처방 목록
+### Prescription List
 
-| 처방 | 대상 | 메커니즘 | 프레임워크 대응 |
+| Prescription | Target | Mechanism | Framework Correspondence |
 | --- | --- | --- | --- |
-| 휴식권 (돌봄 제공자) | 가족 간병인·활동지원사 | 일정 시간 돌봄에서 벗어날 권리, 대체 인력 배치 | 임시 이탈 인프라 |
-| 대체 돌봄권 (돌봄 수혜자) | 아동·환자·장애인 | 정기적 대체 돌봄 접근, 돌봄 제공자 부재 시 안전망 | 방치 방지 |
-| 긴급 돌봄 전환권 | 양쪽 | 갑작스러운 돌봄 단절 시 즉시 대체 돌봄 연결 | 집행정지 (돌봄 버전) |
-| 돌봄 기록 이동성 | 돌봄기관·가족 | 돌봄 내용·루틴·선호·의료 정보의 표준화된 이전 | 데이터 이동성(데이터 가져가기) 3층 |
-| 돌봄 제공자 이탈권 | 간병인·가사노동자 | 대체 돌봄 확보 후 이탈, 비자·주거 독립 | 탈출권 |
-| 수혜자 방치 방지권 | 아동·중증 환자·인지장애인 | 돌봄 단절 시 자동 작동 보호 | 탈출 피해 방지 |
-| 대리 발언권(대신 말해주는 권리) | 아동·인지장애인 | 독립 옴부즈맨, 제3자 모니터링, 정기 방문 | 이의제기 (대리) |
-| 돌봄 비용 공유 의무화 | 국가 | 가족 돌봄을 공적 비용으로 인정, 부양 의무 축소 | 합작 락인 해제 |
-| 돌봄 형태 변경 자유 | 가족·복지제도 | 가족 돌봄 → 시설 돌봄 전환 시 지원금 유지 | 탈출 비용 저감 |
-| 이주 가사노동자 비자 독립 | 국가 | 비자를 고용주에서 분리, 주거 독립 | 합작 락인 해제 (E-7 패턴) |
+| Right to rest (care provider) | Family caregivers, activity support workers | Right to be free from caregiving for a set period, alternative personnel deployment | Temporary exit infrastructure |
+| Right to alternative care (care recipient) | Children, patients, disabled persons | Regular access to alternative care, safety net during provider absence | Abandonment prevention |
+| Emergency care transition right | Both parties | Immediate alternative care connection in case of sudden care severance | Injunctive suspension (caregiving version) |
+| Care record portability | Care agencies, families | Standardized transfer of care content, routines, preferences, medical information | Data portability, 3-layer |
+| Care provider exit right | Caregivers, domestic workers | Exit after securing alternative care, visa and housing independence | Right of exit |
+| Recipient anti-abandonment right | Children, severe patients, cognitively impaired | Automatic protective activation upon care severance | Exit-harm prevention |
+| Proxy voice | Children, cognitively impaired | Independent ombudsman, third-party monitoring, regular visits | Challenge (by proxy) |
+| Mandatory public sharing of care costs | State | Family caregiving recognized as public cost, reduction of maintenance obligations | Composite lock-in dissolution |
+| Freedom to change care form | Families, welfare system | Subsidies maintained when transitioning from family to facility care | Exit cost reduction |
+| Migrant domestic worker visa independence | State | Visa separated from employer, housing independence | Composite lock-in dissolution (E-7 pattern) |
 
-### 시행 주체 문제
+### The Implementation-Entity Problem
 
-다른 사례와 같은 역설이 반복된다:
-- **국가**: 돌봄 비용을 공적으로 부담하려 하지 않음
-- **가족**: 돌봄을 공적 영역으로 넘기면 정체성·통제 상실
-- **복지제도**: 예산 통제를 줄일 이유 없음
+The same paradox as in other cases recurs:
+- **State**: unwilling to bear care costs publicly
+- **Family**: losing identity and control if caregiving is shifted to the public sphere
+- **Welfare system**: no reason to reduce budget control
 
-다만 돌봄의 특수성: **국가가 돌봄 비용을 부담하지 않으면, 가족이 부담하고,
-가족이 부담하면 락인이 생긴다.** 국가가 돌봄에 투자하지 않는 것 자체가
-합작 락인의 원인이다. 이건 처방이 단순히 "규제를 풀어라"가 아니라
-"공적 돌봄 인프라를 세워라"여야 함을 의미한다.
+However, caregiving has a distinctive feature: **if the state does not bear care costs, the family bears them, and when the family bears them, lock-in arises.** The state's failure to invest in caregiving is itself a cause of composite lock-in. This means prescriptions must not merely "deregulate" but "build public care infrastructure."
 
-### 완화책: 탈출권 강제의 확장
+### Mitigation: Expansion of Exit-Right Enforcement
 
-돌봄에서 탈출권 강제는 기존 사례보다 한 단계 더 나아간다. 단순히 "문을
-열어라"가 아니라, **"문 밖에 대체 돌봄이 있어야 한다"**를 강제하는 것이다.
+In caregiving, exit-right enforcement goes one step further than in previous cases. It is not simply "open the door" but enforcing that **"alternative care must exist outside the door."**
 
-이건 탈출권 개념의 확장이다:
-- E-7: 비자에서 빠져나갈 권리
-- 플랫폼: 데이터를 가져갈 권리
-- 의료: 기록을 이전할 권리
-- **돌봄: 대체 돌봄이 확보된 상태에서 이탈할 권리**
+This is an expansion of the right-of-exit concept:
+- E-7: Right to leave the visa regime
+- Platform: Right to take your data
+- Medical: Right to transfer records
+- **Caregiving: Right to leave with alternative care secured**
 
-돌봄에서 탈출권은 "나갈 권리"가 아니라 **"대체 생존조건이 준비된
-나갈 권리"**다. 이 확장이 없으면 돌봄에서 탈출권은 방치 면허가 된다.
+In caregiving, the right of exit is not "the right to leave" but **"the right to leave with alternative survival conditions prepared."** Without this expansion, the right of exit in caregiving becomes a license for abandonment.
 
-## 7. 락인 열지도 (Lock-in Heatmap)
+## 7. Lock-in Heatmap
 
-돌봄 유형과 제공자/수혜자 유형을 교차한 위험도 행렬:
+A risk matrix crossing care type with provider/recipient type:
 
-### 돌봄 유형 × 제공자 위험도
+### Care Type × Provider Risk
 
 ```
-돌봄 유형              | 이탈가능성(나갈 수 있나?) | 규칙강제성(규칙이 센가?) | 항의실효성(항의가 먹히나?) | 의존비대칭(없으면 안 되나?) | 위험도
-----------------------|----------|----------|----------|----------|------
-가족 간병 (중증 환자)    | 매우 낮음 | 매우 높음 | 매우 낮음 | 매우 높음 | 매우 높음
-가족 간병 (노인)        | 매우 낮음 | 높음      | 매우 낮음 | 매우 높음 | 매우 높음
-양육 (영아)             | 낮음      | 높음      | 낮음      | 매우 높음 | 매우 높음
-양육 (학령기 아동)       | 중간      | 중간      | 중간      | 높음      | 높음
-장애인 가족 돌봄        | 매우 낮음 | 높음      | 매우 낮음 | 매우 높음 | 매우 높음
-활동지원 (근로)          | 낮음      | 중간      | 중간      | 높음      | 높음
-이주 가사노동            | 매우 낮음 | 매우 높음 | 매우 낮음 | 매우 높음 | 매우 높음
-시설 돌봄 (노인·장애인)  | 중간      | 높음      | 낮음      | 높음      | 높음
+Care Type               | Exit Feasibility | Rule Coercion | Redress Efficacy | Dependency Asymmetry | Risk
+------------------------|------------------|---------------|-------------------|----------------------|--------
+Family care (severe)    | Very low         | Very high     | Very low          | Very high            | Very high
+Family care (elderly)   | Very low         | High          | Very low          | Very high            | Very high
+Parenting (infant)      | Low              | High          | Low               | Very high            | Very high
+Parenting (school-age)  | Medium           | Medium        | Medium            | High                 | High
+Disability family care  | Very low         | High          | Very low          | Very high            | Very high
+Activity support (work) | Low              | Medium        | Medium            | High                 | High
+Migrant domestic work   | Very low         | Very high     | Very low          | Very high            | Very high
+Facility care (elderly/disabled) | Medium  | High          | Low               | High                 | High
 ```
 
-### 돌봄 유형 × 수혜자 위험도
+### Care Type × Recipient Risk
 
 ```
-돌봄 수혜자             | 이탈가능성 | 규칙강제성 | 항의실효성 | 의존비대칭 | 위험도
-----------------------|----------|----------|----------|----------|------
-영아                   | 없음      | 매우 높음 | 없음      | 매우 높음 | 매우 높음
-학령기 아동             | 매우 낮음 | 높음      | 매우 낮음 | 매우 높음 | 매우 높음
-중증 환자 (의식 있음)     | 매우 낮음 | 높음      | 매우 낮음 | 매유 높음 | 매우 높음
-중증 환자 (의식 없음)     | 없음      | 매우 높음 | 없음      | 매우 높음 | 매우 높음
-인지장애인              | 매우 낮음 | 높음      | 없음      | 매우 높음 | 매우 높음
-지체장애인 (의식 명료)    | 낮음      | 중간      | 중간      | 높음      | 높음
-노인 (인지 명료)         | 낮음      | 중간      | 중간      | 높음      | 높음
-노인 (인지 저하)         | 매우 낮음 | 높음      | 매우 낮음 | 매우 높음 | 매우 높음
+Care Recipient         | Exit Feasibility | Rule Coercion | Redress Efficacy | Dependency Asymmetry | Risk
+-----------------------|------------------|---------------|-------------------|----------------------|--------
+Infant                 | None             | Very high     | None              | Very high            | Very high
+School-age child       | Very low         | High          | Very low          | Very high            | Very high
+Severe patient (conscious) | Very low     | High          | Very low          | Very high            | Very high
+Severe patient (unconscious) | None       | Very high     | None              | Very high            | Very high
+Cognitively impaired   | Very low         | High          | None              | Very high            | Very high
+Physically disabled (alert) | Low         | Medium        | Medium            | High                 | High
+Elderly (cognitively alert) | Low         | Medium        | Medium            | High                 | High
+Elderly (cognitive decline) | Very low   | High          | Very low          | Very high            | Very high
 ```
 
-이 중첩이 보여주는 것: 돌봄에서는 **제공자와 수혜자 양쪽 모두 락인 위험도가
-높다.** 다른 사례에서는 락인의 주체와 대상이 구분되었지만, 돌봄에서는
-양쪽이 동시에 갇힌다. 이게 관계적 락인의 핵심이다.
+What this overlap reveals: in caregiving, **both provider and recipient have high lock-in severity.** In other cases, the subject and object of lock-in were distinct; in caregiving, both are locked in simultaneously. This is the core of relational lock-in.
 
-## 8. 네 사례 비교 — 프레임워크 보편성 검증
+## 8. Four-Case Comparison — Framework Universality Verification
 
-### 판별식 비교
+### Discriminant Comparison
 
-| 차원 | E-7 비자 | 플랫폼 정지 | 의료 이전 | 돌봄 의존 |
+| Dimension | E-7 Visa | Platform Suspension | Medical Transfer | Caregiving Dependency |
 | --- | --- | --- | --- | --- |
-| 주권 유형 | 지역적 | 비지역적 | 물리적 | 관계적 |
-| 생존조건 | 체류·고용 | 경제·디지털 | 생명·통증 | 생명·양육·돌봄 |
-| 락인된 사람 | 1명 (노동자) | 1명 (사용자) | 1명 (환자) | **2명 이상 (제공자+수혜자)** |
-| 탈출 시 제3자 영향 | 없음 | 없음 | 없음 | **생존 위협 (방치)** |
-| 항의 능력 | 제한적 | 제한적 | 제한적 | **부재 (대리 필요)** |
-| 합작 락인 | 2주체 | 4구조 | 5구조 | 5구조 |
+| Sovereignty type | Territorial | Non-territorial | Physical | Relational |
+| Survival conditions | Residence, employment | Economic, digital | Life, pain | Life, parenting, care |
+| Locked-in person | 1 (worker) | 1 (user) | 1 (patient) | **2+ (provider + recipient)** |
+| Third-party impact of exit | None | None | None | **Survival threat (abandonment)** |
+| Challenge capacity | Limited | Limited | Limited | **Absent (proxy needed)** |
+| Composite lock-in | 2 actors | 4 structures | 5 structures | 5 structures |
 
-### 프레임워크 장치별 검증
+### Framework Mechanism Verification
 
-| 장치 | E-7 | 플랫폼 | 의료 | 돌봄 |
+| Mechanism | E-7 | Platform | Medical | Caregiving |
 | --- | --- | --- | --- | --- |
-| 데이터 이동성 3층 | 매우 낮음 | 매우 낮음 | 부분(1층) | 매우 낮음 (돌봄 기록 비표준) |
-| 포크 가능성 | 제한적 | 낮음 | 불가(물리) | 불가(관계) |
-| 합작 락인 | 2주체 | 4구조 | 5구조 | 5구조 (가족+국가+복지+플랫폼+비자) |
-| 탈출권 강제 | 브릿지 체류 | 데이터 이동 | 기록 표준 | **대체 돌봄 동반** |
-| 항의 절차 | 행정심판 | 고객지원 | 의료분쟁 | **대리 발언권** |
-| 락인 열지도 | 비자 유형 | 플랫폼×사용자 | 의료×환자 | 돌봄×제공자/수혜자 |
+| 3-layer data portability | Very low | Very low | Partial (layer 1) | Very low (care records unstandardized) |
+| Forkability | Limited | Low | Impossible (physical) | Impossible (relational) |
+| Composite lock-in | 2 actors | 4 structures | 5 structures | 5 structures (family + state + welfare + platform + visa) |
+| Exit-right enforcement | Bridge visa | Data portability | Record standards | **Alternative care accompaniment** |
+| Challenge procedure | Administrative appeal | Customer support | Medical dispute | **Proxy voice** |
+| Lock-in heatmap | Visa type | Platform × user | Medical × patient | Care × provider/recipient |
 
-### 돌봄 사례가 새로이 드러낸 것
+### What the Caregiving Case Newly Revealed
 
-1. **관계적 락인** — 한 사람만 락인된 게 아니라, 제공자와 수혜자가 서로
-   다른 방식으로 같이 묶임
-2. **탈출 피해** — 한 사람의 탈출권이 다른 사람의 생존조건을 끊음.
-   탈출=해방 공식이 깨짐
-3. **대리 발언권** — 아동·중증 환자·인지장애인은 스스로 항의 불가.
-   제3자가 대리해야
-4. **휴식권/대체 돌봄권** — 탈출이 아니라 임시 이탈 인프라가 필요.
-   "나가는 것"이 아니라 "잠깐 쉴 수 있는 것"
-5. **국가-가족 합작 락인** — 국가가 돌봄을 가족에 떠넘기고, 가족이
-   사랑/의무로 사람을 묶음
-6. **탈출권 개념의 확장** — "나갈 권리" → "대체 생존조건이 준비된 나갈 권리"
+1. **Relational lock-in** — not one person locked in, but provider and recipient bound together in different ways
+2. **Exit harm** — one person's right of exit severs another's survival conditions. The exit = liberation equation breaks
+3. **Proxy voice** — children, severe patients, and the cognitively impaired cannot self-advocate. Third-party proxy is required
+4. **Right to rest / alternative care right** — not exit but temporary exit infrastructure is needed. Not "leaving" but "being able to take a break"
+5. **State-family composite lock-in** — the state offloads caregiving onto the family, and the family binds people through love and duty
+6. **Expansion of the right-of-exit concept** — "right to leave" → "right to leave with alternative survival conditions prepared"
 
-## 9. 이 사례가 프레임워크에 미치는 영향
+## 9. Impact on the Framework
 
-### 검증된 것
+### What Was Verified
 
-1. **판별식이 관계적 락인에도 적용** — 제공자·수혜자 각각에 적용 가능
-2. **합작 락인 4단계 패턴이 네 번째 영역에서도 반복** — 보편성 입증
-3. **락인 위험도의 연속성이 제공자·수혜자 양쪽에서 입증** — 같은 관계에서
-   양쪽 모두 높은 위험도
-4. **부문별 포크 원칙이 돌봄에서 시험** — 관계는 복제 불가, 포크 대신
-   대체 돌봄 인프라 필요
+1. **The discriminant applies to relational lock-in** — scoring is possible for both provider and recipient
+2. **The composite lock-in four-stage pattern repeats in a fourth domain** — universality confirmed
+3. **Lock-in severity continuity is demonstrated for both provider and recipient** — both show high severity in the same relationship
+4. **Domain-specific fork principles are tested in caregiving** — relationships cannot be replicated; alternative care infrastructure is needed instead of forking
 
-### 새로이 요구되는 프레임워크 수정
+### Framework Revisions Required
 
-1. **탈출권 개념 확장** — "나갈 권리"에서 "대체 생존조건 동반 나갈 권리"로.
-   탈출권이 제3자 생존을 위협하면, 대체 인프라가 선행되어야
-2. **관계적 락인 개념 추가** — 단방향 락인이 아니라 양방향 락인 구조.
-   프레임워크의 락인 모델이 단방향에서 양방향으로 확장됨
-3. **대리 발언권 장치** — 항의 능력이 없는 수혜자를 위한 제3자 개입 장치.
-   기존 "이의제기권"으로는 커버 안 됨
-4. **임시 이탈 인프라** — 탈출이 아닌 "잠깐 벗어남"의 권리. 휴식권,
-   대체 돌봄권이 프레임워크의 방어 장치에 추가되어야
+1. **Expansion of the right-of-exit concept** — from "right to leave" to "right to leave with alternative survival conditions." If exit threatens a third party's survival, alternative infrastructure must precede
+2. **Addition of relational lock-in concept** — not unidirectional but bidirectional lock-in structure. The framework's lock-in model expands from unidirectional to bidirectional
+3. **Proxy voice mechanism** — third-party intervention for recipients without challenge capacity. Existing "right to challenge" does not cover this
+4. **Temporary exit infrastructure** — the right not to exit but to "temporarily disengage." Right to rest and right to alternative care must be added to the framework's defensive mechanisms
 
-### 남은 과제
+### Remaining Problems
 
-1. **대리 발언권의 종속 위험** — 옴부즈맨이나 제3자 모니터가 자기
-   이익을 위해 행동할 위험. 누가 대리 발언자를 감사하는가
-2. **대체 돌봄 인프라의 품질** — 대체 돌봄이 있어도 품질이 낮으면
-   수혜자가 이전하는 것은 또 다른 락인
-3. **가족 내 권력 비대칭** — "가족 합의"가 실제로는 가장이나 주요
-   소득자의 결정인 경우, 지역 합의와 같은 문제가 가족 내부에도 존재
-4. **돌봄 기록의 표준화** — 돌봄 내용(루틴, 선호, 의료 정보)의 표준
-   포맷이 존재하지 않아 데이터 이동성 2층(의미적)부터 부재
+1. **Risk of proxy voice capture** — ombudsmen or third-party monitors may act in their own interest. Who audits the proxy?
+2. **Quality of alternative care infrastructure** — even if alternative care exists, if quality is low, the recipient's transition is another lock-in
+3. **Power asymmetry within families** — when "family consensus" is in practice the decision of the household head or primary earner, the same problem as regional consensus exists within the family
+4. **Standardization of care records** — no standard format for care content (routines, preferences, medical information) means data portability layer 2 (semantic) is absent from the start
 
-## 10. 다음 방향
+## 10. Next Direction
 
-네 사례가 프레임워크의 핵심 장치를 검증했다. 마지막 후보:
+Four cases have verified the framework's core mechanisms. The final candidate:
 
-- **학력 인증 독점 (교육 락인)** — 제도적 이동성에 전적으로 의존하는
-  영역. 기술적 이동성이 있어도 의미가 없는 사례. 데이터 이동성 3층의
-  3층(제도적)만이 유일하게 중요한 극단적 경우.
-- **돌봄 기록 이동성의 기술적 구현** — 돌봄 루틴·선호·의료 정보의
-  표준 포맷 설계. 의료의 EMR 표준화와 유사하지만, 돌봄은 "관계 정보"를
-  포함해야 해서 더 복잡.
+- **Credential monopoly (education lock-in)** — a domain entirely dependent on institutional portability. A case where technical portability exists but is meaningless. An extreme case where only layer 3 (institutional) of the 3-layer data portability model matters.
+- **Technical implementation of care record portability** — designing a standard format for care routines, preferences, and medical information. Similar to EMR standardization in medicine, but caregiving must include "relational information," making it more complex.

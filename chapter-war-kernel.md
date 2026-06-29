@@ -1,291 +1,236 @@
-# 16. 전쟁권 락인 (War Kernel)
+# 16. The War-Power Kernel
 
-> 지역 자율주의의 최종 보스는 국가법이 아니라, 국가 커널(국가 최소 규칙)이 전환되는 전쟁 모드다.
-> 쉬운 말 매핑은 [용어 매핑표](./docs/glossary.md)를 따른다.
-> 대통령이든 총리든 군부든, "국가안보" 이름으로 사람의 몸, 돈, 이동,
-> 언어, 정보, 생명을 한꺼번에 묶을 수 있으면 반주권 설계(사람을 가두지 않는 설계)는 제 역할을 못 한다.
+> The final challenge for regional autonomy is not national law but the war mode into which the national kernel transitions.
+> For terminology, consult the [glossary](./docs/glossary.md).
+> Whether president, prime minister, or military junta — if a single entity can, under the name of national security, bind people's bodies, money, movement, speech, information, and lives all at once, Anti-Sovereign Design cannot do its job.
 
-## 16.1 왜 이 장이 필요한가
+## 16.1 Why This Chapter Is Needed
 
-반주권 설계 v4는 다섯 사례에서 락인 판별식을 검증했다 — 지역, 비지역,
-물리적, 관계적, 인정 체계 주권. 그러나 다섯 사례 모두 **평시**를 전제한다.
+Anti-Sovereign Design v4 verified the lock-in discriminant across five cases — territorial, non-territorial, physical, relational, and recognition-based sovereignty. All five, however, assume **peacetime**.
 
-평시에는 헌법, 의회, 지역자치, 시민권, 데이터 이동권, 항의 절차가 작동하는
-것처럼 보인다. 그런데 전쟁 버튼이 눌리면:
+In peacetime, the constitution, parliament, regional autonomy, citizenship, data portability, and challenge procedures appear to function. But when the war button is pressed:
 
-- 국경이 닫힌다
-- 징병(군대에 강제로 보냄)·예비군·동원이 발동된다
-- 세금과 예산이 군사화된다
-- 언론·시위·이동이 제한된다
-- 지역 합의가 국가안보 명령 아래로 내려간다
-- AI 조언이 주민 복지가 아니라 군사 최적화 도구가 된다
+- Borders close
+- Conscription, reserve mobilization, and general mobilization are activated
+- Taxation and budgets are militarized
+- Press, protest, and movement are restricted
+- Regional agreements are subordinated to national security orders
+- AI counsel shifts from resident welfare to military optimization
 
-전쟁은 **탈출권(빠져나갈 권리)을 일괄 정지시키는 국가 커널의 최고강도 예외 모드**다. 지역이 아무리
-AI+주민 합의로 예쁘게 굴러가도, 국가 지도부가 전쟁·동원·계엄·국경폐쇄·징병을
-발동할 수 있으면 지역 자율은 즉시 꺼진다.
+War is **the highest-intensity exception mode of the national kernel, which suspends the right of exit en masse.** No matter how well a region runs on AI and resident consensus, if the national leadership can activate war, mobilization, martial law, border closure, and conscription, regional autonomy is instantly extinguished.
 
-이건 기존 5사례의 "합작 락인"과는 다른 차원의 락인이다. 합작 락인이
-둘 이상의 주체가 교차점에서 만드는 구조라면, 전쟁권 락인(전쟁 버튼)은 **단일 결정
-하나로 모든 권리를 일시에 동결하는 예외 모드**이다.
+This is a different order of lock-in from the "composite lock-in" of the five cases. Composite lock-in is a structure produced by two or more actors at an intersection. The war-power kernel is **an exception mode in which a single decision freezes all rights simultaneously.**
 
-## 16.2 2021-2026: 전쟁이 어떻게 올라타는가
+## 16.2 2021–2026: How War Ascends
 
-이 장의 데이터는 2026년 6월 기준 공개 출처에서 검증했다.
+Data in this chapter was verified against open sources as of June 2026.
 
-### 글로벌 데이터
+### Global Data
 
-| 출처 | 수치 | 기준 연도 | 출처 |
+| Source | Figure | Reference Year | Source |
 | --- | --- | --- | --- |
-| UCDP (Uppsala) | 65개 국가관여 분쟁, 13개 전쟁급 (1,000명 이상 사망) | 2025 | [UCDP/Uppsala](https://www.uu.se/en/press/press-releases/2026/2026-06-09-ucdp-record-number-of-conflicts-between-states) |
-| UCDP | 국가간 분쟁 8개 (2023년 2개 → 2025년 8개, 2년 연속 배증) | 2025 | 동일 |
-| UCDP | 약 244,600명 사망 (1994년 르완다 학살 이후 최고) | 2025 | 동일 |
-| ACLED | 204,605건 conflict events, 24만 명 이상 사망 | 2024.12-2025.11 | [ACLED Conflict Index](https://acleddata.com/series/acled-conflict-index) |
-| ICRC | "A world succumbing to war" — 130개 무력분쟁, 20개 이상 20년+ 지속 | 2026 전망 | [ICRC](https://www.icrc.org/en/article/humanitarian-outlook-2026) |
+| UCDP (Uppsala) | 65 state-based conflicts, 13 war-level (1,000+ deaths) | 2025 | [UCDP/Uppsala](https://www.uu.se/en/press/press-releases/2026/2026-06-09-ucdp-record-number-of-conflicts-between-states) |
+| UCDP | 8 interstate conflicts (2 in 2023 → 8 in 2025, doubling two years running) | 2025 | same |
+| UCDP | ~244,600 battle deaths (highest since the 1994 Rwandan genocide) | 2025 | same |
+| ACLED | 204,605 conflict events, 240,000+ deaths | 2024.12–2025.11 | [ACLED Conflict Index](https://acleddata.com/series/acled-conflict-index) |
+| ICRC | "A world succumbing to war" — 130 armed conflicts, 20+ lasting 20+ years | 2026 forecast | [ICRC](https://www.icrc.org/en/article/humanitarian-outlook-2026) |
 
-UCDP는 1946년 데이터 수집 시작 이래 최고치라고 밝혔다. 국가간 분쟁 8개는
-2차대전 이후 최고다. "1946년 이후 최고"라는 표현은 이 장에서 수사가 아니라
-출처의 정확한 표현이다.
+UCDP stated this is the highest figure since data collection began in 1946. Eight interstate conflicts is the highest since World War II. "Highest since 1946" is not rhetoric in this chapter; it is the exact language of the source.
 
-### 2021-2026 주요 사례
+### Major Cases 2021–2026
 
-| 전쟁/분쟁 | 시기 | 권력 병목(막힘) | CFR 상태 |
+| War/Conflict | Period | Power Bottleneck | CFR Status |
 | --- | --- | --- | --- |
-| 러시아-우크라이나 | 2022-현재 | 푸틴 중심의 국가안보 결정이 침공·동원·장기전을 개시. 양국 국민 전쟁 체제로 묶임. UCDP 2025년 94,700명 사망 (전 세계 전투 사망의 62%) | Critical / Unchanging |
-| 미얀마 내전 | 2021 쿠데타 이후 | 선출 정부가 아닌 군부가 국가 장악. 국민 전체를 무력 통치와 공습 체제로. ACLED "가장 파편화된 분쟁" (1,200개 이상 무장 단체) | Limited / Unchanging |
-| 수단 내전 | 2023-현재 | 대통령이 아니라 두 군사 엘리트(SAF vs RSF)가 국가를 분할. UCDP: 엘파셰르 함락 후 대규모 민간인 학살. 단방향 폭력 사망 76,500명 (30년 최고) | Limited / Unchanging |
-| 이스라엘-하마스/가자 | 2023-현재 | 하마스 공격, 이스라엘 대규모 군사 응답. 인질·봉쇄·민간 피해. 민주국가여도 전쟁 결정은 좁은 안보 핵심부에 집중. ACLED: 팔레스타인 민간인 노출 전 세계 1위 | Significant / Worsening |
-| 이란-이스라엘-미국 | 2025 | 선제공격, 보복, 미국 폭격까지 12일 전쟁. 핵심 결정권은 시민 합의가 아니라 국가안보 지도부 | Critical / Worsening |
-| DRC/M23/르완다 | 2025-2026 격화 | 정부군, 반군, 외부 국가 지원이 겹침. 지역 주민이 빠져나올 수 없는 물리적 전쟁 락인 | Limited / Worsening |
-| 인도-파키스탄 | 2025 | 테러 공격 후 핵보유국 두 곳이 며칠 만에 군사 충돌로 상승 | Significant / Unchanging |
-| 태국-캄보디아 | 2025 | 오래된 국경분쟁이 중화기·공습·민간 대피로 번짐 | ACLED 보고 |
+| Russia–Ukraine | 2022–present | Putin-centric national security decisions initiating invasion, mobilization, prolonged war. Both nations' populations locked into war footing. UCDP: 94,700 deaths in 2025 (62% of global battle deaths) | Critical / Unchanging |
+| Myanmar Civil War | Post-2021 coup | Military junta, not elected government, controls the state. Entire population under armed rule and airstrike regime. ACLED: "most fragmented conflict" (1,200+ armed groups) | Limited / Unchanging |
+| Sudan Civil War | 2023–present | Not a president but two military elites (SAF vs. RSF) dividing the state. UCDP: mass civilian killings after El Fasher fell. One-sided violence deaths: 76,500 (highest in 30 years) | Limited / Unchanging |
+| Israel–Hamas/Gaza | 2023–present | Hamas attack, large-scale Israeli military response. Hostages, blockade, civilian casualties. Even in a democracy, war decisions concentrated in a narrow security inner circle. ACLED: Palestinian civilian exposure ranks #1 globally | Significant / Worsening |
+| Iran–Israel–US | 2025 | Preemptive strikes, retaliation, US bombing — 12-day war. Core decision-making in national security leadership, not citizen consensus | Critical / Worsening |
+| DRC/M23/Rwanda | 2025–2026 escalation | Government forces, rebels, and external state support overlapping. Physical war lock-in from which regional residents cannot escape | Limited / Worsening |
+| India–Pakistan | 2025 | Terror attack followed by military escalation between two nuclear states within days | Significant / Unchanging |
+| Thailand–Cambodia | 2025 | Long-standing border dispute escalating to heavy weapons, airstrikes, civilian evacuations | ACLED report |
 
-출처: [CFR Global Conflict Tracker](https://www.cfr.org/global-conflict-tracker), ACLED, UCDP.
+Source: [CFR Global Conflict Tracker](https://www.cfr.org/global-conflict-tracker), ACLED, UCDP.
 
-### 패턴
+### Pattern
 
-여덟 사례에서 같은 구조가 반복된다:
+The same structure repeats across all eight cases:
 
-1. **결정권이 좁다** — 전쟁 개시·동원·계엄 발동 권한이 1인 또는 소수 안보 핵심부에 집중
-2. **국민이 결정에서 배제된다** — 침공, 동원, 봉쇄 결정에 시민 투표·공청회·재승인 없음
-3. **전쟁이 발동되면 모든 권리가 일시 정지된다** — 이동, 언론, 세금, AI 사용이 국가안보 명령 아래로
-4. **전쟁 종료가 어렵다** — 휴전·협상 거부에 설명 책임 없음. 장기화가 기본
-5. **민주국가든 아니든 같다** — 이스라엘(민주)과 미얀마(군부)에서 같은 구조
+1. **Decision authority is narrow** — war initiation, mobilization, and martial law activation concentrated in one person or a small security inner circle
+2. **Citizens are excluded from decisions** — no referenda, public hearings, or reauthorization for invasion, mobilization, or blockade
+3. **When war is activated, all rights are suspended** — movement, press, taxation, AI use subordinated to national security orders
+4. **War termination is difficult** — no accountability for refusing ceasefire or negotiation. Prolongation is the default
+5. **Democratic or not, the structure is the same** — Israel (democratic) and Myanmar (junta) exhibit the same pattern
 
-## 16.3 "대통령"이 아니다 — 전쟁 커널이다
+## 16.3 It Is Not "the President" — It Is the War Kernel
 
-사용자가 정확히 지적한 대로, 문제는 "대통령"만이 아니다. 총리, 군부, 장군,
-왕정, 당 지도부, 안보내각, 반군 지도자 전부 같은 역할을 할 수 있다.
+As the user correctly identified, the problem is not "the president" alone. Prime ministers, military juntas, generals, monarchs, party leaderships, security cabinets, and rebel commanders can all play the same role.
 
-**전쟁 커널**이란: 전쟁을 개시·동원·계엄·국경통제를 발동할 수 있는
-최소 결정 권한의 집합. 이 권한이 누구에게 있든, 그 주체가 전쟁 버튼을
-누르면 모든 하위 구조(지역 자치, 시민권, 데이터 이동권, 탈출권)가
-일시에 정지된다.
+The **war kernel** is: the minimal set of decision authorities capable of activating war, mobilization, martial law, and border control. Whoever holds this authority, when they press the war button, all subordinate structures (regional autonomy, citizenship, data portability, right of exit) are suspended simultaneously.
 
-전쟁 커널의 특징:
+Characteristics of the war kernel:
 
-- **평시에는 보이지 않는다** — 헌법, 의회, 사법부가 작동하는 것처럼 보인다
-- **전쟁이 발동되면 모든 것 위에 올라탄다** — 헌법의 비상사태 조항이
-  전쟁 커널의 합법적 발동구가 됨
-- **발동 후 되돌리기 어렵다** — "전쟁 중에 권력을 바꾸면 적에게 힘을 준다"는
-  논리가 권력 회수를 막음
-- **발동 주체가 권한을 반납할 이유가 없다** — 전쟁이 길어질수록
-  비상 권한이 일상화됨
+- **Invisible in peacetime** — the constitution, parliament, and judiciary appear to function
+- **When activated, it overrides everything** — constitutional emergency clauses become the legal trigger for the war kernel
+- **Difficult to reverse once activated** — the logic that "changing leadership during war gives strength to the enemy" blocks power recovery
+- **The activating entity has no reason to relinquish authority** — the longer the war, the more emergency powers become routine
 
-이건 기존 프레임워크의 "강제의 역설(강제 딜레마)"과 같은 구조다. 탈출권을 보호하려면
-강제자가 필요한데, 그 강제자에게 권력이 모인다. 전쟁권에서는 더 극단적이다 —
-전쟁을 통제하려는 주체가 전쟁 커널을 가질 수밖에 없고, 그 커널이 다시
-전쟁을 만드는 원인이 된다.
+This is the same structure as the framework's "coercion paradox." Protecting the right of exit requires an enforcer, and power concentrates in that enforcer. In war power, it is more extreme — the entity that would control war must hold the war kernel, and that kernel becomes the cause of the next war.
 
-## 16.4 전쟁이 탈출권을 일괄 정지시키는 6가지 메커니즘
+## 16.4 Six Mechanisms by Which War Suspends the Right of Exit En Masse
 
-전쟁은 기존 5사례에서 다룬 개별 락인과 달리, **모든 탈출권을 동시에**
-무력화한다.
+Unlike the individual lock-ins addressed in the five cases, war **simultaneously** neutralizes all exit rights.
 
-| 메커니즘 | 평시 상태 | 전쟁 발동 후 | 해당 사례 |
+| Mechanism | Peacetime Status | After War Activation | Corresponding Case |
 | --- | --- | --- | --- |
-| 국경 통제 | 이탈 가능 (여권, 비자) | 국경 폐쇄, 출국 금지, 남성 징병 대상자 출국 제한 | E-7 (지역 락인)의 전쟁 버전 |
-| 동원·징병 | 본인 선택 | 강제 징집, 예비군 소집, 양심적 거부권 제한 또는 부재 | 돌봄 (관계적 락인)의 강제 버전 |
-| 예산 군사화 | 세금 사용에 동의/감시 | 국방비 급증, 복지 예산 전용, 국가안보 예산 비공개 | 의료 (물리적 락인)의 재정 버전 |
-| 언론·정보 통제 | 자유 언론, 정보 접근 | 검열, 반전 시위 금지, "적대적 행위" 처벌 | 플랫폼 (비지역 락인)의 강제 버전 |
-| AI 목적 전환 | 주민 복지, 데이터 이동성(데이터 가져가기) | 군사 최적화, 표적 식별, 감시 강화 | 교육 (인정 락인)의 AI 버전 |
-| 지역 자치 중단 | 지역 합의, 주민 투표 | 국가안보 명령, 군사 행정, 계엄령 | 모든 사례의 메타 정지 |
+| Border control | Exit possible (passport, visa) | Border closure, exit bans, travel restrictions on conscription-eligible males | War version of E-7 (territorial lock-in) |
+| Mobilization/conscription | Individual choice | Forced conscription, reserve call-up, conscientious objection restricted or absent | Forced version of caregiving (relational lock-in) |
+| Budget militarization | Taxation subject to consent/oversight | Defense spending surge, welfare budget diversion, classified national security spending | Fiscal version of medical (physical lock-in) |
+| Press/information control | Free press, information access | Censorship, anti-war protest bans, prosecution of "hostile acts" | Forced version of platform (non-territorial lock-in) |
+| AI purpose shift | Resident welfare, data portability | Military optimization, target identification, enhanced surveillance | AI version of education (recognition lock-in) |
+| Regional autonomy suspension | Regional consensus, referenda | National security orders, military administration, martial law | Meta-suspension of all cases |
 
-6번째 행이 핵심이다. 전쟁은 개별 권리를 침해하는 것이 아니라, 권리를
-만드는 **하위 구조 자체를 중단**시킨다. 지역 합의, 주민 투표, 데이터
-이동성, 항의 절차가 전부 "국가안보" 이름으로 정지된다.
+The sixth row is the key. War does not violate individual rights — it **suspends the substrate that produces rights.** Regional consensus, referenda, data portability, and challenge procedures are all halted under the name of "national security."
 
-ICRC가 2026 전망에서 지적한 4대 트렌드가 이 메커니즘의 현실적 발현이다:
+The four trends identified in the ICRC's 2026 outlook are real-world expressions of these mechanisms:
 
-1. **비인간화** — 민간인이 "위협"으로 재분류됨 (메커니즘 4, 6)
-2. **인도적 행동 위협** — 중립적 구호가 정치적·군사적 장애물로 취급됨 (메커니즘 1, 3)
-3. "승리에 모든 것" — 군사 목표가 민간 보호 의무 위에 우선함 (메커니즘 3, 4, 6)
-4. **자원 부족** — 전쟁 비용이 인도적 자원을 압박함 (메커니즘 3)
+1. **Dehumanization** — civilians reclassified as "threats" (mechanisms 4, 6)
+2. **Threat to humanitarian action** — neutral aid treated as a political/military obstacle (mechanisms 1, 3)
+3. "Everything on victory" — military objectives prioritized over civilian protection obligations (mechanisms 3, 4, 6)
+4. **Resource scarcity** — war costs pressure humanitarian resources (mechanism 3)
 
-## 16.5 판별식 적용: 전쟁권은 락인인가
+## 16.5 Applying the Discriminant: Is War Power a Lock-in?
 
-락인 판별식 4항을 전쟁권에 적용한다. 갇힌 주체는 **국민**이다.
+The four-prong lock-in discriminant is applied to war power. The locked-in entity is **the citizenry**.
 
-| 항 | 점수 | 설명 |
+| Prong | Score | Description |
 | --- | --- | --- |
-| 못 나감 | 매우 높음 | 국경 폐쇄, 징병 대상자 출국 금지, 전쟁 중 여권 발급 중단 |
-| 룰을 당함 | 매우 높음 | 계엄령, 동원령, 언론 검열 — 일방적 부과, 합의 없음 |
-| 따져도 안 먹힘 | 매우 높음 | 전쟁 중 사법 접근 제한, 반전 시위 금지, "국가안보"가 모든 항의 차단 |
-| 생존조건을 쥠 | 매우 높음 | 징병=몸, 세금=돈, 검열=정보, 국경=이동 — 생존조건 전부를 한꺼번에 |
+| Cannot exit | Very high | Border closure, exit bans on conscription-eligible individuals, passport issuance suspended during war |
+| Subject to imposed rules | Very high | Martial law, mobilization orders, press censorship — unilaterally imposed, no consent |
+| Challenge produces no change | Very high | Restricted judicial access during war, anti-war protest bans, "national security" blocking all challenges |
+| Survival conditions held by another | Very high | Conscription = body, taxation = money, censorship = information, border = movement — all survival conditions held simultaneously |
 
-**락인 위험도: 매우 높음 (4/4 항 만족, 전부 "매우 높음")**
+**Lock-in severity: Very high (4/4 prongs satisfied, all "very high")**
 
-이건 5사례 중 어느 것보다 극단적이다. 돌봄 사례가 4번째 항에서 "매우 높음"을
-받은 것이 충격적이었는데, 전쟁권은 4항 전부에서 "매우 높음"이다.
+This is more extreme than any of the five cases. The caregiving case scoring "very high" on the fourth prong was striking; war power scores "very high" on all four.
 
-전쟁권 락인의 특이점: **락인된 사람이 한 명이 아니다**. 국민 전체가 동시에
-갇힌다. 그리고 락인된 사람 중 일부(징병 대상자)는 생존조건이 아니라 생명
-자체를 직접적으로 위협받는다.
+The distinctive feature of war-power lock-in: **the locked-in are not individuals.** The entire citizenry is locked in simultaneously. And some of the locked-in — conscription-eligible individuals — face not merely a threat to survival conditions but a direct threat to life.
 
-## 16.6 방어전 vs 공격전: 커널 강제의 최소 원칙
+## 16.6 Defensive vs. Offensive War: The Minimal Rule of Kernel Enforcement
 
-전쟁권 락인을 풀기 위해 "전쟁을 금지하자"고 할 수는 없다. 그건
-평화주의의 규범적 주장이지, 구조적 설계가 아니다. 외부에서 공격받는
-국가가 방어할 권리를 부정하면, 그건 약자에게 자기방어를 금지하는 것이다.
+To undo war-power lock-in, one cannot simply say "ban war." That is a normative pacifist claim, not a structural design. Denying a state under external attack the right to defend itself is prohibiting self-defense for the weak.
 
-대신, **전쟁권을 통치 강제와 탈출권 강제로 쪼갠다**.
+Instead, **war power is split into governance enforcement and exit-right enforcement.**
 
-### 통치 강제 (금지): 공격전 개시 권한
+### Governance Enforcement (Prohibited): Authority to Initiate Offensive War
 
-다음은 단일 지도자에게 부여될 수 없는 권한이다:
+The following authorities cannot be vested in a single leader:
 
-- 선제공격 결정
-- 국경 밖 군사 작전 개시
-- 무력 사용의 확전 (단계 상승)
-- 전쟁 목표의 일방적 변경 (방어 → 체제 전복, 영토 확장)
+- First-strike decisions
+- Initiating military operations beyond borders
+- Escalation of force use (step-up)
+- Unilateral change of war objectives (defense → regime change, territorial expansion)
 
-이 권한들은 "통치 강제"에 해당한다 — 사람을 질서 안에 넣는 것이 아니라,
-사람의 생명을 걸고 질서를 바꾸는 것. 커널이 강제하지 않는 것의 범주에 속한다.
+These fall under "governance enforcement" — not placing people within an order but staking people's lives to change an order. They belong in the category of what the kernel does not enforce.
 
-### 탈출권 강제 (보장): 전쟁 중에도 정지되지 않는 권리
+### Exit-Right Enforcement (Guaranteed): Rights That Must Not Be Suspended Even During War
 
-다음은 전쟁 중에도 정지되어서는 안 되는 권리다:
+The following rights must not be suspended even during war:
 
-| 권리 | 내용 | 전쟁 중 보장 방식 |
+| Right | Content | Wartime Guarantee |
 | --- | --- | --- |
-| 피난권 | 전쟁 지역 이탈 권리 | 국경 개방 의무, 난민 수용 의무 |
-| 양심적 거부권 | 징병 거부 권리 | 대체 복무 보장, 거부 이유 심사 (군사 아닌 민간 기관) |
-| 사후 감사권 | 전쟁 결정의 사후 조사 | 전쟁 종료 후 casus belli 사후 감사, 허위 명목 전쟁 책임 |
-| 비용 공개 | 전쟁 비용·민간 피해 자동 공개 | 국방 예산 공개 의무, 민간 사상자 집계 의무 |
-| 휴전 설명 | 휴전·협상 거부 시 사유 공개 | "왜 싸우는가"를 주기적으로 공개 |
-| AI 감사 | 군사 AI 조언의 사후 공개 | 비밀 블랙박스 금지, 작전 종료 후 알고리즘 감사 |
+| Right to flee | Right to leave a war zone | Obligation to keep borders open, obligation to accept refugees |
+| Conscientious objection | Right to refuse conscription | Alternative service guarantee, review of objection grounds (by civilian, not military, body) |
+| Post hoc audit | Post-war investigation of war decisions | Post-war casus belli audit, accountability for war waged on false pretexts |
+| Cost disclosure | Automatic publication of war costs and civilian casualties | Mandatory defense budget disclosure, mandatory civilian casualty counting |
+| Ceasefire explanation | Publication of reasons for refusing ceasefire/negotiation | Periodic public disclosure of "why we are fighting" |
+| AI audit | Post hoc disclosure of military AI counsel | No secret black boxes, algorithmic audit after operation completion |
 
-## 16.7 전쟁권 쪼개기: 9가지 처방(해결책)
+## 16.7 Splitting War Power: Nine Prescriptions
 
-전쟁권을 쪼개기 위한 최소 처방이다. 각 처방은 프레임워크의 기존 장치에
-대응한다.
+The minimal prescriptions for splitting war power. Each corresponds to an existing framework mechanism.
 
-| # | 처방 | 메커니즘 | 프레임워크 대응 |
+| # | Prescription | Mechanism | Framework Correspondence |
 | --- | --- | --- | --- |
-| 1 | 방어전과 공격전 구분 | 공격전 개시 권한을 지도자에게서 분리 | 통치 강제 vs 탈출권 강제 (섹션 8) |
-| 2 | 선제공격 금지 | 단일 지도자의 선제공격 결정 금지. 방어전만 지도자 발동 가능 | 커널 강제 (섹션 8) |
-| 3 | casus belli 공개 | 전쟁 개시 전 공개 가능한 범위의 명분 감사. 비밀 명분은 사후 감사 대상 | 투명성 부족 (명제 4) |
-| 4 | 짧은 주기 재승인 | 의회 1회 승인으로 끝내지 말고 30-90일 단위 재승인 | 락인 위험도 점수 (섹션 5) — 위험도가 시간에 따라 변하므로 |
-| 5 | 징병·동원 별도 초고강도 승인 | 전쟁 승인 ≠ 동원 승인. 동원은 더 높은 문턱 | 락인 판별식 4번째 항 (생존조건을 쥠) — 몸을 직접 묶는 것은 별도 승인 |
-| 6 | 전쟁 비용·민간 피해 자동 공개 | 국방 예산, 민간 사상자, 파괴 시설 자동 집계·공개 | 측정이 통치다 (섹션 7) |
-| 7 | 지역별 탈출권·피난권 보장 | 전쟁 지역 주민의 이탈 권리, 난민 수용 의무 | 탈출권 (명제 3) — 전쟁 중에도 정지되지 않는 탈출권 |
-| 8 | AI 군사 조언 사후 감사 | 비밀 블랙박스 금지, 작전 종료 후 알고리즘 공개 | AI의 역할 (섹션 11) — 통치자가 아니라 변호사. 군사 AI도 변호사가 아닌 도구 |
-| 9 | 휴전·협상 거부 설명 책임 | 전쟁 지속을 원하는 주체가 "왜 멈추지 않는가"를 주기적으로 공개 | 강제의 역설 (섹션 12) — 전쟁을 종료할 권한이 전쟁을 연장하는 원인 |
+| 1 | Distinguish defensive from offensive war | Separate offensive war initiation authority from the leader | Governance enforcement vs. exit-right enforcement (Section 8) |
+| 2 | Prohibit first strikes | Prohibit single-leader first-strike decisions. Only defensive war may be leader-activated | Kernel enforcement (Section 8) |
+| 3 | Publish casus belli | Audit of publicly disclosable grounds before war initiation. Secret grounds subject to post hoc audit | Transparency deficit (Prop. 4) |
+| 4 | Short-cycle reauthorization | Do not end at a single parliamentary authorization; require reauthorization every 30–90 days | Lock-in severity score (Section 5) — severity changes over time |
+| 5 | Separate super-majority approval for conscription/mobilization | War authorization ≠ mobilization authorization. Mobilization requires a higher threshold | Discriminant prong 4 (survival conditions held) — binding the body directly requires separate approval |
+| 6 | Automatic disclosure of war costs and civilian casualties | Automatic compilation and publication of defense budget, civilian casualties, destroyed facilities | Measurement as governance (Section 7) |
+| 7 | Per-region right of exit and right to flee | Right of war-zone residents to leave, obligation to accept refugees | Right of exit (Prop. 3) — exit rights that must not be suspended even during war |
+| 8 | Post hoc audit of military AI counsel | No secret black boxes, algorithmic disclosure after operation completion | Role of AI (Section 11) — not a ruler but an advocate. Military AI is also a tool, not an advocate |
+| 9 | Accountability for refusing ceasefire/negotiation | Periodic public disclosure by the party seeking to prolong war of "why they are not stopping" | Coercion paradox (Section 12) — the authority to end war is the cause of war prolongation |
 
-### 4단계 패턴 확인
+### Four-Stage Pattern Confirmation
 
-합작 락인의 4단계 패턴이 전쟁권에서도 반복되는지 확인한다:
+Confirming whether the composite lock-in four-stage pattern repeats in war power:
 
-1. **각 주체는 자기 역할만 수행** — 지도자는 "국가안보" 결정, 의회는 승인(1회), 군은 작전 수행, 민간인은 동원 대상
-2. **교차점에서 생기는 락인** — 각 주체가 자기 역할만 하는데, 교차점에서 국민의 모든 권리가 정지됨
-3. **처방은 교차점을 동시에 풀어야** — 지도자 권한 제한 + 의회 재승인 + 동원 별도 승인 + 피난권 보장이 동시에
-4. **시행 주체의 역설** — 전쟁을 통제할 권한을 가진 주체(국가, 국제기구)가 전쟁 커널 자체를 가짐
+1. **Each actor performs only its own role** — the leader makes "national security" decisions, parliament provides authorization (once), the military executes operations, civilians are mobilization targets
+2. **Lock-in emerges at the intersection** — each actor performs only its role, but at the intersection, all citizens' rights are suspended
+3. **Prescriptions must address the intersection simultaneously** — leader authority limits + parliamentary reauthorization + separate mobilization approval + right to flee, all simultaneously
+4. **Implementation-entity paradox** — the entity with authority to control war holds the war kernel itself
 
-4단째에서 역설이 가장 분명하게 드러난다. 전쟁을 막으려는 주체에게
-전쟁 통제 권한이 필요하고, 그 권한이 다시 전쟁 커널이 된다.
+The paradox is most clearly exposed at the fourth stage. The entity that would prevent war needs war-control authority, and that authority becomes the war kernel again.
 
-## 16.8 기존 5사례와의 관계
+## 16.8 Relationship to the Five Cases
 
-전쟁권 락인은 기존 5사례를 **수직으로 지배**하는 국가 커널의 예외 모드다.
+War-power lock-in is the exception mode of the national kernel that **vertically** dominates the five existing cases.
 
-| 사례 | 평시 락인 | 전쟁 발동 시 |
+| Case | Peacetime Lock-in | During War Activation |
 | --- | --- | --- |
-| E-7 | 고용주-국가 합작 락인 | 전쟁 징병 대상자 출국 전면 금지. 비자 상태 무관 |
-| 플랫폼 | 계정 정지, 데이터 락인 | 국가안보 명목 계정 압수, 반전 발언 삭제, 플랫폼 강제 협조 |
-| 의료 | 기록 이전 불가 | 군사 의료 우선, 민간 의료 접근 제한, 의료 인력 징발 |
-| 돌봄 | 관계적 락인, 대체 돌봄 부재 | 징병으로 돌봄 제공자 사라짐. 돌봄 수혜자 방치. 대체 돌봄 인프라 파괴 |
-| 교육 | 인정 독점, 입시 트랙 | 학교 군사화, 교육 과정 국가안보 편입, 학생 동원 |
+| E-7 | Employer-state composite lock-in | Comprehensive exit ban on war conscription targets. Visa status irrelevant |
+| Platform | Account suspension, data lock-in | Account seizure under national security pretext, deletion of anti-war speech, forced platform cooperation |
+| Medical | Record transfer impossible | Military medical priority, restricted civilian medical access, conscription of medical personnel |
+| Caregiving | Relational lock-in, absence of alternative care | Conscription removes care providers. Care recipients abandoned. Alternative care infrastructure destroyed |
+| Education | Credential monopoly, admissions track | School militarization, curriculum subsumed under national security, student mobilization |
 
-전쟁은 각 사례의 락인을 "강화"하는 것이 아니라, 그 위에 **별도의 층**을
-올리는 것이다. 평시 락인이 풀려도 전쟁권 락인이 남아 있으면, 풀린 락인이
-전쟁 발동과 함께 다시 닫힌다.
+War does not "strengthen" each case's lock-in; it **layers a separate stratum** on top. Even if peacetime lock-in is loosened, if war-power lock-in remains, the loosened lock-in closes again with war activation.
 
-## 16.9 강제의 역설 — 전쟁 버전
+## 16.9 The Coercion Paradox — War Version
 
-섹션 12에서 "강제의 역설"을 인정했다. 전쟁권에서 역설은 더 날카롭다.
+Section 12 acknowledged the "coercion paradox." In war power, the paradox is sharper.
 
-"전쟁을 막겠다"는 원칙을 누가 강제하는가.
+Who enforces the principle "prevent war"?
 
-- 국가가 강제하면 → 국가가 전쟁 커널을 가진다. 국가가 "이건 방어전이다"라고
-  판정하면, 모든 제한이 풀린다.
-- 국제기구가 강제하면 → 국제기구에 군사 통제 권한이 필요하고, 그 권한이
-  새 주권자가 된다. UN 안전보장이사회 거부권이 이 문제의 축소판이다.
-- 지역이 강제하면 → 지역이 전쟁 거부권을 가지면, 그게 분리독립의 근거가 된다.
-  그리고 분리독립한 지역이 다시 자기 전쟁 커널을 가진다.
-- AI가 강제하면 → AI가 "이건 공격전이다"라고 판정하는 권한이 새 권력이 된다.
+- If the state enforces → the state holds the war kernel. When the state declares "this is defensive war," all restrictions dissolve.
+- If an international body enforces → the international body needs military control authority, which becomes a new sovereign. The UN Security Council veto is a miniature of this problem.
+- If the region enforces → if the region holds a war-refusal right, it becomes grounds for secession. And the seceded region acquires its own war kernel.
+- If AI enforces → AI's authority to declare "this is an offensive war" becomes a new power.
 
-이 순환은 끊기지 않는다. 프레임워크가 할 수 있는 것은 **늦추는 것**이다.
+This cycle cannot be broken. What the framework can do is **slow it**.
 
-전쟁권에서 "늦추다"는 의미:
+What "slowing" means in war power:
 
-1. **개시 지연** — 선제공격 금지, 재승인 주기, 동원 별도 승인이 전쟁
-   개시 속도를 늦춰 시간을 번다. 그 시간 안에 외교·협상 기회가 생길 수 있다.
-2. **권한 분산** — 전쟁 결정을 단일 주체에 맡기지 않는다. 의회, 사법부,
-   지역 대표, 시민 참여가 겹칠수록, 한 점이 종속되어도 전쟁이 즉시 발동되지 않는다.
-3. **피해 가시화** — 전쟁 비용·민간 사상자·파괴 시설이 자동 공개되면,
-   "국가안보"로 가려지는 부분이 줄어든다.
-4. **탈출권 보장** — 전쟁 중에도 피난권·양심적 거부권이 보장되면,
-   전쟁이 모든 국민을 묶는 것을 부분적으로 막는다.
+1. **Initiation delay** — first-strike prohibition, reauthorization cycles, and separate mobilization approval slow war initiation speed, buying time. Within that time, diplomatic and negotiation opportunities may arise.
+2. **Authority distribution** — war decisions are not vested in a single entity. The more parliament, judiciary, regional representatives, and citizen participation overlap, the more a single point's capture does not immediately trigger war.
+3. **Damage visibility** — automatic disclosure of war costs, civilian casualties, and destroyed facilities reduces what is hidden behind "national security."
+4. **Exit-right guarantee** — if the right to flee and conscientious objection are guaranteed during war, war's capacity to bind all citizens is partially blocked.
 
-이것도 해결이 아니다. 전쟁이 발동되면, 이 장치들도 무력화될 수 있다.
-"계엄령으로 재승인 절차를 정지한다"는 논리가 언제든 등장할 수 있다.
+This too is not a solution. When war is activated, these mechanisms can be neutralized. The logic "martial law suspends reauthorization procedures" can appear at any time.
 
-다만, 장치가 있으면, 장치를 무력화하는 데 시간과 가시성이 필요하다.
-그 시간이 국내외 반응의 기회가 된다. 장치가 없으면, 전쟁 버튼 하나로
-모든 것이 즉시 정지된다.
+However, if mechanisms exist, neutralizing them requires time and visibility. That time becomes the window for domestic and international response. Without mechanisms, a single war button stops everything instantly.
 
-## 16.10 남은 과제
+## 16.10 Remaining Problems
 
-이 장은 프레임워크의 상위 병목을 식별하지만, 풀지 못한 문제가 있다.
+This chapter identifies the framework's uppermost bottleneck but leaves problems unresolved.
 
-1. **국제 차원** — 전쟁권 락인은 단일 국가 안에서 풀 수 없다. 국제기구,
-   조약, 관습법이 필요한데, 그 국제기구 자체가 종속될 수 있다 (UN 안보리 거부권).
-2. **비대칭(차이) 전쟁** — 국가 대 비국가 행위자(반군, 테러 단체)에서는
-   "방어전 vs 공격전" 구분이 흐려진다. 비대칭 전쟁에서 전쟁권은 누구에게 있는가.
-3. **핵무기** — 전쟁권의 궁극적 형태. 핵무기 사용 결정은 전쟁 커널의
-   극단이다. 이건 별도 논의가 필요하다.
-4. **내전** — 수단, 미얀마처럼 국가가 분열된 경우, "전쟁권"이 누구의
-   것인지 자체가 분쟁의 대상이 된다.
-5. **AI 군사화** — 자율 무기 시스템, AI 표적 식별, 알고리즘 전쟁 결정.
-   AI가 전쟁을 빠르게 만들면, "늦추는 장치"가 작동할 시간이 없어진다.
+1. **International dimension** — war-power lock-in cannot be resolved within a single state. International bodies, treaties, and customary law are needed, but those bodies can themselves be captured (UN Security Council veto).
+2. **Asymmetric warfare** — in state vs. non-state actor conflicts (rebels, terrorist organizations), the "defensive vs. offensive war" distinction blurs. In asymmetric warfare, who holds war power?
+3. **Nuclear weapons** — the ultimate form of war power. The decision to use nuclear weapons is the extreme of the war kernel. This requires separate discussion.
+4. **Civil war** — in cases like Sudan and Myanmar where the state is fractured, who holds "war power" is itself the subject of the conflict.
+5. **AI militarization** — autonomous weapon systems, AI target identification, algorithmic war decisions. If AI accelerates war, "slowing mechanisms" run out of time to operate.
 
-이 문제들은 이 장에서 열어두고, 별도 사례 연구로 검증할 수 있다.
+These problems are opened here and can be verified through separate case studies.
 
-## 16.11 한 줄 결론
+## 16.11 One-Line Conclusion
 
-**평시의 모든 탈출권은, 전쟁 버튼 하나로 0이 될 수 있다.**
+**All peacetime exit rights can be reduced to zero by a single war button.**
 
-반주권 설계가 "평시 락인"만 다루면, 그건 비가 올 때만 작동하는 우산이다.
-전쟁권을 다루지 않으면, 프레임워크는 비가 올 때 접히는 우산이다.
+If Anti-Sovereign Design addresses only "peacetime lock-in," it is an umbrella that works only when it is not raining. Without addressing war power, the framework is an umbrella that folds when the rain comes.
 
-전쟁권을 완벽히 통제하겠다고 약속하면 거짓이다. 다만, 전쟁권을 쪼개고,
-개시를 늦추고, 탈출권을 보장하고, 비용을 가시화하면, 전쟁이 모든 것을
-한꺼번에 묶는 속도를 늦출 수 있다. 그 늦춰진 시간이, 사람이 반응할
-기회를 만든다.
+Promising to perfectly control war power is false. However, splitting war power, delaying initiation, guaranteeing exit rights, and making costs visible can slow the speed at which war binds everything at once. That deferred time creates the opportunity for people to respond.
 
 ---
 
-*이 장은 v4 프레임워크의 5사례가 평시를 전제한 한계를 보완하기 위해
-추가되었다. 2021-2026 전쟁 데이터는 UCDP (Uppsala University), ACLED,
-ICRC, CFR Global Conflict Tracker에서 검증했다. 이 장은 "사례 연구"가
-아니라 국가 커널의 예외 모드 분석이다. 전쟁권 락인을 구체 사례로
-검증하는 것은 별도 작업이다.*
+*This chapter was added to address the limitation that the v4 framework's five cases assume peacetime. 2021–2026 war data was verified against UCDP (Uppsala University), ACLED, ICRC, and the CFR Global Conflict Tracker. This chapter is not a "case study" but an analysis of the national kernel's exception mode. Verifying war-power lock-in through a concrete case is separate work.*
