@@ -392,7 +392,7 @@ the framework operates in a different context.
 | Forced right of exit | Bridge residence period | Forced data portability | Standardized record + mutual acceptance |
 | Lock-in heatmap | By visa type | Platform × user type | Medical situation × patient type |
 
-### What the Three Cases Jointly Prove
+### What the Three Cases Jointly Show
 
 1. **The discriminant applies to all three sovereignty types** — territorial
    (E-7), non-territorial (platform), physical (medicine)

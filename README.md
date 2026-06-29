@@ -38,39 +38,39 @@ This repository applies that diagnostic to five case studies and two structural 
 
 | Document | Lines | Content |
 | --- | --- | --- |
-| [SUMMARY.md](./SUMMARY.md) | 119 | One-page overview — what it is, how to use it, five-case verification |
-| [framework.md](./framework.md) | 709 | The complete v4 framework — propositions, lock-in discriminant, scoring, defensive mechanisms, experiment engine, the role of AI |
-| [case-e7-visa.md](./case-e7-visa.md) | 202 | First case — the employer-state composite lock-in in South Korea's E-7 visa |
-| [case-platform-suspension.md](./case-platform-suspension.md) | 422 | Second case — platform account suspension and non-territorial sovereignty |
-| [case-medical-lock-in.md](./case-medical-lock-in.md) | 427 | Third case — medical record portability and physical infrastructure lock-in |
-| [case-care-lock-in.md](./case-care-lock-in.md) | 432 | Fourth case — caregiving dependency, relational lock-in, and the exit-as-abandonment dilemma |
-| [case-education-lock-in.md](./case-education-lock-in.md) | 481 | Fifth case — credential monopoly and the recognition regime lock-in |
-| [chapter-war-kernel.md](./chapter-war-kernel.md) | 291 | The war button — the highest-intensity emergency mode of the national kernel. When war is declared, all exit rights are suspended. Verified against 2021–2026 conflict data (UCDP/ACLED/ICRC/CFR). |
-| [chapter-national-kernel.md](./chapter-national-kernel.md) | 483 | The national kernel — the rules that operate every day in peacetime. Law, budget, and emergency powers press against regional autonomy. The war button (Ch. 16) is the emergency mode of this kernel. Verified directly against the South Korean Constitution (Arts. 40, 73, 76, 77, 117). |
-| [appendix-coercion-paradox.md](./appendix-coercion-paradox.md) | 263 | Appendix — the coercion paradox in depth: its concrete form across five cases, its four faces, and the proposition that the framework lives with the paradox rather than resolving it. |
+| [SUMMARY.md](./SUMMARY.md) | 104 | One-page overview — what it is, how to use it, five-case stress test |
+| [framework.md](./framework.md) | 558 | The complete v4 framework — propositions, lock-in discriminant, scoring, defensive mechanisms, experiment engine, the role of AI |
+| [case-e7-visa.md](./case-e7-visa.md) | 180 | First case — the employer-state composite lock-in in South Korea's E-7 visa |
+| [case-platform-suspension.md](./case-platform-suspension.md) | 465 | Second case — platform account suspension and non-territorial sovereignty |
+| [case-medical-lock-in.md](./case-medical-lock-in.md) | 468 | Third case — medical record portability and physical infrastructure lock-in |
+| [case-care-lock-in.md](./case-care-lock-in.md) | 361 | Fourth case — caregiving dependency, relational lock-in, and the exit-as-abandonment dilemma |
+| [case-education-lock-in.md](./case-education-lock-in.md) | 394 | Fifth case — credential monopoly and the recognition regime lock-in |
+| [chapter-national-kernel.md](./chapter-national-kernel.md) | 384 | The national kernel — the rules that operate every day in peacetime. Law, budget, and emergency powers press against regional autonomy. Checked against the South Korean Constitution (Arts. 40, 73, 76, 77, 117). |
+| [chapter-war-kernel.md](./chapter-war-kernel.md) | 236 | The war button — the highest-intensity emergency mode of the national kernel. When war is declared, all exit rights are suspended. Checked against 2021–2026 conflict data (UCDP/ACLED/ICRC/CFR). |
+| [appendix-coercion-paradox.md](./appendix-coercion-paradox.md) | 171 | Appendix — the coercion paradox in depth: its concrete form across five cases, its four faces, and the proposition that the framework lives with the paradox rather than resolving it. |
 | [case-template.md](./case-template.md) | 225 | Template for new case studies — a ten-section standard structure |
-| **Total** | **4,054** | (Excluding README.md, GAME_DESIGN.md, docs/glossary.md. Including README: 4,236 lines.) |
+| **Total** | **3,546** | (Excluding README.md, GAME_DESIGN.md, docs/glossary.md.) |
 
 > The total counts framework documents only, excluding README.md and docs/glossary.md. GAME_DESIGN.md is a game design draft and is excluded from the framework total.
 >
-> framework.md was expanded after five-case verification and review.
-> The war-power chapter addresses the highest-intensity emergency mode of the national kernel. It is
-> maintained as a separate file but numbered as Section 16 and treated as a formal chapter.
-> The national-kernel chapter addresses the peacetime rules that operate every day — law, budget, and
-> emergency powers as structural lock-in. The war-power chapter (16) is the emergency mode of these
-> rules. It is verified directly against South Korean constitutional provisions and numbered as Section 17.
+> framework.md was expanded after the five-case stress test and review.
+> The national-kernel chapter (Ch. 16) addresses the peacetime rules that operate every day — law, budget,
+> and emergency powers as structural lock-in. It is checked directly against South Korean constitutional
+> provisions and numbered as Section 16.
+> The war-power chapter (Ch. 17) addresses the highest-intensity emergency mode of the national kernel.
+> It is maintained as a separate file but numbered as Section 17 and treated as a formal chapter.
 
 ```text
-[Ch. 17] National Kernel: operates every day in peacetime
+[Ch. 16] National Kernel: operates every day in peacetime
         └─ emergency transition
-[Ch. 16] War-Power Kernel: the most intense suspension of exit rights during war, martial law, and mobilization
+[Ch. 17] War-Power Kernel: the most intense suspension of exit rights during war, martial law, and mobilization
 ```
 
-## Case Verification Status
+## Case Stress Test Status
 
-Five cases verify that this framework applies universally — the same lock-in discriminant works across territorial, non-territorial, physical, relational, and recognition-based power, and the composite lock-in structure appears identically in all five domains.
+Five cases stress-test the framework across distinct power substrates — the same lock-in discriminant is applied to territorial, non-territorial, physical, relational, and recognition-based power, and the composite lock-in structure appears in all five domains.
 
-| Case | Power Type | Lock-in Substrate | What It Verified |
+| Case | Power Type | Lock-in Substrate | What It Tested |
 | --- | --- | --- | --- |
 | E-7 Visa | Territorial (land-based) | Residence permit + employment linkage | Employer-state composite lock-in, lock-in heatmap, translating prescriptions into administrative tables |
 | Platform Suspension | Non-territorial (network-based) | Account + network effects | Non-territorial sovereignty, account as digital citizenship, fork-cost asymmetry, four composite structures |
@@ -78,7 +78,7 @@ Five cases verify that this framework applies universally — the same lock-in d
 | Caregiving Dependency | Relational (relationship-based) | Relationship + absence of alternative care | Relational lock-in, exit-as-harm, proxy voice, alternative survival conditions as precondition for exit, five composite structures |
 | Credential Monopoly | Recognition-based | Credential monopoly + admissions track | The hardest case to reform, three-pronged relational lock-in, recognition pluralism, five composite structures |
 
-### What the Five Cases Collectively Prove
+### What the Five Cases Collectively Show
 
 1. **The discriminant applies to all five power types** — territorial, non-territorial, physical, relational, and recognition-based.
 2. **The composite lock-in follows a four-stage pattern** — each actor performs only its own role, lock-in emerges at the intersection, prescriptions must address all actors simultaneously, and the coercion paradox recurs at the implementation stage.
@@ -115,13 +115,13 @@ publicly compared and iteratively improved.
 | 13 | Anti-Sovereign Design Constitution | The fifth condition: visibility of rights |
 | 14 | Applied Lock-in Discriminant | Tables for state, corporation, platform, hospital, family, school (lock-in type + composite structure columns) + six-step usage |
 | 15 | Limits of the Framework | Not a perfect society but a design that preserves opportunities to loosen lock-in before it structurally hardens |
-| 16 | War-Power Kernel | Separate chapter — the highest-intensity emergency mode of the national kernel. When war is declared, all exit rights are suspended. Nine prescriptions (defensive vs. offensive distinction, prohibition of first strike, reauthorization, separate mobilization approval, right to flee, etc.) |
-| 17 | National Kernel | Separate chapter — the peacetime mode of the national kernel. Law, budget, and emergency powers as structural lock-in operating every day. The war-power chapter (16) is the emergency mode of this kernel. Verified directly against the South Korean Constitution (Arts. 40, 73, 76, 77, 117). Seven-stage classification of national decisions, regional impact assessment, AI lock-in auditor, regional waiver, sunset clause for centralized authority |
+| 16 | National Kernel | Separate chapter — the peacetime mode of the national kernel. Law, budget, and emergency powers as structural lock-in operating every day. Checked directly against the South Korean Constitution (Arts. 40, 73, 76, 77, 117). Seven-stage classification of national decisions, regional impact assessment, AI lock-in auditor, regional waiver, sunset clause for centralized authority |
+| 17 | War-Power Kernel | Separate chapter — the highest-intensity emergency mode of the national kernel. When war is declared, all exit rights are suspended. Nine prescriptions (defensive vs. offensive distinction, prohibition of first strike, reauthorization, separate mobilization approval, right to flee, etc.) |
 
-> **Relationship between Ch. 16 and Ch. 17**: The national kernel (Ch. 17) is the set of rules
-> that operate in peacetime. The war-power kernel (Ch. 16) is the most intense mode that
-> emerges when the national kernel transitions to emergency. Ch. 17 is not subordinate to
-> Ch. 16 — **Ch. 16 is the emergency mode of Ch. 17.**
+> **Relationship between Ch. 16 and Ch. 17**: The national kernel (Ch. 16) is the set of rules
+> that operate in peacetime. The war-power kernel (Ch. 17) is the most intense mode that
+> emerges when the national kernel transitions to emergency. Ch. 17 is not a separate system
+> — **Ch. 17 is the emergency mode of Ch. 16.**
 
 ## Evolution of the Right of Exit — Five-Case Comparison
 
@@ -172,5 +172,5 @@ The components of this framework exist in prior theory. What is distinctive is n
 | Proxy Voice | Caregiving | Education | Section 2 (Prop. 3) |
 | Recognition Pluralism | Education | — | Section 8 (Kernel Design) |
 | Kernel vs. Freedom Rules Distinction | Platform | Medical, Caregiving, Education | Section 8 |
-| War-Power Kernel (Emergency Mode) | War-Power Chapter | — | Section 16 (chapter-war-kernel.md) |
-| National Kernel (Peacetime Mode) | National-Kernel Chapter | — | Section 17 (chapter-national-kernel.md) |
+| War-Power Kernel (Emergency Mode) | War-Power Chapter | — | Section 17 (chapter-war-kernel.md) |
+| National Kernel (Peacetime Mode) | National-Kernel Chapter | — | Section 16 (chapter-national-kernel.md) |

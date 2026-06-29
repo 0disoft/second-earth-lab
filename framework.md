@@ -519,7 +519,7 @@ The fifth condition ("must be surfaced as a public matter") protects the other f
 
 ## 14. The Applied Lock-In Discriminant — Apply to Every Power Structure
 
-Apply this checklist only to the state and you get old liberalism. Apply it to regions as well and you get decentralism. Apply it all the way to companies, platforms, hospitals, and schools, and only then do you arrive at a modern theory of sovereignty. It reflects the structural features verified across the five cases.
+Apply this checklist only to the state and you get old liberalism. Apply it to regions as well and you get decentralism. Apply it all the way to companies, platforms, hospitals, and schools, and only then do you arrive at a modern theory of sovereignty. It reflects the structural features tested across the five cases.
 
 | Structure | Cannot leave | Subjected to rules | Objection does not work | Holds survival conditions | Lock-in type | Primary partner structure |
 | --- | --- | --- | --- | --- | --- | --- |

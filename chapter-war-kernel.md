@@ -1,12 +1,12 @@
-# 16. The War-Power Kernel
+# 17. The War-Power Kernel
 
 > The final challenge for regional autonomy is not national law but the war mode into which the national kernel transitions.
 > For terminology, consult the [glossary](./docs/glossary.md).
 > Whether president, prime minister, or military junta — if a single entity can, under the name of national security, bind people's bodies, money, movement, speech, information, and lives all at once, Anti-Sovereign Design cannot do its job.
 
-## 16.1 Why This Chapter Is Needed
+## 17.1 Why This Chapter Is Needed
 
-Anti-Sovereign Design v4 verified the lock-in discriminant across five cases — territorial, non-territorial, physical, relational, and recognition-based sovereignty. All five, however, assume **peacetime**.
+Anti-Sovereign Design v4 tested the lock-in discriminant across five cases — territorial, non-territorial, physical, relational, and recognition-based sovereignty. All five, however, assume **peacetime**.
 
 In peacetime, the constitution, parliament, regional autonomy, citizenship, data portability, and challenge procedures appear to function. But when the war button is pressed:
 
@@ -21,7 +21,7 @@ War is **the highest-intensity exception mode of the national kernel, which susp
 
 This is a different order of lock-in from the "composite lock-in" of the five cases. Composite lock-in is a structure produced by two or more actors at an intersection. The war-power kernel is **an exception mode in which a single decision freezes all rights simultaneously.**
 
-## 16.2 2021–2026: How War Ascends
+## 17.2 2021–2026: How War Ascends
 
 Data in this chapter was verified against open sources as of June 2026.
 
@@ -62,7 +62,7 @@ The same structure repeats across all eight cases:
 4. **War termination is difficult** — no accountability for refusing ceasefire or negotiation. Prolongation is the default
 5. **Democratic or not, the structure is the same** — Israel (democratic) and Myanmar (junta) exhibit the same pattern
 
-## 16.3 It Is Not "the President" — It Is the War Kernel
+## 17.3 It Is Not "the President" — It Is the War Kernel
 
 As the user correctly identified, the problem is not "the president" alone. Prime ministers, military juntas, generals, monarchs, party leaderships, security cabinets, and rebel commanders can all play the same role.
 
@@ -77,7 +77,7 @@ Characteristics of the war kernel:
 
 This is the same structure as the framework's "coercion paradox." Protecting the right of exit requires an enforcer, and power concentrates in that enforcer. In war power, it is more extreme — the entity that would control war must hold the war kernel, and that kernel becomes the cause of the next war.
 
-## 16.4 Six Mechanisms by Which War Suspends the Right of Exit En Masse
+## 17.4 Six Mechanisms by Which War Suspends the Right of Exit En Masse
 
 Unlike the individual lock-ins addressed in the five cases, war **simultaneously** neutralizes all exit rights.
 
@@ -99,7 +99,7 @@ The four trends identified in the ICRC's 2026 outlook are real-world expressions
 3. "Everything on victory" — military objectives prioritized over civilian protection obligations (mechanisms 3, 4, 6)
 4. **Resource scarcity** — war costs pressure humanitarian resources (mechanism 3)
 
-## 16.5 Applying the Discriminant: Is War Power a Lock-in?
+## 17.5 Applying the Discriminant: Is War Power a Lock-in?
 
 The four-prong lock-in discriminant is applied to war power. The locked-in entity is **the citizenry**.
 
@@ -116,7 +116,7 @@ This is more extreme than any of the five cases. The caregiving case scoring "ve
 
 The distinctive feature of war-power lock-in: **the locked-in are not individuals.** The entire citizenry is locked in simultaneously. And some of the locked-in — conscription-eligible individuals — face not merely a threat to survival conditions but a direct threat to life.
 
-## 16.6 Defensive vs. Offensive War: The Minimal Rule of Kernel Enforcement
+## 17.6 Defensive vs. Offensive War: The Minimal Rule of Kernel Enforcement
 
 To undo war-power lock-in, one cannot simply say "ban war." That is a normative pacifist claim, not a structural design. Denying a state under external attack the right to defend itself is prohibiting self-defense for the weak.
 
@@ -146,7 +146,7 @@ The following rights must not be suspended even during war:
 | Ceasefire explanation | Publication of reasons for refusing ceasefire/negotiation | Periodic public disclosure of "why we are fighting" |
 | AI audit | Post hoc disclosure of military AI counsel | No secret black boxes, algorithmic audit after operation completion |
 
-## 16.7 Splitting War Power: Nine Prescriptions
+## 17.7 Splitting War Power: Nine Prescriptions
 
 The minimal prescriptions for splitting war power. Each corresponds to an existing framework mechanism.
 
@@ -173,7 +173,7 @@ Confirming whether the composite lock-in four-stage pattern repeats in war power
 
 The paradox is most clearly exposed at the fourth stage. The entity that would prevent war needs war-control authority, and that authority becomes the war kernel again.
 
-## 16.8 Relationship to the Five Cases
+## 17.8 Relationship to the Five Cases
 
 War-power lock-in is the exception mode of the national kernel that **vertically** dominates the five existing cases.
 
@@ -187,7 +187,7 @@ War-power lock-in is the exception mode of the national kernel that **vertically
 
 War does not "strengthen" each case's lock-in; it **layers a separate stratum** on top. Even if peacetime lock-in is loosened, if war-power lock-in remains, the loosened lock-in closes again with war activation.
 
-## 16.9 The Coercion Paradox — War Version
+## 17.9 The Coercion Paradox — War Version
 
 Section 12 acknowledged the "coercion paradox." In war power, the paradox is sharper.
 
@@ -211,7 +211,7 @@ This too is not a solution. When war is activated, these mechanisms can be neutr
 
 However, if mechanisms exist, neutralizing them requires time and visibility. That time becomes the window for domestic and international response. Without mechanisms, a single war button stops everything instantly.
 
-## 16.10 Remaining Problems
+## 17.10 Remaining Problems
 
 This chapter identifies the framework's uppermost bottleneck but leaves problems unresolved.
 
@@ -223,7 +223,7 @@ This chapter identifies the framework's uppermost bottleneck but leaves problems
 
 These problems are opened here and can be verified through separate case studies.
 
-## 16.11 One-Line Conclusion
+## 17.11 One-Line Conclusion
 
 **All peacetime exit rights can be reduced to zero by a single war button.**
 

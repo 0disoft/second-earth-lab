@@ -159,7 +159,7 @@ What this heatmap shows:
 
 ## 7. Impact of This Case on the Framework
 
-### What Was Verified
+### What Was Tested
 
 1. **The discriminant works** — the four-clause discriminant can analyze concrete policy
 2. **The composite lock-in concept is necessary** — a single-actor model cannot explain the E-7 structure
@@ -177,4 +177,4 @@ What this heatmap shows:
 
 This case deals with "territorial sovereignty." The next case, **platform account suspension**, deals with **non-territorial sovereignty (power without territory)**, and will show that the same discriminant applies to sovereigns without territory (Google/Apple/Meta).
 
-Viewed together, these two cases demonstrate that the framework applies universally to all power structures, not bound by territorial borders.
+Viewed together, these two cases demonstrate that the framework transfers across power structures beyond territorial borders.

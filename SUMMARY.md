@@ -47,7 +47,7 @@ If one cannot leave, is that fact visible?
 | Caregiving Dependency | Relationship and absence of alternative care | Survival conditions for both the one who leaves and the one who stays |
 | Credential Monopoly | Schools, admissions, qualification recognition | A path for alternative learning to be recognized |
 
-The common pattern across all five cases is identical. Each actor claims to have done only its own job, but lock-in emerges at the intersection. Prescriptions must therefore address the intersection, not one side alone.
+The common pattern across all five cases is structurally consistent. Each actor claims to have done only its own job, but lock-in emerges at the intersection. Prescriptions must therefore address the intersection, not one side alone.
 
 ## Nation and War
 
@@ -56,9 +56,9 @@ No matter how well a region crafts rules through resident consensus and AI couns
 War, martial law, and mobilization are the moment when that state authority shifts to emergency mode. The everyday rights of exit, challenge, and movement are all suspended at once under the name of national security. This problem is addressed separately in the [War-Power Kernel](./chapter-war-kernel.md) chapter.
 
 ```text
-[Ch. 17] National Kernel: operates every day in peacetime
+[Ch. 16] National Kernel: operates every day in peacetime
         └─ emergency transition
-[Ch. 16] War-Power Kernel: suspends exit rights en masse during war, martial law, and mobilization
+[Ch. 17] War-Power Kernel: suspends exit rights en masse during war, martial law, and mobilization
 ```
 
 ## The Kernel

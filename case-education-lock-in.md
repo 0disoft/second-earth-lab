@@ -326,7 +326,7 @@ The right of exit demands more with each case. This is the process by which the 
 
 ## 9. Impact on the Framework
 
-### What Was Verified
+### What Was Tested
 
 1. **The extreme case where only layer 3 of the 3-layer model matters was demonstrated** — even with layers 1 and 2 satisfied, without layer 3, exit is impossible
 2. **Relational lock-in expanded into a triangular structure in education** — student, parent, and teacher each bound in different ways
@@ -351,7 +351,7 @@ The right of exit demands more with each case. This is the process by which the 
 
 ## 10. Five Cases Complete — Final Framework Universality Conclusion
 
-The five cases have verified the framework's core mechanisms. Each case tested a different face of the framework, and with each test the framework was revised and expanded.
+The five cases have stress-tested the framework's core mechanisms. Each case tested a different face of the framework, and with each test the framework was revised and expanded.
 
 ### Five Sovereignty Types
 
@@ -378,14 +378,14 @@ The five cases have verified the framework's core mechanisms. Each case tested a
 
 ### Final Conclusion
 
-The Anti-Sovereign Design v4 framework has been demonstrated to be universally applicable across five sovereignty types — territorial, non-territorial, physical, relational, and recognition regime.
+The Anti-Sovereign Design v4 framework transfers across five sovereignty types — territorial, non-territorial, physical, relational, and recognition regime.
 
 What the framework acknowledges:
 - Each case revealed a new dimension. The framework is richer after case application than before.
 - The five cases did not complete the framework; rather, **the framework was revised and expanded through the five cases.**
 - The coercion paradox remained unresolved in all five domains. The framework does not promise to sever it completely but leaves opportunities to loosen lock-in before it structurally hardens.
 
-The framework's core propositions were verified through the five cases:
+The framework's core propositions were tested through the five cases:
 
 > **If data moves but recognition does not, there is no right of exit.**
 > **If exit threatens a third party's survival, alternative survival conditions must accompany it.**

@@ -394,7 +394,7 @@ of structure and user.
 
 ## 9. Impact of This Case on the Framework
 
-### What Was Verified
+### What Was Tested
 
 1. **The discriminant applies to non-territorial sovereignty** — territorial
    sovereignty (E-7) and network-based sovereignty (platform) can be placed on

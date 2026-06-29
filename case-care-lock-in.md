@@ -332,7 +332,7 @@ What this overlap reveals: in caregiving, **both provider and recipient have hig
 
 ## 9. Impact on the Framework
 
-### What Was Verified
+### What Was Tested
 
 1. **The discriminant applies to relational lock-in** — scoring is possible for both provider and recipient
 2. **The composite lock-in four-stage pattern repeats in a fourth domain** — universality confirmed
@@ -355,7 +355,7 @@ What this overlap reveals: in caregiving, **both provider and recipient have hig
 
 ## 10. Next Direction
 
-Four cases have verified the framework's core mechanisms. The final candidate:
+Four cases have stress-tested the framework's core mechanisms. The final candidate:
 
 - **Credential monopoly (education lock-in)** — a domain entirely dependent on institutional portability. A case where technical portability exists but is meaningless. An extreme case where only layer 3 (institutional) of the 3-layer data portability model matters.
 - **Technical implementation of care record portability** — designing a standard format for care routines, preferences, and medical information. Similar to EMR standardization in medicine, but caregiving must include "relational information," making it more complex.

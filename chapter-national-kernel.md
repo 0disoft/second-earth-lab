@@ -1,12 +1,12 @@
-# 17. National Kernel (National Minimum Rules) Lock-in
+# 16. National Kernel (National Minimum Rules) Lock-in
 
 > National law is the supreme coercive kernel layered on top of regional consensus.
 > For plain-language mapping, see the [glossary](./docs/glossary.md).
 > If Anti-Sovereign Design (design that does not trap people) analyzes only regions and platforms while leaving national legislation, war powers, and emergency powers unexamined, it misses the largest lock-in.
 
-## 17.1 Why This Chapter Is Necessary
+## 16.1 Why This Chapter Is Necessary
 
-The war-power chapter (Chapter 16) stated that once the war button is pressed, every right of exit (the right to get out) is suspended.
+The war-power chapter (Chapter 17) stated that once the war button is pressed, every right of exit (the right to get out) is suspended.
 But even without war, the state neutralizes regions. Every day, in peacetime, legally.
 
 - When the National Assembly passes a law, regional ordinances become void.
@@ -14,7 +14,7 @@ But even without war, the state neutralizes regions. Every day, in peacetime, le
 - When the president issues an emergency order, regional consensus is not even consulted.
 - When statutes change, the recognition regimes, medical record formats, and curricula built by regions are invalidated overnight.
 
-**The war power is not a sub-item of the national kernel; it is the highest-intensity mode that appears when the national kernel switches to an exception state.** The national kernel describes the everyday coercion of peacetime, while the war kernel describes the moment that coercion is amplified into borders, conscription (forced dispatch into the military), martial law, and mobilization. If the war-power chapter (Chapter 16) dealt with the "emergency button," this chapter deals with the **everyday button**.
+**The war power is not a sub-item of the national kernel; it is the highest-intensity mode that appears when the national kernel switches to an exception state.** The national kernel describes the everyday coercion of peacetime, while the war kernel describes the moment that coercion is amplified into borders, conscription (forced dispatch into the military), martial law, and mobilization. If the war-power chapter (Chapter 17) dealt with the "emergency button," this chapter deals with the **everyday button**.
 
 Core proposition:
 
@@ -22,7 +22,7 @@ Core proposition:
 
 The corrective direction is not to make the president virtuous, but to **attach a lock-in cost sheet to each national decision and give brakes to regions, individuals, and those who cannot exit.**
 
-## 17.2 Structure: Local Autonomy Is Permitted Autonomy
+## 16.2 Structure: Local Autonomy Is Permitted Autonomy
 
 Based on the South Korean Constitution, we verify the authority relationship between the state and the region. The following provisions were verified directly at the National Law Information Center (accessed June 2026, Constitution No. 10, fully amended October 29, 1987).
 
@@ -31,9 +31,9 @@ Based on the South Korean Constitution, we verify the authority relationship bet
 | Art. 40 | "The legislative power (the power to make laws) belongs to the National Assembly." | All laws pass through the National Assembly. What regions create is not law but ordinances. |
 | Art. 73 | "The President concludes and ratifies treaties, accredits, receives, or dispatches diplomatic envoys, and declares war and concludes peace." | War and diplomatic decisions are the president's sole authority. |
 | Art. 76 ① | The President may, when necessary to maintain national security or public peace and order in the face of internal turmoil, external provocation, natural disaster, or a grave financial or economic crisis, and when there is no time to await the convening of the National Assembly, take minimum necessary financial or economic measures or issue orders having the effect of law. | The president can unilaterally issue orders with the force of law. However, ex post National Assembly approval is required (③④⑤). |
-| Art. 76 ② | The President may, when necessary to protect the state in a state of grave engagement crisis concerning national security and when the convening of the National Assembly is impossible, issue orders having the effect of law. | In a state of engagement, the president can unilaterally issue orders with the force of law. This is the constitutional basis for the war power of Chapter 16. |
+| Art. 76 ② | The President may, when necessary to protect the state in a state of grave engagement crisis concerning national security and when the convening of the National Assembly is impossible, issue orders having the effect of law. | In a state of engagement, the president can unilaterally issue orders with the force of law. This is the constitutional basis for the war power of Chapter 17. |
 | Art. 77 ① | The President may, when necessary to meet military requirements or to maintain public peace and order during wartime, armed conflict, or a comparable national emergency, proclaim martial law as prescribed by law. | The authority to proclaim martial law belongs to the president. |
-| Art. 77 ③ | When emergency martial law is proclaimed, special measures may be taken with respect to the warrant system, freedom of speech, press, assembly, and association, and the authority of the government or the courts, as prescribed by law. | When emergency martial law is activated, the fundamental-rights system folds. This is the constitutional basis for the "blanket suspension of the right of exit" covered in Chapter 16. |
+| Art. 77 ③ | When emergency martial law is proclaimed, special measures may be taken with respect to the warrant system, freedom of speech, press, assembly, and association, and the authority of the government or the courts, as prescribed by law. | When emergency martial law is activated, the fundamental-rights system folds. This is the constitutional basis for the "blanket suspension of the right of exit" covered in Chapter 17. |
 | Art. 77 ⑤ | When the National Assembly requests the lifting of martial law by a majority vote of the members present, the President shall comply. | The sole brake — a National Assembly majority. But convening the National Assembly during martial law may itself be difficult. |
 | Art. 117 ① | Local governments handle affairs concerning the welfare of residents and manage property, and may enact provisions concerning autonomy **within the scope of statutes and regulations.** | Local autonomy is a sub-setting of national statutes. "Within the scope of statutes" is the bottleneck. |
 
@@ -66,7 +66,7 @@ Source: [National Law Information Center, Constitution of the Republic of Korea]
 
 The region does not have its "own operating system." It is closer to an app running on top of the national OS. When the state closes the API, it is over.
 
-## 17.3 Why Authority Concentrated Here
+## 16.3 Why Authority Concentrated Here
 
 ### Cause 1: Legacy of the War State
 
@@ -92,7 +92,7 @@ War, martial law, and emergency orders are buttons that fold the peacetime right
 
 Art. 77 ③ is the cause: under emergency martial law, "special measures" can be taken regarding "the warrant system, freedom of speech, press, assembly, and association, and the authority of the government or the courts." This is a constitutional mechanism that can fold the entire fundamental-rights system.
 
-The war-power kernel (war button) covered in Chapter 16 is the highest-intensity exception mode of this black hole. But even in peacetime, the **mere existence** of this mechanism shrinks regional autonomy — the possibility that "it could someday be used" alone is enough for regions to avoid head-on conflict with the state.
+The war-power kernel (war button) covered in Chapter 17 is the highest-intensity exception mode of this black hole. But even in peacetime, the **mere existence** of this mechanism shrinks regional autonomy — the possibility that "it could someday be used" alone is enough for regions to avoid head-on conflict with the state.
 
 ### Cause 5: Budgetary Centralization
 
@@ -106,7 +106,7 @@ Even if a National Assembly member is elected from a district, once elected they
 
 This is not an abstract critique of "the limits of representative democracy." It is a structural fact: legislative power (Art. 40) belongs to the National Assembly, and regions can only enact ordinances (Art. 117), so the National Assembly can narrow the scope of regional autonomy at any time through nationwide legislation.
 
-## 17.4 Applying the Discriminant: Is the National Kernel a Lock-in?
+## 16.4 Applying the Discriminant: Is the National Kernel a Lock-in?
 
 The four criteria of the lock-in discriminant are applied to the national kernel. The trapped subject is the **region**, and secondarily the **individual**.
 
@@ -123,7 +123,7 @@ The distinctive feature of the national kernel lock-in: **the trapped subject is
 
 ### Relationship to the War-Power Lock-in
 
-| Dimension | War-power lock-in (Ch. 16) | National kernel lock-in (this chapter) |
+| Dimension | War-power lock-in (Ch. 17) | National kernel lock-in (this chapter) |
 | --- | --- | --- |
 | Trigger condition | Wartime, armed conflict, emergency martial law | Every day, even in peacetime |
 | Triggering actor | President (Arts. 73, 76, 77) | National Assembly + President + Executive |
@@ -133,7 +133,7 @@ The distinctive feature of the national kernel lock-in: **the trapped subject is
 
 The war-power lock-in is the **highest-intensity mode that appears when the national kernel transitions to an exception state.** The national kernel describes the everyday coercion of peacetime, while the war kernel describes the moment that coercion is amplified into borders, conscription, martial law, and mobilization. If the war-power chapter dealt with the "emergency button," this chapter deals with **the everyday coercion that operates even in peacetime.**
 
-## 17.5 Composite Lock-in — The National Side
+## 16.5 Composite Lock-in — The National Side
 
 The composite lock-in pattern identified in the five cases also appears at the national level.
 
@@ -182,7 +182,7 @@ The four-step pattern repeats:
 3. The prescription (solution) must simultaneously unlock legislation, budget, and licensing — releasing only one yields a half-undone lock-in.
 4. The implementing actors (National Assembly, president) have no reason to reduce their own authority.
 
-## 17.6 National Decision Classification — Lock-in Intensity Hierarchy
+## 16.6 National Decision Classification — Lock-in Intensity Hierarchy
 
 We integrate the user-proposed classification into the framework. All national decisions are stratified by lock-in intensity, with approval thresholds rising geometrically toward the back.
 
@@ -194,11 +194,11 @@ We integrate the user-proposed classification into the framework. All national d
 | 4 | Status, visa, movement restrictions | High | National Assembly majority (individual laws) | National Assembly 3/5 + right-of-exit impact assessment + 2-year re-approval |
 | 5 | Conscription and mobilization | Very high | National Assembly consent (Military Service Act, etc.) | National Assembly 3/5 + prior specification of mobilization targets + 1-year re-approval |
 | 6 | Martial law, emergency orders | Very high | Ex post National Assembly approval (Art. 76 ③) | Ex post approval + 30-day re-approval + regional waiver request right |
-| 7 | War, troop deployment, preemptive strike | Supreme | President (Art. 73) + National Assembly consent (constitutionally) | Chapter 16's nine prescriptions + defensive/offensive war distinction + 30–90 day re-approval |
+| 7 | War, troop deployment, preemptive strike | Supreme | President (Art. 73) + National Assembly consent (constitutionally) | Chapter 17's nine prescriptions + defensive/offensive war distinction + 30–90 day re-approval |
 
 The core of this table: **the approval threshold must rise sharply toward the back.** The current structure does not sufficiently differentiate the approval thresholds of Tier 1 and Tier 7. General legislation requires a National Assembly majority, and war, too, (formally) only requires National Assembly consent. Decisions whose lock-in intensity differs by hundreds of times pass through similar procedures.
 
-## 17.7 Mandatory Regional Impact Assessment
+## 16.7 Mandatory Regional Impact Assessment
 
 We propose a system in which a National Assembly bill or presidential order that infringes on regional autonomy is automatically flagged.
 
@@ -229,7 +229,7 @@ This is a governance version of the Environmental Impact Assessment (EIA). Just 
 
 Without an impact assessment, it is invisible whether a national decision neutralizes a region. If it is invisible, it cannot be discussed; if it cannot be discussed, a brake cannot be applied.
 
-## 17.8 AI Is Not a Pro-Con Judge but a Lock-in Auditor
+## 16.8 AI Is Not a Pro-Con Judge but a Lock-in Auditor
 
 AI must not say "this law is good." That is the role of a governor.
 
@@ -248,11 +248,11 @@ AI's role is **measurement and disclosure**, not **judgment and enforcement.** T
 
 - If the AI model itself is controlled by the state, AI auditing becomes the state's self-audit.
 - Since those who delegate AI (the state, corporations) are the powerful, AI "independence" is structurally limited.
-- As noted in Chapter 16, if judgment is handed to AI, that judgment authority becomes a new power.
+- As noted in Chapter 17, if judgment is handed to AI, that judgment authority becomes a new power.
 
 Mitigation: AI audit results are cross-verified by **multiple auditors** (Section 9), and disagreements are disclosed. AI does not function as a single judge but as one tool among multiple audits.
 
-## 17.9 Regional Waiver (The Region's Right to Postpone)
+## 16.9 Regional Waiver (The Region's Right to Postpone)
 
 When national law kills a regional experiment, some regions should be able to apply for a deferral or alternative compliance for a certain period.
 
@@ -266,9 +266,9 @@ When national law kills a regional experiment, some regions should be able to ap
 ```
 National law passes
     ↓
-Regional impact assessment (17.7)
+Regional impact assessment (16.7)
     ↓
-Lock-in intensity tier classification (17.6)
+Lock-in intensity tier classification (16.6)
     ↓
 Tier 2 or above → regional waiver request right arises
     ↓
@@ -285,13 +285,13 @@ Waiver approved/denied (if denied, obligation to disclose reasons)
 - When the waiver period ends, national law applies, so a waiver is a deferral, not immunity.
 - Who defines the fundamental-rights floor — that defining authority is itself a cause of new lock-in.
 
-## 17.10 Separate Constitutional Lock on War Powers
+## 16.10 Separate Constitutional Lock on War Powers
 
-Chapter 16 proposed nine prescriptions for war powers. This chapter integrates those prescriptions into the national kernel structure.
+Chapter 17 proposed nine prescriptions for war powers. This chapter integrates those prescriptions into the national kernel structure.
 
 War must not be handled through ordinary political procedures. War decisions must be separately fixed at the top tier (Tier 7) of the national kernel.
 
-| Prescription (Ch. 16) | National kernel integration | Constitutional position |
+| Prescription (Ch. 17) | National kernel integration | Constitutional position |
 | --- | --- | --- |
 | Defensive/offensive war distinction | Internal distinction within Tier 7. Offensive war = Tier 7+ (a threshold higher than the top) | Constitutional amendment required |
 | Preemptive strike prohibition | Prohibition on sole presidential action (restriction of Art. 73). Parliamentary 3/5 + ex post referendum | Constitutional amendment required |
@@ -305,7 +305,7 @@ War must not be handled through ordinary political procedures. War decisions mus
 
 Items marked "constitutional amendment required" are structural changes that cannot be implemented under the current constitution (Arts. 73, 76, 77) alone. This explicitly marks that this framework is not a "bill for legal revision" but a **structural design.**
 
-## 17.11 Sunset Clause for Centralized Authority (Taken Authority Must Have an Expiration Date)
+## 16.11 Sunset Clause for Centralized Authority (Taken Authority Must Have an Expiration Date)
 
 Authority taken by the state under the pretext of crisis must automatically expire.
 To extend it, it must be proven again.
@@ -336,9 +336,9 @@ The authority to determine "has this authority expired?" is itself a cause of ne
 
 Mitigation: automate the expiry determination — when the deadline passes, it is legally voided automatically, and if not extended, its effect is lost. No judging actor is placed; **time itself is designed to be the judge.** However, to prevent tricks that evade "automatic expiry" (extending via emergency orders, etc.), a cooldown is imposed: for six months after expiry, emergency orders and emergency legislation of the same content are prohibited.
 
-## 17.12 The Coercion Paradox — National Kernel Version
+## 16.12 The Coercion Paradox — National Kernel Version
 
-The paradox was acknowledged in Section 12 and Chapter 16. In the national kernel, the paradox is most fundamental.
+The paradox was acknowledged in Section 12 and Chapter 17. In the national kernel, the paradox is most fundamental.
 
 "Attach a lock-in cost sheet to each national decision and give brakes to regions and individuals" — who enforces this principle?
 
@@ -360,25 +360,25 @@ This cycle does not break. What the framework can do is **slow it down.**
 This is not a solution either. If the state declares "emergency," these mechanisms can also be neutralized.
 However, when mechanisms exist, neutralizing them requires time and visibility. That time becomes the window for response.
 
-## 17.13 Remaining Challenges
+## 16.13 Remaining Challenges
 
 1. **Feasibility of constitutional amendment** — Structural changes to Tier 7 (war powers) require constitutional amendment. Amendment requires a 2/3 National Assembly majority + a referendum majority (Arts. 128, 129). That threshold itself is the national kernel's self-protection mechanism.
-2. **The international dimension** — The national kernel lock-in is difficult to resolve within a single state. Treaties, international norms, and sanctions create another layer above national law. This is the same international-dimension issue opened in Chapter 16.
+2. **The international dimension** — The national kernel lock-in is difficult to resolve within a single state. Treaties, international norms, and sanctions create another layer above national law. This is the same international-dimension issue opened in Chapter 17.
 3. **Enforcement of the sunset clause** — Concrete design is needed to prevent tricks that evade "automatic expiry."
 4. **Capture of the regional waiver** — If regional councils gain the authority to waive national law, the regional council itself can become a new lock-in actor.
 5. **Concrete mitigation of budgetary centralization** — Concrete revenue-source transfer design is needed to raise the degree of regional fiscal autonomy. This belongs to the field of public finance, but must be approached from a lock-in perspective.
 6. **Independence of AI auditing** — A structure must be designed in which AI audits national decisions but the actor controlling the AI is not the state. This is a technical and institutional challenge.
 
-## 17.14 One-Sentence Conclusion
+## 16.14 One-Sentence Conclusion
 
 **The problem is not that the president and the National Assembly are too strong; it is the structure that treats a single election as blanket consent to all future coercion.**
 
 The corrective direction is not to make the president virtuous, but to attach a lock-in cost sheet to each national decision and give brakes to regions, individuals, and those who cannot exit.
 
-The war power (Chapter 16) is the highest-intensity mode that appears when the national kernel transitions to an exception state.
+The war power (Chapter 17) is the highest-intensity mode that appears when the national kernel transitions to an exception state.
 The national kernel is the **everyday button** of peacetime. Locking the emergency-mode button alone is not enough — a lock-in cost sheet must also be attached to the everyday button that is pressed every day.
 Only then can a region have its "own operating system," and an individual become a subject rather than "an app on top of the national OS."
 
 ---
 
-*This chapter was written as a companion to Chapter 16 (War-Power Lock-in). Where Chapter 16 dealt with the national kernel's exception mode (war and emergency buttons), this chapter deals with the structural lock-in of national legislation, budget, and emergency powers that operates every day even in peacetime. The national kernel is the peacetime default kernel, and the war kernel is the highest-intensity exception mode within it. Constitutional provisions were verified directly at the National Law Information Center (law.go.kr). This chapter is not a "bill for legal revision" but a structural design document.*
+*This chapter was written as a companion to Chapter 17 (War-Power Lock-in). Where Chapter 17 dealt with the national kernel's exception mode (war and emergency buttons), this chapter deals with the structural lock-in of national legislation, budget, and emergency powers that operates every day even in peacetime. The national kernel is the peacetime default kernel, and the war kernel is the highest-intensity exception mode within it. Constitutional provisions were verified directly at the National Law Information Center (law.go.kr). This chapter is not a "bill for legal revision" but a structural design document.*
