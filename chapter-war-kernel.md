@@ -31,17 +31,17 @@ Data in this chapter was verified against open sources as of June 2026.
 | --- | --- | --- | --- |
 | UCDP (Uppsala) | 65 state-based conflicts, 13 war-level (1,000+ deaths) | 2025 | [UCDP/Uppsala](https://www.uu.se/en/press/press-releases/2026/2026-06-09-ucdp-record-number-of-conflicts-between-states) |
 | UCDP | 8 interstate conflicts (2 in 2023 → 8 in 2025, doubling two years running) | 2025 | same |
-| UCDP | ~244,600 battle deaths (highest since the 1994 Rwandan genocide) | 2025 | same |
+| UCDP | ~244,600 fatalities from organized violence (highest since the 1994 Rwandan genocide) | 2025 | same |
 | ACLED | 204,605 conflict events, 240,000+ deaths | 2024.12–2025.11 | [ACLED Conflict Index](https://acleddata.com/series/acled-conflict-index) |
 | ICRC | "A world succumbing to war" — 130 armed conflicts, 20+ lasting 20+ years | 2026 forecast | [ICRC](https://www.icrc.org/en/article/humanitarian-outlook-2026) |
 
-UCDP stated this is the highest figure since data collection began in 1946. Eight interstate conflicts is the highest since World War II. "Highest since 1946" is not rhetoric in this chapter; it is the exact language of the source.
+UCDP stated this is the highest figure since the 1994 Rwandan genocide. Eight interstate conflicts is the highest since World War II. "Highest since 1994" is not rhetoric in this chapter; it is the exact language of the source.
 
 ### Major Cases 2021–2026
 
 | War/Conflict | Period | Power Bottleneck | CFR Status |
 | --- | --- | --- | --- |
-| Russia–Ukraine | 2022–present | Putin-centric national security decisions initiating invasion, mobilization, prolonged war. Both nations' populations locked into war footing. UCDP: 94,700 deaths in 2025 (62% of global battle deaths) | Critical / Unchanging |
+| Russia–Ukraine | 2022–present | Putin-centric national security decisions initiating invasion, mobilization, prolonged war. Both nations' populations locked into war footing. UCDP: 94,700 battle-related deaths in 2025 (≈62% of global battle-related deaths) | Critical / Unchanging |
 | Myanmar Civil War | Post-2021 coup | Military junta, not elected government, controls the state. Entire population under armed rule and airstrike regime. ACLED: "most fragmented conflict" (1,200+ armed groups) | Limited / Unchanging |
 | Sudan Civil War | 2023–present | Not a president but two military elites (SAF vs. RSF) dividing the state. UCDP: mass civilian killings after El Fasher fell. One-sided violence deaths: 76,500 (highest in 30 years) | Limited / Unchanging |
 | Israel–Hamas/Gaza | 2023–present | Hamas attack, large-scale Israeli military response. Hostages, blockade, civilian casualties. Even in a democracy, war decisions concentrated in a narrow security inner circle. ACLED: Palestinian civilian exposure ranks #1 globally | Significant / Worsening |

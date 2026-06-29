@@ -163,9 +163,8 @@ def check_readme_completeness() -> list[str]:
     text = README.read_text(encoding="utf-8")
 
     for doc in CORE_DOCS:
-        # Look for a markdown link to this doc in README
-        pattern = f"]({doc})" or f"](./{doc})"
-        if doc not in text:
+        # Verify README contains a markdown link to this doc
+        if f"]({doc})" not in text and f"](./{doc})" not in text:
             errors.append(
                 f"README completeness: {doc} is missing from the Document Map"
             )
