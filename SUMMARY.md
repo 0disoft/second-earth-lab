@@ -1,119 +1,104 @@
-# 반주권 설계 (Anti-Sovereign Design) - 1페이지 요약
+# Anti-Sovereign Design — One-Page Summary
 
-> **어떤 권력도 사람의 생존조건을 쥔 채 설명 없이 묶어둘 수 없다.**
-> 용어가 막히면 [용어 매핑표](./docs/glossary.md)를 먼저 본다.
+> **No power may hold a person's survival conditions hostage without explanation and bind them without recourse.**
+> If terminology is unclear, consult the [glossary](./docs/glossary.md) first.
 
-## 한 문장
+## In One Sentence
 
-반주권 설계는 국가, 플랫폼, 병원, 학교, 가족처럼 서로 달라 보이는 권력을
-**사람이 빠져나갈 수 있는가**라는 하나의 질문으로 다시 읽는 분석 도구다.
+Anti-Sovereign Design is an analytical instrument that rereads power structures — nations, platforms, hospitals, schools, families — through a single question: **can the individual leave?**
 
-주권을 없애겠다는 말은 거짓이다. 이 프레임워크의 목표는 권력이 구조적으로
-고정되기 전에 락인된 사람이 설명을 요구하고, 멈추고, 다투고, 옮겨갈 수
-있도록 하는 것이다.
+The promise to abolish sovereignty is false. The goal of this framework is to ensure that, before power structurally hardens, the locked-in individual can demand explanation, halt proceedings, dispute, and move.
 
-## 락인 판별식
+## The Lock-in Discriminant
 
 ```text
-못 나감 + 룰을 당함 + 따져도 안 먹힘 + 살 곳을 쥠 = 보호 대상 락인
+Cannot exit + Subject to imposed rules + Challenge produces no change +
+Survival conditions held by another = Lock-in requiring intervention
 ```
 
-- **못 나감**: 떠나는 비용이 너무 큰가?
-- **룰을 당함**: 규칙을 내가 정하지 않았는데 따라야 하는가?
-- **따져도 안 먹힘**: 항의해도 실질적으로 바뀌지 않는가?
-- **살 곳을 쥠**: 상대가 비자, 계정, 치료, 돌봄, 학력처럼 생존 기반을 쥐는가?
+- **Cannot exit**: Is the cost of leaving prohibitively high?
+- **Subject to imposed rules**: Must one follow rules one did not make?
+- **Challenge produces no change**: Does challenge fail to produce real change?
+- **Survival conditions held by another**: Does the other party control the basis of survival — visa, account, treatment, care, credential?
 
-네 번째 항목이 금고와 감옥을 가른다. 그냥 불편한 계약이 아니라, 살 곳을 쥔
-상대가 나가는 문까지 잠그면 공적 문제가 된다.
+The fourth prong separates a safe from a prison. When the party holding one's survival conditions also locks the exit door, it becomes a public problem, not merely an inconvenient contract.
 
-## 왜 필요한가
+## Why This Is Needed
 
-선거 한 번, 약관 동의 한 번, 입학 한 번, 취업 한 번이 미래의 모든 강제에 대한
-백지위임장처럼 쓰인다. 그래서 겉으로는 합법이고 자율인데, 실제로는 못 나가는
-사람이 생긴다.
+A single election, a single terms-of-service click, a single enrollment, a single job acceptance is treated as a blank check for all future coercion. The structure is formally legal and voluntary, yet it produces people who cannot leave.
 
-이 프레임워크는 "이 제도가 선한가?"보다 먼저 묻는다.
+This framework asks, before asking "is this institution good?":
 
 ```text
-누가 누구의 탈출 비용을 올렸나?
-그 비용은 설명됐나?
-다툴 수 있나?
-멈출 수 있나?
-못 나가면 그 사실이 보이나?
+Who raised whose exit cost?
+Was that cost explained?
+Can it be disputed?
+Can it be halted?
+If one cannot leave, is that fact visible?
 ```
 
-## 다섯 사례
+## Five Cases
 
-| 사례 | 락인의 본체 | 탈출권이 요구하는 것 |
+| Case | Lock-in Substrate | What the Right of Exit Demands |
 | --- | --- | --- |
-| E-7 비자 | 체류 허가와 고용주의 결합 | 고용주 동의 없이 옮길 권리 |
-| 플랫폼 계정 정지 | 계정, 결제, 평판, 네트워크 | 데이터와 평판을 들고 나갈 권리 |
-| 의료 기록 이전 | 병원 인프라와 기록 인정 | 기록을 옮기고 새 병원이 인정하게 할 권리 |
-| 돌봄 의존 | 관계와 대체 돌봄 부재 | 나가는 사람과 남는 사람 모두의 생존조건 |
-| 학력 인증 독점 | 학교, 입시, 자격 인정 | 다른 배움도 인정받을 경로 |
+| E-7 Visa | Residence permit linked to employer | Right to move without employer consent |
+| Platform Suspension | Account, payments, reputation, network | Right to take data and reputation elsewhere |
+| Medical Record Transfer | Hospital infrastructure and record recognition | Right to transfer records and have them recognized |
+| Caregiving Dependency | Relationship and absence of alternative care | Survival conditions for both the one who leaves and the one who stays |
+| Credential Monopoly | Schools, admissions, qualification recognition | A path for alternative learning to be recognized |
 
-다섯 사례의 공통 패턴은 같다. 각 주체는 자기 일만 했다고 말하지만, 그 교차점에서
-락인이 생긴다. 그래서 해결책도 한쪽만 풀면 안 되고 교차점을 같이 풀어야 한다.
+The common pattern across all five cases is identical. Each actor claims to have done only its own job, but lock-in emerges at the intersection. Prescriptions must therefore address the intersection, not one side alone.
 
-## 국가와 전쟁
+## Nation and War
 
-지역이 아무리 주민 합의와 AI 조언으로 좋은 규칙을 만들어도, 국가가 법, 예산,
-인허가, 비상권으로 전부 덮으면 지역 자치는 무력화된다. 이 문제는
-[국가 최소 규칙](./chapter-national-kernel.md) 장에서 다룬다.
+No matter how well a region crafts rules through resident consensus and AI counsel, if the state can override everything through law, budget, licensing, and emergency powers, regional autonomy is neutralized. This problem is addressed in the [National Kernel](./chapter-national-kernel.md) chapter.
 
-전쟁, 계엄, 동원은 그 국가 권한이 비상 모드로 바뀌는 순간이다. 평소의 탈출권,
-항의권, 이동권이 "안보" 이름으로 한꺼번에 멈춘다. 이 문제는
-[전쟁 버튼](./chapter-war-kernel.md) 장에서 따로 다룬다.
+War, martial law, and mobilization are the moment when that state authority shifts to emergency mode. The everyday rights of exit, challenge, and movement are all suspended at once under the name of national security. This problem is addressed separately in the [War-Power Kernel](./chapter-war-kernel.md) chapter.
 
 ```text
-[17장] 국가 최소 규칙: 평시에 매일 작동
-        └─ 비상 전환
-[16장] 전쟁 버튼: 전쟁, 계엄, 동원 때 탈출권을 일괄 정지
+[Ch. 17] National Kernel: operates every day in peacetime
+        └─ emergency transition
+[Ch. 16] War-Power Kernel: suspends exit rights en masse during war, martial law, and mobilization
 ```
 
-## 최소 규칙
+## The Kernel
 
-지역과 공동체는 각자의 합의와 AI 조언으로 세금, 복지, 교육, 주거, 교통 방식을
-채울 수 있어야 한다. 다만 사람을 가두는 장치는 최소 규칙이 막아야 한다.
+Regions and communities should be able to fill in their own approaches to taxation, welfare, education, housing, and transportation through their own consensus and AI counsel. But mechanisms that lock people in must be blocked by the kernel.
 
-최소 규칙이 강제해야 하는 것은 좋은 삶의 내용이 아니라 최소 탈출권이다.
+What the kernel enforces is not a vision of the good life but the minimal right of exit.
 
-- 설명 요구권
-- 이의제기권
-- 긴급 집행정지권
-- 기록과 데이터 이동권
-- 대리 발언권
-- 대체 생존조건
-- 인정 경로 다원화
-- 지역 유예권과 중앙권한 만료제
+- Right to demand explanation
+- Right to challenge
+- Right to emergency injunctive suspension
+- Right to port records and data
+- Right to proxy voice
+- Right to alternative survival conditions
+- Right to plural recognition pathways
+- Regional waiver and sunset clause for centralized authority
 
-## AI의 자리
+## The Place of AI
 
-AI는 통치자가 아니다. "이 정책이 정답입니다"라고 말하면 왕의 도구가 된다.
-여기서 AI의 자리는 락인된 사람의 변호사이자 락인 감사관이다.
+AI is not a ruler. The moment it says "this policy is the correct answer," it becomes the king's instrument. Here, the place of AI is as advocate for the locked-in and as lock-in auditor.
 
-AI가 해야 할 말은 이것에 가깝다.
+What AI should say is closer to this:
 
 ```text
-이 규칙은 A집단의 탈출 비용을 올린다.
-이 데이터는 다른 곳으로 옮길 수 없다.
-이 항의 절차는 실제 구제까지 이어지지 않는다.
-이 권한은 만료일이 없다.
+This rule raises the exit cost for group A.
+This data cannot be moved elsewhere.
+This challenge procedure does not lead to actual remedy.
+This authority has no expiration date.
 ```
 
-## 한계
+## Limits
 
-이 프레임워크의 가장 큰 딜레마는 단순하다. "사람을 가두지 말라"는 원칙을
-강제하려면 누군가 권력을 가져야 하고, 그 권력이 다시 새 락인의 원인이 된다.
+The central dilemma of this framework is straightforward. Enforcing the principle "do not lock people in" requires someone to hold power, and that power becomes the seed of a new lock-in.
 
-그래서 이 문서는 완벽한 해방을 약속하지 않는다. 대신 권력 집중이 구조적으로
-고정되기 전에 풀 수 있는 기회를 남기고, 고정되는 시점이 알려지도록 만들고,
-그 동안 사람이 직접 개입할 수 있는 설계를 제안한다.
+This document therefore does not promise perfect liberation. Instead, it proposes preserving opportunities to loosen lock-in before power structurally hardens, making the moment of hardening visible, and ensuring that human beings can intervene directly in the interim.
 
-## 어디부터 읽을까
+## Where to Begin Reading
 
-- 전체 구조: [framework.md](./framework.md)
-- 빠른 적용: [case-template.md](./case-template.md)
-- 국가 권한 문제: [chapter-national-kernel.md](./chapter-national-kernel.md)
-- 전쟁과 계엄 문제: [chapter-war-kernel.md](./chapter-war-kernel.md)
-- 강제 딜레마: [appendix-coercion-paradox.md](./appendix-coercion-paradox.md)
+- Full structure: [framework.md](./framework.md)
+- Quick application: [case-template.md](./case-template.md)
+- The problem of national authority: [chapter-national-kernel.md](./chapter-national-kernel.md)
+- The problem of war and martial law: [chapter-war-kernel.md](./chapter-war-kernel.md)
+- The coercion paradox: [appendix-coercion-paradox.md](./appendix-coercion-paradox.md)

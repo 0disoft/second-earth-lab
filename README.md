@@ -1,182 +1,176 @@
-# 반주권 설계 (Anti-Sovereign Design)
+# Anti-Sovereign Design
 
-> 주권을 없애겠다는 말은 거짓이다.
-> 사람이 락인되는 속도를 늦추고, 문을 열어두고,
-> 사람들이 더 나은 곳으로 스스로 옮겨갈 수 있게 만드는 설계다.
+> The promise to abolish sovereignty is false.
+> What can be done is to slow the rate at which people become locked in,
+> to keep the doors open,
+> and to ensure that individuals can move to better ground under their own power.
 
-## 30초 요약
+## In Thirty Seconds
 
-반주권 설계 (Anti-Sovereign Design)는 **사람이 제도 안에 락인되는 순간을 찾고,
-그 락인을 줄이는 장치를 설계하는 분석 도구**다. 국가·지역·플랫폼·회사·병원·학교·가족처럼
-서로 달라 보이는 권력 구조를 같은 락인 판별식으로 비교한다.
+Anti-Sovereign Design is **an analytical instrument that identifies the moments when individuals become locked into institutions and designs mechanisms to reduce that lock-in.** It applies a single lock-in discriminant to power structures that appear unrelated — nations, regions, platforms, corporations, hospitals, schools, families — and sets them on the same table for comparison.
 
 ```text
-못 나감 + 룰을 당함 + 따져도 안 먹힘 + 살 곳을 쥠 = 보호 대상 락인
+Cannot exit + Subject to imposed rules + Challenge produces no change +
+Survival conditions held by another = Lock-in requiring intervention
 ```
 
-이 저장소는 이 확인표를 5개 사례와 국가/전쟁 커널에 적용해, 어디서 탈출권이
-막히고 어떤 최소 규칙이 필요한지 정리한다.
+This repository applies that diagnostic to five case studies and two structural chapters on national and war-power kernels, documenting where the right of exit is blocked and what minimal rules would unblock it.
 
-> **어려운 말은?** [용어 매핑표](./docs/glossary.md)에서
-> 어려운 말과 쉬운 말을 비교해 둔다.
+> **Unfamiliar with the terminology?** The [glossary](./docs/glossary.md) maps every technical term to a plain-language definition.
 
-## 먼저 읽기
+## Where to Start
 
-- **처음 5분**: [SUMMARY.md](./SUMMARY.md)
-- **개념 전체**: [framework.md](./framework.md)
-- **국가 권한 문제**: [chapter-national-kernel.md](./chapter-national-kernel.md)
-- **전쟁/계엄/동원 문제**: [chapter-war-kernel.md](./chapter-war-kernel.md)
-- **새 사례 작성**: [case-template.md](./case-template.md)
+- **First five minutes**: [SUMMARY.md](./SUMMARY.md)
+- **The full framework**: [framework.md](./framework.md)
+- **The problem of national authority**: [chapter-national-kernel.md](./chapter-national-kernel.md)
+- **The problem of war, martial law, and mobilization**: [chapter-war-kernel.md](./chapter-war-kernel.md)
+- **Writing a new case study**: [case-template.md](./case-template.md)
 
-## 이 문서가 말하는 것 (3줄 요약)
+## What This Repository Argues (Three Lines)
 
-1. **한 번 들어가면 나오기 힘든 곳**이 많다 — 비자, 플랫폼 계정, 병원, 학교, 돌봄.
-2. 그곳에서 **나갈 권리(탈출권)**가 있어야 하고, 나가면 **갈 곳(대체 생존조건)**이 있어야 한다.
-3. 나갈 길이 없으면 그건 **락인(lock-in)**이다. 이 문서는 락인을 **찾아내고, 재고, 풀어주는** 방법을 다룬다.
+1. **There are many places that, once entered, are nearly impossible to leave** — visas, platform accounts, hospitals, schools, caregiving arrangements.
+2. Where exit is possible, **the right to leave must be accompanied by somewhere to go** (alternative survival conditions); otherwise, exit is abandonment, not liberation.
+3. Where there is no way out, the structure is a **lock-in**. This repository is about finding lock-in, measuring it, and designing mechanisms that loosen it.
 
-## 문서 구성
+## Document Map
 
-> 빠른 진입: [SUMMARY.md](./SUMMARY.md) — 1페이지 요약
+> Quick entry: [SUMMARY.md](./SUMMARY.md) — a one-page overview
 
-| 문서 | 줄 수 | 내용 |
+| Document | Lines | Content |
 | --- | --- | --- |
-| [SUMMARY.md](./SUMMARY.md) | 119 | 1페이지 요약 — 무엇인가, 어떻게 쓰는가, 5사례 검증 |
-| [framework.md](./framework.md) | 709 | v4 프레임워크 전체 — 명제, 락인 판별식, 점수화, 방어 장치, 실험 엔진, AI 역할 |
-| [case-e7-visa.md](./case-e7-visa.md) | 202 | 첫 사례 — 한국 E-7 비자의 고용주-국가 합작 락인 분석 |
-| [case-platform-suspension.md](./case-platform-suspension.md) | 422 | 두 번째 사례 — 플랫폼 계정 정지, 땅 없는 힘 분석 |
-| [case-medical-lock-in.md](./case-medical-lock-in.md) | 427 | 세 번째 사례 — 의료 기록 옮기기 불가, 물리 락인 분석 |
-| [case-care-lock-in.md](./case-care-lock-in.md) | 432 | 네 번째 사례 — 돌봄 의존, 관계적 락인, 나가면 방치되는 딜레마 |
-| [case-education-lock-in.md](./case-education-lock-in.md) | 481 | 다섯 번째 사례 — 학력 인정 독점, 인정 시장 락인 분석 |
-| [chapter-war-kernel.md](./chapter-war-kernel.md) | 291 | 전쟁 버튼 — 국가 최소 규칙의 가장 센 비상 모드. 전쟁이 나면 모든 탈출권이 멈춤. 2021-2026 전쟁 데이터(UCDP/ACLED/ICRC/CFR)로 검증 |
-| [chapter-national-kernel.md](./chapter-national-kernel.md) | 483 | 국가 최소 규칙 — 평소에 매일 작동하는 규칙. 법·예산·비상 권한이 지역을 누른다. 전쟁 버튼(16장)은 이 규칙의 비상 모드. 한국 헌법(제40, 73, 76, 77, 117조) 직접 검증 |
-| [appendix-coercion-paradox.md](./appendix-coercion-paradox.md) | 263 | 부록 — 강제 딜레마 심화: 5사례에서 딜레마의 구체적 모습, 4가지 얼굴, 딜레마와 함께 살기 |
-| [case-template.md](./case-template.md) | 225 | 새 사례 분석 템플릿 — 10섹션 표준 구조 |
-| **총합** | **4,054** | (README, GAME_DESIGN.md, docs/glossary.md 제외. README 포함 시 4,236줄) |
+| [SUMMARY.md](./SUMMARY.md) | 119 | One-page overview — what it is, how to use it, five-case verification |
+| [framework.md](./framework.md) | 709 | The complete v4 framework — propositions, lock-in discriminant, scoring, defensive mechanisms, experiment engine, the role of AI |
+| [case-e7-visa.md](./case-e7-visa.md) | 202 | First case — the employer-state composite lock-in in South Korea's E-7 visa |
+| [case-platform-suspension.md](./case-platform-suspension.md) | 422 | Second case — platform account suspension and non-territorial sovereignty |
+| [case-medical-lock-in.md](./case-medical-lock-in.md) | 427 | Third case — medical record portability and physical infrastructure lock-in |
+| [case-care-lock-in.md](./case-care-lock-in.md) | 432 | Fourth case — caregiving dependency, relational lock-in, and the exit-as-abandonment dilemma |
+| [case-education-lock-in.md](./case-education-lock-in.md) | 481 | Fifth case — credential monopoly and the recognition regime lock-in |
+| [chapter-war-kernel.md](./chapter-war-kernel.md) | 291 | The war button — the highest-intensity emergency mode of the national kernel. When war is declared, all exit rights are suspended. Verified against 2021–2026 conflict data (UCDP/ACLED/ICRC/CFR). |
+| [chapter-national-kernel.md](./chapter-national-kernel.md) | 483 | The national kernel — the rules that operate every day in peacetime. Law, budget, and emergency powers press against regional autonomy. The war button (Ch. 16) is the emergency mode of this kernel. Verified directly against the South Korean Constitution (Arts. 40, 73, 76, 77, 117). |
+| [appendix-coercion-paradox.md](./appendix-coercion-paradox.md) | 263 | Appendix — the coercion paradox in depth: its concrete form across five cases, its four faces, and the proposition that the framework lives with the paradox rather than resolving it. |
+| [case-template.md](./case-template.md) | 225 | Template for new case studies — a ten-section standard structure |
+| **Total** | **4,054** | (Excluding README.md, GAME_DESIGN.md, docs/glossary.md. Including README: 4,236 lines.) |
 
-> 총합은 README.md와 docs/glossary.md를 제외한 프레임워크 문서 줄 수 기준이다. GAME_DESIGN.md는 게임 기획안이므로 프레임워크 문서 총합에서 제외한다.
+> The total counts framework documents only, excluding README.md and docs/glossary.md. GAME_DESIGN.md is a game design draft and is excluded from the framework total.
 >
-> framework.md는 5사례 검증 후 리뷰를 거쳐 확장됨.
-> 전쟁 버튼 장은 국가 최소 규칙의 가장 센 비상 모드를 다룬다. framework.md 본문이
-> 아닌 별도 파일로 분리했으나, 섹션 16으로 번호를 부여해 정식 장으로 취급한다.
-> 국가 최소 규칙 장은 평소에 작동하는 규칙을 다룬다 — 법·예산·비상 권한이 매일
-> 작동하는 구조적 락인. 16장(전쟁 버튼)은 이 규칙의 비상 모드다. 한국 헌법 조항을
-> 직접 검증했으며, 섹션 17로 번호를 부여해 정식 장으로 취급한다.
+> framework.md was expanded after five-case verification and review.
+> The war-power chapter addresses the highest-intensity emergency mode of the national kernel. It is
+> maintained as a separate file but numbered as Section 16 and treated as a formal chapter.
+> The national-kernel chapter addresses the peacetime rules that operate every day — law, budget, and
+> emergency powers as structural lock-in. The war-power chapter (16) is the emergency mode of these
+> rules. It is verified directly against South Korean constitutional provisions and numbered as Section 17.
 
 ```text
-[17장] 국가 최소 규칙: 평소에 매일 작동
-        └─ 비상 전환
-[16장] 전쟁 버튼: 전쟁·계엄·동원 때 탈출권을 가장 세게 멈춤
+[Ch. 17] National Kernel: operates every day in peacetime
+        └─ emergency transition
+[Ch. 16] War-Power Kernel: the most intense suspension of exit rights during war, martial law, and mobilization
 ```
 
-## 사례 검증 현황
+## Case Verification Status
 
-다섯 사례가 이 프레임워크가 어디든 통한다는 것을 검증한다 — 지역, 땅 없는 힘, 물리적,
-관계, 인정 시장에 같은 락인 판별식이 적용되며, 합작 락인 구조가 다섯 영역에서
-동일하게 나타난다.
+Five cases verify that this framework applies universally — the same lock-in discriminant works across territorial, non-territorial, physical, relational, and recognition-based power, and the composite lock-in structure appears identically in all five domains.
 
-| 사례 | 힘의 유형 | 락인의 본체 | 검증된 것 |
+| Case | Power Type | Lock-in Substrate | What It Verified |
 | --- | --- | --- | --- |
-| E-7 비자 | 지역 (땅 기반) | 체류 허가 + 고용 결합 | 고용주-국가 합작 락인, 락인 열지도, 해결책을 행정 표로 바꾸기 |
-| 플랫폼 계정 정지 | 땅 없는 힘 (네트워크 기반) | 계정 + 네트워크 효과 | 땅 없는 힘, 계정=디지털 시민권, 갈라탈 때 힘 차이, 4개 짝꿍 구조 |
-| 의료 기록 이전 | 물리적 (인프라 기반) | 물리 인프라 + 기록 | 데이터 가져가기 3층 부재, 물리 인프라 갈라탈 수 없음, 5개 짝꿍 구조, 환자가 모름 |
-| 돌봄 의존 | 관계 (관계 기반) | 관계 + 대체 돌봄 없음 | 관계적 락인, 나가면 피해, 대신 말해주는 권리, 나가면 갈 곳이 있어야 함, 5개 짝꿍 구조 |
-| 학력 인증 독점 | 인정 시장 (인정 기반) | 인정 독점 + 입시 트랙 | 제도를 바꾸기 가장 힘든 사례, 세 갈래 관계적 락인, 인정 시장 여러 곳으로, 5개 짝꿍 구조 |
+| E-7 Visa | Territorial (land-based) | Residence permit + employment linkage | Employer-state composite lock-in, lock-in heatmap, translating prescriptions into administrative tables |
+| Platform Suspension | Non-territorial (network-based) | Account + network effects | Non-territorial sovereignty, account as digital citizenship, fork-cost asymmetry, four composite structures |
+| Medical Record Transfer | Physical (infrastructure-based) | Physical infrastructure + records | Absence of 3-layer data portability, physical infrastructure cannot be forked, five composite structures, patient information asymmetry |
+| Caregiving Dependency | Relational (relationship-based) | Relationship + absence of alternative care | Relational lock-in, exit-as-harm, proxy voice, alternative survival conditions as precondition for exit, five composite structures |
+| Credential Monopoly | Recognition-based | Credential monopoly + admissions track | The hardest case to reform, three-pronged relational lock-in, recognition pluralism, five composite structures |
 
-### 다섯 사례가 공통으로 입증한 것
+### What the Five Cases Collectively Prove
 
-1. **락인 판별식이 다섯 가지 힘 유형에 모두 적용** — 지역, 땅 없는 힘, 물리적, 관계, 인정 시장
-2. **합작 락인의 4단계 패턴** — 각 주체는 자기 역할만 함, 교차점에서 생김, 동시에 풀어야 함, 실행 주체 딜레마 반복
-3. **락인 위험도는 연속값** — 같은 구조에서 사용자/환자/돌봄/학생 유형에 따라 위험도가 다름
-4. **데이터 가져가기 3층이 진짜 막힘** — 기술적으로만 가져갈 수 있고, 의미·제도적으로는 못 가져감
-5. **부문별로 갈라타는 방법이 다름** — 디지털(진짜 갈라타기), 의료(인정+접근), 물리(접근 보장만), 관계(대체 돌봄 인프라), 인정(인정 다원화)
-6. **탈출권은 상황에 따라 늘어남** — 단순 이탈 → 데이터 동반 → 인정 동반 → 대체 살 곳 동반 → 인정+트랙 보호
-7. **강제 딜레마가 모든 영역에서 반복** — 해결책을 채택할 권한을 가진 주체가 해결책 때문에 자기 권한이 줄어드는 구조
+1. **The discriminant applies to all five power types** — territorial, non-territorial, physical, relational, and recognition-based.
+2. **The composite lock-in follows a four-stage pattern** — each actor performs only its own role, lock-in emerges at the intersection, prescriptions must address all actors simultaneously, and the coercion paradox recurs at the implementation stage.
+3. **Lock-in severity is a continuous value** — the same structure produces different severity depending on user, patient, caregiving, or student type.
+4. **The 3-layer data portability model is the real bottleneck** — technical export alone is insufficient without semantic and institutional portability.
+5. **Fork principles differ by domain** — digital (true fork), medical (recognition + access), physical (access guarantee only), relational (alternative care infrastructure), recognition (recognition pluralism).
+6. **The right of exit expands with context** — from simple departure to data accompaniment to recognition accompaniment to alternative survival conditions to recognition + track protection.
+7. **The coercion paradox recurs in every domain** — the authority with the power to dismantle a lock-in is the one whose own authority would be diminished by the prescription.
 
-## 핵심 한 줄
+## The One-Line Thesis
 
-**어떤 권력도 사람의 살 곳을 쥔 채 설명 없이 묶어둘 수 없다.**
-락인 위험은 계속 재어야 하고, 그 재는 권한은 따로 떼어놓아야 하며,
-방어장치는 서로 다른 시간표로 작동해야 한다.
-시스템은 하나의 선을 향해 통치되는 게 아니라,
-나갈 수 있는 실험들이 공개 비교되며 개선되어야 한다.
+**No power may hold a person's survival conditions hostage without explanation and bind them without recourse.**
+Lock-in risk must be measured continuously, the authority to measure must be independently constituted,
+and defensive mechanisms must operate on different timelines from the power they constrain.
+The system must not be governed toward a single line but toward a field of exit-capable experiments,
+publicly compared and iteratively improved.
 
-## 프레임워크의 15개 섹션 + 전쟁 버튼 장 + 국가 최소 규칙 장
+## The Fifteen Sections + War-Power Chapter + National-Kernel Chapter
 
-| # | 섹션 | 핵심 |
+| # | Section | Essence |
 | --- | --- | --- |
-| 1 | 출발점 | 도망칠 수 없는 사람을 먼저 설계하라 |
-| 2 | 여섯 핵심 명제 | 권력·락인·탈출권 차이(대체 살 곳 동반·관계적 락인·대신 말해주는 권리)·투명성 부족·막힘 찾기·락인 가정 |
-| 3 | 땅 없는 힘 | 영토 없는 힘, 계정=디지털 시민권 |
-| 4 | 락인 판별식 | 못 나감 + 룰을 당함 + 따져도 안 먹힘 + 살 곳을 쥠 |
-| 5 | 락인 위험도 점수 | 둘로 나뉘는 게 아니라 연속값, 기준선을 정하는 건 정치적 |
-| 6 | 합작 락인 | 교차점에서 생기는 락인, 4단계 공통 패턴, 15개 짝꿍 구조 |
-| 7 | 재는 게 통치다 | 지표도 헌법처럼, 재는 권한 헌법화 |
-| 8 | 최소 규칙 설계 | 강제할 것(11항) vs 강제하지 않을 것, 프로토콜, 부문별 갈라타기(5부문), 갈라탈 때 힘 차이, 데이터 가져가기 3층, 인정 시장 여러 곳으로 |
-| 9 | 감사 시스템 | 분쟁을 숨기지 않는 구조, BFT 한계 |
-| 10 | 실험 엔진 | 실험-비교-확산 루프, 거버넌스 IRB |
-| 11 | AI의 역할 | 통치자가 아니라 탈출권 변호사 |
-| 12 | 강제 딜레마 | 완벽한 해방을 약속하지 않고, 락인이 구조적으로 고정되기 전에 풀 기회를 남김 |
-| 13 | 반주권 설계 헌법 | 다섯 번째 조건: 권리의 가시성 |
-| 14 | 적용 락인 판별식 | 국가·회사·플랫폼·병원·가족·학교 표 (락인 유형+짝꿍 구조 열) + 사용법 6단계 |
-| 15 | 프레임워크의 한계 | 완벽한 사회가 아니라, 락인이 고정되기 전에 풀 기회를 남기는 설계 |
-| 16 | 전쟁 버튼 | 별도 장 — 국가 최소 규칙의 가장 센 비상 모드. 전쟁이 나면 모든 탈출권이 멈춤. 9가지 해결책(방어/공격 구분, 선제공격 금지, 재승인, 동원 별도 승인, 피난권 보장 등) |
-| 17 | 국가 최소 규칙 | 별도 장 — 국가 최소 규칙의 평소 모드. 법·예산·비상 권한이 매일 작동하는 구조적 락인. 16장(전쟁 버튼)은 이 규칙의 비상 모드. 한국 헌법(제40, 73, 76, 77, 117조) 직접 검증. 국가 결정 분류(7단계), 지역 영향 조사, AI 락인 확인관, 지역이 잠깐 미루는 권리, 가져간 권한은 끝나는 날이 있음 |
+| 1 | Point of Departure | Design first for those who cannot flee |
+| 2 | Six Core Propositions | Power · Lock-in · Right of exit (alternative survival conditions · relational lock-in · proxy voice) · Transparency deficit · Bottleneck identification · Lock-in assumption |
+| 3 | Non-Territorial Sovereignty | Power without territory, account as digital citizenship |
+| 4 | Lock-in Discriminant | Cannot exit + subject to imposed rules + challenge produces no change + survival conditions held by another |
+| 5 | Lock-in Severity Score | Not binary but continuous; where to draw the line is a political question |
+| 6 | Composite Lock-in | Lock-in that emerges at the intersection, four-stage common pattern, fifteen composite structures |
+| 7 | Measurement as Governance | Indicators are constitutional; the right to measure must be constitutionalized |
+| 8 | Kernel Design | What to enforce (11 items) vs. what not to enforce, protocols, domain-specific fork principles (5 domains), fork-cost asymmetry, 3-layer data portability, recognition pluralism |
+| 9 | Audit System | A structure that does not conceal disputes; the limits of Byzantine fault tolerance |
+| 10 | Experiment Engine | Experiment–compare–diffuse loop, governance IRB |
+| 11 | The Role of AI | Not a ruler but an exit-rights advocate |
+| 12 | The Coercion Paradox | No promise of perfect liberation; instead, preserving opportunities to loosen lock-in before it structurally hardens |
+| 13 | Anti-Sovereign Design Constitution | The fifth condition: visibility of rights |
+| 14 | Applied Lock-in Discriminant | Tables for state, corporation, platform, hospital, family, school (lock-in type + composite structure columns) + six-step usage |
+| 15 | Limits of the Framework | Not a perfect society but a design that preserves opportunities to loosen lock-in before it structurally hardens |
+| 16 | War-Power Kernel | Separate chapter — the highest-intensity emergency mode of the national kernel. When war is declared, all exit rights are suspended. Nine prescriptions (defensive vs. offensive distinction, prohibition of first strike, reauthorization, separate mobilization approval, right to flee, etc.) |
+| 17 | National Kernel | Separate chapter — the peacetime mode of the national kernel. Law, budget, and emergency powers as structural lock-in operating every day. The war-power chapter (16) is the emergency mode of this kernel. Verified directly against the South Korean Constitution (Arts. 40, 73, 76, 77, 117). Seven-stage classification of national decisions, regional impact assessment, AI lock-in auditor, regional waiver, sunset clause for centralized authority |
 
-> **16장과 17장의 관계**: 국가 최소 규칙(17장)은 평소에 작동하는 규칙이고,
-> 전쟁 버튼(16장)은 국가 최소 규칙이 비상 모드로 전환될 때 나타나는 가장 센
-> 모드다. 17장이 16장의 상위가 아니라, **16장이 17장의 비상 모드**다.
+> **Relationship between Ch. 16 and Ch. 17**: The national kernel (Ch. 17) is the set of rules
+> that operate in peacetime. The war-power kernel (Ch. 16) is the most intense mode that
+> emerges when the national kernel transitions to emergency. Ch. 17 is not subordinate to
+> Ch. 16 — **Ch. 16 is the emergency mode of Ch. 17.**
 
-## 탈출권의 진화 — 5사례 비교
+## Evolution of the Right of Exit — Five-Case Comparison
 
-| 사례 | 탈출권의 형태 | 핵심 요구 |
+| Case | Form of Exit Right | Core Requirement |
 | --- | --- | --- |
-| E-7 | 비자에서 빠져나갈 권리 | 단순 이탈 |
-| 플랫폼 | 데이터를 가져갈 권리 | 이탈 + 데이터 |
-| 의료 | 기록을 옮길 권리 | 이탈 + 기록 + 인정 |
-| 돌봄 | 대체 살 곳 동반 이탈 | 이탈 + 대체 돌봄 + 방치 방지 |
-| 교육 | 인정이 따라가는 이탈 | 이탈 + 기록 + 인정 + 입시 트랙 보호 |
+| E-7 | Right to leave the visa regime | Simple departure |
+| Platform | Right to take your data | Departure + data |
+| Medical | Right to transfer records | Departure + records + recognition |
+| Caregiving | Exit accompanied by alternative survival conditions | Departure + alternative care + prevention of abandonment |
+| Education | Exit with recognition intact | Departure + records + recognition + admissions-track protection |
 
-탈출권이 갈수록 요구하는 것이 많아진다. 이건 프레임워크가 "탈출권만 있으면
-된다"에서 시작해서, 실제 적용하면서 **탈출권이 상황에 따라 다른 무게를
-가짐**을 발견한 과정이다.
+The right of exit demands more as the cases progress. The framework began with the premise that "exit is enough" and discovered, through application, that **exit carries different weight in different contexts**.
 
-## 지적 계보
+## Intellectual Lineage
 
-이 프레임워크의 조각은 기존 이론에 있다. 독특한 것은 조각 자체가 아니라,
-**락인 판별식 하나로 국가·플랫폼·회사·병원·학교·가족을 같은 테이블에 올리는 방식**이다.
+The components of this framework exist in prior theory. What is distinctive is not any single component but **the method of placing nations, platforms, corporations, hospitals, schools, and families on the same table using a single lock-in discriminant.**
 
-- Hirschman — 출구·발언·충성: 출구가 쉬워야 정치가 개선된다
-- Nozick — 최소국가: 국가 기능의 최소화
-- Rawls — 무지의 베일: 최악의 위치에 있는 사람 기준으로 설계
-- Mouffe — 적대적 민주주의: 합의가 아니라 분쟁을 보이게 함
-- Srinivasan — Network State: 영토 없는 주권
-- Hohfeld — 권리-의무 대응: 권리에는 강제 주체가 필요하다는 딜레마
-- BFT 합의 — 분산 시스템에서 신뢰할 수 없는 노드가 임계값을 넘으면 합의가 깨짐
-- 오픈소스 포크 — 갈라탈 수 있다는 위협이 규율 작용을 함
-- 의학 IRB — 사람을 대상으로 하는 실험에는 사전 동의와 중단 기준이 필요함
+- Hirschman — Exit, Voice, Loyalty: exit must be easy for politics to improve
+- Nozick — The Minimal State: minimization of state function
+- Rawls — Veil of Ignorance: design for those in the worst position
+- Mouffe — Agonistic Democracy: making conflict visible rather than seeking consensus
+- Srinivasan — The Network State: sovereignty without territory
+- Hohfeld — Rights and Duties: the dilemma that every right requires an enforcer
+- BFT Consensus — In distributed systems, trust breaks when untrustworthy nodes exceed a threshold
+- Open-Source Forking — The credible threat of forking produces disciplinary pressure
+- Medical IRB — Experiments involving human subjects require prior consent and stopping criteria
 
-## 다섯 가지 힘 유형
+## Five Power Types
 
-| 사례 | 힘 유형 | 락인의 본체 | 갈라타는 방법 |
+| Case | Power Type | Lock-in Substrate | Fork Approach |
 | --- | --- | --- | --- |
-| E-7 | 지역 | 체류 허가 + 고용 결합 | 제한적 (다른 비자) |
-| 플랫폼 | 땅 없는 힘 | 계정 + 네트워크 효과 | 진짜 갈라타기 (현재 불가) |
-| 의료 | 물리적 | 물리 인프라 + 기록 | 접근 보장 + 인정 |
-| 돌봄 | 관계 | 관계 + 대체 돌봄 없음 | 대체 돌봄 인프라 |
-| 교육 | 인정 시장 | 인정 독점 + 입시 트랙 | 인정 다원화 |
+| E-7 | Territorial | Residence permit + employment linkage | Limited (other visa types) |
+| Platform | Non-territorial | Account + network effects | True fork (currently impossible) |
+| Medical | Physical | Physical infrastructure + records | Access guarantee + recognition |
+| Caregiving | Relational | Relationship + absence of alternative care | Alternative care infrastructure |
+| Education | Recognition-based | Credential monopoly + admissions track | Recognition pluralism |
 
-## 프레임워크가 사례에서 끌어올린 개념
+## Concepts Extracted from Cases
 
-| 개념 | 처음 등장 | 더 쓰인 사례 | 프레임워크 위치 |
+| Concept | First Appeared | Reused In | Framework Location |
 | --- | --- | --- | --- |
-| 합작 락인 | E-7 | 플랫폼 | 섹션 6 |
-| 땅 없는 힘 | 플랫폼 | — | 섹션 3 |
-| 갈라탈 때 힘 차이 | 플랫폼 | — | 섹션 8 |
-| 데이터 가져가기 3층 | 의료 | 교육 | 섹션 8 |
-| 관계적 락인 | 돌봄 | 교육 | 섹션 2 (명제 3) |
-| 탈출권 확장 (대체 살 곳) | 돌봄 | 교육 | 섹션 2 (명제 3) |
-| 대신 말해주는 권리 | 돌봄 | 교육 | 섹션 2 (명제 3) |
-| 인정 시장 여러 곳으로 | 교육 | — | 섹션 8 (최소 규칙 설계) |
-| 최소 규칙과 자유 규칙 구분 | 플랫폼 | 의료·돌봄·교육 | 섹션 8 |
-| 전쟁 버튼 (비상 모드) | 전쟁 버튼 장 | — | 섹션 16 (chapter-war-kernel.md) |
-| 국가 최소 규칙 (평소 모드) | 국가 최소 규칙 장 | — | 섹션 17 (chapter-national-kernel.md) |
+| Composite Lock-in | E-7 | Platform | Section 6 |
+| Non-Territorial Sovereignty | Platform | — | Section 3 |
+| Fork-Cost Asymmetry | Platform | — | Section 8 |
+| 3-Layer Data Portability | Medical | Education | Section 8 |
+| Relational Lock-in | Caregiving | Education | Section 2 (Prop. 3) |
+| Exit Right Expansion (Alternative Survival Conditions) | Caregiving | Education | Section 2 (Prop. 3) |
+| Proxy Voice | Caregiving | Education | Section 2 (Prop. 3) |
+| Recognition Pluralism | Education | — | Section 8 (Kernel Design) |
+| Kernel vs. Freedom Rules Distinction | Platform | Medical, Caregiving, Education | Section 8 |
+| War-Power Kernel (Emergency Mode) | War-Power Chapter | — | Section 16 (chapter-war-kernel.md) |
+| National Kernel (Peacetime Mode) | National-Kernel Chapter | — | Section 17 (chapter-national-kernel.md) |

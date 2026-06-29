@@ -1,59 +1,58 @@
-# 용어 매핑표 — 어려운 말 → 쉬운 말
+# Glossary
 
-> 문서에서 쓰는 전문 용어를 처음 보는 사람이 이해할 수 있게 풀어쓴 표.
-> 본문에서는 전문 용어를 그대로 쓰되, 첫 등장에서만 괄호로 풀어쓴다.
+> Reference for the specialized terminology used throughout this repository.
+> Technical terms are used as-is in the body; first occurrences are annotated in parentheses.
 
-## 핵심 개념
+## Core Concepts
 
-| 용어 | 풀어쓰기 | 비고 |
-| --- | --- | --- |
-| Anti-Sovereign Design | 반주권 설계 | 공식 영문명 |
-| 락인 (lock-in) | 한 번 들어가면 나오기 힘든 상태 | |
-| 반주권 설계 | 사람을 함부로 묶어두지 않는 설계 | |
-| 탈출권 | 빠져나갈 권리 | |
-| 대체 생존조건 | 나가면 갈 다른 곳 | "나가면 갈 곳이 있어야 함" |
-| 판별식 | 4가지 항목으로 락인인지 확인하는 표 | |
-| 합작 락인 | 둘 이상이 각자 역할을 해서 만드는 락인 | |
-| 포크 (fork) | 갈라타기 | "같은 것을 복사해서 따로 운영" |
-| 포크 비용 비대칭 | 갈라탈 때 드는 힘 차이 | "회사는 쉽고 사용자는 어려움" |
-| 커널 | 최소 규칙 | "모두가 따라야 하는 기본 룰" |
-| 비지역적 주권 | 땅 없는 힘 | "플랫폼처럼 영토 없이 힘을 쓰는 경우" |
-| 관계적 락인 | 사람 사이 관계로 생기는 락인 | "돌봄처럼 서로가 서로를 묶는 구조" |
-| 인정 체계 | 인정 시장 | "학력처럼 누군가가 인정해주는 체계" |
-| 대리 발언권 | 대신 말해주는 권리 | |
-| 강제의 역설 | 강제 딜레마 | "풀어주려다 더 묶이는 딜레마" |
-| 포획 | 부정을 당함 | "방어장치가 무력화됨" |
-| 창발 (emergence) | 교차점에서 생김 | "각자 따로 움직이다 만나서 생기는 현상" |
-| 병목 | 막힘 | |
-| 위계 | 차례 | "누가 위고 누가 아래인지" |
-| 비대칭 | 차이 | "양쪽 힘이 다름" |
-| 비동기화 | 따로 움직임 | |
-| 포괄 동의 | 한꺼번에 동의 | "선거 한 번 = 모든 것에 동의?" |
-| 인허가 | 허가 | |
-
-## 국가 최소 규칙 관련
-
-| 용어 | 풀어쓰기 |
+| Term | Definition |
 | --- | --- |
-| 국가 커널 | 국가 최소 규칙 |
-| 전쟁권 락인 | 전쟁 버튼 |
-| 비상권 | 비상 권한 |
-| 입법권 | 법 만드는 권한 |
-| 징병 | 군대에 강제로 보냄 |
-| 조세 | 세금 |
-| 지역 유예권 | 지역이 잠깐 미루는 권리 |
-| 중앙권한 만료제 | 가져간 권한은 끝나는 날이 있음 |
-| 락인 감사관 | 락인 확인관 |
-| 지역 영향평가 | 지역에 미치는 영향 조사 |
+| Anti-Sovereign Design | The framework presented in this repository — a design discipline that identifies and mitigates lock-in across all forms of sovereign power. |
+| Lock-in | A structural condition in which the cost of exit from a system, institution, or relationship becomes prohibitively high for the individual. |
+| Right of Exit | The affirmative right to leave a lock-in structure, distinguished from mere absence of restraint. |
+| Alternative Survival Conditions | The requirement that viable alternatives exist before exit becomes meaningful — exit without destination is abandonment, not liberation. |
+| Discriminant | A four-pronged diagnostic instrument used to determine whether a given structure constitutes a lock-in. |
+| Composite Lock-in | Lock-in produced not by a single actor but by the intersection of two or more actors, each exercising independent authority, whose combined exit cost is attributable to none. |
+| Fork | The structural capacity to replicate a system, institution, or arrangement and operate it independently. |
+| Fork-Cost Asymmetry | The disparity between the cost imposed on an individual attempting to exit and the near-zero cost imposed on the institution executing expulsion. |
+| Kernel | The minimal set of binding rules that all participants in a jurisdiction must follow, from which all other rules derive. |
+| Non-Territorial Sovereignty | Sovereign power exercised without territorial basis — most prominently by digital platforms whose reach exceeds any nation-state. |
+| Relational Lock-in | A bidirectional lock-in structure in which both parties are bound to each other in different ways, such that one party's exit threatens the other's survival. |
+| Recognition Regime | A system in which access to opportunity depends on credentialing by a recognized authority — degrees, certifications, licenses. |
+| Proxy Voice | The right of a third party to advocate on behalf of those who cannot self-advocate — children, the cognitively impaired, the unconscious. |
+| Coercion Paradox | The structural dilemma that any authority powerful enough to dismantle a lock-in is also powerful enough to become a new one. |
+| Capture | The subordination of a defensive mechanism to the interest of the power it was designed to constrain. |
+| Emergence | The phenomenon by which lock-in arises at the intersection of independent actors, not from any single actor's intent. |
+| Bottleneck | A structural choke point that restricts the flow of people, data, or rights. |
+| Hierarchy | The ordering of authority — who stands above whom. |
+| Asymmetry | A disparity in power, information, or cost between parties. |
+| Desynchronization | The principle that defensive mechanisms should operate on different timelines from the power they constrain, so that capturing one does not disable all. |
+| Blanket Consent | The treatment of a single act of consent (e.g., a vote, a terms-of-service click) as consent to everything that follows. |
 
-## 사례별
+## National Kernel
 
-| 용어 | 풀어쓰기 |
+| Term | Definition |
 | --- | --- |
-| 이탈가능성 | 나갈 수 있나? |
-| 규칙강제성 | 규칙이 센가? |
-| 항의실효성 | 항의가 먹히나? |
-| 의존비대칭 | 없으면 안 되나? |
-| 데이터 이동성 | 데이터 가져갈 수 있나? |
-| 측정권 | 재는 권한 |
-| 집행정지 | 멈추기 |
+| National Kernel | The minimal binding rules that constitute the state's permanent authority during peacetime. |
+| War-Power Lock-in | The exceptional mode in which the state's war powers override the national kernel — the highest-intensity exception to peacetime rule. |
+| Emergency Powers | Authority granted to the executive to act outside normal legislative constraints during crisis. |
+| Legislative Power | The authority to make law. |
+| Conscription | Compulsory military service. |
+| Taxation | The state's power to extract revenue. |
+| Regional Waiver | The right of a regional government to temporarily suspend application of national law within its territory. |
+| Sunset Clause for Centralized Authority | The principle that any authority transferred upward must have a defined expiration date. |
+| Lock-in Auditor | An independent official or body responsible for measuring and publicly reporting lock-in conditions. |
+| Lock-in Heatmap | A public visualization of lock-in severity across categories — visa types, platform types, medical conditions, care arrangements. |
+| Regional Impact Assessment | A mandatory evaluation of how national decisions affect regional autonomy and welfare before approval. |
+
+## Case-Specific
+
+| Term | Definition |
+| --- | --- |
+| Exit Feasibility | Can the individual leave? (Discriminant prong 1) |
+| Rule Coercion | How forcefully are rules imposed? (Discriminant prong 2) |
+| Redress Efficacy | Does challenge produce change? (Discriminant prong 3) |
+| Dependency Asymmetry | Does the individual depend on the structure for survival? (Discriminant prong 4) |
+| Data Portability (3-Layer) | The capacity to move data across systems, measured at three levels: technical (can files be exported?), semantic (can the recipient interpret them?), institutional (will the recipient recognize them?). |
+| Right to Measure | The authority to collect and publish data about lock-in conditions, constitutionalized as a public function. |
+| Injunctive Suspension | The power to halt an action pending review — preventing irreparable harm during the dispute process. |
